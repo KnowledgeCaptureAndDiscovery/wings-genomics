@@ -1,0 +1,56 @@
+#!/bin/bash
+
+# Functions:
+checkExitCode() {
+EC=$?
+
+if [ ${EC} -ne 0 ]; then
+	echo "Error"
+    exit ${EC};
+fi
+}
+
+
+BASEDIR=`dirname $0`
+if [ $# -lt 1 ]; then echo "Error No inputs provided" && exit 1; fi
+
+NINPUTS=1
+NPARAMS=0
+NOUTPUTS=1 
+
+. $BASEDIR/io.sh ${NINPUTS} ${NPARAMS} ${NOUTPUTS} "$@"
+
+
+OUTPUTS1_BASENAME=`basename $OUTPUTS1`
+cp $INPUTS1 $OUTPUTS1_BASENAME
+
+echo ".load /usr/lib/sqlite3/pcre.so
+
+DROP TABLE IF EXISTS RefSeqProtein;
+DROP TABLE IF EXISTS VariantProtein;
+CREATE TABLE RefSeqProtein AS SELECT Id, Accession FROM UnfilteredProtein WHERE regexp('.*NP_[0-9]+$', Accession);
+CREATE TABLE VariantProtein AS SELECT Id, Accession FROM UnfilteredProtein WHERE regexp('.*NP_[0-9]+_[^>*]+$', Accession);
+CREATE INDEX RefSeqProtein_Id ON RefSeqProtein (Id);
+CREATE INDEX VariantProtein_Id ON VariantProtein (Id);
+
+DROP TABLE IF EXISTS VariantPeptide;
+CREATE TABLE VariantPeptide AS SELECT pep.Id AS Id, pi.Offset AS Offset, IFNULL(SUBSTR(pd.Sequence, pi.Offset+1, pi.Length), pep.DecoySequence) AS Peptide,
+GROUP_CONCAT(DISTINCT vp.Accession) AS VariantProteins, GROUP_CONCAT(DISTINCT rsp.Accession) AS RefSeqProteins, GROUP_CONCAT(DISTINCT pro.Accession) AS AllProteins
+FROM UnfilteredProtein pro
+JOIN UnfilteredPeptideInstance pi ON pro.Id=pi.Protein
+LEFT JOIN VariantProtein vp ON pro.Id=vp.Id
+LEFT JOIN RefSeqProtein rsp ON pro.Id=rsp.Id
+LEFT JOIN ProteinData pd ON pro.Id=pd.Id
+JOIN Peptide pep ON pi.Peptide=pep.Id
+GROUP BY pep.Id;
+CREATE INDEX VariantPeptide_Id ON VariantPeptide (Id);
+
+
+DELETE FROM PeptideSpectrumMatch WHERE Peptide NOT IN (SELECT Id FROM VariantPeptide vp WHERE RefSeqProteins IS null AND VariantProteins IS NOT null);
+DELETE FROM Spectrum WHERE Id NOT IN (SELECT DISTINCT Spectrum FROM PeptideSpectrumMatch);
+DELETE FROM Peptide WHERE Id NOT IN (SELECT DISTINCT Peptide FROM PeptideSpectrumMatch);
+DELETE FROM PeptideInstance WHERE Peptide NOT IN (SELECT DISTINCT Id FROM Peptide);
+DELETE FROM Protein WHERE Id NOT IN (SELECT DISTINCT Protein FROM PeptideInstance);" > varpep.sql
+
+$SQLITE3_HOME/sqlite3 $OUTPUTS1_BASENAME ".read varpep.sql"
+mv $OUTPUTS1_BASENAME $OUTPUTS1

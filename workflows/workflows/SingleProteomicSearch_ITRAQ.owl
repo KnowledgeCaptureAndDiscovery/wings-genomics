@@ -1,0 +1,2454 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.0="http://www.wings-workflows.org/ontology/workflow.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+      xml:base="http://localhost:8080/wings-portal/export/users/admin/genomics/workflows/SingleProteomicSearch_ITRAQ.owl">
+      <owl:Ontology rdf:about="">
+            <owl:imports>
+                  <owl:Ontology rdf:about="http://www.wings-workflows.org/ontology/workflow.owl"/>
+            </owl:imports>
+      </owl:Ontology>
+      <owl:Ontology rdf:about="http://www.wings-workflows.org/ontology/workflow.owl">
+            <owl:versionInfo>3.0</owl:versionInfo>
+      </owl:Ontology>
+      <owl:Class rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#WorkflowTemplate">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#Workflow"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#ComponentSetRule">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#SetCreationRule"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#SetCreationExpression"/>
+      <owl:Class rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#Variable"/>
+      <owl:Class rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#Role"/>
+      <owl:Class rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#IncreaseDimensionality">
+            <rdfs:subClassOf rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#SetCreationExpression"/>
+      </owl:Class>
+      <owl:Class rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#NWise">
+            <rdfs:subClassOf rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#SetCreationExpression"/>
+      </owl:Class>
+      <owl:Class rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#WorkflowInstance">
+            <rdfs:subClassOf rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Workflow"/>
+      </owl:Class>
+      <owl:Class rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#Node"/>
+      <owl:Class rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#PortSetRule">
+            <rdfs:subClassOf rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#SetCreationRule"/>
+      </owl:Class>
+      <owl:Class rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#XProduct">
+            <rdfs:subClassOf rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#SetCreationExpression"/>
+      </owl:Class>
+      <owl:Class rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#Port"/>
+      <owl:Class rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#DataVariable">
+            <rdfs:subClassOf rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Variable"/>
+      </owl:Class>
+      <owl:Class rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#InputLink">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#Link"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#InOutLink">
+            <rdfs:subClassOf rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Link"/>
+      </owl:Class>
+      <owl:Class rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#OutputLink">
+            <rdfs:subClassOf rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Link"/>
+      </owl:Class>
+      <owl:Class rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#ComponentVariable">
+            <rdfs:subClassOf rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Variable"/>
+      </owl:Class>
+      <owl:Class rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#ReduceDimensionality">
+            <rdfs:subClassOf rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#SetCreationExpression"/>
+      </owl:Class>
+      <owl:Class rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#Metadata"/>
+      <owl:Class rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#ParameterVariable">
+            <rdfs:subClassOf rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Variable"/>
+      </owl:Class>
+      <owl:Class rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#Shift">
+            <rdfs:subClassOf rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#SetCreationExpression"/>
+      </owl:Class>
+      <owl:ObjectProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#derivedFrom"/>
+      <owl:ObjectProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#hasLink">
+            <rdfs:range rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Link"/>
+            <rdfs:domain rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Workflow"/>
+      </owl:ObjectProperty>
+      <owl:ObjectProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#hasExpressionArgument">
+            <rdfs:range>
+                  <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                              <owl:Class rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#Port"/>
+                              <owl:Class rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#SetCreationExpression"/>
+                        </owl:unionOf>
+                  </owl:Class>
+            </rdfs:range>
+            <rdfs:domain rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#SetCreationExpression"/>
+      </owl:ObjectProperty>
+      <owl:ObjectProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#hasOutputRole">
+            <rdfs:range rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Role"/>
+            <rdfs:domain rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Workflow"/>
+      </owl:ObjectProperty>
+      <owl:ObjectProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#hasComponentBinding">
+            <rdfs:domain rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#ComponentVariable"/>
+      </owl:ObjectProperty>
+      <owl:ObjectProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#canRunOn">
+            <rdfs:range rdf:resource="http://www.wings-workflows.org/ontology/resource.owl#Machine"/>
+            <rdfs:domain rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Node"/>
+      </owl:ObjectProperty>
+      <owl:ObjectProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#hasOriginNode">
+            <rdfs:range rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Node"/>
+            <rdfs:domain rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Link"/>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+      </owl:ObjectProperty>
+      <owl:ObjectProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#hasInputPort">
+            <rdfs:range rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Port"/>
+            <rdfs:domain rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Node"/>
+      </owl:ObjectProperty>
+      <owl:ObjectProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#hasNode">
+            <rdfs:range rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Node"/>
+            <rdfs:domain rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Workflow"/>
+      </owl:ObjectProperty>
+      <owl:ObjectProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#hasDestinationPort">
+            <rdfs:range rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Port"/>
+            <rdfs:domain rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Link"/>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+      </owl:ObjectProperty>
+      <owl:ObjectProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#hasWorkflow">
+            <rdfs:range rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Workflow"/>
+            <rdfs:domain rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Node"/>
+      </owl:ObjectProperty>
+      <owl:ObjectProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#hasDataBinding">
+            <rdfs:domain rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#DataVariable"/>
+      </owl:ObjectProperty>
+      <owl:ObjectProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#hasDestinationNode">
+            <rdfs:range rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Node"/>
+            <rdfs:domain rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Link"/>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+      </owl:ObjectProperty>
+      <owl:ObjectProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#mapsToVariable">
+            <rdfs:range rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Variable"/>
+            <rdfs:domain rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Role"/>
+      </owl:ObjectProperty>
+      <owl:ObjectProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#createSetsOn">
+            <rdfs:range>
+                  <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                              <owl:Class rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#ComponentVariable"/>
+                              <owl:Class rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#SetCreationExpression"/>
+                        </owl:unionOf>
+                  </owl:Class>
+            </rdfs:range>
+            <rdfs:domain rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#SetCreationRule"/>
+      </owl:ObjectProperty>
+      <owl:ObjectProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#hasVariable">
+            <rdfs:range rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Variable"/>
+            <rdfs:domain rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Link"/>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+      </owl:ObjectProperty>
+      <owl:ObjectProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#hasOutputPort">
+            <rdfs:range rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Port"/>
+            <rdfs:domain rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Node"/>
+      </owl:ObjectProperty>
+      <owl:ObjectProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#hasComponent">
+            <rdfs:range rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#ComponentVariable"/>
+            <rdfs:domain rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Node"/>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+      </owl:ObjectProperty>
+      <owl:ObjectProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#hasComponentSetCreationRule">
+            <rdfs:range rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#SetCreationRule"/>
+            <rdfs:domain rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Node"/>
+      </owl:ObjectProperty>
+      <owl:ObjectProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#hasOriginPort">
+            <rdfs:range rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Port"/>
+            <rdfs:domain rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Link"/>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+      </owl:ObjectProperty>
+      <owl:ObjectProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#hasPortSetCreationRule">
+            <rdfs:range rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#SetCreationRule"/>
+            <rdfs:domain rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Node"/>
+      </owl:ObjectProperty>
+      <owl:ObjectProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#hasInputRole">
+            <rdfs:range rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Role"/>
+            <rdfs:domain rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Workflow"/>
+      </owl:ObjectProperty>
+      <owl:ObjectProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#hasMetadata">
+            <rdfs:range rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Metadata"/>
+            <rdfs:domain rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Workflow"/>
+      </owl:ObjectProperty>
+      <owl:ObjectProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#satisfiesRole">
+            <rdfs:range rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Role"/>
+            <rdfs:domain rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Port"/>
+      </owl:ObjectProperty>
+      <owl:DatatypeProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#hasVersion">
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            <rdfs:domain rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Workflow"/>
+      </owl:DatatypeProperty>
+      <owl:DatatypeProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#hasDocumentation">
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            <rdfs:domain rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Metadata"/>
+      </owl:DatatypeProperty>
+      <owl:DatatypeProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#isInactive">
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+      </owl:DatatypeProperty>
+      <owl:DatatypeProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#hasRoleID">
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            <rdfs:domain rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Role"/>
+      </owl:DatatypeProperty>
+      <owl:DatatypeProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#createdFrom">
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            <rdfs:domain rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Metadata"/>
+      </owl:DatatypeProperty>
+      <owl:DatatypeProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#hasContributor">
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            <rdfs:domain rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Metadata"/>
+      </owl:DatatypeProperty>
+      <owl:DatatypeProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#tellmeData">
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            <rdfs:domain rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Metadata"/>
+      </owl:DatatypeProperty>
+      <owl:DatatypeProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#createWorkflowSets">
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            <rdfs:domain rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#SetCreationRule"/>
+      </owl:DatatypeProperty>
+      <owl:DatatypeProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#hasParameterValue">
+            <rdfs:domain rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#ParameterVariable"/>
+      </owl:DatatypeProperty>
+      <owl:DatatypeProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#autoFill">
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            <rdfs:domain rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#ParameterVariable"/>
+      </owl:DatatypeProperty>
+      <owl:DatatypeProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#breakPoint">
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#true"/>
+            <rdfs:domain rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Variable"/>
+      </owl:DatatypeProperty>
+      <owl:DatatypeProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#isConcrete">
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            <rdfs:domain rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#ComponentVariable"/>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+      </owl:DatatypeProperty>
+      <owl:DatatypeProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#hasRules">
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            <rdfs:domain rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Workflow"/>
+      </owl:DatatypeProperty>
+      <owl:DatatypeProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#createComponentSets">
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            <rdfs:domain rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#SetCreationRule"/>
+      </owl:DatatypeProperty>
+      <owl:DatatypeProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#hasDimensionality">
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+      </owl:DatatypeProperty>
+      <owl:DatatypeProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#lastUpdateTime">
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            <rdfs:domain rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Metadata"/>
+      </owl:DatatypeProperty>
+      <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#comment"/>
+      <j.0:WorkflowTemplate rdf:ID="SingleProteomicSearch_ITRAQ">
+            <j.0:hasOutputRole>
+                  <j.0:Role rdf:ID="ref_protConvertSpectraWithGene_orole">
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                        <j.0:hasRoleID>ref_protConvertSpectraWithGene</j.0:hasRoleID>
+                        <j.0:mapsToVariable>
+                              <j.0:DataVariable rdf:ID="ref_protConvertSpectraWithGene">
+                                    <rdfs:comment>center:x=574.9019065856934,y=1496.6611232757568</rdfs:comment>
+                              </j.0:DataVariable>
+                        </j.0:mapsToVariable>
+                  </j.0:Role>
+            </j.0:hasOutputRole>
+            <j.0:hasOutputRole>
+                  <j.0:Role rdf:ID="ref_mergedProtFile_withQuantData_orole">
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                        <j.0:hasRoleID>ref_mergedProtFile_withQuantData</j.0:hasRoleID>
+                        <j.0:mapsToVariable>
+                              <j.0:DataVariable rdf:ID="ref_mergedProtFile_withQuantData">
+                                    <rdfs:comment>center:x=463.8001777648926,y=909.9705762863159</rdfs:comment>
+                              </j.0:DataVariable>
+                        </j.0:mapsToVariable>
+                  </j.0:Role>
+            </j.0:hasOutputRole>
+            <j.0:hasLink>
+                  <j.0:InOutLink rdf:ID="ProteinAssembly_node2_mergedProtFile_to_DataQuery_node_inputFile">
+                        <j.0:hasVariable rdf:resource="#ref_mergedProtFile_withQuantData"/>
+                        <j.0:hasOriginPort>
+                              <j.0:Port rdf:ID="ProteinAssembly_node2_mergedProtFile">
+                                    <j.0:satisfiesRole>
+                                          <rdf:Description rdf:ID="ProteinAssembly_node2_mergedProtFile_role">
+                                                <j.0:hasRoleID
+                                                >mergedProtFile</j.0:hasRoleID>
+                                                <j.0:hasDimensionality
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#integer"
+                                                >0</j.0:hasDimensionality>
+                                          </rdf:Description>
+                                    </j.0:satisfiesRole>
+                              </j.0:Port>
+                        </j.0:hasOriginPort>
+                        <j.0:hasOriginNode>
+                              <j.0:Node rdf:ID="ProteinAssembly_node2">
+                                    <j.0:hasInputPort>
+                                          <j.0:Port rdf:ID="ProteinAssembly_node2_spectraFile">
+                                                <j.0:satisfiesRole>
+                                                      <rdf:Description rdf:ID="ProteinAssembly_node2_spectraFile_role">
+                                                            <j.0:hasRoleID
+                                                            >spectraFile</j.0:hasRoleID>
+                                                            <j.0:hasDimensionality
+                                                             rdf:datatype=
+                                                            "http://www.w3.org/2001/XMLSchema#integer"
+                                                            >1</j.0:hasDimensionality>
+                                                      </rdf:Description>
+                                                </j.0:satisfiesRole>
+                                          </j.0:Port>
+                                    </j.0:hasInputPort>
+                                    <j.0:hasInputPort>
+                                          <j.0:Port rdf:ID="ProteinAssembly_node2_protSeqDBFile">
+                                                <j.0:satisfiesRole>
+                                                      <rdf:Description rdf:ID="ProteinAssembly_node2_protSeqDBFile_role">
+                                                            <j.0:hasRoleID
+                                                            >protSeqDBFile</j.0:hasRoleID>
+                                                            <j.0:hasDimensionality
+                                                             rdf:datatype=
+                                                            "http://www.w3.org/2001/XMLSchema#integer"
+                                                            >1</j.0:hasDimensionality>
+                                                      </rdf:Description>
+                                                </j.0:satisfiesRole>
+                                          </j.0:Port>
+                                    </j.0:hasInputPort>
+                                    <j.0:hasComponentSetCreationRule>
+                                          <j.0:ComponentSetRule rdf:ID="ProteinAssembly_node2_crule">
+                                                <j.0:createWorkflowSets
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#boolean"
+                                                >true</j.0:createWorkflowSets>
+                                                <j.0:createSetsOn>
+                                                      <j.0:ComponentVariable rdf:ID="ProteinAssembly_node2_comp">
+                                                            <j.0:hasComponentBinding rdf:resource="../components/library.owl#ProteinAssembly"/>
+                                                      </j.0:ComponentVariable>
+                                                </j.0:createSetsOn>
+                                          </j.0:ComponentSetRule>
+                                    </j.0:hasComponentSetCreationRule>
+                                    <j.0:hasInputPort>
+                                          <j.0:Port rdf:ID="ProteinAssembly_node2_pepFile">
+                                                <j.0:satisfiesRole>
+                                                      <rdf:Description rdf:ID="ProteinAssembly_node2_pepFile_role">
+                                                            <j.0:hasRoleID
+                                                            >pepFile</j.0:hasRoleID>
+                                                            <j.0:hasDimensionality
+                                                             rdf:datatype=
+                                                            "http://www.w3.org/2001/XMLSchema#integer"
+                                                            >1</j.0:hasDimensionality>
+                                                      </rdf:Description>
+                                                </j.0:satisfiesRole>
+                                          </j.0:Port>
+                                    </j.0:hasInputPort>
+                                    <rdfs:comment>center:x=699.198373413086,y=836.6745557785034</rdfs:comment>
+                                    <j.0:hasOutputPort rdf:resource="#ProteinAssembly_node2_mergedProtFile"/>
+                                    <j.0:hasInputPort>
+                                          <j.0:Port rdf:ID="ProteinAssembly_node2_sampleIDs">
+                                                <j.0:satisfiesRole>
+                                                      <rdf:Description rdf:ID="ProteinAssembly_node2_sampleIDs_role">
+                                                            <j.0:hasRoleID
+                                                            >sampleIDs</j.0:hasRoleID>
+                                                            <j.0:hasDimensionality
+                                                             rdf:datatype=
+                                                            "http://www.w3.org/2001/XMLSchema#integer"
+                                                            >0</j.0:hasDimensionality>
+                                                      </rdf:Description>
+                                                </j.0:satisfiesRole>
+                                          </j.0:Port>
+                                    </j.0:hasInputPort>
+                                    <j.0:hasInputPort>
+                                          <j.0:Port rdf:ID="ProteinAssembly_node2_protAssemblyParams">
+                                                <j.0:satisfiesRole>
+                                                      <rdf:Description rdf:ID="ProteinAssembly_node2_protAssemblyParams_role">
+                                                            <j.0:hasRoleID
+                                                            >protAssemblyParams</j.0:hasRoleID>
+                                                            <j.0:hasDimensionality
+                                                             rdf:datatype=
+                                                            "http://www.w3.org/2001/XMLSchema#integer"
+                                                            >0</j.0:hasDimensionality>
+                                                      </rdf:Description>
+                                                </j.0:satisfiesRole>
+                                          </j.0:Port>
+                                    </j.0:hasInputPort>
+                                    <j.0:hasOutputPort>
+                                          <j.0:Port rdf:ID="ProteinAssembly_node2_protassemblyLog">
+                                                <j.0:satisfiesRole>
+                                                      <rdf:Description rdf:ID="ProteinAssembly_node2_protassemblyLog_role">
+                                                            <j.0:hasRoleID
+                                                            >protassemblyLog</j.0:hasRoleID>
+                                                            <j.0:hasDimensionality
+                                                             rdf:datatype=
+                                                            "http://www.w3.org/2001/XMLSchema#integer"
+                                                            >0</j.0:hasDimensionality>
+                                                      </rdf:Description>
+                                                </j.0:satisfiesRole>
+                                          </j.0:Port>
+                                    </j.0:hasOutputPort>
+                                    <j.0:hasComponent rdf:resource="#ProteinAssembly_node2_comp"/>
+                                    <j.0:hasInputPort>
+                                          <j.0:Port rdf:ID="ProteinAssembly_node2_condFile">
+                                                <j.0:satisfiesRole>
+                                                      <rdf:Description rdf:ID="ProteinAssembly_node2_condFile_role">
+                                                            <j.0:hasRoleID
+                                                            >condFile</j.0:hasRoleID>
+                                                            <j.0:hasDimensionality
+                                                             rdf:datatype=
+                                                            "http://www.w3.org/2001/XMLSchema#integer"
+                                                            >0</j.0:hasDimensionality>
+                                                      </rdf:Description>
+                                                </j.0:satisfiesRole>
+                                          </j.0:Port>
+                                    </j.0:hasInputPort>
+                                    <j.0:hasPortSetCreationRule>
+                                          <j.0:PortSetRule rdf:ID="ProteinAssembly_node2_prule">
+                                                <j.0:createComponentSets
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#boolean"
+                                                >true</j.0:createComponentSets>
+                                                <j.0:createSetsOn>
+                                                      <j.0:XProduct rdf:ID="_xprod-1b52066d-f913-459f-937d-ba7fbab5a2d9">
+                                                            <j.0:hasExpressionArgument rdf:resource="#ProteinAssembly_node2_condFile"/>
+                                                            <j.0:hasExpressionArgument rdf:resource="#ProteinAssembly_node2_protAssemblyParams"/>
+                                                            <j.0:hasExpressionArgument rdf:resource="#ProteinAssembly_node2_spectraFile"/>
+                                                            <j.0:hasExpressionArgument rdf:resource="#ProteinAssembly_node2_protSeqDBFile"/>
+                                                            <j.0:hasExpressionArgument rdf:resource="#ProteinAssembly_node2_pepFile"/>
+                                                            <j.0:hasExpressionArgument rdf:resource="#ProteinAssembly_node2_sampleIDs"/>
+                                                      </j.0:XProduct>
+                                                </j.0:createSetsOn>
+                                          </j.0:PortSetRule>
+                                    </j.0:hasPortSetCreationRule>
+                                    <j.0:hasOutputPort>
+                                          <j.0:Port rdf:ID="ProteinAssembly_node2_mergedPepFile">
+                                                <j.0:satisfiesRole>
+                                                      <rdf:Description rdf:ID="ProteinAssembly_node2_mergedPepFile_role">
+                                                            <j.0:hasRoleID
+                                                            >mergedPepFile</j.0:hasRoleID>
+                                                            <j.0:hasDimensionality
+                                                             rdf:datatype=
+                                                            "http://www.w3.org/2001/XMLSchema#integer"
+                                                            >0</j.0:hasDimensionality>
+                                                      </rdf:Description>
+                                                </j.0:satisfiesRole>
+                                          </j.0:Port>
+                                    </j.0:hasOutputPort>
+                              </j.0:Node>
+                        </j.0:hasOriginNode>
+                        <j.0:hasDestinationPort>
+                              <j.0:Port rdf:ID="DataQuery_node_inputFile">
+                                    <j.0:satisfiesRole>
+                                          <rdf:Description rdf:ID="DataQuery_node_inputFile_role">
+                                                <j.0:hasRoleID
+                                                >inputFile</j.0:hasRoleID>
+                                                <j.0:hasDimensionality
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#integer"
+                                                >0</j.0:hasDimensionality>
+                                          </rdf:Description>
+                                    </j.0:satisfiesRole>
+                              </j.0:Port>
+                        </j.0:hasDestinationPort>
+                        <j.0:hasDestinationNode>
+                              <j.0:Node rdf:ID="DataQuery_node">
+                                    <j.0:hasPortSetCreationRule>
+                                          <j.0:PortSetRule rdf:ID="DataQuery_node_prule">
+                                                <j.0:createComponentSets
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#boolean"
+                                                >true</j.0:createComponentSets>
+                                                <j.0:createSetsOn>
+                                                      <j.0:XProduct rdf:ID="_xprod-01fade32-d3a4-400a-9b7d-37671e77de57">
+                                                            <j.0:hasExpressionArgument rdf:resource="#DataQuery_node_inputFile"/>
+                                                      </j.0:XProduct>
+                                                </j.0:createSetsOn>
+                                          </j.0:PortSetRule>
+                                    </j.0:hasPortSetCreationRule>
+                                    <j.0:hasOutputPort>
+                                          <j.0:Port rdf:ID="DataQuery_node_editedFile">
+                                                <j.0:satisfiesRole>
+                                                      <rdf:Description rdf:ID="DataQuery_node_editedFile_role">
+                                                            <j.0:hasRoleID
+                                                            >editedFile</j.0:hasRoleID>
+                                                            <j.0:hasDimensionality
+                                                             rdf:datatype=
+                                                            "http://www.w3.org/2001/XMLSchema#integer"
+                                                            >0</j.0:hasDimensionality>
+                                                      </rdf:Description>
+                                                </j.0:satisfiesRole>
+                                          </j.0:Port>
+                                    </j.0:hasOutputPort>
+                                    <j.0:hasInputPort rdf:resource="#DataQuery_node_inputFile"/>
+                                    <j.0:hasComponentSetCreationRule>
+                                          <j.0:ComponentSetRule rdf:ID="DataQuery_node_crule">
+                                                <j.0:createWorkflowSets
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#boolean"
+                                                >true</j.0:createWorkflowSets>
+                                                <j.0:createSetsOn>
+                                                      <j.0:ComponentVariable rdf:ID="DataQuery_node_comp">
+                                                            <j.0:hasComponentBinding rdf:resource="../components/library.owl#DataQuery"/>
+                                                      </j.0:ComponentVariable>
+                                                </j.0:createSetsOn>
+                                          </j.0:ComponentSetRule>
+                                    </j.0:hasComponentSetCreationRule>
+                                    <j.0:hasComponent rdf:resource="#DataQuery_node_comp"/>
+                                    <rdfs:comment>center:x=486.89487800598147,y=983.3145704269409</rdfs:comment>
+                              </j.0:Node>
+                        </j.0:hasDestinationNode>
+                  </j.0:InOutLink>
+            </j.0:hasLink>
+            <j.0:hasLink>
+                  <j.0:InputLink rdf:ID="ProteinAssembly_node1_sampleIDs_input">
+                        <j.0:hasVariable>
+                              <j.0:DataVariable rdf:ID="sampleIDs">
+                                    <rdfs:comment>center:x=856.4895782470704,y=470.0025587081909</rdfs:comment>
+                              </j.0:DataVariable>
+                        </j.0:hasVariable>
+                        <j.0:hasDestinationPort>
+                              <j.0:Port rdf:ID="ProteinAssembly_node1_sampleIDs">
+                                    <j.0:satisfiesRole>
+                                          <rdf:Description rdf:ID="ProteinAssembly_node1_sampleIDs_role">
+                                                <j.0:hasRoleID
+                                                >sampleIDs</j.0:hasRoleID>
+                                                <j.0:hasDimensionality
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#integer"
+                                                >0</j.0:hasDimensionality>
+                                          </rdf:Description>
+                                    </j.0:satisfiesRole>
+                              </j.0:Port>
+                        </j.0:hasDestinationPort>
+                        <j.0:hasDestinationNode>
+                              <j.0:Node rdf:ID="ProteinAssembly_node1">
+                                    <j.0:hasInputPort>
+                                          <j.0:Port rdf:ID="ProteinAssembly_node1_protAssemblyParams">
+                                                <j.0:satisfiesRole>
+                                                      <rdf:Description rdf:ID="ProteinAssembly_node1_protAssemblyParams_role">
+                                                            <j.0:hasRoleID
+                                                            >protAssemblyParams</j.0:hasRoleID>
+                                                            <j.0:hasDimensionality
+                                                             rdf:datatype=
+                                                            "http://www.w3.org/2001/XMLSchema#integer"
+                                                            >0</j.0:hasDimensionality>
+                                                      </rdf:Description>
+                                                </j.0:satisfiesRole>
+                                          </j.0:Port>
+                                    </j.0:hasInputPort>
+                                    <j.0:hasOutputPort>
+                                          <j.0:Port rdf:ID="ProteinAssembly_node1_mergedProtFile">
+                                                <j.0:satisfiesRole>
+                                                      <rdf:Description rdf:ID="ProteinAssembly_node1_mergedProtFile_role">
+                                                            <j.0:hasRoleID
+                                                            >mergedProtFile</j.0:hasRoleID>
+                                                            <j.0:hasDimensionality
+                                                             rdf:datatype=
+                                                            "http://www.w3.org/2001/XMLSchema#integer"
+                                                            >0</j.0:hasDimensionality>
+                                                      </rdf:Description>
+                                                </j.0:satisfiesRole>
+                                          </j.0:Port>
+                                    </j.0:hasOutputPort>
+                                    <j.0:hasInputPort rdf:resource="#ProteinAssembly_node1_sampleIDs"/>
+                                    <rdfs:comment>center:x=736.5966445922852,y=1129.9929456710815</rdfs:comment>
+                                    <j.0:hasComponentSetCreationRule>
+                                          <j.0:ComponentSetRule rdf:ID="ProteinAssembly_node1_crule">
+                                                <j.0:createWorkflowSets
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#boolean"
+                                                >true</j.0:createWorkflowSets>
+                                                <j.0:createSetsOn>
+                                                      <j.0:ComponentVariable rdf:ID="ProteinAssembly_node1_comp">
+                                                            <j.0:hasComponentBinding rdf:resource="../components/library.owl#ProteinAssembly"/>
+                                                      </j.0:ComponentVariable>
+                                                </j.0:createSetsOn>
+                                          </j.0:ComponentSetRule>
+                                    </j.0:hasComponentSetCreationRule>
+                                    <j.0:hasInputPort>
+                                          <j.0:Port rdf:ID="ProteinAssembly_node1_spectraFile">
+                                                <j.0:satisfiesRole>
+                                                      <rdf:Description rdf:ID="ProteinAssembly_node1_spectraFile_role">
+                                                            <j.0:hasRoleID
+                                                            >spectraFile</j.0:hasRoleID>
+                                                            <j.0:hasDimensionality
+                                                             rdf:datatype=
+                                                            "http://www.w3.org/2001/XMLSchema#integer"
+                                                            >1</j.0:hasDimensionality>
+                                                      </rdf:Description>
+                                                </j.0:satisfiesRole>
+                                          </j.0:Port>
+                                    </j.0:hasInputPort>
+                                    <j.0:hasPortSetCreationRule>
+                                          <j.0:PortSetRule rdf:ID="ProteinAssembly_node1_prule">
+                                                <j.0:createComponentSets
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#boolean"
+                                                >true</j.0:createComponentSets>
+                                                <j.0:createSetsOn>
+                                                      <j.0:XProduct rdf:ID="_xprod-b626fb74-34f9-44c7-a4dd-55a6c04276db">
+                                                            <j.0:hasExpressionArgument>
+                                                            
+      <j.0:Port rdf:ID="ProteinAssembly_node1_pepFile">
+            <j.0:satisfiesRole>
+                  <rdf:Description rdf:ID="ProteinAssembly_node1_pepFile_role">
+                        <j.0:hasRoleID>pepFile</j.0:hasRoleID>
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >1</j.0:hasDimensionality>
+                  </rdf:Description>
+            </j.0:satisfiesRole>
+      </j.0:Port>                                           </j.0:hasExpressionArgument>
+                                                            <j.0:hasExpressionArgument rdf:resource="#ProteinAssembly_node1_sampleIDs"/>
+                                                            <j.0:hasExpressionArgument>
+                                                            
+      <j.0:Port rdf:ID="ProteinAssembly_node1_protSeqDBFile">
+            <j.0:satisfiesRole>
+                  <rdf:Description rdf:ID="ProteinAssembly_node1_protSeqDBFile_role">
+                        <j.0:hasRoleID>protSeqDBFile</j.0:hasRoleID>
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >1</j.0:hasDimensionality>
+                  </rdf:Description>
+            </j.0:satisfiesRole>
+      </j.0:Port>                                           </j.0:hasExpressionArgument>
+                                                            <j.0:hasExpressionArgument rdf:resource="#ProteinAssembly_node1_spectraFile"/>
+                                                            <j.0:hasExpressionArgument rdf:resource="#ProteinAssembly_node1_protAssemblyParams"/>
+                                                            <j.0:hasExpressionArgument>
+                                                            
+      <j.0:Port rdf:ID="ProteinAssembly_node1_condFile">
+            <j.0:satisfiesRole>
+                  <rdf:Description rdf:ID="ProteinAssembly_node1_condFile_role">
+                        <j.0:hasRoleID>condFile</j.0:hasRoleID>
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                  </rdf:Description>
+            </j.0:satisfiesRole>
+      </j.0:Port>                                           </j.0:hasExpressionArgument>
+                                                      </j.0:XProduct>
+                                                </j.0:createSetsOn>
+                                          </j.0:PortSetRule>
+                                    </j.0:hasPortSetCreationRule>
+                                    <j.0:hasInputPort rdf:resource="#ProteinAssembly_node1_protSeqDBFile"/>
+                                    <j.0:hasOutputPort>
+                                          <j.0:Port rdf:ID="ProteinAssembly_node1_protassemblyLog">
+                                                <j.0:satisfiesRole>
+                                                      <rdf:Description rdf:ID="ProteinAssembly_node1_protassemblyLog_role">
+                                                            <j.0:hasRoleID
+                                                            >protassemblyLog</j.0:hasRoleID>
+                                                            <j.0:hasDimensionality
+                                                             rdf:datatype=
+                                                            "http://www.w3.org/2001/XMLSchema#integer"
+                                                            >0</j.0:hasDimensionality>
+                                                      </rdf:Description>
+                                                </j.0:satisfiesRole>
+                                          </j.0:Port>
+                                    </j.0:hasOutputPort>
+                                    <j.0:hasInputPort rdf:resource="#ProteinAssembly_node1_pepFile"/>
+                                    <j.0:hasInputPort rdf:resource="#ProteinAssembly_node1_condFile"/>
+                                    <j.0:hasOutputPort>
+                                          <j.0:Port rdf:ID="ProteinAssembly_node1_mergedPepFile">
+                                                <j.0:satisfiesRole>
+                                                      <rdf:Description rdf:ID="ProteinAssembly_node1_mergedPepFile_role">
+                                                            <j.0:hasRoleID
+                                                            >mergedPepFile</j.0:hasRoleID>
+                                                            <j.0:hasDimensionality
+                                                             rdf:datatype=
+                                                            "http://www.w3.org/2001/XMLSchema#integer"
+                                                            >0</j.0:hasDimensionality>
+                                                      </rdf:Description>
+                                                </j.0:satisfiesRole>
+                                          </j.0:Port>
+                                    </j.0:hasOutputPort>
+                                    <j.0:hasComponent rdf:resource="#ProteinAssembly_node1_comp"/>
+                              </j.0:Node>
+                        </j.0:hasDestinationNode>
+                  </j.0:InputLink>
+            </j.0:hasLink>
+            <j.0:hasOutputRole>
+                  <j.0:Role rdf:ID="ref_mergedPepFile_orole">
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                        <j.0:hasRoleID>ref_mergedPepFile</j.0:hasRoleID>
+                        <j.0:mapsToVariable>
+                              <j.0:DataVariable rdf:ID="ref_mergedPepFile">
+                                    <rdfs:comment>center:x=448.3957424163819,y=616.6425733566284</rdfs:comment>
+                              </j.0:DataVariable>
+                        </j.0:mapsToVariable>
+                  </j.0:Role>
+            </j.0:hasOutputRole>
+            <j.0:hasNode>
+                  <j.0:Node rdf:ID="ProteinDataConvert_node">
+                        <j.0:hasComponent>
+                              <j.0:ComponentVariable rdf:ID="ProteinDataConvert_node_comp">
+                                    <j.0:hasComponentBinding rdf:resource="../components/library.owl#ProteinDataConvert"/>
+                              </j.0:ComponentVariable>
+                        </j.0:hasComponent>
+                        <j.0:hasOutputPort>
+                              <j.0:Port rdf:ID="ProteinDataConvert_node_protConvertSpectra">
+                                    <j.0:satisfiesRole>
+                                          <rdf:Description rdf:ID="ProteinDataConvert_node_protConvertSpectra_role">
+                                                <j.0:hasRoleID
+                                                >protConvertSpectra</j.0:hasRoleID>
+                                                <j.0:hasDimensionality
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#integer"
+                                                >0</j.0:hasDimensionality>
+                                          </rdf:Description>
+                                    </j.0:satisfiesRole>
+                              </j.0:Port>
+                        </j.0:hasOutputPort>
+                        <j.0:hasInputPort>
+                              <j.0:Port rdf:ID="ProteinDataConvert_node_protSpectra">
+                                    <j.0:satisfiesRole>
+                                          <rdf:Description rdf:ID="ProteinDataConvert_node_protSpectra_role">
+                                                <j.0:hasRoleID
+                                                >protSpectra</j.0:hasRoleID>
+                                                <j.0:hasDimensionality
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#integer"
+                                                >0</j.0:hasDimensionality>
+                                          </rdf:Description>
+                                    </j.0:satisfiesRole>
+                              </j.0:Port>
+                        </j.0:hasInputPort>
+                        <j.0:hasInputPort>
+                              <j.0:Port rdf:ID="ProteinDataConvert_node_pepSpectra">
+                                    <j.0:satisfiesRole>
+                                          <rdf:Description rdf:ID="ProteinDataConvert_node_pepSpectra_role">
+                                                <j.0:hasRoleID
+                                                >pepSpectra</j.0:hasRoleID>
+                                                <j.0:hasDimensionality
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#integer"
+                                                >0</j.0:hasDimensionality>
+                                          </rdf:Description>
+                                    </j.0:satisfiesRole>
+                              </j.0:Port>
+                        </j.0:hasInputPort>
+                        <rdfs:comment>center:x=201.99664459228518,y=1276.66175365448</rdfs:comment>
+                        <j.0:hasInputPort>
+                              <j.0:Port rdf:ID="ProteinDataConvert_node_protConvertParams">
+                                    <j.0:satisfiesRole>
+                                          <rdf:Description rdf:ID="ProteinDataConvert_node_protConvertParams_role">
+                                                <j.0:hasRoleID
+                                                >protConvertParams</j.0:hasRoleID>
+                                                <j.0:hasDimensionality
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#integer"
+                                                >0</j.0:hasDimensionality>
+                                          </rdf:Description>
+                                    </j.0:satisfiesRole>
+                              </j.0:Port>
+                        </j.0:hasInputPort>
+                        <j.0:hasInputPort>
+                              <j.0:Port rdf:ID="ProteinDataConvert_node_fastaFile">
+                                    <j.0:satisfiesRole>
+                                          <rdf:Description rdf:ID="ProteinDataConvert_node_fastaFile_role">
+                                                <j.0:hasRoleID
+                                                >fastaFile</j.0:hasRoleID>
+                                                <j.0:hasDimensionality
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#integer"
+                                                >1</j.0:hasDimensionality>
+                                          </rdf:Description>
+                                    </j.0:satisfiesRole>
+                              </j.0:Port>
+                        </j.0:hasInputPort>
+                        <j.0:hasPortSetCreationRule>
+                              <j.0:PortSetRule rdf:ID="ProteinDataConvert_node_prule">
+                                    <j.0:createComponentSets rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#boolean"
+                                    >true</j.0:createComponentSets>
+                                    <j.0:createSetsOn>
+                                          <j.0:XProduct rdf:ID="_xprod-4368ae74-9a9b-4887-ab0e-a8437146475b">
+                                                <j.0:hasExpressionArgument rdf:resource="#ProteinDataConvert_node_protSpectra"/>
+                                                <j.0:hasExpressionArgument rdf:resource="#ProteinDataConvert_node_pepSpectra"/>
+                                                <j.0:hasExpressionArgument rdf:resource="#ProteinDataConvert_node_fastaFile"/>
+                                                <j.0:hasExpressionArgument rdf:resource="#ProteinDataConvert_node_protConvertParams"/>
+                                          </j.0:XProduct>
+                                    </j.0:createSetsOn>
+                              </j.0:PortSetRule>
+                        </j.0:hasPortSetCreationRule>
+                        <j.0:hasComponentSetCreationRule>
+                              <j.0:ComponentSetRule rdf:ID="ProteinDataConvert_node_crule">
+                                    <j.0:createWorkflowSets rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#boolean"
+                                    >true</j.0:createWorkflowSets>
+                                    <j.0:createSetsOn rdf:resource="#ProteinDataConvert_node_comp"/>
+                              </j.0:ComponentSetRule>
+                        </j.0:hasComponentSetCreationRule>
+                        <j.0:hasOutputPort>
+                              <j.0:Port rdf:ID="ProteinDataConvert_node_protConvertLog">
+                                    <j.0:satisfiesRole>
+                                          <rdf:Description rdf:ID="ProteinDataConvert_node_protConvertLog_role">
+                                                <j.0:hasRoleID
+                                                >protConvertLog</j.0:hasRoleID>
+                                                <j.0:hasDimensionality
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#integer"
+                                                >0</j.0:hasDimensionality>
+                                          </rdf:Description>
+                                    </j.0:satisfiesRole>
+                              </j.0:Port>
+                        </j.0:hasOutputPort>
+                  </j.0:Node>
+            </j.0:hasNode>
+            <j.0:hasLink>
+                  <j.0:InputLink rdf:ID="ProteinAssembly_node_condFile_input">
+                        <j.0:hasVariable>
+                              <j.0:DataVariable rdf:ID="condFile">
+                                    <rdfs:comment>center:x=387.89487800598147,y=470.0025587081909</rdfs:comment>
+                              </j.0:DataVariable>
+                        </j.0:hasVariable>
+                        <j.0:hasDestinationPort>
+                              <j.0:Port rdf:ID="ProteinAssembly_node_condFile">
+                                    <j.0:satisfiesRole>
+                                          <rdf:Description rdf:ID="ProteinAssembly_node_condFile_role">
+                                                <j.0:hasRoleID
+                                                >condFile</j.0:hasRoleID>
+                                                <j.0:hasDimensionality
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#integer"
+                                                >0</j.0:hasDimensionality>
+                                          </rdf:Description>
+                                    </j.0:satisfiesRole>
+                              </j.0:Port>
+                        </j.0:hasDestinationPort>
+                        <j.0:hasDestinationNode>
+                              <j.0:Node rdf:ID="ProteinAssembly_node">
+                                    <j.0:hasComponent>
+                                          <j.0:ComponentVariable rdf:ID="ProteinAssembly_node_comp">
+                                                <j.0:hasComponentBinding rdf:resource="../components/library.owl#ProteinAssembly"/>
+                                          </j.0:ComponentVariable>
+                                    </j.0:hasComponent>
+                                    <j.0:hasOutputPort>
+                                          <j.0:Port rdf:ID="ProteinAssembly_node_protassemblyLog">
+                                                <j.0:satisfiesRole>
+                                                      <rdf:Description rdf:ID="ProteinAssembly_node_protassemblyLog_role">
+                                                            <j.0:hasRoleID
+                                                            >protassemblyLog</j.0:hasRoleID>
+                                                            <j.0:hasDimensionality
+                                                             rdf:datatype=
+                                                            "http://www.w3.org/2001/XMLSchema#integer"
+                                                            >0</j.0:hasDimensionality>
+                                                      </rdf:Description>
+                                                </j.0:satisfiesRole>
+                                          </j.0:Port>
+                                    </j.0:hasOutputPort>
+                                    <j.0:hasInputPort>
+                                          <j.0:Port rdf:ID="ProteinAssembly_node_sampleIDs">
+                                                <j.0:satisfiesRole>
+                                                      <rdf:Description rdf:ID="ProteinAssembly_node_sampleIDs_role">
+                                                            <j.0:hasRoleID
+                                                            >sampleIDs</j.0:hasRoleID>
+                                                            <j.0:hasDimensionality
+                                                             rdf:datatype=
+                                                            "http://www.w3.org/2001/XMLSchema#integer"
+                                                            >0</j.0:hasDimensionality>
+                                                      </rdf:Description>
+                                                </j.0:satisfiesRole>
+                                          </j.0:Port>
+                                    </j.0:hasInputPort>
+                                    <j.0:hasInputPort>
+                                          <j.0:Port rdf:ID="ProteinAssembly_node_spectraFile">
+                                                <j.0:satisfiesRole>
+                                                      <rdf:Description rdf:ID="ProteinAssembly_node_spectraFile_role">
+                                                            <j.0:hasRoleID
+                                                            >spectraFile</j.0:hasRoleID>
+                                                            <j.0:hasDimensionality
+                                                             rdf:datatype=
+                                                            "http://www.w3.org/2001/XMLSchema#integer"
+                                                            >1</j.0:hasDimensionality>
+                                                      </rdf:Description>
+                                                </j.0:satisfiesRole>
+                                          </j.0:Port>
+                                    </j.0:hasInputPort>
+                                    <j.0:hasInputPort rdf:resource="#ProteinAssembly_node_condFile"/>
+                                    <j.0:hasOutputPort>
+                                          <j.0:Port rdf:ID="ProteinAssembly_node_mergedPepFile">
+                                                <j.0:satisfiesRole>
+                                                      <rdf:Description rdf:ID="ProteinAssembly_node_mergedPepFile_role">
+                                                            <j.0:hasRoleID
+                                                            >mergedPepFile</j.0:hasRoleID>
+                                                            <j.0:hasDimensionality
+                                                             rdf:datatype=
+                                                            "http://www.w3.org/2001/XMLSchema#integer"
+                                                            >0</j.0:hasDimensionality>
+                                                      </rdf:Description>
+                                                </j.0:satisfiesRole>
+                                          </j.0:Port>
+                                    </j.0:hasOutputPort>
+                                    <j.0:hasInputPort>
+                                          <j.0:Port rdf:ID="ProteinAssembly_node_protSeqDBFile">
+                                                <j.0:satisfiesRole>
+                                                      <rdf:Description rdf:ID="ProteinAssembly_node_protSeqDBFile_role">
+                                                            <j.0:hasRoleID
+                                                            >protSeqDBFile</j.0:hasRoleID>
+                                                            <j.0:hasDimensionality
+                                                             rdf:datatype=
+                                                            "http://www.w3.org/2001/XMLSchema#integer"
+                                                            >1</j.0:hasDimensionality>
+                                                      </rdf:Description>
+                                                </j.0:satisfiesRole>
+                                          </j.0:Port>
+                                    </j.0:hasInputPort>
+                                    <j.0:hasInputPort>
+                                          <j.0:Port rdf:ID="ProteinAssembly_node_pepFile">
+                                                <j.0:satisfiesRole>
+                                                      <rdf:Description rdf:ID="ProteinAssembly_node_pepFile_role">
+                                                            <j.0:hasRoleID
+                                                            >pepFile</j.0:hasRoleID>
+                                                            <j.0:hasDimensionality
+                                                             rdf:datatype=
+                                                            "http://www.w3.org/2001/XMLSchema#integer"
+                                                            >1</j.0:hasDimensionality>
+                                                      </rdf:Description>
+                                                </j.0:satisfiesRole>
+                                          </j.0:Port>
+                                    </j.0:hasInputPort>
+                                    <j.0:hasInputPort>
+                                          <j.0:Port rdf:ID="ProteinAssembly_node_protAssemblyParams">
+                                                <j.0:satisfiesRole>
+                                                      <rdf:Description rdf:ID="ProteinAssembly_node_protAssemblyParams_role">
+                                                            <j.0:hasRoleID
+                                                            >protAssemblyParams</j.0:hasRoleID>
+                                                            <j.0:hasDimensionality
+                                                             rdf:datatype=
+                                                            "http://www.w3.org/2001/XMLSchema#integer"
+                                                            >0</j.0:hasDimensionality>
+                                                      </rdf:Description>
+                                                </j.0:satisfiesRole>
+                                          </j.0:Port>
+                                    </j.0:hasInputPort>
+                                    <j.0:hasComponentSetCreationRule>
+                                          <j.0:ComponentSetRule rdf:ID="ProteinAssembly_node_crule">
+                                                <j.0:createWorkflowSets
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#boolean"
+                                                >true</j.0:createWorkflowSets>
+                                                <j.0:createSetsOn rdf:resource="#ProteinAssembly_node_comp"/>
+                                          </j.0:ComponentSetRule>
+                                    </j.0:hasComponentSetCreationRule>
+                                    <j.0:hasOutputPort>
+                                          <j.0:Port rdf:ID="ProteinAssembly_node_mergedProtFile">
+                                                <j.0:satisfiesRole>
+                                                      <rdf:Description rdf:ID="ProteinAssembly_node_mergedProtFile_role">
+                                                            <j.0:hasRoleID
+                                                            >mergedProtFile</j.0:hasRoleID>
+                                                            <j.0:hasDimensionality
+                                                             rdf:datatype=
+                                                            "http://www.w3.org/2001/XMLSchema#integer"
+                                                            >0</j.0:hasDimensionality>
+                                                      </rdf:Description>
+                                                </j.0:satisfiesRole>
+                                          </j.0:Port>
+                                    </j.0:hasOutputPort>
+                                    <rdfs:comment>center:x=685.9957801818848,y=543.3465528488159</rdfs:comment>
+                                    <j.0:hasPortSetCreationRule>
+                                          <j.0:PortSetRule rdf:ID="ProteinAssembly_node_prule">
+                                                <j.0:createComponentSets
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#boolean"
+                                                >true</j.0:createComponentSets>
+                                                <j.0:createSetsOn>
+                                                      <j.0:XProduct rdf:ID="_xprod-d01e1d68-a320-4a78-b77f-617b085f4237">
+                                                            <j.0:hasExpressionArgument rdf:resource="#ProteinAssembly_node_pepFile"/>
+                                                            <j.0:hasExpressionArgument rdf:resource="#ProteinAssembly_node_protSeqDBFile"/>
+                                                            <j.0:hasExpressionArgument rdf:resource="#ProteinAssembly_node_sampleIDs"/>
+                                                            <j.0:hasExpressionArgument rdf:resource="#ProteinAssembly_node_spectraFile"/>
+                                                            <j.0:hasExpressionArgument rdf:resource="#ProteinAssembly_node_condFile"/>
+                                                            <j.0:hasExpressionArgument rdf:resource="#ProteinAssembly_node_protAssemblyParams"/>
+                                                      </j.0:XProduct>
+                                                </j.0:createSetsOn>
+                                          </j.0:PortSetRule>
+                                    </j.0:hasPortSetCreationRule>
+                              </j.0:Node>
+                        </j.0:hasDestinationNode>
+                  </j.0:InputLink>
+            </j.0:hasLink>
+            <j.0:hasLink>
+                  <j.0:OutputLink rdf:ID="ProteinAssembly_node1_mergedPepFile_output">
+                        <j.0:hasVariable>
+                              <j.0:DataVariable rdf:ID="ref_mergedPepFile_redone">
+                                    <rdfs:comment>center:x=313.0983922958374,y=1203.3273725509644</rdfs:comment>
+                              </j.0:DataVariable>
+                        </j.0:hasVariable>
+                        <j.0:hasOriginPort rdf:resource="#ProteinAssembly_node1_mergedPepFile"/>
+                        <j.0:hasOriginNode rdf:resource="#ProteinAssembly_node1"/>
+                  </j.0:OutputLink>
+            </j.0:hasLink>
+            <j.0:hasLink>
+                  <j.0:OutputLink rdf:ID="ProteinAssembly_node_protassemblyLog_output">
+                        <j.0:hasVariable>
+                              <j.0:DataVariable rdf:ID="protassemblyLog">
+                                    <rdfs:comment>center:x=753.1019065856934,y=616.6425733566284</rdfs:comment>
+                              </j.0:DataVariable>
+                        </j.0:hasVariable>
+                        <j.0:hasOriginPort rdf:resource="#ProteinAssembly_node_protassemblyLog"/>
+                        <j.0:hasOriginNode rdf:resource="#ProteinAssembly_node"/>
+                  </j.0:OutputLink>
+            </j.0:hasLink>
+            <j.0:hasNode>
+                  <j.0:Node rdf:ID="PeptideDataConvertNode">
+                        <j.0:hasPortSetCreationRule>
+                              <j.0:PortSetRule rdf:ID="PeptideDataConvertNode_prule">
+                                    <j.0:createComponentSets rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#boolean"
+                                    >true</j.0:createComponentSets>
+                                    <j.0:createSetsOn>
+                                          <j.0:XProduct rdf:ID="_xprod-9411e72b-f36e-4a64-8414-2c0651f562e1">
+                                                <j.0:hasExpressionArgument>
+                                                      <j.0:NWise rdf:ID="_nwise-8026c557-40e1-45c6-b88c-05f8393261e5">
+                                                            <j.0:hasExpressionArgument>
+                                                            
+      <j.0:Port rdf:ID="port_spectraFile2">
+            <j.0:satisfiesRole>
+                  <rdf:Description rdf:ID="port_spectraFile2_role">
+                        <j.0:hasRoleID>spectraFile</j.0:hasRoleID>
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                  </rdf:Description>
+            </j.0:satisfiesRole>
+      </j.0:Port>                                           </j.0:hasExpressionArgument>
+                                                            <j.0:hasExpressionArgument>
+                                                            
+      <j.0:Port rdf:ID="port_pepFile">
+            <j.0:satisfiesRole>
+                  <rdf:Description rdf:ID="port_pepFile_role">
+                        <j.0:hasRoleID>pepFile</j.0:hasRoleID>
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                  </rdf:Description>
+            </j.0:satisfiesRole>
+      </j.0:Port>                                           </j.0:hasExpressionArgument>
+                                                      </j.0:NWise>
+                                                </j.0:hasExpressionArgument>
+                                                <j.0:hasExpressionArgument>
+                                                      <j.0:Port rdf:ID="port_pepConvertParams">
+                                                            <j.0:satisfiesRole>
+                                                            
+      <rdf:Description rdf:ID="port_pepConvertParams_role">
+            <j.0:hasRoleID>pepConvertParams</j.0:hasRoleID>
+            <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+            >0</j.0:hasDimensionality>
+      </rdf:Description>                                    </j.0:satisfiesRole>
+                                                      </j.0:Port>
+                                                </j.0:hasExpressionArgument>
+                                          </j.0:XProduct>
+                                    </j.0:createSetsOn>
+                              </j.0:PortSetRule>
+                        </j.0:hasPortSetCreationRule>
+                        <j.0:hasOutputPort>
+                              <j.0:Port rdf:ID="port_pepConvertSpectra">
+                                    <j.0:satisfiesRole>
+                                          <rdf:Description rdf:ID="port_pepConvertSpectra_role">
+                                                <j.0:hasRoleID
+                                                >pepConvertSpectra</j.0:hasRoleID>
+                                                <j.0:hasDimensionality
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#integer"
+                                                >0</j.0:hasDimensionality>
+                                          </rdf:Description>
+                                    </j.0:satisfiesRole>
+                              </j.0:Port>
+                        </j.0:hasOutputPort>
+                        <j.0:hasInputPort rdf:resource="#port_spectraFile2"/>
+                        <j.0:hasInputPort rdf:resource="#port_pepFile"/>
+                        <j.0:hasInputPort rdf:resource="#port_pepConvertParams"/>
+                        <j.0:hasComponentSetCreationRule>
+                              <j.0:ComponentSetRule rdf:ID="PeptideDataConvertNode_crule">
+                                    <j.0:createWorkflowSets rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#boolean"
+                                    >true</j.0:createWorkflowSets>
+                                    <j.0:createSetsOn>
+                                          <j.0:ComponentVariable rdf:ID="PeptideDataConvertNode_component">
+                                                <j.0:hasComponentBinding rdf:resource="../components/library.owl#PeptideDataConvert"/>
+                                          </j.0:ComponentVariable>
+                                    </j.0:createSetsOn>
+                              </j.0:ComponentSetRule>
+                        </j.0:hasComponentSetCreationRule>
+                        <j.0:hasComponent rdf:resource="#PeptideDataConvertNode_component"/>
+                        <rdfs:comment>center:x=809.2071685791017,y=249.97057628631592</rdfs:comment>
+                  </j.0:Node>
+            </j.0:hasNode>
+            <j.0:hasOutputRole>
+                  <j.0:Role rdf:ID="ref_mergedPepFile_redone_orole">
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                        <j.0:hasRoleID>ref_mergedPepFile_redone</j.0:hasRoleID>
+                        <j.0:mapsToVariable rdf:resource="#ref_mergedPepFile_redone"/>
+                  </j.0:Role>
+            </j.0:hasOutputRole>
+            <j.0:hasLink>
+                  <j.0:OutputLink rdf:ID="ProteinDataConvert_node1_protConvertLog_output">
+                        <j.0:hasVariable>
+                              <j.0:DataVariable rdf:ID="ref_protConvertLogWithGene">
+                                    <rdfs:comment>center:x=330.69664459228517,y=1496.6611232757568</rdfs:comment>
+                              </j.0:DataVariable>
+                        </j.0:hasVariable>
+                        <j.0:hasOriginPort>
+                              <j.0:Port rdf:ID="ProteinDataConvert_node1_protConvertLog">
+                                    <j.0:satisfiesRole>
+                                          <rdf:Description rdf:ID="ProteinDataConvert_node1_protConvertLog_role">
+                                                <j.0:hasRoleID
+                                                >protConvertLog</j.0:hasRoleID>
+                                                <j.0:hasDimensionality
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#integer"
+                                                >0</j.0:hasDimensionality>
+                                          </rdf:Description>
+                                    </j.0:satisfiesRole>
+                              </j.0:Port>
+                        </j.0:hasOriginPort>
+                        <j.0:hasOriginNode>
+                              <j.0:Node rdf:ID="ProteinDataConvert_node1">
+                                    <j.0:hasOutputPort>
+                                          <j.0:Port rdf:ID="ProteinDataConvert_node1_protConvertSpectra">
+                                                <j.0:satisfiesRole>
+                                                      <rdf:Description rdf:ID="ProteinDataConvert_node1_protConvertSpectra_role">
+                                                            <j.0:hasRoleID
+                                                            >protConvertSpectra</j.0:hasRoleID>
+                                                            <j.0:hasDimensionality
+                                                             rdf:datatype=
+                                                            "http://www.w3.org/2001/XMLSchema#integer"
+                                                            >0</j.0:hasDimensionality>
+                                                      </rdf:Description>
+                                                </j.0:satisfiesRole>
+                                          </j.0:Port>
+                                    </j.0:hasOutputPort>
+                                    <j.0:hasComponentSetCreationRule>
+                                          <j.0:ComponentSetRule rdf:ID="ProteinDataConvert_node1_crule">
+                                                <j.0:createWorkflowSets
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#boolean"
+                                                >true</j.0:createWorkflowSets>
+                                                <j.0:createSetsOn>
+                                                      <j.0:ComponentVariable rdf:ID="ProteinDataConvert_node1_comp">
+                                                            <j.0:hasComponentBinding rdf:resource="../components/library.owl#ProteinDataConvert"/>
+                                                      </j.0:ComponentVariable>
+                                                </j.0:createSetsOn>
+                                          </j.0:ComponentSetRule>
+                                    </j.0:hasComponentSetCreationRule>
+                                    <j.0:hasInputPort>
+                                          <j.0:Port rdf:ID="ProteinDataConvert_node1_protSpectra">
+                                                <j.0:satisfiesRole>
+                                                      <rdf:Description rdf:ID="ProteinDataConvert_node1_protSpectra_role">
+                                                            <j.0:hasRoleID
+                                                            >protSpectra</j.0:hasRoleID>
+                                                            <j.0:hasDimensionality
+                                                             rdf:datatype=
+                                                            "http://www.w3.org/2001/XMLSchema#integer"
+                                                            >0</j.0:hasDimensionality>
+                                                      </rdf:Description>
+                                                </j.0:satisfiesRole>
+                                          </j.0:Port>
+                                    </j.0:hasInputPort>
+                                    <rdfs:comment>center:x=451.6984111785889,y=1423.3257608413696</rdfs:comment>
+                                    <j.0:hasInputPort>
+                                          <j.0:Port rdf:ID="ProteinDataConvert_node1_pepSpectra">
+                                                <j.0:satisfiesRole>
+                                                      <rdf:Description rdf:ID="ProteinDataConvert_node1_pepSpectra_role">
+                                                            <j.0:hasRoleID
+                                                            >pepSpectra</j.0:hasRoleID>
+                                                            <j.0:hasDimensionality
+                                                             rdf:datatype=
+                                                            "http://www.w3.org/2001/XMLSchema#integer"
+                                                            >0</j.0:hasDimensionality>
+                                                      </rdf:Description>
+                                                </j.0:satisfiesRole>
+                                          </j.0:Port>
+                                    </j.0:hasInputPort>
+                                    <j.0:hasOutputPort rdf:resource="#ProteinDataConvert_node1_protConvertLog"/>
+                                    <j.0:hasInputPort>
+                                          <j.0:Port rdf:ID="ProteinDataConvert_node1_protConvertParams">
+                                                <j.0:satisfiesRole>
+                                                      <rdf:Description rdf:ID="ProteinDataConvert_node1_protConvertParams_role">
+                                                            <j.0:hasRoleID
+                                                            >protConvertParams</j.0:hasRoleID>
+                                                            <j.0:hasDimensionality
+                                                             rdf:datatype=
+                                                            "http://www.w3.org/2001/XMLSchema#integer"
+                                                            >0</j.0:hasDimensionality>
+                                                      </rdf:Description>
+                                                </j.0:satisfiesRole>
+                                          </j.0:Port>
+                                    </j.0:hasInputPort>
+                                    <j.0:hasComponent rdf:resource="#ProteinDataConvert_node1_comp"/>
+                                    <j.0:hasPortSetCreationRule>
+                                          <j.0:PortSetRule rdf:ID="ProteinDataConvert_node1_prule">
+                                                <j.0:createComponentSets
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#boolean"
+                                                >true</j.0:createComponentSets>
+                                                <j.0:createSetsOn>
+                                                      <j.0:XProduct rdf:ID="_xprod-ce991883-bd8a-413b-a1be-a099c45a72a0">
+                                                            <j.0:hasExpressionArgument rdf:resource="#ProteinDataConvert_node1_protSpectra"/>
+                                                            <j.0:hasExpressionArgument rdf:resource="#ProteinDataConvert_node1_protConvertParams"/>
+                                                            <j.0:hasExpressionArgument>
+                                                            
+      <j.0:Port rdf:ID="ProteinDataConvert_node1_fastaFile">
+            <j.0:satisfiesRole>
+                  <rdf:Description rdf:ID="ProteinDataConvert_node1_fastaFile_role">
+                        <j.0:hasRoleID>fastaFile</j.0:hasRoleID>
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >1</j.0:hasDimensionality>
+                  </rdf:Description>
+            </j.0:satisfiesRole>
+      </j.0:Port>                                           </j.0:hasExpressionArgument>
+                                                            <j.0:hasExpressionArgument rdf:resource="#ProteinDataConvert_node1_pepSpectra"/>
+                                                      </j.0:XProduct>
+                                                </j.0:createSetsOn>
+                                          </j.0:PortSetRule>
+                                    </j.0:hasPortSetCreationRule>
+                                    <j.0:hasInputPort rdf:resource="#ProteinDataConvert_node1_fastaFile"/>
+                              </j.0:Node>
+                        </j.0:hasOriginNode>
+                  </j.0:OutputLink>
+            </j.0:hasLink>
+            <j.0:hasLink>
+                  <j.0:InOutLink rdf:ID="ref_searchResults_port_pepSearchResults_port_pepFile">
+                        <j.0:hasVariable>
+                              <j.0:DataVariable rdf:ID="ref_searchResults">
+                                    <rdfs:comment>center:x=373.59927558898926,y=176.67455577850342</rdfs:comment>
+                              </j.0:DataVariable>
+                        </j.0:hasVariable>
+                        <j.0:hasOriginPort>
+                              <j.0:Port rdf:ID="port_pepSearchResults">
+                                    <j.0:satisfiesRole>
+                                          <rdf:Description rdf:ID="port_pepSearchResults_role">
+                                                <j.0:hasRoleID
+                                                >pepSearchResults</j.0:hasRoleID>
+                                                <j.0:hasDimensionality
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#integer"
+                                                >0</j.0:hasDimensionality>
+                                          </rdf:Description>
+                                    </j.0:satisfiesRole>
+                              </j.0:Port>
+                        </j.0:hasOriginPort>
+                        <j.0:hasOriginNode>
+                              <j.0:Node rdf:ID="PeptideSearchNode">
+                                    <j.0:hasComponentSetCreationRule>
+                                          <j.0:ComponentSetRule rdf:ID="PeptideSearchNode_crule">
+                                                <j.0:createWorkflowSets
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#boolean"
+                                                >true</j.0:createWorkflowSets>
+                                                <j.0:createSetsOn>
+                                                      <j.0:ComponentVariable rdf:ID="PeptideSearchNode_component">
+                                                            <j.0:hasComponentBinding rdf:resource="../components/library.owl#PeptideSearch"/>
+                                                      </j.0:ComponentVariable>
+                                                </j.0:createSetsOn>
+                                          </j.0:ComponentSetRule>
+                                    </j.0:hasComponentSetCreationRule>
+                                    <j.0:hasInputPort>
+                                          <j.0:Port rdf:ID="port_spectraFile">
+                                                <j.0:satisfiesRole>
+                                                      <rdf:Description rdf:ID="port_spectraFile_role">
+                                                            <j.0:hasRoleID
+                                                            >spectraFile</j.0:hasRoleID>
+                                                            <j.0:hasDimensionality
+                                                             rdf:datatype=
+                                                            "http://www.w3.org/2001/XMLSchema#integer"
+                                                            >0</j.0:hasDimensionality>
+                                                      </rdf:Description>
+                                                </j.0:satisfiesRole>
+                                          </j.0:Port>
+                                    </j.0:hasInputPort>
+                                    <j.0:hasOutputPort>
+                                          <j.0:Port rdf:ID="port_pepsearchLog">
+                                                <j.0:satisfiesRole>
+                                                      <rdf:Description rdf:ID="port_pepsearchLog_role">
+                                                            <j.0:hasRoleID
+                                                            >pepsearchLog</j.0:hasRoleID>
+                                                            <j.0:hasDimensionality
+                                                             rdf:datatype=
+                                                            "http://www.w3.org/2001/XMLSchema#integer"
+                                                            >0</j.0:hasDimensionality>
+                                                      </rdf:Description>
+                                                </j.0:satisfiesRole>
+                                          </j.0:Port>
+                                    </j.0:hasOutputPort>
+                                    <j.0:hasOutputPort rdf:resource="#port_pepSearchResults"/>
+                                    <j.0:hasOutputPort>
+                                          <j.0:Port rdf:ID="port_pepSearchFinalParams">
+                                                <j.0:satisfiesRole>
+                                                      <rdf:Description rdf:ID="port_pepSearchFinalParams_role">
+                                                            <j.0:hasRoleID
+                                                            >pepSearchFinalParams</j.0:hasRoleID>
+                                                            <j.0:hasDimensionality
+                                                             rdf:datatype=
+                                                            "http://www.w3.org/2001/XMLSchema#integer"
+                                                            >0</j.0:hasDimensionality>
+                                                      </rdf:Description>
+                                                </j.0:satisfiesRole>
+                                          </j.0:Port>
+                                    </j.0:hasOutputPort>
+                                    <rdfs:comment>center:x=472.5992755889893,y=103.33056163787842</rdfs:comment>
+                                    <j.0:hasInputPort>
+                                          <j.0:Port rdf:ID="port_protSeqDBFile">
+                                                <j.0:satisfiesRole>
+                                                      <rdf:Description rdf:ID="port_protSeqDBFile_role">
+                                                            <j.0:hasRoleID
+                                                            >protSeqDBFile</j.0:hasRoleID>
+                                                            <j.0:hasDimensionality
+                                                             rdf:datatype=
+                                                            "http://www.w3.org/2001/XMLSchema#integer"
+                                                            >0</j.0:hasDimensionality>
+                                                      </rdf:Description>
+                                                </j.0:satisfiesRole>
+                                          </j.0:Port>
+                                    </j.0:hasInputPort>
+                                    <j.0:hasPortSetCreationRule>
+                                          <j.0:PortSetRule rdf:ID="PeptideSearchNode_prule">
+                                                <j.0:createComponentSets
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#boolean"
+                                                >true</j.0:createComponentSets>
+                                                <j.0:createSetsOn>
+                                                      <j.0:XProduct rdf:ID="_xprod-66558b7a-9b17-455f-99a3-7059290a15c2">
+                                                            <j.0:hasExpressionArgument rdf:resource="#port_spectraFile"/>
+                                                            <j.0:hasExpressionArgument>
+                                                            
+      <j.0:Port rdf:ID="port_pepSearchParams">
+            <j.0:satisfiesRole>
+                  <rdf:Description rdf:ID="port_pepSearchParams_role">
+                        <j.0:hasRoleID>pepSearchParams</j.0:hasRoleID>
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                  </rdf:Description>
+            </j.0:satisfiesRole>
+      </j.0:Port>                                           </j.0:hasExpressionArgument>
+                                                            <j.0:hasExpressionArgument rdf:resource="#port_protSeqDBFile"/>
+                                                      </j.0:XProduct>
+                                                </j.0:createSetsOn>
+                                          </j.0:PortSetRule>
+                                    </j.0:hasPortSetCreationRule>
+                                    <j.0:hasComponent rdf:resource="#PeptideSearchNode_component"/>
+                                    <j.0:hasInputPort rdf:resource="#port_pepSearchParams"/>
+                              </j.0:Node>
+                        </j.0:hasOriginNode>
+                        <j.0:hasDestinationPort rdf:resource="#port_pepFile"/>
+                        <j.0:hasDestinationNode rdf:resource="#PeptideDataConvertNode"/>
+                  </j.0:InOutLink>
+            </j.0:hasLink>
+            <j.0:hasLink>
+                  <j.0:OutputLink rdf:ID="ProteinDataConvert_node_protConvertLog_output">
+                        <j.0:hasVariable>
+                              <j.0:DataVariable rdf:ID="ref_protConvertLog">
+                                    <rdfs:comment>center:x=112.89664459228517,y=1349.9961576461792</rdfs:comment>
+                              </j.0:DataVariable>
+                        </j.0:hasVariable>
+                        <j.0:hasOriginPort rdf:resource="#ProteinDataConvert_node_protConvertLog"/>
+                        <j.0:hasOriginNode rdf:resource="#ProteinDataConvert_node"/>
+                  </j.0:OutputLink>
+            </j.0:hasLink>
+            <j.0:hasOutputRole>
+                  <j.0:Role rdf:ID="ref_mergedProtFile_redone_orole">
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                        <j.0:hasRoleID>ref_mergedProtFile_redone</j.0:hasRoleID>
+                        <j.0:mapsToVariable>
+                              <j.0:DataVariable rdf:ID="ref_mergedProtFile_redone">
+                                    <rdfs:comment>center:x=523.2001777648926,y=1203.3273725509644</rdfs:comment>
+                              </j.0:DataVariable>
+                        </j.0:mapsToVariable>
+                  </j.0:Role>
+            </j.0:hasOutputRole>
+            <j.0:hasLink>
+                  <j.0:OutputLink rdf:ID="ProteinAssembly_node_mergedProtFile_output">
+                        <j.0:hasVariable>
+                              <j.0:DataVariable rdf:ID="ref_mergedProtFile">
+                                    <rdfs:comment>center:x=603.501042175293,y=616.6425733566284</rdfs:comment>
+                              </j.0:DataVariable>
+                        </j.0:hasVariable>
+                        <j.0:hasOriginPort rdf:resource="#ProteinAssembly_node_mergedProtFile"/>
+                        <j.0:hasOriginNode rdf:resource="#ProteinAssembly_node"/>
+                  </j.0:OutputLink>
+            </j.0:hasLink>
+            <j.0:hasNode>
+                  <j.0:Node rdf:ID="idpQonvert_itraq_node">
+                        <j.0:hasPortSetCreationRule>
+                              <j.0:PortSetRule rdf:ID="idpQonvert_itraq_node_prule">
+                                    <j.0:createComponentSets rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#boolean"
+                                    >true</j.0:createComponentSets>
+                                    <j.0:createSetsOn>
+                                          <j.0:XProduct rdf:ID="_xprod-6e69a328-54ce-4c7b-9176-c46ecce66eae">
+                                                <j.0:hasExpressionArgument>
+                                                      <j.0:Port rdf:ID="idpQonvert_itraq_node_pepFile">
+                                                            <j.0:satisfiesRole>
+                                                            
+      <rdf:Description rdf:ID="idpQonvert_itraq_node_pepFile_role">
+            <j.0:hasRoleID>pepFile</j.0:hasRoleID>
+            <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+            >0</j.0:hasDimensionality>
+      </rdf:Description>                                    </j.0:satisfiesRole>
+                                                      </j.0:Port>
+                                                </j.0:hasExpressionArgument>
+                                                <j.0:hasExpressionArgument>
+                                                      <j.0:Port rdf:ID="idpQonvert_itraq_node_protSeqDB">
+                                                            <j.0:satisfiesRole>
+                                                            
+      <rdf:Description rdf:ID="idpQonvert_itraq_node_protSeqDB_role">
+            <j.0:hasRoleID>protSeqDB</j.0:hasRoleID>
+            <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+            >0</j.0:hasDimensionality>
+      </rdf:Description>                                    </j.0:satisfiesRole>
+                                                      </j.0:Port>
+                                                </j.0:hasExpressionArgument>
+                                                <j.0:hasExpressionArgument>
+                                                      <j.0:Port rdf:ID="idpQonvert_itraq_node_pepConvertParams">
+                                                            <j.0:satisfiesRole>
+                                                            
+      <rdf:Description rdf:ID="idpQonvert_itraq_node_pepConvertParams_role">
+            <j.0:hasRoleID>pepConvertParams</j.0:hasRoleID>
+            <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+            >0</j.0:hasDimensionality>
+      </rdf:Description>                                    </j.0:satisfiesRole>
+                                                      </j.0:Port>
+                                                </j.0:hasExpressionArgument>
+                                                <j.0:hasExpressionArgument>
+                                                      <j.0:Port rdf:ID="idpQonvert_itraq_node_spectraFile">
+                                                            <j.0:satisfiesRole>
+                                                            
+      <rdf:Description rdf:ID="idpQonvert_itraq_node_spectraFile_role">
+            <j.0:hasRoleID>spectraFile</j.0:hasRoleID>
+            <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+            >1</j.0:hasDimensionality>
+      </rdf:Description>                                    </j.0:satisfiesRole>
+                                                      </j.0:Port>
+                                                </j.0:hasExpressionArgument>
+                                          </j.0:XProduct>
+                                    </j.0:createSetsOn>
+                              </j.0:PortSetRule>
+                        </j.0:hasPortSetCreationRule>
+                        <j.0:hasInputPort rdf:resource="#idpQonvert_itraq_node_spectraFile"/>
+                        <j.0:hasComponentSetCreationRule>
+                              <j.0:ComponentSetRule rdf:ID="idpQonvert_itraq_node_crule">
+                                    <j.0:createWorkflowSets rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#boolean"
+                                    >true</j.0:createWorkflowSets>
+                                    <j.0:createSetsOn>
+                                          <j.0:ComponentVariable rdf:ID="idpQonvert_itraq_node_comp">
+                                                <j.0:isConcrete
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#boolean"
+                                                >true</j.0:isConcrete>
+                                                <j.0:hasComponentBinding rdf:resource="../components/library.owl#idpQonvert_itraq"/>
+                                          </j.0:ComponentVariable>
+                                    </j.0:createSetsOn>
+                              </j.0:ComponentSetRule>
+                        </j.0:hasComponentSetCreationRule>
+                        <j.0:hasInputPort rdf:resource="#idpQonvert_itraq_node_protSeqDB"/>
+                        <j.0:hasInputPort rdf:resource="#idpQonvert_itraq_node_pepFile"/>
+                        <j.0:hasInputPort rdf:resource="#idpQonvert_itraq_node_pepConvertParams"/>
+                        <rdfs:comment>center:x=450.59750900268557,y=689.9865674972534</rdfs:comment>
+                        <j.0:hasComponent rdf:resource="#idpQonvert_itraq_node_comp"/>
+                        <j.0:hasOutputPort>
+                              <j.0:Port rdf:ID="idpQonvert_itraq_node_pepConvertSpectra">
+                                    <j.0:satisfiesRole>
+                                          <rdf:Description rdf:ID="idpQonvert_itraq_node_pepConvertSpectra_role">
+                                                <j.0:hasRoleID
+                                                >pepConvertSpectra</j.0:hasRoleID>
+                                                <j.0:hasDimensionality
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#integer"
+                                                >0</j.0:hasDimensionality>
+                                          </rdf:Description>
+                                    </j.0:satisfiesRole>
+                              </j.0:Port>
+                        </j.0:hasOutputPort>
+                  </j.0:Node>
+            </j.0:hasNode>
+            <j.0:hasOutputRole>
+                  <j.0:Role rdf:ID="pepConvertSpectra_orole">
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                        <j.0:hasRoleID>pepConvertSpectra</j.0:hasRoleID>
+                        <j.0:mapsToVariable>
+                              <j.0:DataVariable rdf:ID="pepConvertSpectra">
+                                    <rdfs:comment>center:x=508.8966445922852,y=470.0025587081909</rdfs:comment>
+                              </j.0:DataVariable>
+                        </j.0:mapsToVariable>
+                  </j.0:Role>
+            </j.0:hasOutputRole>
+            <j.0:hasNode rdf:resource="#ProteinAssembly_node"/>
+            <j.0:hasLink>
+                  <j.0:OutputLink rdf:ID="idpQonvert_node1_pepConvertSpectra_output">
+                        <j.0:hasVariable>
+                              <j.0:DataVariable rdf:ID="prot_withGeneData">
+                                    <rdfs:comment>center:x=837.798373413086,y=1349.9961576461792</rdfs:comment>
+                              </j.0:DataVariable>
+                        </j.0:hasVariable>
+                        <j.0:hasOriginPort>
+                              <j.0:Port rdf:ID="idpQonvert_node1_pepConvertSpectra">
+                                    <j.0:satisfiesRole>
+                                          <rdf:Description rdf:ID="idpQonvert_node1_pepConvertSpectra_role">
+                                                <j.0:hasRoleID
+                                                >pepConvertSpectra</j.0:hasRoleID>
+                                                <j.0:hasDimensionality
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#integer"
+                                                >0</j.0:hasDimensionality>
+                                          </rdf:Description>
+                                    </j.0:satisfiesRole>
+                              </j.0:Port>
+                        </j.0:hasOriginPort>
+                        <j.0:hasOriginNode>
+                              <j.0:Node rdf:ID="idpQonvert_node1">
+                                    <rdfs:comment>center:x=963.1719879150392,y=1276.66175365448</rdfs:comment>
+                                    <j.0:hasInputPort>
+                                          <j.0:Port rdf:ID="idpQonvert_node1_pepFile">
+                                                <j.0:satisfiesRole>
+                                                      <rdf:Description rdf:ID="idpQonvert_node1_pepFile_role">
+                                                            <j.0:hasRoleID
+                                                            >pepFile</j.0:hasRoleID>
+                                                            <j.0:hasDimensionality
+                                                             rdf:datatype=
+                                                            "http://www.w3.org/2001/XMLSchema#integer"
+                                                            >0</j.0:hasDimensionality>
+                                                      </rdf:Description>
+                                                </j.0:satisfiesRole>
+                                          </j.0:Port>
+                                    </j.0:hasInputPort>
+                                    <j.0:hasInputPort>
+                                          <j.0:Port rdf:ID="idpQonvert_node1_protSeqDB">
+                                                <j.0:satisfiesRole>
+                                                      <rdf:Description rdf:ID="idpQonvert_node1_protSeqDB_role">
+                                                            <j.0:hasRoleID
+                                                            >protSeqDB</j.0:hasRoleID>
+                                                            <j.0:hasDimensionality
+                                                             rdf:datatype=
+                                                            "http://www.w3.org/2001/XMLSchema#integer"
+                                                            >0</j.0:hasDimensionality>
+                                                      </rdf:Description>
+                                                </j.0:satisfiesRole>
+                                          </j.0:Port>
+                                    </j.0:hasInputPort>
+                                    <j.0:hasInputPort>
+                                          <j.0:Port rdf:ID="idpQonvert_node1_spectraFile">
+                                                <j.0:satisfiesRole>
+                                                      <rdf:Description rdf:ID="idpQonvert_node1_spectraFile_role">
+                                                            <j.0:hasRoleID
+                                                            >spectraFile</j.0:hasRoleID>
+                                                            <j.0:hasDimensionality
+                                                             rdf:datatype=
+                                                            "http://www.w3.org/2001/XMLSchema#integer"
+                                                            >0</j.0:hasDimensionality>
+                                                      </rdf:Description>
+                                                </j.0:satisfiesRole>
+                                          </j.0:Port>
+                                    </j.0:hasInputPort>
+                                    <j.0:hasComponentSetCreationRule>
+                                          <j.0:ComponentSetRule rdf:ID="idpQonvert_node1_crule">
+                                                <j.0:createWorkflowSets
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#boolean"
+                                                >true</j.0:createWorkflowSets>
+                                                <j.0:createSetsOn>
+                                                      <j.0:ComponentVariable rdf:ID="idpQonvert_node1_comp">
+                                                            <j.0:isConcrete
+                                                             rdf:datatype=
+                                                            "http://www.w3.org/2001/XMLSchema#boolean"
+                                                            >true</j.0:isConcrete>
+                                                            <j.0:hasComponentBinding rdf:resource="../components/library.owl#idpQonvert"/>
+                                                      </j.0:ComponentVariable>
+                                                </j.0:createSetsOn>
+                                          </j.0:ComponentSetRule>
+                                    </j.0:hasComponentSetCreationRule>
+                                    <j.0:hasInputPort>
+                                          <j.0:Port rdf:ID="idpQonvert_node1_pepConvertParams">
+                                                <j.0:satisfiesRole>
+                                                      <rdf:Description rdf:ID="idpQonvert_node1_pepConvertParams_role">
+                                                            <j.0:hasRoleID
+                                                            >pepConvertParams</j.0:hasRoleID>
+                                                            <j.0:hasDimensionality
+                                                             rdf:datatype=
+                                                            "http://www.w3.org/2001/XMLSchema#integer"
+                                                            >0</j.0:hasDimensionality>
+                                                      </rdf:Description>
+                                                </j.0:satisfiesRole>
+                                          </j.0:Port>
+                                    </j.0:hasInputPort>
+                                    <j.0:hasPortSetCreationRule>
+                                          <j.0:PortSetRule rdf:ID="idpQonvert_node1_prule">
+                                                <j.0:createComponentSets
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#boolean"
+                                                >true</j.0:createComponentSets>
+                                                <j.0:createSetsOn>
+                                                      <j.0:XProduct rdf:ID="_xprod-cf2a74ff-50f4-4138-a04b-2d1eb94dd559">
+                                                            <j.0:hasExpressionArgument rdf:resource="#idpQonvert_node1_pepConvertParams"/>
+                                                            <j.0:hasExpressionArgument rdf:resource="#idpQonvert_node1_protSeqDB"/>
+                                                            <j.0:hasExpressionArgument rdf:resource="#idpQonvert_node1_spectraFile"/>
+                                                            <j.0:hasExpressionArgument rdf:resource="#idpQonvert_node1_pepFile"/>
+                                                      </j.0:XProduct>
+                                                </j.0:createSetsOn>
+                                          </j.0:PortSetRule>
+                                    </j.0:hasPortSetCreationRule>
+                                    <j.0:hasOutputPort rdf:resource="#idpQonvert_node1_pepConvertSpectra"/>
+                                    <j.0:hasComponent rdf:resource="#idpQonvert_node1_comp"/>
+                              </j.0:Node>
+                        </j.0:hasOriginNode>
+                  </j.0:OutputLink>
+            </j.0:hasLink>
+            <j.0:hasLink>
+                  <j.0:InputLink rdf:ID="ProteinAssembly_node2_sampleIDs_input">
+                        <j.0:hasVariable rdf:resource="#sampleIDs"/>
+                        <j.0:hasDestinationPort rdf:resource="#ProteinAssembly_node2_sampleIDs"/>
+                        <j.0:hasDestinationNode rdf:resource="#ProteinAssembly_node2"/>
+                  </j.0:InputLink>
+            </j.0:hasLink>
+            <j.0:hasInputRole>
+                  <j.0:Role rdf:ID="sampleIDs_irole">
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                        <j.0:hasRoleID>ProteinAssembly_node2_sampleIDs</j.0:hasRoleID>
+                        <j.0:mapsToVariable rdf:resource="#sampleIDs"/>
+                  </j.0:Role>
+            </j.0:hasInputRole>
+            <j.0:hasLink>
+                  <j.0:OutputLink rdf:ID="idpQonvert_node_pepConvertSpectra_output">
+                        <j.0:hasVariable rdf:resource="#pepConvertSpectra"/>
+                        <j.0:hasOriginPort>
+                              <j.0:Port rdf:ID="idpQonvert_node_pepConvertSpectra">
+                                    <j.0:satisfiesRole>
+                                          <rdf:Description rdf:ID="idpQonvert_node_pepConvertSpectra_role">
+                                                <j.0:hasRoleID
+                                                >pepConvertSpectra</j.0:hasRoleID>
+                                                <j.0:hasDimensionality
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#integer"
+                                                >0</j.0:hasDimensionality>
+                                          </rdf:Description>
+                                    </j.0:satisfiesRole>
+                              </j.0:Port>
+                        </j.0:hasOriginPort>
+                        <j.0:hasOriginNode>
+                              <j.0:Node rdf:ID="idpQonvert_node">
+                                    <j.0:hasPortSetCreationRule>
+                                          <j.0:PortSetRule rdf:ID="idpQonvert_node_prule">
+                                                <j.0:createComponentSets
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#boolean"
+                                                >true</j.0:createComponentSets>
+                                                <j.0:createSetsOn>
+                                                      <j.0:XProduct rdf:ID="_xprod-ab0b30e6-565a-4e32-a9c1-5e2824f9df50">
+                                                            <j.0:hasExpressionArgument>
+                                                            
+      <j.0:NWise rdf:ID="_nwise-9ebe639f-9ec0-4060-b00e-6fc88809895a">
+            <j.0:hasExpressionArgument>
+                  <j.0:Port rdf:ID="idpQonvert_node_pepFile">
+                        <j.0:satisfiesRole>
+                              <rdf:Description rdf:ID="idpQonvert_node_pepFile_role">
+                                    <j.0:hasRoleID>pepFile</j.0:hasRoleID>
+                                    <j.0:hasDimensionality rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#integer"
+                                    >0</j.0:hasDimensionality>
+                              </rdf:Description>
+                        </j.0:satisfiesRole>
+                  </j.0:Port>
+            </j.0:hasExpressionArgument>
+      </j.0:NWise>                                          </j.0:hasExpressionArgument>
+                                                            <j.0:hasExpressionArgument>
+                                                            
+      <j.0:Port rdf:ID="idpQonvert_node_pepConvertParams">
+            <j.0:satisfiesRole>
+                  <rdf:Description rdf:ID="idpQonvert_node_pepConvertParams_role">
+                        <j.0:hasRoleID>pepConvertParams</j.0:hasRoleID>
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                  </rdf:Description>
+            </j.0:satisfiesRole>
+      </j.0:Port>                                           </j.0:hasExpressionArgument>
+                                                            <j.0:hasExpressionArgument>
+                                                            
+      <j.0:Port rdf:ID="idpQonvert_node_spectraFile">
+            <j.0:satisfiesRole>
+                  <rdf:Description rdf:ID="idpQonvert_node_spectraFile_role">
+                        <j.0:hasRoleID>spectraFile</j.0:hasRoleID>
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                  </rdf:Description>
+            </j.0:satisfiesRole>
+      </j.0:Port>                                           </j.0:hasExpressionArgument>
+                                                            <j.0:hasExpressionArgument>
+                                                            
+      <j.0:Port rdf:ID="idpQonvert_node_protSeqDB">
+            <j.0:satisfiesRole>
+                  <rdf:Description rdf:ID="idpQonvert_node_protSeqDB_role">
+                        <j.0:hasRoleID>protSeqDB</j.0:hasRoleID>
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                  </rdf:Description>
+            </j.0:satisfiesRole>
+      </j.0:Port>                                           </j.0:hasExpressionArgument>
+                                                      </j.0:XProduct>
+                                                </j.0:createSetsOn>
+                                          </j.0:PortSetRule>
+                                    </j.0:hasPortSetCreationRule>
+                                    <j.0:hasComponent>
+                                          <j.0:ComponentVariable rdf:ID="idpQonvert_node_comp">
+                                                <j.0:isConcrete
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#boolean"
+                                                >true</j.0:isConcrete>
+                                                <j.0:hasComponentBinding rdf:resource="../components/library.owl#idpQonvert"/>
+                                          </j.0:ComponentVariable>
+                                    </j.0:hasComponent>
+                                    <rdfs:comment>center:x=659.5983734130859,y=396.6585645675659</rdfs:comment>
+                                    <j.0:hasInputPort rdf:resource="#idpQonvert_node_pepFile"/>
+                                    <j.0:hasInputPort rdf:resource="#idpQonvert_node_protSeqDB"/>
+                                    <j.0:hasComponentSetCreationRule>
+                                          <j.0:ComponentSetRule rdf:ID="idpQonvert_node_crule">
+                                                <j.0:createWorkflowSets
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#boolean"
+                                                >true</j.0:createWorkflowSets>
+                                                <j.0:createSetsOn rdf:resource="#idpQonvert_node_comp"/>
+                                          </j.0:ComponentSetRule>
+                                    </j.0:hasComponentSetCreationRule>
+                                    <j.0:hasInputPort rdf:resource="#idpQonvert_node_pepConvertParams"/>
+                                    <j.0:hasInputPort rdf:resource="#idpQonvert_node_spectraFile"/>
+                                    <j.0:hasOutputPort rdf:resource="#idpQonvert_node_pepConvertSpectra"/>
+                              </j.0:Node>
+                        </j.0:hasOriginNode>
+                  </j.0:OutputLink>
+            </j.0:hasLink>
+            <j.0:hasLink>
+                  <j.0:InputLink rdf:ID="ProteinAssembly_node_sampleIDs_input">
+                        <j.0:hasVariable rdf:resource="#sampleIDs"/>
+                        <j.0:hasDestinationPort rdf:resource="#ProteinAssembly_node_sampleIDs"/>
+                        <j.0:hasDestinationNode rdf:resource="#ProteinAssembly_node"/>
+                  </j.0:InputLink>
+            </j.0:hasLink>
+            <j.0:hasLink>
+                  <j.0:InputLink rdf:ID="ref_proteome_fasta_Input_To_port_protSeqDBFile">
+                        <j.0:hasVariable>
+                              <j.0:DataVariable rdf:ID="ref_proteome_fasta">
+                                    <rdfs:comment>center:x=672.801042175293,y=29.986567497253418</rdfs:comment>
+                              </j.0:DataVariable>
+                        </j.0:hasVariable>
+                        <j.0:hasDestinationPort rdf:resource="#port_protSeqDBFile"/>
+                        <j.0:hasDestinationNode rdf:resource="#PeptideSearchNode"/>
+                  </j.0:InputLink>
+            </j.0:hasLink>
+            <j.0:hasLink>
+                  <j.0:OutputLink rdf:ID="ProteinDataConvert_node1_protConvertSpectra_output">
+                        <j.0:hasVariable rdf:resource="#ref_protConvertSpectraWithGene"/>
+                        <j.0:hasOriginPort rdf:resource="#ProteinDataConvert_node1_protConvertSpectra"/>
+                        <j.0:hasOriginNode rdf:resource="#ProteinDataConvert_node1"/>
+                  </j.0:OutputLink>
+            </j.0:hasLink>
+            <j.0:hasOutputRole>
+                  <j.0:Role rdf:ID="protassemblyLog_redone_orole">
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                        <j.0:hasRoleID>protassemblyLog_redone</j.0:hasRoleID>
+                        <j.0:mapsToVariable>
+                              <j.0:DataVariable rdf:ID="protassemblyLog_redone">
+                                    <rdfs:comment>center:x=728.898373413086,y=1203.3273725509644</rdfs:comment>
+                              </j.0:DataVariable>
+                        </j.0:mapsToVariable>
+                  </j.0:Role>
+            </j.0:hasOutputRole>
+            <j.0:hasLink>
+                  <j.0:InputLink rdf:ID="idpQonvert_node1_protSeqDB_input">
+                        <j.0:hasVariable rdf:resource="#ref_proteome_fasta"/>
+                        <j.0:hasDestinationPort rdf:resource="#idpQonvert_node1_protSeqDB"/>
+                        <j.0:hasDestinationNode rdf:resource="#idpQonvert_node1"/>
+                  </j.0:InputLink>
+            </j.0:hasLink>
+            <j.0:hasLink>
+                  <j.0:InOutLink rdf:ID="idpQonvert_node1_pepConvertSpectra_to_ProteinDataConvert_node1_protSpectra">
+                        <j.0:hasVariable rdf:resource="#prot_withGeneData"/>
+                        <j.0:hasOriginPort rdf:resource="#idpQonvert_node1_pepConvertSpectra"/>
+                        <j.0:hasOriginNode rdf:resource="#idpQonvert_node1"/>
+                        <j.0:hasDestinationPort rdf:resource="#ProteinDataConvert_node1_protSpectra"/>
+                        <j.0:hasDestinationNode rdf:resource="#ProteinDataConvert_node1"/>
+                  </j.0:InOutLink>
+            </j.0:hasLink>
+            <j.0:hasLink>
+                  <j.0:InputLink rdf:ID="ProteinDataConvert_node_fastaFile_input">
+                        <j.0:hasVariable rdf:resource="#ref_proteome_fasta"/>
+                        <j.0:hasDestinationPort rdf:resource="#ProteinDataConvert_node_fastaFile"/>
+                        <j.0:hasDestinationNode rdf:resource="#ProteinDataConvert_node"/>
+                  </j.0:InputLink>
+            </j.0:hasLink>
+            <j.0:hasOutputRole>
+                  <j.0:Role rdf:ID="ref_protConvertLogWithGene_orole">
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                        <j.0:hasRoleID>ref_protConvertLogWithGene</j.0:hasRoleID>
+                        <j.0:mapsToVariable rdf:resource="#ref_protConvertLogWithGene"/>
+                  </j.0:Role>
+            </j.0:hasOutputRole>
+            <j.0:hasNode rdf:resource="#idpQonvert_node"/>
+            <j.0:hasOutputRole>
+                  <j.0:Role rdf:ID="prot_withGeneData_orole">
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                        <j.0:hasRoleID>prot_withGeneData</j.0:hasRoleID>
+                        <j.0:mapsToVariable rdf:resource="#prot_withGeneData"/>
+                  </j.0:Role>
+            </j.0:hasOutputRole>
+            <j.0:hasLink>
+                  <j.0:InputLink rdf:ID="idpQonvert_itraq_node_protSeqDB_input">
+                        <j.0:hasVariable rdf:resource="#ref_proteome_fasta"/>
+                        <j.0:hasDestinationPort rdf:resource="#idpQonvert_itraq_node_protSeqDB"/>
+                        <j.0:hasDestinationNode rdf:resource="#idpQonvert_itraq_node"/>
+                  </j.0:InputLink>
+            </j.0:hasLink>
+            <j.0:hasLink>
+                  <j.0:OutputLink rdf:ID="ProteinAssembly_node2_mergedProtFile_output">
+                        <j.0:hasVariable rdf:resource="#ref_mergedProtFile_withQuantData"/>
+                        <j.0:hasOriginPort rdf:resource="#ProteinAssembly_node2_mergedProtFile"/>
+                        <j.0:hasOriginNode rdf:resource="#ProteinAssembly_node2"/>
+                  </j.0:OutputLink>
+            </j.0:hasLink>
+            <j.0:hasLink>
+                  <j.0:InOutLink rdf:ID="DataQuery_node_editedFile_to_ProteinAssembly_node1_pepFile">
+                        <j.0:hasVariable>
+                              <j.0:DataVariable rdf:ID="ref_mergedProtFile_edited">
+                                    <rdfs:comment>center:x=515.5019065856934,y=1056.6633710861206</rdfs:comment>
+                              </j.0:DataVariable>
+                        </j.0:hasVariable>
+                        <j.0:hasOriginPort rdf:resource="#DataQuery_node_editedFile"/>
+                        <j.0:hasOriginNode rdf:resource="#DataQuery_node"/>
+                        <j.0:hasDestinationPort rdf:resource="#ProteinAssembly_node1_pepFile"/>
+                        <j.0:hasDestinationNode rdf:resource="#ProteinAssembly_node1"/>
+                  </j.0:InOutLink>
+            </j.0:hasLink>
+            <j.0:hasLink>
+                  <j.0:OutputLink rdf:ID="ProteinAssembly_node2_protassemblyLog_output">
+                        <j.0:hasVariable>
+                              <j.0:DataVariable rdf:ID="ref_protassemblyLog_withQuantData">
+                                    <rdfs:comment>center:x=741.0001777648927,y=909.9705762863159</rdfs:comment>
+                              </j.0:DataVariable>
+                        </j.0:hasVariable>
+                        <j.0:hasOriginPort rdf:resource="#ProteinAssembly_node2_protassemblyLog"/>
+                        <j.0:hasOriginNode rdf:resource="#ProteinAssembly_node2"/>
+                  </j.0:OutputLink>
+            </j.0:hasLink>
+            <j.0:hasLink>
+                  <j.0:OutputLink rdf:ID="ProteinDataConvert_node_protConvertSpectra_output">
+                        <j.0:hasVariable>
+                              <j.0:DataVariable rdf:ID="ref_protConvertSpectra">
+                                    <rdfs:comment>center:x=286.701042175293,y=1349.9961576461792</rdfs:comment>
+                              </j.0:DataVariable>
+                        </j.0:hasVariable>
+                        <j.0:hasOriginPort rdf:resource="#ProteinDataConvert_node_protConvertSpectra"/>
+                        <j.0:hasOriginNode rdf:resource="#ProteinDataConvert_node"/>
+                  </j.0:OutputLink>
+            </j.0:hasLink>
+            <j.0:hasLink>
+                  <j.0:InputLink rdf:ID="ProteinAssembly_node_protAssemblyParams_input">
+                        <j.0:hasVariable>
+                              <j.0:DataVariable rdf:ID="protAssemblyParams">
+                                    <rdfs:comment>center:x=672.801042175293,y=470.0025587081909</rdfs:comment>
+                              </j.0:DataVariable>
+                        </j.0:hasVariable>
+                        <j.0:hasDestinationPort rdf:resource="#ProteinAssembly_node_protAssemblyParams"/>
+                        <j.0:hasDestinationNode rdf:resource="#ProteinAssembly_node"/>
+                  </j.0:InputLink>
+            </j.0:hasLink>
+            <j.0:hasInputRole>
+                  <j.0:Role rdf:ID="protAssemblyParams_withQuantData_irole">
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                        <j.0:hasRoleID>ProteinAssembly_node2_protAssemblyParams</j.0:hasRoleID>
+                        <j.0:mapsToVariable>
+                              <j.0:DataVariable rdf:ID="protAssemblyParams_withQuantData">
+                                    <rdfs:comment>center:x=691.5001777648927,y=763.3305616378784</rdfs:comment>
+                              </j.0:DataVariable>
+                        </j.0:mapsToVariable>
+                  </j.0:Role>
+            </j.0:hasInputRole>
+            <j.0:hasLink>
+                  <j.0:InputLink rdf:ID="ProteinAssembly_node_protSeqDBFile_input">
+                        <j.0:hasVariable rdf:resource="#ref_proteome_fasta"/>
+                        <j.0:hasDestinationPort rdf:resource="#ProteinAssembly_node_protSeqDBFile"/>
+                        <j.0:hasDestinationNode rdf:resource="#ProteinAssembly_node"/>
+                  </j.0:InputLink>
+            </j.0:hasLink>
+            <j.0:hasInputRole>
+                  <j.0:Role rdf:ID="condFile_withQuantData_irole">
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                        <j.0:hasRoleID>ProteinAssembly_node2_condFile</j.0:hasRoleID>
+                        <j.0:mapsToVariable>
+                              <j.0:DataVariable rdf:ID="condFile_withQuantData">
+                                    <rdfs:comment>center:x=255.90015888214114,y=763.3305616378784</rdfs:comment>
+                              </j.0:DataVariable>
+                        </j.0:mapsToVariable>
+                  </j.0:Role>
+            </j.0:hasInputRole>
+            <j.0:hasLink>
+                  <j.0:InputLink rdf:ID="ProteinAssembly_node1_protAssemblyParams_input">
+                        <j.0:hasVariable>
+                              <j.0:DataVariable rdf:ID="protAssemblyParams_redone">
+                                    <rdfs:comment>center:x=792.7019065856935,y=1056.6633710861206</rdfs:comment>
+                              </j.0:DataVariable>
+                        </j.0:hasVariable>
+                        <j.0:hasDestinationPort rdf:resource="#ProteinAssembly_node1_protAssemblyParams"/>
+                        <j.0:hasDestinationNode rdf:resource="#ProteinAssembly_node1"/>
+                  </j.0:InputLink>
+            </j.0:hasLink>
+            <j.0:hasInputRole>
+                  <j.0:Role rdf:ID="condFile_irole">
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                        <j.0:hasRoleID>ProteinAssembly_node1_condFile</j.0:hasRoleID>
+                        <j.0:mapsToVariable rdf:resource="#condFile"/>
+                  </j.0:Role>
+            </j.0:hasInputRole>
+            <j.0:hasOutputRole>
+                  <j.0:Role rdf:ID="ref_searchLog_orole">
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                        <j.0:hasRoleID>ref_searchLog</j.0:hasRoleID>
+                        <j.0:mapsToVariable>
+                              <j.0:DataVariable rdf:ID="ref_searchLog">
+                                    <rdfs:comment>center:x=507.79574241638187,y=176.67455577850342</rdfs:comment>
+                              </j.0:DataVariable>
+                        </j.0:mapsToVariable>
+                  </j.0:Role>
+            </j.0:hasOutputRole>
+            <j.0:hasLink>
+                  <j.0:InOutLink rdf:ID="port_pepConvertSpectra_to_idpQonvert_node_pepFile">
+                        <j.0:hasVariable>
+                              <j.0:DataVariable rdf:ID="ref_pepConverted">
+                                    <rdfs:comment>center:x=847.698373413086,y=323.3145704269409</rdfs:comment>
+                              </j.0:DataVariable>
+                        </j.0:hasVariable>
+                        <j.0:hasOriginPort rdf:resource="#port_pepConvertSpectra"/>
+                        <j.0:hasOriginNode rdf:resource="#PeptideDataConvertNode"/>
+                        <j.0:hasDestinationPort rdf:resource="#idpQonvert_node_pepFile"/>
+                        <j.0:hasDestinationNode rdf:resource="#idpQonvert_node"/>
+                  </j.0:InOutLink>
+            </j.0:hasLink>
+            <j.0:hasLink>
+                  <j.0:InputLink rdf:ID="ProteinAssembly_node1_condFile_input">
+                        <j.0:hasVariable rdf:resource="#condFile"/>
+                        <j.0:hasDestinationPort rdf:resource="#ProteinAssembly_node1_condFile"/>
+                        <j.0:hasDestinationNode rdf:resource="#ProteinAssembly_node1"/>
+                  </j.0:InputLink>
+            </j.0:hasLink>
+            <j.0:hasNode rdf:resource="#idpQonvert_node1"/>
+            <j.0:hasOutputRole>
+                  <j.0:Role rdf:ID="ref_mergedProtFile_orole">
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                        <j.0:hasRoleID>ref_mergedProtFile</j.0:hasRoleID>
+                        <j.0:mapsToVariable rdf:resource="#ref_mergedProtFile"/>
+                  </j.0:Role>
+            </j.0:hasOutputRole>
+            <j.0:hasInputRole>
+                  <j.0:Role rdf:ID="idpQonvertParams_Quant_irole">
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                        <j.0:hasRoleID>idpQonvert_itraq_node_pepConvertParams</j.0:hasRoleID>
+                        <j.0:mapsToVariable>
+                              <j.0:DataVariable rdf:ID="idpQonvertParams_Quant">
+                                    <rdfs:comment>center:x=228.40192546844483,y=616.6425733566284</rdfs:comment>
+                              </j.0:DataVariable>
+                        </j.0:mapsToVariable>
+                  </j.0:Role>
+            </j.0:hasInputRole>
+            <j.0:hasLink>
+                  <j.0:InOutLink rdf:ID="ProteinAssembly_node1_mergedProtFile_to_idpQonvert_node1_pepFile">
+                        <j.0:hasVariable rdf:resource="#ref_mergedProtFile_redone"/>
+                        <j.0:hasOriginPort rdf:resource="#ProteinAssembly_node1_mergedProtFile"/>
+                        <j.0:hasOriginNode rdf:resource="#ProteinAssembly_node1"/>
+                        <j.0:hasDestinationPort rdf:resource="#idpQonvert_node1_pepFile"/>
+                        <j.0:hasDestinationNode rdf:resource="#idpQonvert_node1"/>
+                  </j.0:InOutLink>
+            </j.0:hasLink>
+            <j.0:hasNode rdf:resource="#DataQuery_node"/>
+            <j.0:hasLink>
+                  <j.0:InOutLink rdf:ID="port_pepConvertSpectra_to_ProteinAssembly_node2_spectraFile">
+                        <j.0:hasVariable rdf:resource="#ref_pepConverted"/>
+                        <j.0:hasOriginPort rdf:resource="#port_pepConvertSpectra"/>
+                        <j.0:hasOriginNode rdf:resource="#PeptideDataConvertNode"/>
+                        <j.0:hasDestinationPort rdf:resource="#ProteinAssembly_node2_spectraFile"/>
+                        <j.0:hasDestinationNode rdf:resource="#ProteinAssembly_node2"/>
+                  </j.0:InOutLink>
+            </j.0:hasLink>
+            <j.0:hasLink>
+                  <j.0:OutputLink rdf:ID="idpQonvert_itraq_node_pepConvertSpectra_output">
+                        <j.0:hasVariable>
+                              <j.0:DataVariable rdf:ID="ref_prot_withQuantData">
+                                    <rdfs:comment>center:x=451.6984111785889,y=763.3305616378784</rdfs:comment>
+                              </j.0:DataVariable>
+                        </j.0:hasVariable>
+                        <j.0:hasOriginPort rdf:resource="#idpQonvert_itraq_node_pepConvertSpectra"/>
+                        <j.0:hasOriginNode rdf:resource="#idpQonvert_itraq_node"/>
+                  </j.0:OutputLink>
+            </j.0:hasLink>
+            <j.0:hasOutputRole>
+                  <j.0:Role rdf:ID="ref_protConvertSpectra_orole">
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                        <j.0:hasRoleID>ref_protConvertSpectra</j.0:hasRoleID>
+                        <j.0:mapsToVariable rdf:resource="#ref_protConvertSpectra"/>
+                  </j.0:Role>
+            </j.0:hasOutputRole>
+            <j.0:hasNode rdf:resource="#ProteinAssembly_node1"/>
+            <j.0:hasLink>
+                  <j.0:InputLink rdf:ID="pepConvertParams_Input_To_port_pepConvertParams">
+                        <j.0:hasVariable>
+                              <j.0:DataVariable rdf:ID="pepConvertParams">
+                                    <rdfs:comment>center:x=775.0957801818848,y=176.67455577850342</rdfs:comment>
+                              </j.0:DataVariable>
+                        </j.0:hasVariable>
+                        <j.0:hasDestinationPort rdf:resource="#port_pepConvertParams"/>
+                        <j.0:hasDestinationNode rdf:resource="#PeptideDataConvertNode"/>
+                  </j.0:InputLink>
+            </j.0:hasLink>
+            <j.0:hasLink>
+                  <j.0:OutputLink rdf:ID="port_pepConvertSpectra_output">
+                        <j.0:hasVariable rdf:resource="#ref_pepConverted"/>
+                        <j.0:hasOriginPort rdf:resource="#port_pepConvertSpectra"/>
+                        <j.0:hasOriginNode rdf:resource="#PeptideDataConvertNode"/>
+                  </j.0:OutputLink>
+            </j.0:hasLink>
+            <j.0:hasLink>
+                  <j.0:InputLink rdf:ID="idpQonvert_node_pepConvertParams_input">
+                        <j.0:hasVariable>
+                              <j.0:DataVariable rdf:ID="idpQonvertParams">
+                                    <rdfs:comment>center:x=586.9957424163819,y=323.3145704269409</rdfs:comment>
+                              </j.0:DataVariable>
+                        </j.0:hasVariable>
+                        <j.0:hasDestinationPort rdf:resource="#idpQonvert_node_pepConvertParams"/>
+                        <j.0:hasDestinationNode rdf:resource="#idpQonvert_node"/>
+                  </j.0:InputLink>
+            </j.0:hasLink>
+            <j.0:hasLink>
+                  <j.0:InputLink rdf:ID="ProteinAssembly_node2_condFile_input">
+                        <j.0:hasVariable rdf:resource="#condFile_withQuantData"/>
+                        <j.0:hasDestinationPort rdf:resource="#ProteinAssembly_node2_condFile"/>
+                        <j.0:hasDestinationNode rdf:resource="#ProteinAssembly_node2"/>
+                  </j.0:InputLink>
+            </j.0:hasLink>
+            <j.0:hasLink>
+                  <j.0:InputLink rdf:ID="pepSearchParams_Input_To_port_pepSearchParams">
+                        <j.0:hasVariable>
+                              <j.0:DataVariable rdf:ID="pepSearchParams">
+                                    <rdfs:comment>center:x=438.49574241638186,y=29.986567497253418</rdfs:comment>
+                              </j.0:DataVariable>
+                        </j.0:hasVariable>
+                        <j.0:hasDestinationPort rdf:resource="#port_pepSearchParams"/>
+                        <j.0:hasDestinationNode rdf:resource="#PeptideSearchNode"/>
+                  </j.0:InputLink>
+            </j.0:hasLink>
+            <j.0:hasInputRole>
+                  <j.0:Role rdf:ID="ref_proteome_fasta_irole">
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >1</j.0:hasDimensionality>
+                        <j.0:hasRoleID>ProteinAssembly_node2_protSeqDBFile</j.0:hasRoleID>
+                        <j.0:mapsToVariable rdf:resource="#ref_proteome_fasta"/>
+                  </j.0:Role>
+            </j.0:hasInputRole>
+            <j.0:hasLink>
+                  <j.0:OutputLink rdf:ID="ProteinAssembly_node_mergedPepFile_output">
+                        <j.0:hasVariable rdf:resource="#ref_mergedPepFile"/>
+                        <j.0:hasOriginPort rdf:resource="#ProteinAssembly_node_mergedPepFile"/>
+                        <j.0:hasOriginNode rdf:resource="#ProteinAssembly_node"/>
+                  </j.0:OutputLink>
+            </j.0:hasLink>
+            <j.0:hasInputRole>
+                  <j.0:Role rdf:ID="idpQonvertParams_irole">
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                        <j.0:hasRoleID>idpQonvert_node_pepConvertParams</j.0:hasRoleID>
+                        <j.0:mapsToVariable rdf:resource="#idpQonvertParams"/>
+                  </j.0:Role>
+            </j.0:hasInputRole>
+            <j.0:hasLink>
+                  <j.0:OutputLink rdf:ID="ref_searchLog_port_pepsearchLog_Output">
+                        <j.0:hasVariable rdf:resource="#ref_searchLog"/>
+                        <j.0:hasOriginPort rdf:resource="#port_pepsearchLog"/>
+                        <j.0:hasOriginNode rdf:resource="#PeptideSearchNode"/>
+                  </j.0:OutputLink>
+            </j.0:hasLink>
+            <j.0:hasMetadata>
+                  <j.0:Metadata rdf:ID="SingleProteomicSearch_ITRAQ_meta">
+                        <j.0:lastUpdateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+                        >2020-11-03T00:00:00Z</j.0:lastUpdateTime>
+                        <j.0:hasContributor>admin</j.0:hasContributor>
+                  </j.0:Metadata>
+            </j.0:hasMetadata>
+            <j.0:hasNode rdf:resource="#ProteinDataConvert_node1"/>
+            <j.0:hasLink>
+                  <j.0:InOutLink rdf:ID="port_pepConvertSpectra_to_ProteinAssembly_node_spectraFile">
+                        <j.0:hasVariable rdf:resource="#ref_pepConverted"/>
+                        <j.0:hasOriginPort rdf:resource="#port_pepConvertSpectra"/>
+                        <j.0:hasOriginNode rdf:resource="#PeptideDataConvertNode"/>
+                        <j.0:hasDestinationPort rdf:resource="#ProteinAssembly_node_spectraFile"/>
+                        <j.0:hasDestinationNode rdf:resource="#ProteinAssembly_node"/>
+                  </j.0:InOutLink>
+            </j.0:hasLink>
+            <j.0:hasOutputRole>
+                  <j.0:Role rdf:ID="ref_protConvertLog_orole">
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                        <j.0:hasRoleID>ref_protConvertLog</j.0:hasRoleID>
+                        <j.0:mapsToVariable rdf:resource="#ref_protConvertLog"/>
+                  </j.0:Role>
+            </j.0:hasOutputRole>
+            <j.0:hasInputRole>
+                  <j.0:Role rdf:ID="ProtDataZip_irole">
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                        <j.0:hasRoleID>idpQonvert_node1_spectraFile</j.0:hasRoleID>
+                        <j.0:mapsToVariable>
+                              <j.0:DataVariable rdf:ID="ProtDataZip">
+                                    <rdfs:comment>center:x=980.8336296081544,y=29.986567497253418</rdfs:comment>
+                              </j.0:DataVariable>
+                        </j.0:mapsToVariable>
+                  </j.0:Role>
+            </j.0:hasInputRole>
+            <j.0:hasLink>
+                  <j.0:InputLink rdf:ID="idpQonvert_node1_pepConvertParams_input">
+                        <j.0:hasVariable>
+                              <j.0:DataVariable rdf:ID="idpQonvertGeneParams">
+                                    <rdfs:comment>center:x=922.4631927490235,y=1203.3273725509644</rdfs:comment>
+                              </j.0:DataVariable>
+                        </j.0:hasVariable>
+                        <j.0:hasDestinationPort rdf:resource="#idpQonvert_node1_pepConvertParams"/>
+                        <j.0:hasDestinationNode rdf:resource="#idpQonvert_node1"/>
+                  </j.0:InputLink>
+            </j.0:hasLink>
+            <j.0:hasLink>
+                  <j.0:OutputLink rdf:ID="ref_searchParams_port_pepSearchFinalParams_Output">
+                        <j.0:hasVariable>
+                              <j.0:DataVariable rdf:ID="ref_searchParams">
+                                    <rdfs:comment>center:x=226.20015888214112,y=176.67455577850342</rdfs:comment>
+                              </j.0:DataVariable>
+                        </j.0:hasVariable>
+                        <j.0:hasOriginPort rdf:resource="#port_pepSearchFinalParams"/>
+                        <j.0:hasOriginNode rdf:resource="#PeptideSearchNode"/>
+                  </j.0:OutputLink>
+            </j.0:hasLink>
+            <j.0:hasInputRole>
+                  <j.0:Role rdf:ID="protConvertParams_irole">
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                        <j.0:hasRoleID>ProteinDataConvert_node_protConvertParams</j.0:hasRoleID>
+                        <j.0:mapsToVariable>
+                              <j.0:DataVariable rdf:ID="protConvertParams">
+                                    <rdfs:comment>center:x=129.4019160270691,y=1203.3273725509644</rdfs:comment>
+                              </j.0:DataVariable>
+                        </j.0:mapsToVariable>
+                  </j.0:Role>
+            </j.0:hasInputRole>
+            <j.0:hasLink>
+                  <j.0:InputLink rdf:ID="ProtDataZip_Input_To_port_spectraFile">
+                        <j.0:hasVariable rdf:resource="#ProtDataZip"/>
+                        <j.0:hasDestinationPort rdf:resource="#port_spectraFile"/>
+                        <j.0:hasDestinationNode rdf:resource="#PeptideSearchNode"/>
+                  </j.0:InputLink>
+            </j.0:hasLink>
+            <j.0:hasOutputRole>
+                  <j.0:Role rdf:ID="ref_protassemblyLog_withQuantData_orole">
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                        <j.0:hasRoleID>ref_protassemblyLog_withQuantData</j.0:hasRoleID>
+                        <j.0:mapsToVariable rdf:resource="#ref_protassemblyLog_withQuantData"/>
+                  </j.0:Role>
+            </j.0:hasOutputRole>
+            <j.0:hasInputRole>
+                  <j.0:Role rdf:ID="pepSearchParams_irole">
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >1</j.0:hasDimensionality>
+                        <j.0:hasRoleID>port_pepSearchParams</j.0:hasRoleID>
+                        <j.0:mapsToVariable rdf:resource="#pepSearchParams"/>
+                  </j.0:Role>
+            </j.0:hasInputRole>
+            <j.0:hasInputRole>
+                  <j.0:Role rdf:ID="protAssemblyParams_redone_irole">
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                        <j.0:hasRoleID>ProteinAssembly_node1_protAssemblyParams</j.0:hasRoleID>
+                        <j.0:mapsToVariable rdf:resource="#protAssemblyParams_redone"/>
+                  </j.0:Role>
+            </j.0:hasInputRole>
+            <j.0:hasOutputRole>
+                  <j.0:Role rdf:ID="ref_mergedPepFile_withQuantData_orole">
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                        <j.0:hasRoleID>ref_mergedPepFile_withQuantData</j.0:hasRoleID>
+                        <j.0:mapsToVariable>
+                              <j.0:DataVariable rdf:ID="ref_mergedPepFile_withQuantData">
+                                    <rdfs:comment>center:x=194.2983922958374,y=909.9705762863159</rdfs:comment>
+                              </j.0:DataVariable>
+                        </j.0:mapsToVariable>
+                  </j.0:Role>
+            </j.0:hasOutputRole>
+            <j.0:hasInputRole>
+                  <j.0:Role rdf:ID="pepConvertParams_irole">
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                        <j.0:hasRoleID>port_pepConvertParams</j.0:hasRoleID>
+                        <j.0:mapsToVariable rdf:resource="#pepConvertParams"/>
+                  </j.0:Role>
+            </j.0:hasInputRole>
+            <j.0:hasLink>
+                  <j.0:InputLink rdf:ID="ProteinAssembly_node2_protSeqDBFile_input">
+                        <j.0:hasVariable rdf:resource="#ref_proteome_fasta"/>
+                        <j.0:hasDestinationPort rdf:resource="#ProteinAssembly_node2_protSeqDBFile"/>
+                        <j.0:hasDestinationNode rdf:resource="#ProteinAssembly_node2"/>
+                  </j.0:InputLink>
+            </j.0:hasLink>
+            <j.0:hasVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+            >3</j.0:hasVersion>
+            <j.0:hasLink>
+                  <j.0:InOutLink rdf:ID="idpQonvert_itraq_node_pepConvertSpectra_to_ProteinAssembly_node2_pepFile">
+                        <j.0:hasVariable rdf:resource="#ref_prot_withQuantData"/>
+                        <j.0:hasOriginPort rdf:resource="#idpQonvert_itraq_node_pepConvertSpectra"/>
+                        <j.0:hasOriginNode rdf:resource="#idpQonvert_itraq_node"/>
+                        <j.0:hasDestinationPort rdf:resource="#ProteinAssembly_node2_pepFile"/>
+                        <j.0:hasDestinationNode rdf:resource="#ProteinAssembly_node2"/>
+                  </j.0:InOutLink>
+            </j.0:hasLink>
+            <j.0:hasLink>
+                  <j.0:InOutLink rdf:ID="ProteinAssembly_node1_mergedPepFile_to_ProteinDataConvert_node_pepSpectra">
+                        <j.0:hasVariable rdf:resource="#ref_mergedPepFile_redone"/>
+                        <j.0:hasOriginPort rdf:resource="#ProteinAssembly_node1_mergedPepFile"/>
+                        <j.0:hasOriginNode rdf:resource="#ProteinAssembly_node1"/>
+                        <j.0:hasDestinationPort rdf:resource="#ProteinDataConvert_node_pepSpectra"/>
+                        <j.0:hasDestinationNode rdf:resource="#ProteinDataConvert_node"/>
+                  </j.0:InOutLink>
+            </j.0:hasLink>
+            <j.0:hasLink>
+                  <j.0:OutputLink rdf:ID="ProteinAssembly_node1_protassemblyLog_output">
+                        <j.0:hasVariable rdf:resource="#protassemblyLog_redone"/>
+                        <j.0:hasOriginPort rdf:resource="#ProteinAssembly_node1_protassemblyLog"/>
+                        <j.0:hasOriginNode rdf:resource="#ProteinAssembly_node1"/>
+                  </j.0:OutputLink>
+            </j.0:hasLink>
+            <j.0:hasLink>
+                  <j.0:OutputLink rdf:ID="DataQuery_node_editedFile_output">
+                        <j.0:hasVariable rdf:resource="#ref_mergedProtFile_edited"/>
+                        <j.0:hasOriginPort rdf:resource="#DataQuery_node_editedFile"/>
+                        <j.0:hasOriginNode rdf:resource="#DataQuery_node"/>
+                  </j.0:OutputLink>
+            </j.0:hasLink>
+            <j.0:hasNode rdf:resource="#PeptideSearchNode"/>
+            <j.0:hasLink>
+                  <j.0:InputLink rdf:ID="idpQonvert_node_protSeqDB_input">
+                        <j.0:hasVariable rdf:resource="#ref_proteome_fasta"/>
+                        <j.0:hasDestinationPort rdf:resource="#idpQonvert_node_protSeqDB"/>
+                        <j.0:hasDestinationNode rdf:resource="#idpQonvert_node"/>
+                  </j.0:InputLink>
+            </j.0:hasLink>
+            <j.0:hasOutputRole>
+                  <j.0:Role rdf:ID="ref_searchParams_orole">
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                        <j.0:hasRoleID>ref_searchParams</j.0:hasRoleID>
+                        <j.0:mapsToVariable rdf:resource="#ref_searchParams"/>
+                  </j.0:Role>
+            </j.0:hasOutputRole>
+            <j.0:hasLink>
+                  <j.0:InOutLink rdf:ID="port_pepConvertSpectra_to_ProteinAssembly_node1_spectraFile">
+                        <j.0:hasVariable rdf:resource="#ref_pepConverted"/>
+                        <j.0:hasOriginPort rdf:resource="#port_pepConvertSpectra"/>
+                        <j.0:hasOriginNode rdf:resource="#PeptideDataConvertNode"/>
+                        <j.0:hasDestinationPort rdf:resource="#ProteinAssembly_node1_spectraFile"/>
+                        <j.0:hasDestinationNode rdf:resource="#ProteinAssembly_node1"/>
+                  </j.0:InOutLink>
+            </j.0:hasLink>
+            <j.0:hasNode rdf:resource="#ProteinAssembly_node2"/>
+            <j.0:hasInputRole>
+                  <j.0:Role rdf:ID="protAssemblyParams_irole">
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                        <j.0:hasRoleID>ProteinAssembly_node_protAssemblyParams</j.0:hasRoleID>
+                        <j.0:mapsToVariable rdf:resource="#protAssemblyParams"/>
+                  </j.0:Role>
+            </j.0:hasInputRole>
+            <j.0:hasLink>
+                  <j.0:InputLink rdf:ID="idpQonvert_itraq_node_pepConvertParams_input">
+                        <j.0:hasVariable rdf:resource="#idpQonvertParams_Quant"/>
+                        <j.0:hasDestinationPort rdf:resource="#idpQonvert_itraq_node_pepConvertParams"/>
+                        <j.0:hasDestinationNode rdf:resource="#idpQonvert_itraq_node"/>
+                  </j.0:InputLink>
+            </j.0:hasLink>
+            <j.0:hasLink>
+                  <j.0:InOutLink rdf:ID="ProteinAssembly_node1_mergedPepFile_to_ProteinDataConvert_node1_pepSpectra">
+                        <j.0:hasVariable rdf:resource="#ref_mergedPepFile_redone"/>
+                        <j.0:hasOriginPort rdf:resource="#ProteinAssembly_node1_mergedPepFile"/>
+                        <j.0:hasOriginNode rdf:resource="#ProteinAssembly_node1"/>
+                        <j.0:hasDestinationPort rdf:resource="#ProteinDataConvert_node1_pepSpectra"/>
+                        <j.0:hasDestinationNode rdf:resource="#ProteinDataConvert_node1"/>
+                  </j.0:InOutLink>
+            </j.0:hasLink>
+            <j.0:hasLink>
+                  <j.0:OutputLink rdf:ID="ProteinAssembly_node2_mergedPepFile_output">
+                        <j.0:hasVariable rdf:resource="#ref_mergedPepFile_withQuantData"/>
+                        <j.0:hasOriginPort rdf:resource="#ProteinAssembly_node2_mergedPepFile"/>
+                        <j.0:hasOriginNode rdf:resource="#ProteinAssembly_node2"/>
+                  </j.0:OutputLink>
+            </j.0:hasLink>
+            <j.0:hasLink>
+                  <j.0:InputLink rdf:ID="ProtDataZip_Input_To_port_spectraFile2">
+                        <j.0:hasVariable rdf:resource="#ProtDataZip"/>
+                        <j.0:hasDestinationPort rdf:resource="#port_spectraFile2"/>
+                        <j.0:hasDestinationNode rdf:resource="#PeptideDataConvertNode"/>
+                  </j.0:InputLink>
+            </j.0:hasLink>
+            <j.0:hasInputRole>
+                  <j.0:Role rdf:ID="idpQonvertGeneParams_irole">
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                        <j.0:hasRoleID>idpQonvert_node1_pepConvertParams</j.0:hasRoleID>
+                        <j.0:mapsToVariable rdf:resource="#idpQonvertGeneParams"/>
+                  </j.0:Role>
+            </j.0:hasInputRole>
+            <j.0:hasLink>
+                  <j.0:InOutLink rdf:ID="ProteinAssembly_node_mergedProtFile_to_idpQonvert_itraq_node_pepFile">
+                        <j.0:hasVariable rdf:resource="#ref_mergedProtFile"/>
+                        <j.0:hasOriginPort rdf:resource="#ProteinAssembly_node_mergedProtFile"/>
+                        <j.0:hasOriginNode rdf:resource="#ProteinAssembly_node"/>
+                        <j.0:hasDestinationPort rdf:resource="#idpQonvert_itraq_node_pepFile"/>
+                        <j.0:hasDestinationNode rdf:resource="#idpQonvert_itraq_node"/>
+                  </j.0:InOutLink>
+            </j.0:hasLink>
+            <j.0:hasLink>
+                  <j.0:InOutLink rdf:ID="ProteinAssembly_node1_mergedProtFile_to_ProteinDataConvert_node_protSpectra">
+                        <j.0:hasVariable rdf:resource="#ref_mergedProtFile_redone"/>
+                        <j.0:hasOriginPort rdf:resource="#ProteinAssembly_node1_mergedProtFile"/>
+                        <j.0:hasOriginNode rdf:resource="#ProteinAssembly_node1"/>
+                        <j.0:hasDestinationPort rdf:resource="#ProteinDataConvert_node_protSpectra"/>
+                        <j.0:hasDestinationNode rdf:resource="#ProteinDataConvert_node"/>
+                  </j.0:InOutLink>
+            </j.0:hasLink>
+            <j.0:hasLink>
+                  <j.0:OutputLink rdf:ID="ref_pepConverted_port_pepConvertSpectra_Output">
+                        <j.0:hasVariable rdf:resource="#ref_pepConverted"/>
+                        <j.0:hasOriginPort rdf:resource="#port_pepConvertSpectra"/>
+                        <j.0:hasOriginNode rdf:resource="#PeptideDataConvertNode"/>
+                  </j.0:OutputLink>
+            </j.0:hasLink>
+            <j.0:hasLink>
+                  <j.0:InputLink rdf:ID="ProteinAssembly_node2_protAssemblyParams_input">
+                        <j.0:hasVariable rdf:resource="#protAssemblyParams_withQuantData"/>
+                        <j.0:hasDestinationPort rdf:resource="#ProteinAssembly_node2_protAssemblyParams"/>
+                        <j.0:hasDestinationNode rdf:resource="#ProteinAssembly_node2"/>
+                  </j.0:InputLink>
+            </j.0:hasLink>
+            <j.0:hasOutputRole>
+                  <j.0:Role rdf:ID="ref_prot_withQuantData_orole">
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                        <j.0:hasRoleID>ref_prot_withQuantData</j.0:hasRoleID>
+                        <j.0:mapsToVariable rdf:resource="#ref_prot_withQuantData"/>
+                  </j.0:Role>
+            </j.0:hasOutputRole>
+            <j.0:hasLink>
+                  <j.0:InputLink rdf:ID="ProteinAssembly_node1_protSeqDBFile_input">
+                        <j.0:hasVariable rdf:resource="#ref_proteome_fasta"/>
+                        <j.0:hasDestinationPort rdf:resource="#ProteinAssembly_node1_protSeqDBFile"/>
+                        <j.0:hasDestinationNode rdf:resource="#ProteinAssembly_node1"/>
+                  </j.0:InputLink>
+            </j.0:hasLink>
+            <j.0:hasLink>
+                  <j.0:InputLink rdf:ID="idpQonvert_itraq_node_spectraFile_input">
+                        <j.0:hasVariable rdf:resource="#ProtDataZip"/>
+                        <j.0:hasDestinationPort rdf:resource="#idpQonvert_itraq_node_spectraFile"/>
+                        <j.0:hasDestinationNode rdf:resource="#idpQonvert_itraq_node"/>
+                  </j.0:InputLink>
+            </j.0:hasLink>
+            <j.0:hasOutputRole>
+                  <j.0:Role rdf:ID="ref_pepConverted_orole">
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                        <j.0:hasRoleID>ref_pepConverted</j.0:hasRoleID>
+                        <j.0:mapsToVariable rdf:resource="#ref_pepConverted"/>
+                  </j.0:Role>
+            </j.0:hasOutputRole>
+            <j.0:hasOutputRole>
+                  <j.0:Role rdf:ID="protassemblyLog_orole">
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                        <j.0:hasRoleID>protassemblyLog</j.0:hasRoleID>
+                        <j.0:mapsToVariable rdf:resource="#protassemblyLog"/>
+                  </j.0:Role>
+            </j.0:hasOutputRole>
+            <j.0:hasLink>
+                  <j.0:InputLink rdf:ID="ProteinDataConvert_node1_fastaFile_input">
+                        <j.0:hasVariable rdf:resource="#ref_proteome_fasta"/>
+                        <j.0:hasDestinationPort rdf:resource="#ProteinDataConvert_node1_fastaFile"/>
+                        <j.0:hasDestinationNode rdf:resource="#ProteinDataConvert_node1"/>
+                  </j.0:InputLink>
+            </j.0:hasLink>
+            <j.0:hasLink>
+                  <j.0:InputLink rdf:ID="idpQonvert_node1_spectraFile_input">
+                        <j.0:hasVariable rdf:resource="#ProtDataZip"/>
+                        <j.0:hasDestinationPort rdf:resource="#idpQonvert_node1_spectraFile"/>
+                        <j.0:hasDestinationNode rdf:resource="#idpQonvert_node1"/>
+                  </j.0:InputLink>
+            </j.0:hasLink>
+            <j.0:hasOutputRole>
+                  <j.0:Role rdf:ID="ref_mergedProtFile_edited_orole">
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                        <j.0:hasRoleID>ref_mergedProtFile_edited</j.0:hasRoleID>
+                        <j.0:mapsToVariable rdf:resource="#ref_mergedProtFile_edited"/>
+                  </j.0:Role>
+            </j.0:hasOutputRole>
+            <j.0:hasLink>
+                  <j.0:InOutLink rdf:ID="idpQonvert_node_pepConvertSpectra_to_ProteinAssembly_node_pepFile">
+                        <j.0:hasVariable rdf:resource="#pepConvertSpectra"/>
+                        <j.0:hasOriginPort rdf:resource="#idpQonvert_node_pepConvertSpectra"/>
+                        <j.0:hasOriginNode rdf:resource="#idpQonvert_node"/>
+                        <j.0:hasDestinationPort rdf:resource="#ProteinAssembly_node_pepFile"/>
+                        <j.0:hasDestinationNode rdf:resource="#ProteinAssembly_node"/>
+                  </j.0:InOutLink>
+            </j.0:hasLink>
+            <j.0:hasLink>
+                  <j.0:InputLink rdf:ID="idpQonvert_node_spectraFile_input">
+                        <j.0:hasVariable rdf:resource="#ProtDataZip"/>
+                        <j.0:hasDestinationPort rdf:resource="#idpQonvert_node_spectraFile"/>
+                        <j.0:hasDestinationNode rdf:resource="#idpQonvert_node"/>
+                  </j.0:InputLink>
+            </j.0:hasLink>
+            <j.0:hasLink>
+                  <j.0:InputLink rdf:ID="ProteinDataConvert_node_protConvertParams_input">
+                        <j.0:hasVariable rdf:resource="#protConvertParams"/>
+                        <j.0:hasDestinationPort rdf:resource="#ProteinDataConvert_node_protConvertParams"/>
+                        <j.0:hasDestinationNode rdf:resource="#ProteinDataConvert_node"/>
+                  </j.0:InputLink>
+            </j.0:hasLink>
+            <j.0:hasInputRole>
+                  <j.0:Role rdf:ID="protConvertParams_withGene_irole">
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                        <j.0:hasRoleID>ProteinDataConvert_node1_protConvertParams</j.0:hasRoleID>
+                        <j.0:mapsToVariable>
+                              <j.0:DataVariable rdf:ID="protConvertParams_withGene">
+                                    <rdfs:comment>center:x=514.401042175293,y=1349.9961576461792</rdfs:comment>
+                              </j.0:DataVariable>
+                        </j.0:mapsToVariable>
+                  </j.0:Role>
+            </j.0:hasInputRole>
+            <j.0:hasLink>
+                  <j.0:OutputLink rdf:ID="ProteinAssembly_node1_mergedProtFile_output">
+                        <j.0:hasVariable rdf:resource="#ref_mergedProtFile_redone"/>
+                        <j.0:hasOriginPort rdf:resource="#ProteinAssembly_node1_mergedProtFile"/>
+                        <j.0:hasOriginNode rdf:resource="#ProteinAssembly_node1"/>
+                  </j.0:OutputLink>
+            </j.0:hasLink>
+            <j.0:hasLink>
+                  <j.0:InputLink rdf:ID="ProteinDataConvert_node1_protConvertParams_input">
+                        <j.0:hasVariable rdf:resource="#protConvertParams_withGene"/>
+                        <j.0:hasDestinationPort rdf:resource="#ProteinDataConvert_node1_protConvertParams"/>
+                        <j.0:hasDestinationNode rdf:resource="#ProteinDataConvert_node1"/>
+                  </j.0:InputLink>
+            </j.0:hasLink>
+      </j.0:WorkflowTemplate>
+</rdf:RDF>

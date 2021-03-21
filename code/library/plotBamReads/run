@@ -1,0 +1,31 @@
+#!/bin/sh
+
+checkExitCode() {
+if [ $? -ne 0 ]; then
+	echo "Error"
+	exit 1;
+fi
+}
+
+BASEDIR=`dirname $0`
+
+if [ $# -lt 1 ]; then echo "Error No inputs provided" && exit 1; fi
+
+. $BASEDIR/io.sh 3 0 4 "$@"
+
+# processRNAseqBamMetrics accepts comma-separated values for now:
+CSV_INPUTS1=`paste -s -d, $INPUTS1`
+CSV_INPUTS2=`echo $INPUTS2 | tr " " ,`
+CSV_INPUTS3=`echo $INPUTS3 | tr " " ,`
+
+echo $R_HOME/bin/Rscript --no-save --no-restore $BASEDIR/plotSeqReadsFromBam.R $CSV_INPUTS1 $CSV_INPUTS2 $CSV_INPUTS3
+$R_HOME/bin/Rscript --no-save --no-restore $BASEDIR/plotSeqReadsFromBam.R $CSV_INPUTS1 $CSV_INPUTS2 $CSV_INPUTS3
+
+checkExitCode
+
+mv allSamplesExonCov.pdf $OUTPUTS1
+mv allSamplesReadDist.pdf $OUTPUTS2
+mv readMappingAllSamplesbplot.pdf $OUTPUTS3
+mv readMappingAllSamples.txt $OUTPUTS4
+
+checkExitCode

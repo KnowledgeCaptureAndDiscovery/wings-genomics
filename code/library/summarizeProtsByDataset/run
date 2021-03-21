@@ -1,0 +1,19 @@
+#!/bin/sh
+
+checkExitCode() {
+if [ $? -ne 0 ]; then
+	echo "Error"
+	exit 1;
+fi
+}
+
+BASEDIR=`dirname $0`
+
+if [ $# -lt 1 ]; then echo "Error No inputs provided" && exit 1; fi
+
+. $BASEDIR/io.sh 1 7 2 "$@"
+
+echo $R_HOME/bin/Rscript --no-save --no-restore $BASEDIR/summarizeProtsByDataset.R $INPUTS1 $PARAMS1 $PARAMS2 $PARAMS3 $PARAMS4 $PARAMS5 $PARAMS6 $PARAMS7 $OUTPUTS1 $OUTPUTS2
+$R_HOME/bin/Rscript --no-save --no-restore $BASEDIR/summarizeProtsByDataset.R $INPUTS1 $PARAMS1 $PARAMS2 $PARAMS3 $PARAMS4 $PARAMS5 $PARAMS6 $PARAMS7 $OUTPUTS1 $OUTPUTS2
+
+checkExitCode

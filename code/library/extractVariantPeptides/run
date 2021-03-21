@@ -1,0 +1,21 @@
+#!/bin/bash
+
+checkExitCode() {
+if [ $? -ne 0 ]; then
+	echo "Error"
+	exit 1;
+fi
+}
+
+BASEDIR=`dirname $0`
+
+if [ $# -lt 1 ]; then echo "Error No inputs provided" && exit 1; fi
+
+. $BASEDIR/io.sh 3 0 2 "$@"
+
+echo $BASEDIR/run_variant_peptide.sh $INPUTS1 $INPUTS2 $INPUTS3 output
+$BASEDIR/run_variant_peptide.sh $INPUTS1 $INPUTS2 $INPUTS3 output
+
+mv outputaberrant_pep.tab $OUTPUTS1
+mv outputvariant_pep.tab $OUTPUTS2
+checkExitCode

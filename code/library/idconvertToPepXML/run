@@ -1,0 +1,60 @@
+#!/bin/bash
+
+# Functions:
+checkExitCode() {
+EC=$?
+
+if [ ${EC} -ne 0 ]; then
+	echo "Error"
+    exit ${EC};
+fi
+}
+
+#Check if a file is zipped:
+SSV_INPUTS=""
+checkZipFile() {
+	INPUTS="$1"
+	echo $INPUTS
+	#Check if the input file is empty
+	FILE_ZIP_CHECK=`file $INPUTS | grep "Zip"`
+	echo $FILE_ZIP_CHECK
+	if [[ -z $FILE_ZIP_CHECK ]]; then
+	    SSV_INPUTS=$INPUTS
+	else 
+		# Take a zipped input file containing a collection of mzML files and get a space-sep list -> very hacky.
+		SSV_INPUTS=`$ZIP_HOME/unzip -Z1 $INPUTS | tr "\n" " "`
+		# Extracting the file-collection from zipped input file
+		$ZIP_HOME/unzip $INPUTS
+		checkExitCode
+	fi
+}
+
+BASEDIR=`dirname $0`
+if [ $# -lt 1 ]; then echo "Error No inputs provided" && exit 1; fi
+
+NINPUTS=3
+NPARAMS=0
+NOUTPUTS=1
+
+. $BASEDIR/io.sh ${NINPUTS} ${NPARAMS} ${NOUTPUTS} "$@"
+
+checkZipFile $INPUTS1
+SSV_INPUTS1="$SSV_INPUTS"
+checkZipFile $INPUTS2
+SSV_INPUTS2="$SSV_INPUTS"
+
+echo "Running idconvert from proteowizard to convert input files to pepXML format....."
+for ONE_FILE in $SSV_INPUTS1
+	do
+    	echo ${PWIZ_HOME}/idconvert $ONE_FILE --pepXML
+    	${PWIZ_HOME}/idconvert $ONE_FILE --pepXML
+	done
+checkExitCode
+
+# ZIP the output files (default is mzid) and rename the zipped output file
+$ZIP_HOME/zip -r ${OUTPUTS1}.zip *.pepXML
+checkExitCode
+
+mv ${OUTPUTS1}.zip $OUTPUTS1
+checkExitCode
+exit ${EC}

@@ -1,0 +1,17 @@
+#!/bin/bash
+
+checkExitCode() {
+if [ $? -ne 0 ]; then
+	echo "Error"
+	exit 1;
+fi
+}
+
+BASEDIR=`dirname $0`
+
+if [ $# -lt 1 ]; then echo "Error No inputs provided" && exit 1; fi
+
+. $BASEDIR/io.sh 1 0 1 "$@"
+
+sed -e 's/[0-9]*\.[0-9]*//g' $INPUTS1 > $OUTPUTS1
+checkExitCode

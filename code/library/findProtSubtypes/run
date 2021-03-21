@@ -1,0 +1,30 @@
+#!/bin/sh
+
+checkExitCode() {
+if [ $? -ne 0 ]; then
+	echo "Error"
+	exit 1;
+fi
+}
+
+BASEDIR=`dirname $0`
+
+if [ $# -lt 1 ]; then echo "Error No inputs provided" && exit 1; fi
+
+. $BASEDIR/io.sh 3 14 8 "$@"
+
+echo $R_HOME/bin/Rscript --no-save --no-restore $BASEDIR/findProtSubtypes.R $INPUTS1 $INPUTS2 $INPUTS3 $PARAMS1 $PARAMS2 $PARAMS3 $PARAMS4 $PARAMS5 $PARAMS6 $PARAMS7 $PARAMS8 $PARAMS9 $PARAMS10 $PARAMS11 $PARAMS12 $PARAMS13 $PARAMS14 $OUTPUTS6 $OUTPUTS7
+$R_HOME/bin/Rscript --no-save --no-restore $BASEDIR/findProtSubtypes.R $INPUTS1 $INPUTS2 $INPUTS3 $PARAMS1 $PARAMS2 $PARAMS3 $PARAMS4 $PARAMS5 $PARAMS6 $PARAMS7 $PARAMS8 $PARAMS9 $PARAMS10 $PARAMS11 $PARAMS12 $PARAMS13 $PARAMS14 $OUTPUTS6 $OUTPUTS7
+
+CC_SUBDIR=$PARAMS9
+
+mv normDataForClustering.txt $OUTPUTS1
+mv coreSamples.txt $OUTPUTS2
+mv subtypeSampleMapping.txt $OUTPUTS3
+mv heatmapInputMatrix.txt $OUTPUTS4
+mv coreSampleswithAnnotations.txt $OUTPUTS5
+
+$ZIP_HOME/zip -r ${CC_SUBDIR}.zip ${CC_SUBDIR}
+mv ${CC_SUBDIR}.zip $OUTPUTS8
+
+checkExitCode

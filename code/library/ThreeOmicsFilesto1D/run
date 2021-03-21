@@ -1,0 +1,25 @@
+#!/bin/sh
+
+checkExitCode() {
+if [ $? -ne 0 ]; then
+	echo "Error"
+	exit 1;
+fi
+}
+
+BASEDIR=`dirname $0`
+
+if [ $# -lt 1 ]; then echo "Error No inputs provided" && exit 1; fi
+
+. $BASEDIR/io.sh 3 1 1 "$@"
+
+INPUTS_ARRAY=(`echo $INPUTS1 $INPUTS2 $INPUTS3`)
+
+OUTPUTS1_ARRAY=(${OUTPUTS1[@]})
+for (( i=0; i<${#OUTPUTS1_ARRAY[@]}; i++ ))
+	do
+		echo cp ${INPUTS_ARRAY[$i]} ${OUTPUTS1_ARRAY[$i]}
+		cp ${INPUTS_ARRAY[$i]} ${OUTPUTS1_ARRAY[$i]}
+	done
+
+checkExitCode

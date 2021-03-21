@@ -1,0 +1,22 @@
+#!/bin/sh
+
+checkExitCode() {
+if [ $? -ne 0 ]; then
+	echo "Error"
+	exit 1;
+fi
+}
+
+BASEDIR=`dirname $0`
+
+if [ $# -lt 1 ]; then echo "Error No inputs provided" && exit 1; fi
+
+. $BASEDIR/io.sh 2 9 1 "$@"
+
+# formatConcatMAFFiles.R accepts comma-separated values for now:
+CSV_INPUTS1=`echo $INPUTS1 | tr " " ,`
+
+echo $R_HOME/bin/Rscript --no-save --no-restore $BASEDIR/formatConcatMAFFiles.R $CSV_INPUTS1 $INPUTS2 $PARAMS1 $PARAMS2 $PARAMS3 $PARAMS4 $PARAMS5 $PARAMS6 $PARAMS7 $PARAMS8 $PARAMS9 $OUTPUTS1
+$R_HOME/bin/Rscript --no-save --no-restore $BASEDIR/formatConcatMAFFiles.R $CSV_INPUTS1 $INPUTS2 $PARAMS1 $PARAMS2 $PARAMS3 $PARAMS4 $PARAMS5 $PARAMS6 $PARAMS7 $PARAMS8 $PARAMS9 $OUTPUTS1
+
+checkExitCode

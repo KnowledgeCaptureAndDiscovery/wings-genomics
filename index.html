@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Materials</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+</style>
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-green w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>Supplementary Materials</b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Summary</a>
+    <a href="#resources" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Resources</a>
+  <!--  <a href="#bib" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Bibliography</a>-->
+    <a href="#authors" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">About the authors</a>
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-green w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-green w3-margin-right" onclick="w3_open()">☰</a>
+  <!--<span>Company Name</span>-->
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="showcase">
+    <h1 ><b>Supplementary materials for paper: Computational challenges to reproducibility, robustness, extensibility and reuse in multi-omics: a meta-workflow-based case study (Under review)</b></h1>
+    <!--<h2 class="w3-text-green"><b></b></h2>
+    <hr style="width:50px;border:5px solid green" class="w3-round">-->
+  </div>
+
+
+  <div class="w3-container" id="summary" style="margin-top:15px">
+    <!--<h1 class="w3-xxxlarge w3-text-green"><b>Services.</b></h1>-->
+    <hr style="width:50px;border:5px solid green" class="w3-round">
+    <p>This page provides pointers to the materials used in a paper <strong>under review </strong></p>
+    <p><strong>SUMMARY OF THE PAPER GOES HERE</strong>.</p>
+  </div>
+
+
+  <div class="w3-container" id="data" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-green"><b>Datasets.</b></h1>
+    <hr style="width:50px;border:5px solid green" class="w3-round">
+    <h3>Input Datasets</h3>
+    <ul>
+      <li>Point to each here (as in paper)</li>
+    </ul>
+
+    <h3>Outputs</h3>
+    <ul>
+      <li>Point to each here (as in paper)</li>
+    </ul>
+
+  </div>
+
+  <div class="w3-container" id="software" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-green"><b>Software and Workflows.</b></h1>
+    <hr style="width:50px;border:5px solid green" class="w3-round">
+    Pointers to domain. Point to the concrete workflows! (from paper)
+  </div>
+
+  <div class="w3-container" id="docker" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-green"><b>Docker image.</b></h1>
+    <hr style="width:50px;border:5px solid green" class="w3-round">
+    Include here Docker images and instructions here
+  </div>
+
+  <div class="w3-container" id="prov" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-green"><b>Provenance traces.</b></h1>
+    <hr style="width:50px;border:5px solid green" class="w3-round">
+    Include provenance traces (URL) and their link in Zenodo.
+  </div>
+
+
+  <!-- The Team -->
+  <div class="w3-container" id="authors" style="margin-top:75px">
+  <h1 class="w3-xxxlarge w3-text-green"><b>About the authors.</b></h1>
+  <hr style="width:50px;border:5px solid green" class="w3-round">
+  <div class="w3-row-padding">
+    <div class="w3-col m6 w3-margin-bottom">
+      <div class="w3-light-grey">
+          <img src="images/ravali.jpg" alt="Ravali Adusumilli" style="width:100px;padding-top: 10px;">
+        <div class="w3-container">
+          <h3>Ravali Adusumilli</h3>
+          <p class="w3-opacity">ROLE</p>
+          <p>Small description. </p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m6 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="images/dani.png" alt="Daniel Garijo" style="width:100px;padding-top: 10px;">
+        <div class="w3-container">
+          <h3><a href="https://dgarijo.com">Daniel Garijo</a></h3>
+          <p class="w3-opacity">Researcher</p>
+          <p>Researcher at the Information Sciences Institute of the
+University of Southern California. Daniel's research activities focus on
+e-Science and the Semantic web, specifically on how to increase the
+understandability of software and scientific workflows using provenance, metadata,
+intermediate results and Linked Data. </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="w3-row-padding">
+    <div class="w3-col m6 w3-margin-bottom">
+      <div class="w3-light-grey">
+          <img src="images/varun.jpg" alt="Varun Ratnakar" style="width:100px;padding-top: 10px;">
+        <div class="w3-container">
+          <h3>Varun Ratnakar</h3>
+          <p class="w3-opacity">ROLE</p>
+          <p>Small description. </p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m6 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="" alt="Arunima Srivastava" style="width:100px;padding-top: 10px;">
+        <div class="w3-container">
+          <h3>Arunima Srivastava</h3>
+          <p class="w3-opacity">Researcher</p>
+          <p>Researcher at. </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="w3-row-padding">
+    <div class="w3-col m6 w3-margin-bottom">
+      <div class="w3-light-grey">
+          <img src="" alt="Matt Chambers" style="width:100px;padding-top: 10px;">
+        <div class="w3-container">
+          <h3>Matt Chambers</h3>
+          <p class="w3-opacity">ROLE</p>
+          <p>Small description. </p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m6 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="" alt="Jiang Wang" style="width:100px;padding-top: 10px;">
+        <div class="w3-container">
+          <h3>Jiang Wang</h3>
+          <p class="w3-opacity">Researcher</p>
+          <p>Researcher at. </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="w3-row-padding">
+    <div class="w3-col m6 w3-margin-bottom">
+      <div class="w3-light-grey">
+          <img src="" alt="Xiaojing Wang" style="width:100px;padding-top: 10px;">
+        <div class="w3-container">
+          <h3>Xiaojing Wang</h3>
+          <p class="w3-opacity">ROLE</p>
+          <p>Small description. </p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m6 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="" alt="David Tabb" style="width:100px;padding-top: 10px;">
+        <div class="w3-container">
+          <h3>David Tabb</h3>
+          <p class="w3-opacity">Researcher</p>
+          <p>Researcher at. </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="w3-row-padding">
+    <div class="w3-col m6 w3-margin-bottom">
+      <div class="w3-light-grey">
+          <img src="" alt="Bing Zhang" style="width:100px;padding-top: 10px;">
+        <div class="w3-container">
+          <h3>Bing Zhang</h3>
+          <p class="w3-opacity">ROLE</p>
+          <p>Small description. </p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m6 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="" alt="Raghu Machiraju" style="width:100px;padding-top: 10px;">
+        <div class="w3-container">
+          <h3>Raju Machiraju</h3>
+          <p class="w3-opacity">Researcher</p>
+          <p>Researcher at. </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="w3-row-padding">
+    <div class="w3-col m6 w3-margin-bottom">
+      <div class="w3-light-grey">
+          <img src="images/gil.jpg" alt="Yolanda Gil" style="width:100px;padding-top: 10px;">
+        <div class="w3-container">
+          <h3>Yolanda Gil</h3>
+          <p class="w3-opacity">ROLE</p>
+          <p>Small description. </p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m6 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="images/parag.jpg" alt="Parag Mallick" style="width:100px;padding-top: 10px;">
+        <div class="w3-container">
+          <h3>Parag Mallick</h3>
+          <p class="w3-opacity">Researcher</p>
+          <p>Researcher at. </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  </div>
+
+<!-- End page content -->
+</div>
+
+<!-- W3.CSS Container -->
+<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">Designed deived from <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></p></div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
+</body>
+</html>

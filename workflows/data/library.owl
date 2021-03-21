@@ -1,0 +1,1273 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:j.0="http://localhost:8080/wings-portal/export/users/admin/genomics/data/ontology.owl#"
+    xmlns:j.1="http://www.wings-workflows.org/ontology/data.owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:j.2="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/ontology.owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+      xml:base="http://localhost:8080/wings-portal/export/users/admin/genomics/data/library.owl">
+      <owl:Ontology rdf:about="">
+            <owl:imports rdf:resource="ontology.owl"/>
+      </owl:Ontology>
+      <owl:Class rdf:about="ontology.owl#MAPFile"/>
+      <owl:Class rdf:about="ontology.owl#PEDFile"/>
+      <j.0:BatchAnnFile rdf:ID="CRC_BatchAnn115.txt">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/CRC_BatchAnn115.txt</j.1:hasLocation>
+      </j.0:BatchAnnFile>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-A6-3808-01A-22-2150-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:MAFFile rdf:ID="COADREAD.maf.txt">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/COADREAD.maf.txt</j.1:hasLocation>
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+            <j.0:hasSpeciesName>HS</j.0:hasSpeciesName>
+      </j.0:MAFFile>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AG-3594-01A-12_Proteome_VU_20121011_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA.COAD.mutect.bf1c53dc-79bb-43ae-88e4-23758853e5c6.somatic.maf">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:OmicsFile rdf:ID="ProteinFile5_115Samples.tsv">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/ProteinFile5_115Samples.tsv</j.1:hasLocation>
+      </j.0:OmicsFile>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-A01D-01A-23-A20O-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:RefFastaRSEMZip rdf:ID="hg19_RSEM_bundle.zip">
+            <j.0:hasSpeciesName>HS</j.0:hasSpeciesName>
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/hg19_RSEM_bundle.zip</j.1:hasLocation>
+            <j.0:hasDatasetID></j.0:hasDatasetID>
+            <j.0:hasOmicsType></j.0:hasOmicsType>
+            <j.0:hasGenomeReferenceID>hg19</j.0:hasGenomeReferenceID>
+            <j.0:hasInstrumentName></j.0:hasInstrumentName>
+            <j.0:hasSampleID></j.0:hasSampleID>
+            <j.0:hasParticipantID></j.0:hasParticipantID>
+            <j.0:hasDatatypeID></j.0:hasDatatypeID>
+      </j.0:RefFastaRSEMZip>
+      <j.0:OmicsFile rdf:ID="ProteinFile_NCI60.tsv">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/ProteinFile_NCI60.tsv</j.1:hasLocation>
+      </j.0:OmicsFile>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AG-3580-01A-22-2150-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-A01X-01A-23_Proteome_VU_20120807_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-A01T-01A-23_Proteome_VU_20130103_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:AnnotationFile rdf:ID="hg18_Synaptic_genes.txt"/>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-A01P-01A-23_Proteome_VU_20121214_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-3695-01A-22-2150-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-A03F-01A-41_Proteome_VU_20120923_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#chr1.fa">
+            <j.2:hasSpeciesName></j.2:hasSpeciesName>
+            <j.2:hasDatatypeID></j.2:hasDatatypeID>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-3818-01A-22-2150-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:SNVFile rdf:ID="SNVFile_2.txt">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/SNVFile_2.txt</j.1:hasLocation>
+      </j.0:SNVFile>
+      <j.0:IDPAssembleParamFile rdf:ID="idpassemble_0.01.params">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/idpassemble_0.01.params</j.1:hasLocation>
+      </j.0:IDPAssembleParamFile>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-3695-01A-22_Proteome_VU_20130131_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-3666-01A-31_Proteome_VU_20121101_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-A00K-01A-12-A20O-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:SampleAnnFile rdf:ID="CRC_sampleAnn.txt">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/CRC_sampleAnn.txt</j.1:hasLocation>
+      </j.0:SampleAnnFile>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AG-3574-01A-22_Proteome_VU_20121207_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TMT_10plex.condition.xml">
+            <j.2:hasDatatypeID></j.2:hasDatatypeID>
+            <j.2:hasGenomeReferenceID></j.2:hasGenomeReferenceID>
+            <j.2:hasSpeciesName></j.2:hasSpeciesName>
+            <j.2:hasParticipantID></j.2:hasParticipantID>
+            <j.2:hasSampleID></j.2:hasSampleID>
+            <j.2:hasMS1LabelID></j.2:hasMS1LabelID>
+            <j.2:hasInstrumentName></j.2:hasInstrumentName>
+            <j.2:hasOmicsType></j.2:hasOmicsType>
+            <j.2:hasDatasetID></j.2:hasDatasetID>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-3526-01A-11_Proteome_VU_20130106_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-3525-01A-12-2150-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:ProteomicFastaFile rdf:ID="CRC_CustomProteinSeqDB.fasta">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/CRC_CustomProteinSeqDB.fasta</j.1:hasLocation>
+      </j.0:ProteomicFastaFile>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AG-3593-01A-22_Proteome_VU_20120920_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-A01X-01A-23-A20O-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AG-3584-01A-22_Proteome_VU_20121007_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-A024-01A-32_Proteome_VU_20130114_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:ProteomicFastaFile rdf:ID="hg19_ref_proteome_with_decoy.fasta">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/hg19_ref_proteome_with_decoy.fasta</j.1:hasLocation>
+      </j.0:ProteomicFastaFile>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AG-A00H-01A-22_Proteome_VU_20121201_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:SampleIDsFile rdf:ID="SampleIDs_OV.txt">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/SampleIDs_OV.txt</j.1:hasLocation>
+      </j.0:SampleIDsFile>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#ERR009159_1.fastq.gz">
+            <j.2:hasDatasetID></j.2:hasDatasetID>
+            <j.2:hasDatatypeID></j.2:hasDatatypeID>
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+            <j.2:hasSeqType></j.2:hasSeqType>
+            <j.2:hasParticipantID></j.2:hasParticipantID>
+            <j.2:hasSampleID></j.2:hasSampleID>
+            <j.2:hasInstrumentName></j.2:hasInstrumentName>
+            <j.2:hasOmicsType></j.2:hasOmicsType>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-A02Y-01A-31-A20O-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:IDPQonvertParamFile rdf:ID="idpqonvert_gene.params">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/idpqonvert_gene.params</j.1:hasLocation>
+      </j.0:IDPQonvertParamFile>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-A00N-01A-41_Proteome_VU_20121127_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:TSVFile rdf:ID="SAAVs_OV.tsv">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/SAAVs_OV.tsv</j.1:hasLocation>
+      </j.0:TSVFile>
+      <j.0:OmicsFile rdf:ID="ProteinFile_Myrimatch1.tsv">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/ProteinFile_Myrimatch1.tsv</j.1:hasLocation>
+      </j.0:OmicsFile>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#hs37d5_genes.gtf">
+            <j.2:hasDatatypeID></j.2:hasDatatypeID>
+            <j.2:hasGenomeReferenceID></j.2:hasGenomeReferenceID>
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AF-3400-01A-41-2150-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:FASTQFile rdf:ID="SampleData1_fastq.zip">
+            <j.0:hasDatasetID>Dataset1</j.0:hasDatasetID>
+            <j.0:hasSampleID>SampleData1</j.0:hasSampleID>
+            <j.0:hasSeqType></j.0:hasSeqType>
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/SampleData1_fastq.zip</j.1:hasLocation>
+            <j.0:hasSpeciesName>HS</j.0:hasSpeciesName>
+            <j.0:hasOmicsType></j.0:hasOmicsType>
+            <j.0:hasDatatypeID></j.0:hasDatatypeID>
+            <j.0:hasInstrumentName></j.0:hasInstrumentName>
+            <j.0:hasGenomeReferenceID></j.0:hasGenomeReferenceID>
+            <j.0:hasParticipantID>Sample1</j.0:hasParticipantID>
+      </j.0:FASTQFile>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AG-A002-01A-23_Proteome_VU_20121211_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AF-2692-01A-41-2150-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:SptxtFile rdf:ID="human_2014_05_29_it_decoy.sptxt">
+            <j.0:hasGenomeReferenceID></j.0:hasGenomeReferenceID>
+            <j.0:hasOmicsType></j.0:hasOmicsType>
+            <j.0:hasDatatypeID></j.0:hasDatatypeID>
+            <j.0:hasSampleID></j.0:hasSampleID>
+            <j.0:hasDatasetID></j.0:hasDatasetID>
+            <j.0:hasSpeciesName>HS</j.0:hasSpeciesName>
+            <j.0:hasInstrumentName></j.0:hasInstrumentName>
+            <j.0:hasParticipantID></j.0:hasParticipantID>
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/human_2014_05_29_it_decoy.sptxt</j.1:hasLocation>
+      </j.0:SptxtFile>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#bxeng_test.bam">
+            <j.2:Chromosome></j.2:Chromosome>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AG-A015-01A-51-A20O-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-A02H-01A-32_Proteome_VU_20121025_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AG-A01W-01A-23_Proteome_VU_20121115_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AG-A016-01A-23_Proteome_VU_20120730_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA_09-1664-01A_61-2094-01A_25-1312-01A_Proteome_JHUZ_20130802.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+            <j.2:hasGenomeReferenceID></j.2:hasGenomeReferenceID>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-A004-01A-22_Proteome_VU_20121020_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:ProteomicFastaFile rdf:ID="humanRefSeq_Version54_with_tryp_DECOY.fasta">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/humanRefSeq_Version54_with_tryp_DECOY.fasta</j.1:hasLocation>
+            <j.0:hasOmicsType></j.0:hasOmicsType>
+            <j.0:hasDatatypeID></j.0:hasDatatypeID>
+            <j.0:hasParticipantID></j.0:hasParticipantID>
+            <j.0:hasDatasetID></j.0:hasDatasetID>
+            <j.0:hasGenomeReferenceID></j.0:hasGenomeReferenceID>
+            <j.0:hasInstrumentName></j.0:hasInstrumentName>
+            <j.0:hasSpeciesName>HS</j.0:hasSpeciesName>
+            <j.0:hasSampleID></j.0:hasSampleID>
+      </j.0:ProteomicFastaFile>
+      <j.0:mzMLFile rdf:ID="SampleData1_mzML.zip">
+            <j.0:hasMS1LabelID></j.0:hasMS1LabelID>
+            <j.0:hasDatatypeID></j.0:hasDatatypeID>
+            <j.0:hasParticipantID>Sample1</j.0:hasParticipantID>
+            <j.0:hasMS2LabelID></j.0:hasMS2LabelID>
+            <j.0:hasOmicsType></j.0:hasOmicsType>
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/SampleData1_mzML.zip</j.1:hasLocation>
+            <j.0:hasInstrumentName></j.0:hasInstrumentName>
+            <j.0:hasDatasetID>Dataset1</j.0:hasDatasetID>
+            <j.0:hasSampleID>SampleData1</j.0:hasSampleID>
+            <j.0:hasGenomeReferenceID></j.0:hasGenomeReferenceID>
+            <j.0:hasSpeciesName>HS</j.0:hasSpeciesName>
+      </j.0:mzMLFile>
+      <j.0:CufflinksParamFile rdf:ID="cufflinks.params">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/cufflinks.params</j.1:hasLocation>
+      </j.0:CufflinksParamFile>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-3715-01A-22-2150-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-A022-01A-23_Proteome_VU_20130118_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:MSGFPlusParamFile rdf:ID="MSGFPlus_iTRAQ4plex.params">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/MSGFPlus_iTRAQ4plex.params</j.1:hasLocation>
+      </j.0:MSGFPlusParamFile>
+      <j.0:OmicsFile rdf:ID="ProteinFile2_100Samples.tsv">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/ProteinFile2_100Samples.tsv</j.1:hasLocation>
+      </j.0:OmicsFile>
+      <j.0:GenomicFastaFile rdf:ID="hg19.fa">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/hg19.fa</j.1:hasLocation>
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+            <j.0:ReferenceId></j.0:ReferenceId>
+            <j.0:hasDatatypeID></j.0:hasDatatypeID>
+            <j.0:hasSpeciesName>HS</j.0:hasSpeciesName>
+            <j.0:hasGenomeReferenceID>hg19</j.0:hasGenomeReferenceID>
+            <j.2:hasDatatypeID></j.2:hasDatatypeID>
+      </j.0:GenomicFastaFile>
+      <j.0:MAFFile rdf:ID="MAFFile_1.txt">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/MAFFile_1.txt</j.1:hasLocation>
+      </j.0:MAFFile>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-A03J-01A-23_Proteome_VU_20120809_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-A00U-01A-41_Proteome_VU_20130201_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#_20151216_ML_default_HUMAN_FAST.xml">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+            <j.2:isQuantType></j.2:isQuantType>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-3710-01A-22_Proteome_VU_20120827_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-3986-01A-12-2150-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AG-3584-01A-22-2150-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:TSVFile rdf:ID="VariantPeptides_BRCA.tsv">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/VariantPeptides_BRCA.tsv</j.1:hasLocation>
+      </j.0:TSVFile>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#hg19_genes.gtf">
+            <j.2:hasDatatypeID></j.2:hasDatatypeID>
+            <j.2:hasGenomeReferenceID></j.2:hasGenomeReferenceID>
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:Gistic2CNV rdf:ID="crc_all_data_by_genes.txt">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/crc_all_data_by_genes.txt</j.1:hasLocation>
+      </j.0:Gistic2CNV>
+      <j.0:SampleIDsFile rdf:ID="SampleIDs_CRC95_CO_15.txt">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/SampleIDs_CRC95_CO_15.txt</j.1:hasLocation>
+      </j.0:SampleIDsFile>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-A01R-01A-23_Proteome_VU_20120829_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-A004-01A-22-A20O-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:SampleIDsFile rdf:ID="SampleIDs.txt">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/SampleIDs.txt</j.1:hasLocation>
+      </j.0:SampleIDsFile>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-3552-01A-22_Proteome_VU_20130125_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-A02J-01A-23-A20O-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AG-A014-01A-12_Proteome_VU_20120824_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-3989-01A-22_Proteome_VU_20121114_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:SampleIDsFile rdf:ID="CPTAC_CO_20SampleIDs.txt">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/CPTAC_CO_20SampleIDs.txt</j.1:hasLocation>
+      </j.0:SampleIDsFile>
+      <j.0:OmicsFile rdf:ID="ProteinFile_Deposited.tsv">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/ProteinFile_Deposited.tsv</j.1:hasLocation>
+      </j.0:OmicsFile>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#iTRAQ_8plex.condition.xml">
+            <j.2:hasDatatypeID></j.2:hasDatatypeID>
+            <j.2:hasGenomeReferenceID></j.2:hasGenomeReferenceID>
+            <j.2:hasSpeciesName></j.2:hasSpeciesName>
+            <j.2:hasParticipantID></j.2:hasParticipantID>
+            <j.2:hasSampleID></j.2:hasSampleID>
+            <j.2:hasMS1LabelID></j.2:hasMS1LabelID>
+            <j.2:hasInstrumentName></j.2:hasInstrumentName>
+            <j.2:hasOmicsType></j.2:hasOmicsType>
+            <j.2:hasDatasetID></j.2:hasDatasetID>
+      </rdf:Description>
+      <j.0:CRCAnnFile rdf:ID="CRC_subtypeAnn.txt">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/CRC_subtypeAnn.txt</j.1:hasLocation>
+      </j.0:CRCAnnFile>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-3529-01A-12_Proteome_VU_20121203_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-3554-01A-22_Proteome_VU_20121122_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:SampleAnnFile rdf:ID="CRC_sampleAnn110.txt">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/CRC_sampleAnn110.txt</j.1:hasLocation>
+      </j.0:SampleAnnFile>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#LCMS_Mods.txt">
+            <j.2:hasDatasetID></j.2:hasDatasetID>
+            <j.2:hasDatatypeID></j.2:hasDatatypeID>
+            <j.2:hasSpeciesName></j.2:hasSpeciesName>
+            <j.2:hasMS2LabelID></j.2:hasMS2LabelID>
+            <j.2:hasParticipantID></j.2:hasParticipantID>
+            <j.2:hasSampleID></j.2:hasSampleID>
+            <j.2:hasMS1LabelID></j.2:hasMS1LabelID>
+            <j.2:hasInstrumentName></j.2:hasInstrumentName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AG-A01Y-01A-43-A20O-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-3986-01A-12_Proteome_VU_20130116_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:TSVFile rdf:ID="VariantPeptides_Stage3.tsv">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/VariantPeptides_Stage3.tsv</j.1:hasLocation>
+      </j.0:TSVFile>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AG-3574-01A-22-2150-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-A00O-01A-13-A20O-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:TSVFile rdf:ID="RSEMNormMatrix_NCI60.tsv">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/RSEMNormMatrix_NCI60.tsv</j.1:hasLocation>
+      </j.0:TSVFile>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-A010-01A-31_Proteome_VU_20120925_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-A6-3807-01A-22_Proteome_VU_20121019_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:TSVFile rdf:ID="RSEMNormMatrix_Original.tsv">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/RSEMNormMatrix_Original.tsv</j.1:hasLocation>
+      </j.0:TSVFile>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TMT_6plex.condition.xml">
+            <j.2:hasDatatypeID></j.2:hasDatatypeID>
+            <j.2:hasGenomeReferenceID></j.2:hasGenomeReferenceID>
+            <j.2:hasSpeciesName></j.2:hasSpeciesName>
+            <j.2:hasParticipantID></j.2:hasParticipantID>
+            <j.2:hasSampleID></j.2:hasSampleID>
+            <j.2:hasMS1LabelID></j.2:hasMS1LabelID>
+            <j.2:hasInstrumentName></j.2:hasInstrumentName>
+            <j.2:hasOmicsType></j.2:hasOmicsType>
+            <j.2:hasDatasetID></j.2:hasDatasetID>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-3534-01A-22-2150-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:TSVFile rdf:ID="VariantPeptides_OV.tsv">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/VariantPeptides_OV.tsv</j.1:hasLocation>
+      </j.0:TSVFile>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#hs37d5_tux_bundle.zip">
+            <j.2:hasDatatypeID></j.2:hasDatatypeID>
+            <j.2:hasGenomeReferenceID></j.2:hasGenomeReferenceID>
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-A01Z-01A-13-A20O-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:SampleIDsFile rdf:ID="SampleIDs_CRC95.txt">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/SampleIDs_CRC95.txt</j.1:hasLocation>
+      </j.0:SampleIDsFile>
+      <j.0:IDPAssembleParamFile rdf:ID="idpassemble_0.01_iTRAQ4plex.params">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/idpassemble_0.01_iTRAQ4plex.params</j.1:hasLocation>
+      </j.0:IDPAssembleParamFile>
+      <j.0:IDPQonvert4plexParamFile rdf:ID="idpqonvert_gene_iTRAQ4plex.params">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/idpqonvert_gene_iTRAQ4plex.params</j.1:hasLocation>
+      </j.0:IDPQonvert4plexParamFile>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-3664-01A-22_Proteome_VU_20130123_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:IDPQonvertParamFile rdf:ID="idpqonvert.params">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/idpqonvert.params</j.1:hasLocation>
+      </j.0:IDPQonvertParamFile>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA.READ.mutect.221f1dec-b539-4345-b687-435659fc21af.somatic.maf">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-A01Z-01A-13_Proteome_VU_20120907_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:XInteractParamFile rdf:ID="xinteract.params">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/xinteract.params</j.1:hasLocation>
+      </j.0:XInteractParamFile>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-A00J-01A-12_Proteome_VU_20120804_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:SampleAnnFile rdf:ID="CRC_sampleAnn100.txt">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/CRC_sampleAnn100.txt</j.1:hasLocation>
+      </j.0:SampleAnnFile>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#hapmap1.map">
+            <j.2:hasPlatformCode>HT_HG-U133A</j.2:hasPlatformCode>
+            <j.2:hasPlatform>Affymetrix</j.2:hasPlatform>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-A01C-01A-22-A20O-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#HUMAN2015.fasta">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+            <j.2:hasGenomeReferenceID></j.2:hasGenomeReferenceID>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-A00N-01A-32-A20O-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AG-A036-01A-22_Proteome_VU_20120805_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-3684-01A-31_Proteome_VU_20121018_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#COADREAD_RSEM_genesNorm.txt">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+            <j.2:hasSeqType></j.2:hasSeqType>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-3848-01A-22-2150-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-3554-01A-22-2150-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-3684-01A-31-2150-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-A00E-01A-31_Proteome_VU_20121012_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AG-A01L-01A-22_Proteome_VU_20130129_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-3818-01A-22_Proteome_VU_20130210_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#k_Yeast_ICAT.xml">
+            <j.2:hasSpeciesName>Yeast</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AF-3913-01A-12_Proteome_VU_20121026_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-3989-01A-22-2150-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:TSVFile rdf:ID="RSEMNormMatrix_Reanalysis.tsv">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/RSEMNormMatrix_Reanalysis.tsv</j.1:hasLocation>
+      </j.0:TSVFile>
+      <j.0:IDConvertParamFile rdf:ID="toPepXML.params">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/toPepXML.params</j.1:hasLocation>
+      </j.0:IDConvertParamFile>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-A00A-01A-41_Proteome_VU_20130120_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-A00O-01A-13_Proteome_VU_20120816_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#ERR009159_1.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-3518-01A-11_Proteome_VU_20120915_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:MAFFile rdf:ID="MAFFile_2.txt">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/MAFFile_2.txt</j.1:hasLocation>
+      </j.0:MAFFile>
+      <j.0:OmicsFile rdf:ID="ProteinFile_Search1.tsv">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/ProteinFile_Search1.tsv</j.1:hasLocation>
+      </j.0:OmicsFile>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-A024-01A-32-A20O-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:OmicsFile rdf:ID="VarPepFile_CustomDB.tsv">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/VarPepFile_CustomDB.tsv</j.1:hasLocation>
+      </j.0:OmicsFile>
+      <j.0:SampleAnnFile rdf:ID="CRC_sampleAnn115.txt">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/CRC_sampleAnn115.txt</j.1:hasLocation>
+      </j.0:SampleAnnFile>
+      <j.0:AnnotationFile rdf:ID="variation.hg18.vMcCarroll2008.nov.2008.txt"/>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-3710-01A-22-2150-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:IDPQueryParamFile rdf:ID="iTRAQ4plex_idpQueryProt.params">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/iTRAQ4plex_idpQueryProt.params</j.1:hasLocation>
+      </j.0:IDPQueryParamFile>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-A00E-01A-31-A20O-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:RSEMFile rdf:ID="COADREAD_RSEM_genesNorm.txt">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/COADREAD_RSEM_genesNorm.txt</j.1:hasLocation>
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+            <j.0:hasSeqType></j.0:hasSeqType>
+            <j.0:hasSpeciesName>HS</j.0:hasSpeciesName>
+            <j.2:hasSeqType></j.2:hasSeqType>
+      </j.0:RSEMFile>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AG-A015-01A-51_Proteome_VU_20120921_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:MS2LabelParamFile rdf:ID="NOplex.condition.xml">
+            <j.2:hasSampleID></j.2:hasSampleID>
+            <j.0:hasSpeciesName></j.0:hasSpeciesName>
+            <j.0:hasGenomeReferenceID></j.0:hasGenomeReferenceID>
+            <j.0:hasInstrumentName></j.0:hasInstrumentName>
+            <j.2:hasMS1LabelID></j.2:hasMS1LabelID>
+            <j.2:hasParticipantID></j.2:hasParticipantID>
+            <j.0:hasDatasetID></j.0:hasDatasetID>
+            <j.0:hasMS1LabelID></j.0:hasMS1LabelID>
+            <j.2:hasSpeciesName></j.2:hasSpeciesName>
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/NOplex.condition.xml</j.1:hasLocation>
+            <j.0:hasMS2LabelID></j.0:hasMS2LabelID>
+            <j.0:hasDatatypeID></j.0:hasDatatypeID>
+            <j.2:hasDatatypeID></j.2:hasDatatypeID>
+            <j.2:hasOmicsType></j.2:hasOmicsType>
+            <j.2:hasInstrumentName></j.2:hasInstrumentName>
+            <j.2:hasGenomeReferenceID></j.2:hasGenomeReferenceID>
+            <j.0:hasOmicsType></j.0:hasOmicsType>
+            <j.2:hasDatasetID></j.2:hasDatasetID>
+            <j.0:hasParticipantID></j.0:hasParticipantID>
+            <j.2:hasMS2LabelID></j.2:hasMS2LabelID>
+            <j.0:hasSampleID></j.0:hasSampleID>
+      </j.0:MS2LabelParamFile>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-3552-01A-22-2150-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:VCFFile rdf:ID="ERR009159_1_2.mpileup.bcftools.vcf">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/ERR009159_1_2.mpileup.bcftools.vcf</j.1:hasLocation>
+      </j.0:VCFFile>
+      <j.0:AnnotationFile rdf:ID="hg18_Chromosome_band.txt"/>
+      <j.0:OmicsFile rdf:ID="Peptide_Myrimatch2.tsv">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/Peptide_Myrimatch2.tsv</j.1:hasLocation>
+      </j.0:OmicsFile>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-A02H-01A-32-A20O-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:TSVFile rdf:ID="RSEMNormMatrix_BRCA.tsv">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/RSEMNormMatrix_BRCA.tsv</j.1:hasLocation>
+      </j.0:TSVFile>
+      <j.0:OmicsFile rdf:ID="ProteinFile_CustomDB.tsv">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/ProteinFile_CustomDB.tsv</j.1:hasLocation>
+      </j.0:OmicsFile>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AF-3913-01A-12-2150-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-A02O-01A-23-A20O-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-A02J-01A-23_Proteome_VU_20121126_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:IDPQonvert4plexParamFile rdf:ID="idpqonvert_iTRAQ4plex.params">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/idpqonvert_iTRAQ4plex.params</j.1:hasLocation>
+      </j.0:IDPQonvert4plexParamFile>
+      <j.0:TSVFile rdf:ID="RSEMNormMatrix_OV.tsv">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/RSEMNormMatrix_OV.tsv</j.1:hasLocation>
+      </j.0:TSVFile>
+      <j.0:IDPAssembleParamFile rdf:ID="idpassemble_0.001.params">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/idpassemble_0.001.params</j.1:hasLocation>
+      </j.0:IDPAssembleParamFile>
+      <j.0:OmicsFile rdf:ID="ProteinFile_BRCA.tsv">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/ProteinFile_BRCA.tsv</j.1:hasLocation>
+      </j.0:OmicsFile>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AG-A01N-01A-23_Proteome_VU_20130104_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TMT_2plex.condition.xml">
+            <j.2:hasDatatypeID></j.2:hasDatatypeID>
+            <j.2:hasGenomeReferenceID></j.2:hasGenomeReferenceID>
+            <j.2:hasSpeciesName></j.2:hasSpeciesName>
+            <j.2:hasParticipantID></j.2:hasParticipantID>
+            <j.2:hasSampleID></j.2:hasSampleID>
+            <j.2:hasMS1LabelID></j.2:hasMS1LabelID>
+            <j.2:hasInstrumentName></j.2:hasInstrumentName>
+            <j.2:hasOmicsType></j.2:hasOmicsType>
+            <j.2:hasDatasetID></j.2:hasDatasetID>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-A01I-01A-12_Proteome_VU_20121118_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-A01S-01A-23_Proteome_VU_20121121_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:SampleAnnFile rdf:ID="CRC_sampleAnn105.txt">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/CRC_sampleAnn105.txt</j.1:hasLocation>
+      </j.0:SampleAnnFile>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AG-A02N-01A-31_Proteome_VU_20120819_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-3715-01A-22_Proteome_VU_20120821_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#HG00096.chrom11.ILLUMINA.bwa.GBR.low_coverage.20120522.bam">
+            <j.2:hasGenomeReferenceID>hs37d5</j.2:hasGenomeReferenceID>
+            <j.2:Chromosome>chr11</j.2:Chromosome>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AG-A011-01A-32_Proteome_VU_20120828_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:mzMLFile rdf:ID="SampleData_iTRAQ_mzML.zip">
+            <j.0:hasDatatypeID></j.0:hasDatatypeID>
+            <j.0:hasOmicsType></j.0:hasOmicsType>
+            <j.0:hasSpeciesName>HS</j.0:hasSpeciesName>
+            <j.0:hasInstrumentName></j.0:hasInstrumentName>
+            <j.0:hasMS2LabelID></j.0:hasMS2LabelID>
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/SampleData_iTRAQ_mzML.zip</j.1:hasLocation>
+            <j.0:hasGenomeReferenceID></j.0:hasGenomeReferenceID>
+            <j.0:hasMS1LabelID></j.0:hasMS1LabelID>
+            <j.0:hasDatasetID>Dataset1</j.0:hasDatasetID>
+            <j.0:hasParticipantID>Sample1</j.0:hasParticipantID>
+            <j.0:hasSampleID>SampleData1</j.0:hasSampleID>
+      </j.0:mzMLFile>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-A00F-01A-31-A20O-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-A01F-01A-23-A20O-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:Tophat2ParamFile rdf:ID="tophat2.params">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/tophat2.params</j.1:hasLocation>
+      </j.0:Tophat2ParamFile>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-3672-01A-22_Proteome_VU_20121217_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:SampleIDsFile rdf:ID="SampleIDs_NCI60.txt">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/NCI60_SampleIDs.txt</j.1:hasLocation>
+      </j.0:SampleIDsFile>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-3561-01A-22_Proteome_VU_20120808_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:SampleIDsFile rdf:ID="SampleIDs_CRC95_CO_10.txt">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/SampleIDs_CRC95_CO_10.txt</j.1:hasLocation>
+      </j.0:SampleIDsFile>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-3864-01A-22-2150-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:MS2LabelParamFile rdf:ID="iTRAQ4plex_idpicker.params">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/iTRAQ4plex_idpicker.params</j.1:hasLocation>
+      </j.0:MS2LabelParamFile>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AG-A016-01A-23-A20O-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:SampleIDsFile rdf:ID="SampleIDs_iTRAQ.txt">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/SampleIDs_iTRAQ.txt</j.1:hasLocation>
+      </j.0:SampleIDsFile>
+      <j.0:SptxtFile rdf:ID="human_2011_05_26_it_decoy.sptxt">
+            <j.0:hasInstrumentName></j.0:hasInstrumentName>
+            <j.0:hasSampleID></j.0:hasSampleID>
+            <j.0:hasGenomeReferenceID></j.0:hasGenomeReferenceID>
+            <j.0:hasDatasetID></j.0:hasDatasetID>
+            <j.0:hasDatatypeID></j.0:hasDatatypeID>
+            <j.0:hasParticipantID></j.0:hasParticipantID>
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/human_2011_05_26_it_decoy.sptxt</j.1:hasLocation>
+            <j.0:hasSpeciesName>HS</j.0:hasSpeciesName>
+            <j.0:hasOmicsType></j.0:hasOmicsType>
+      </j.0:SptxtFile>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-A01F-01A-23_Proteome_VU_20120727_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AF-2691-01A-41-2150-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-3526-01A-11-2150-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-3534-01A-22_Proteome_VU_20130208_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AG-A00Y-01A-12_Proteome_VU_20121016_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:OmicsFile rdf:ID="ProteinFile_Myrimatch2.tsv">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/ProteinFile_Myrimatch2.tsv</j.1:hasLocation>
+      </j.0:OmicsFile>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AG-A014-01A-12-A20O-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:XTandemParamFile rdf:ID="ZhangTandem.params.xml">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/ZhangTandem.params.xml</j.1:hasLocation>
+      </j.0:XTandemParamFile>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AG-4007-01A-22-2150-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:SNVFile rdf:ID="SNVFile_1.txt">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/SNVFile_1.txt</j.1:hasLocation>
+      </j.0:SNVFile>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-A00A-01A-22_Proteome_VU_20121221_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-A01C-01A-22_Proteome_VU_20121015_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:IDPQueryParamFile rdf:ID="iTRAQ4plex_idpQueryPep.params">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/iTRAQ4plex_idpQueryPep.params</j.1:hasLocation>
+      </j.0:IDPQueryParamFile>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AG-A011-01A-32-A20O-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#hg19.fa">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+            <j.2:hasDatatypeID></j.2:hasDatatypeID>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AG-A026-01A-71_Proteome_VU_20121023_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#hs37d5_cpdb_bundle.zip">
+            <j.2:hasDatatypeID></j.2:hasDatatypeID>
+            <j.2:hasGenomeReferenceID></j.2:hasGenomeReferenceID>
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:OmicsFile rdf:ID="ProteinFile_Stage3.tsv">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/ProteinFile_Stage3.tsv</j.1:hasLocation>
+      </j.0:OmicsFile>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-3664-01A-22-2150-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-A01V-01A-24_Proteome_VU_20121124_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:OmicsFile rdf:ID="Peptide_Myrimatch1.tsv">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/Peptide_Myrimatch1.tsv</j.1:hasLocation>
+      </j.0:OmicsFile>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AG-A020-01A-23_Proteome_VU_20130214_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AG-A01Y-01A-43_Proteome_VU_20120825_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-3672-01A-22-2150-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:PepitomeParamFile rdf:ID="ZhangPepitome_Exact.params">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/ZhangPepitome_Exact.params</j.1:hasLocation>
+      </j.0:PepitomeParamFile>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AG-A002-01A-23-A20O-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-3518-01A-11-2150-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-A00J-01A-12-A20O-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:OmicsFile rdf:ID="ProteinFile4_110Samples.tsv">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/ProteinFile4_110Samples.tsv</j.1:hasLocation>
+      </j.0:OmicsFile>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-A00R-01A-31_Proteome_VU_20121227_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-A6-3810-01A-22_Proteome_VU_20121029_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-A00K-01A-12_Proteome_VU_20121213_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:AnnotationFile rdf:ID="hg18_brain_RNASeq.txt"/>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AF-2692-01A-41_Proteome_VU_20120910_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:CustomProDBAnnotZip rdf:ID="hg19_cpdb_bundle.zip">
+            <j.0:hasParticipantID></j.0:hasParticipantID>
+            <j.0:hasOmicsType></j.0:hasOmicsType>
+            <j.2:hasDatatypeID></j.2:hasDatatypeID>
+            <j.0:hasInstrumentName></j.0:hasInstrumentName>
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/hg19_cpdb_bundle.zip</j.1:hasLocation>
+            <j.2:hasGenomeReferenceID></j.2:hasGenomeReferenceID>
+            <j.0:hasSpeciesName>HS</j.0:hasSpeciesName>
+            <j.0:hasDatatypeID></j.0:hasDatatypeID>
+            <j.0:hasDatasetID></j.0:hasDatasetID>
+            <j.0:hasGenomeReferenceID>hg19</j.0:hasGenomeReferenceID>
+            <j.0:hasSampleID></j.0:hasSampleID>
+      </j.0:CustomProDBAnnotZip>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#yeast.nci.20070223.fasta">
+            <j.2:hasSpeciesName>Yeast</j.2:hasSpeciesName>
+            <j.2:hasGenomeReferenceID></j.2:hasGenomeReferenceID>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AF-3400-01A-41_Proteome_VU_20120820_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:OmicsFile rdf:ID="ProteinFile_Search2.tsv">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/ProteinFile_Search2.tsv</j.1:hasLocation>
+      </j.0:OmicsFile>
+      <j.0:IDPQueryParamFile rdf:ID="iTRAQ4plex_idpQueryGene.params">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/iTRAQ4plex_idpQueryGene.params</j.1:hasLocation>
+      </j.0:IDPQueryParamFile>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-3666-01A-31-2150-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-A02R-01A-23-A20O-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:GTFFile rdf:ID="hg19_genes.gtf">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/hg19_genes.gtf</j.1:hasLocation>
+            <j.0:hasSampleID></j.0:hasSampleID>
+            <j.0:hasParticipantID></j.0:hasParticipantID>
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+            <j.0:hasDatasetID></j.0:hasDatasetID>
+            <j.0:hasDatatypeID></j.0:hasDatatypeID>
+            <j.0:hasInstrumentName></j.0:hasInstrumentName>
+            <j.0:hasGenomeReferenceID>hg19</j.0:hasGenomeReferenceID>
+            <j.2:hasGenomeReferenceID></j.2:hasGenomeReferenceID>
+            <j.2:hasDatatypeID></j.2:hasDatatypeID>
+            <j.0:hasSpeciesName>HS</j.0:hasSpeciesName>
+            <j.0:hasOmicsType></j.0:hasOmicsType>
+      </j.0:GTFFile>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-3848-01A-22_Proteome_VU_20121204_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:MyrimatchParamFile rdf:ID="ZhangMM_Exact.params">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/ZhangMM_Exact.params</j.1:hasLocation>
+      </j.0:MyrimatchParamFile>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-A01K-01A-31-A20O-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AG-A008-01A-23_Proteome_VU_20130127_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AG-A032-01A-31_Proteome_VU_20121108_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#hg19_ref_proteome.fasta">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+            <j.2:hasGenomeReferenceID></j.2:hasGenomeReferenceID>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-3531-01A-22-2150-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-A01D-01A-23_Proteome_VU_20121105_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AG-A00C-01A-23-A20O-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-A00U-01A-41-A20O-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AG-A01N-01A-23-A20O-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-A00R-01A-22-A20O-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:IDPAssembleParamFile rdf:ID="idpassemble_0.01mod_pg.params">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/idpassemble_0.01mod_pg.params</j.1:hasLocation>
+      </j.0:IDPAssembleParamFile>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AG-A01W-01A-23-A20O-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-3531-01A-22_Proteome_VU_20130101_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:SampleIDsFile rdf:ID="SampleIDS_BRCA.txt">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/SampleIDS_BRCA.txt</j.1:hasLocation>
+      </j.0:SampleIDsFile>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-A02E-01A-23_Proteome_VU_20120908_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:PepModsFile rdf:ID="LCMS_Mods.txt">
+            <j.2:hasDatasetID></j.2:hasDatasetID>
+            <j.2:hasMS1LabelID></j.2:hasMS1LabelID>
+            <j.2:hasDatatypeID></j.2:hasDatatypeID>
+            <j.0:hasSampleID></j.0:hasSampleID>
+            <j.0:hasMS2LabelID></j.0:hasMS2LabelID>
+            <j.0:hasOmicsType>proteomics</j.0:hasOmicsType>
+            <j.0:hasInstrumentName></j.0:hasInstrumentName>
+            <j.0:hasSpeciesName></j.0:hasSpeciesName>
+            <j.2:hasSampleID></j.2:hasSampleID>
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/LCMS_Mods.txt</j.1:hasLocation>
+            <j.0:hasDatatypeID></j.0:hasDatatypeID>
+            <j.2:hasParticipantID></j.2:hasParticipantID>
+            <j.2:hasMS2LabelID></j.2:hasMS2LabelID>
+            <j.0:hasParticipantID></j.0:hasParticipantID>
+            <j.0:hasDatasetID></j.0:hasDatasetID>
+            <j.0:hasMS1LabelID></j.0:hasMS1LabelID>
+            <j.2:hasInstrumentName></j.2:hasInstrumentName>
+            <j.2:hasSpeciesName></j.2:hasSpeciesName>
+      </j.0:PepModsFile>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AG-3594-01A-12-2150-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AG-3593-01A-22-2150-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:RefFastaTuxZip rdf:ID="hs37d5_tux_bundle.zip">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/hs37d5_tux_bundle.zip</j.1:hasLocation>
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+            <j.0:hasDatatypeID></j.0:hasDatatypeID>
+            <j.0:hasSpeciesName>HS</j.0:hasSpeciesName>
+            <j.0:hasGenomeReferenceID></j.0:hasGenomeReferenceID>
+            <j.2:hasDatatypeID></j.2:hasDatatypeID>
+            <j.2:hasGenomeReferenceID></j.2:hasGenomeReferenceID>
+      </j.0:RefFastaTuxZip>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#NOplex.condition.xml">
+            <j.2:hasMS1LabelID></j.2:hasMS1LabelID>
+            <j.2:hasInstrumentName></j.2:hasInstrumentName>
+            <j.2:hasSampleID></j.2:hasSampleID>
+            <j.2:hasSpeciesName></j.2:hasSpeciesName>
+            <j.2:hasDatatypeID></j.2:hasDatatypeID>
+            <j.2:hasGenomeReferenceID></j.2:hasGenomeReferenceID>
+            <j.2:hasDatasetID></j.2:hasDatasetID>
+            <j.2:hasParticipantID></j.2:hasParticipantID>
+            <j.2:hasOmicsType></j.2:hasOmicsType>
+            <j.2:hasMS2LabelID></j.2:hasMS2LabelID>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-3558-01A-22_Proteome_VU_20121112_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-A03F-01A-41-A20O-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AG-A00C-01A-23_Proteome_VU_20120729_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#iTRAQ_4plex.condition.xml">
+            <j.2:hasDatatypeID></j.2:hasDatatypeID>
+            <j.2:hasGenomeReferenceID></j.2:hasGenomeReferenceID>
+            <j.2:hasSpeciesName></j.2:hasSpeciesName>
+            <j.2:hasParticipantID></j.2:hasParticipantID>
+            <j.2:hasSampleID></j.2:hasSampleID>
+            <j.2:hasMS1LabelID></j.2:hasMS1LabelID>
+            <j.2:hasInstrumentName></j.2:hasInstrumentName>
+            <j.2:hasOmicsType></j.2:hasOmicsType>
+            <j.2:hasDatasetID></j.2:hasDatasetID>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-A6-3807-01A-22-2150-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AG-3580-01A-22_Proteome_VU_20121224_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AG-A01J-01A-22_Proteome_VU_20121231_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:TSVFile rdf:ID="SAAVs_BRCA.tsv">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/SAAVs_BRCA.tsv</j.1:hasLocation>
+      </j.0:TSVFile>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-A017-01A-22-A20O-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:IDPQueryParamFile rdf:ID="idpQueryProt.Params">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/idpQueryProt.Params</j.1:hasLocation>
+      </j.0:IDPQueryParamFile>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AG-4007-01A-22_Proteome_VU_20120731_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AG-A00H-01A-31_Proteome_VU_20121008_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:OmicsFile rdf:ID="ProteinFile_Search4.tsv">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/ProteinFile_Search4.tsv</j.1:hasLocation>
+      </j.0:OmicsFile>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-A029-01A-41-A20O-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-A02R-01A-23_Proteome_VU_20121104_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-3529-01A-12-2150-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AG-A026-01A-71-A20O-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:AnnotationFile rdf:ID="hg18_segdups.txt"/>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#hg19_ref_proteome_with_decoy.fasta">
+            <j.2:hasDatatypeID></j.2:hasDatatypeID>
+            <j.2:hasGenomeReferenceID></j.2:hasGenomeReferenceID>
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+            <j.2:hasParticipantID></j.2:hasParticipantID>
+            <j.2:hasSampleID></j.2:hasSampleID>
+            <j.2:hasInstrumentName></j.2:hasInstrumentName>
+            <j.2:hasOmicsType></j.2:hasOmicsType>
+            <j.2:hasDatasetID></j.2:hasDatasetID>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-A029-01A-41_Proteome_VU_20121009_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AG-A00H-01A-22-A20O-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-A00F-01A-31_Proteome_VU_20121222_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-A00N-01A-32_Proteome_VU_20121027_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-A01T-01A-23-A20O-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AF-2691-01A-41_Proteome_VU_20120726_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AG-A02X-01A-32-A20O-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:IDPQueryParamFile rdf:ID="idpQueryPep.Params">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/idpQueryPep.Params</j.1:hasLocation>
+      </j.0:IDPQueryParamFile>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-A00A-01A-22-A20O-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-3525-01A-12_Proteome_VU_20121209_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:TSVFile rdf:ID="SAAVs_Stage3.tsv">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/SAAVs_Stage3.tsv</j.1:hasLocation>
+      </j.0:TSVFile>
+      <j.0:OmicsFile rdf:ID="ProteinFile1_95Samples.tsv">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/ProteinFile1_95Samples.tsv</j.1:hasLocation>
+      </j.0:OmicsFile>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-A00R-01A-22_Proteome_VU_20121103_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AG-A020-01A-23-A20O-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:OmicsFile rdf:ID="ProteinFile_Search3.tsv">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/ProteinFile_Search3.tsv</j.1:hasLocation>
+      </j.0:OmicsFile>
+      <j.0:OmicsFile rdf:ID="ProteinFile3_105Samples.tsv">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/ProteinFile3_105Samples.tsv</j.1:hasLocation>
+      </j.0:OmicsFile>
+      <j.0:GenomicFastaFile rdf:ID="test.fa">
+            <j.0:hasDatatypeID></j.0:hasDatatypeID>
+            <j.0:hasOmicsType></j.0:hasOmicsType>
+            <j.0:hasParticipantID></j.0:hasParticipantID>
+            <j.0:hasGenomeReferenceID>hg19</j.0:hasGenomeReferenceID>
+            <j.0:hasSampleID></j.0:hasSampleID>
+            <j.0:hasDatasetID></j.0:hasDatasetID>
+            <j.0:hasInstrumentName></j.0:hasInstrumentName>
+            <j.0:hasSpeciesName>HS</j.0:hasSpeciesName>
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/test.fa</j.1:hasLocation>
+      </j.0:GenomicFastaFile>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-A01I-01A-12-A20O-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-A03J-01A-23-A20O-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-A01S-01A-23-A20O-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AG-A032-01A-31-A20O-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:RSEMParamFile rdf:ID="rsem_SE.params">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/rsem_SE.params</j.1:hasLocation>
+      </j.0:RSEMParamFile>
+      <j.0:TSVFile rdf:ID="SAAVs_Published.tsv">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/SAAVs_Published.tsv</j.1:hasLocation>
+      </j.0:TSVFile>
+      <j.0:DecoyFastaParamFile rdf:ID="decoyFASTA.params">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/decoyFASTA.params</j.1:hasLocation>
+      </j.0:DecoyFastaParamFile>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AG-A02X-01A-32_Proteome_VU_20130213_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:GenomicFastaFile rdf:ID="hs37d5.fa">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/hs37d5.fa</j.1:hasLocation>
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+            <j.0:ReferenceId></j.0:ReferenceId>
+            <j.0:hasDatatypeID></j.0:hasDatatypeID>
+            <j.0:hasSpeciesName>HS</j.0:hasSpeciesName>
+            <j.0:hasGenomeReferenceID>hs37d5</j.0:hasGenomeReferenceID>
+            <j.2:hasDatatypeID></j.2:hasDatatypeID>
+            <j.2:hasGenomeReferenceID>hs37d5</j.2:hasGenomeReferenceID>
+      </j.0:GenomicFastaFile>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#hs37d5.fa">
+            <j.2:hasDatatypeID></j.2:hasDatatypeID>
+            <j.2:hasGenomeReferenceID>hs37d5</j.2:hasGenomeReferenceID>
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AG-A01J-01A-22-A20O-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:IDPAssembleParamFile rdf:ID="idpassemble_0.01_pg.params">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/idpassemble_0.01_pg.params</j.1:hasLocation>
+      </j.0:IDPAssembleParamFile>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AG-A008-01A-23-A20O-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-A01R-01A-23-A20O-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AG-A02N-01A-31-A20O-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:TSVFile rdf:ID="VariantPeptides_Published.tsv">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/VariantPeptides_Published.tsv</j.1:hasLocation>
+      </j.0:TSVFile>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-A02O-01A-23_Proteome_VU_20130205_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:VCFFile rdf:ID="HG00096.chrom11.ILLUMINA.bwa.GBR.low_coverage.20120522.bam.MuTect.vcf">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/HG00096.chrom11.ILLUMINA.bwa.GBR.low_coverage.20120522.bam.MuTect.vcf</j.1:hasLocation>
+      </j.0:VCFFile>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-A00K-01A-31_Proteome_VU_20120912_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#protContams.fasta">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+            <j.2:hasGenomeReferenceID></j.2:hasGenomeReferenceID>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-A017-01A-22_Proteome_VU_20120817_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-A022-01A-23-A20O-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-A010-01A-31-A20O-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:RefFastaTuxZip rdf:ID="hg19_tux_bundle.zip">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/hg19_tux_bundle.zip</j.1:hasLocation>
+            <j.0:hasDatatypeID></j.0:hasDatatypeID>
+            <j.0:hasSampleID></j.0:hasSampleID>
+            <j.0:hasSpeciesName>HS</j.0:hasSpeciesName>
+            <j.0:hasParticipantID></j.0:hasParticipantID>
+            <j.0:hasGenomeReferenceID>hg19</j.0:hasGenomeReferenceID>
+            <j.0:hasDatasetID></j.0:hasDatasetID>
+            <j.0:hasInstrumentName></j.0:hasInstrumentName>
+            <j.0:hasOmicsType></j.0:hasOmicsType>
+      </j.0:RefFastaTuxZip>
+      <j.0:CustomProDBAnnotZip rdf:ID="hs37d5_cpdb_bundle.zip">
+            <j.0:hasDatatypeID></j.0:hasDatatypeID>
+            <j.0:hasSpeciesName>HS</j.0:hasSpeciesName>
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/hs37d5_cpdb_bundle.zip</j.1:hasLocation>
+            <j.0:hasGenomeReferenceID>hs37d5</j.0:hasGenomeReferenceID>
+            <j.0:hasOmicsType></j.0:hasOmicsType>
+            <j.0:hasDatasetID></j.0:hasDatasetID>
+            <j.2:hasGenomeReferenceID></j.2:hasGenomeReferenceID>
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+            <j.2:hasDatatypeID></j.2:hasDatatypeID>
+            <j.0:hasParticipantID></j.0:hasParticipantID>
+            <j.0:hasSampleID></j.0:hasSampleID>
+            <j.0:hasInstrumentName></j.0:hasInstrumentName>
+      </j.0:CustomProDBAnnotZip>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-A01K-01A-31_Proteome_VU_20121116_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#COADREAD.maf.txt">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:DecoySpectraSTParamFile rdf:ID="decoySpectraST.params">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/decoySpectraST.params</j.1:hasLocation>
+      </j.0:DecoySpectraSTParamFile>
+      <j.0:OmicsFile rdf:ID="ProteinFile_OV.tsv">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/ProteinFile_OV.tsv</j.1:hasLocation>
+      </j.0:OmicsFile>
+      <j.0:MSGFPlusParamFile rdf:ID="ZhangMSGFPlus_Exact.params">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/ZhangMSGFPlus_Exact.params</j.1:hasLocation>
+      </j.0:MSGFPlusParamFile>
+      <j.0:SampleIDsFile rdf:ID="SampleIDs_CRC95_CO_5.txt">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/SampleIDs_CRC95_CO_5.txt</j.1:hasLocation>
+      </j.0:SampleIDsFile>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-A01V-01A-24-A20O-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#hg19_cpdb_bundle.zip">
+            <j.2:hasDatatypeID></j.2:hasDatatypeID>
+            <j.2:hasGenomeReferenceID></j.2:hasGenomeReferenceID>
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:GTFFile rdf:ID="hs37d5_genes.gtf">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/hs37d5_genes.gtf</j.1:hasLocation>
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+            <j.0:hasDatatypeID></j.0:hasDatatypeID>
+            <j.0:hasSpeciesName>HS</j.0:hasSpeciesName>
+            <j.0:hasGenomeReferenceID></j.0:hasGenomeReferenceID>
+            <j.2:hasDatatypeID></j.2:hasDatatypeID>
+            <j.2:hasGenomeReferenceID></j.2:hasGenomeReferenceID>
+      </j.0:GTFFile>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-A6-3810-01A-22-2150-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:IDPQueryParamFile rdf:ID="idpQueryGene.Params">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/idpQueryGene.Params</j.1:hasLocation>
+      </j.0:IDPQueryParamFile>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-A6-3808-01A-22_Proteome_VU_20121205_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:SampleIDsFile rdf:ID="SampleIDs_CRC95_CO_20.txt">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/SampleIDs_CRC95_CO_20.txt</j.1:hasLocation>
+      </j.0:SampleIDsFile>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AG-A01L-01A-22-A20O-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-3561-01A-22-2150-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:SampleIDsFile rdf:ID="ZhangPGPaired_91SampleIDs.txt">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/ZhangPGPaired_91SampleIDs.txt</j.1:hasLocation>
+      </j.0:SampleIDsFile>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-A02E-01A-23-A20O-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-3864-01A-22_Proteome_VU_20121226_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-A02Y-01A-31_Proteome_VU_20120909_mzML.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#_20151216_ML_default_HUMAN_FAST_Fractions.xml">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <j.0:KeggPathwaysFile rdf:ID="keggRetainPathways.txt">
+            <j.1:hasLocation>/usr/local/tomcat/temp/domain-8291137077818684366-temp/genomics/data/keggRetainPathways.txt</j.1:hasLocation>
+      </j.0:KeggPathwaysFile>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AG-A036-01A-22-A20O-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AA-A01P-01A-23-A20O-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.wings-workflows.org/wings-omics-portal/export/users/ravali/genomics/data/library.owl#TCGA-AG-A00Y-01A-12-A20O-27.zip">
+            <j.2:hasSpeciesName>HS</j.2:hasSpeciesName>
+      </rdf:Description>
+</rdf:RDF>

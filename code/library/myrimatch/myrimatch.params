@@ -1,0 +1,8 @@
+ProteinDatabase = ${DB_FILE}
+OutputFormat = "pepXML"
+StaticMods = ${FIX_MOD_SSV}
+DynamicMods = ${VAR_MOD_SSV}
+MaxDynamicMods = ${MAX_DYN_MODS}
+CleavageRules = ${CL_ENZYME}
+MinPeptideLength = ${MIN_PEP_LENGTH}
+MaxPeptideLength = ${MAX_PEP_LENGTH}

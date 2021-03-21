@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.0="http://www.wings-workflows.org/ontology/workflow.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+      xml:base="http://localhost:8080/wings-portal/export/users/admin/genomics/workflows/library.owl">
+      <j.0:WorkflowTemplate rdf:about="SingleProteomicSearch_ITRAQ.owl#SingleProteomicSearch_ITRAQ"/>
+      <j.0:WorkflowTemplate rdf:about="MetaAnalysis_NewData.owl#MetaAnalysis_NewData"/>
+      <j.0:WorkflowTemplate rdf:about="MetaAnalysisCompare_SAAVResults.owl#MetaAnalysisCompare_SAAVResults"/>
+      <j.0:WorkflowTemplate rdf:about="MetaAnalysisCompare_mRNAProtResults.owl#MetaAnalysisCompare_mRNAProtResults"/>
+      <j.0:WorkflowTemplate rdf:about="PeptideSearch.owl#PeptideSearch"/>
+      <j.0:WorkflowTemplate rdf:about="MetaAnalysis_ParamSensitivityFiles.owl#MetaAnalysis_ParamSensitivityFiles"/>
+      <j.0:WorkflowTemplate rdf:about="MetaAnalysisCompare_TwoProtFiles.owl#MetaAnalysisCompare_TwoProtFiles"/>
+      <j.0:WorkflowTemplate rdf:about="MetaAnalysis_OriginalVsReanalysisFiles.owl#MetaAnalysis_OriginalVsReanalysisFiles"/>
+      <j.0:WorkflowTemplate rdf:about="MetaAnalysisCompare_FourProtResults.owl#MetaAnalysisCompare_FourProtResults"/>
+      <j.0:WorkflowTemplate rdf:about="MetaAnalysis_OriginalVsReanalysis.owl#MetaAnalysis_OriginalVsReanalysis"/>
+      <j.0:WorkflowTemplate rdf:about="MultiProteomic_SpectralLibSearch.owl#MultiProteomic_SpectralLibSearch"/>
+      <j.0:WorkflowTemplate rdf:about="MetaAnalysis_NewDataFiles.owl#MetaAnalysis_NewDataFiles"/>
+      <j.0:WorkflowTemplate rdf:about="MetaAnalysis_ParamSensitivity.owl#MetaAnalysis_ParamSensitivity"/>
+      <j.0:WorkflowTemplate rdf:about="SingleProteogenomicSearch.owl#SingleProteogenomicSearch"/>
+      <j.0:WorkflowTemplate rdf:about="MetaAnalysisCompare_TwoProtResults.owl#MetaAnalysisCompare_TwoProtResults"/>
+      <j.0:WorkflowTemplate rdf:about="SingleProteomicSearch.owl#SingleProteomicSearch"/>
+      <j.0:WorkflowTemplate rdf:about="MetaAnalysis_AdditionalData.owl#MetaAnalysis_AdditionalData"/>
+      <j.0:WorkflowTemplate rdf:about="MetaAnalysisCompare_SAAVFiles.owl#MetaAnalysisCompare_SAAVFiles"/>
+      <j.0:WorkflowTemplate rdf:about="SingleProteomic_SpectralLibSearch.owl#SingleProteomic_SpectralLibSearch"/>
+      <j.0:WorkflowTemplate rdf:about="MultiProteomicSearch.owl#MultiProteomicSearch"/>
+      <j.0:WorkflowTemplate rdf:about="MetaAnalysisCompare_FourProtFiles.owl#MetaAnalysisCompare_FourProtFiles"/>
+      <j.0:WorkflowTemplate rdf:about="MetaAnalysisCompare_RefCustomFiles.owl#MetaAnalysisCompare_RefCustomFiles"/>
+      <j.0:WorkflowTemplate rdf:about="SingleProteogenomicSearch_ITRAQ.owl#SingleProteogenomicSearch_ITRAQ"/>
+      <j.0:WorkflowTemplate rdf:about="MultiProteomic_SpectralLibSearch_Stage1.owl#MultiProteomic_SpectralLibSearch_Stage1"/>
+      <j.0:WorkflowTemplate rdf:about="MetaAnalysisCompare_mRNAProtFiles.owl#MetaAnalysisCompare_mRNAProtFiles"/>
+      <j.0:WorkflowTemplate rdf:about="MetaAnalysis_AdditionalDataFiles.owl#MetaAnalysis_AdditionalDataFiles"/>
+      <j.0:WorkflowTemplate rdf:about="MetaAnalysisCompare_RefCustomResults.owl#MetaAnalysisCompare_RefCustomResults"/>
+</rdf:RDF>

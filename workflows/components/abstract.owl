@@ -1,0 +1,2333 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.0="http://www.wings-workflows.org/ontology/resource.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:j.1="http://localhost:8080/wings-portal/export/users/admin/genomics/data/ontology.owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:j.2="http://localhost:8080/wings-portal/export/users/admin/genomics/components/library.owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:j.3="http://www.wings-workflows.org/ontology/component.owl#"
+      xml:base="http://localhost:8080/wings-portal/export/users/admin/genomics/components/abstract.owl">
+      <owl:Class rdf:about="library.owl#WorkflowComparisonClass"/>
+      <owl:Class rdf:about="library.owl#SpectraProcessing">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:about="library.owl#DISK"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:about="library.owl#ProteinAssemblyClass">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:about="library.owl#MS2_AnalysisClass"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:about="library.owl#DataDimensionConvertClass">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:about="library.owl#DataConversionClass"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:about="library.owl#FASTAProcessing">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:about="library.owl#DISK"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:about="library.owl#Reformat_CNVs"/>
+      <owl:Class rdf:about="library.owl#GeneratePlotsClass">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:about="library.owl#WorkshopDemo"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:about="library.owl#DrawVennClass">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:about="library.owl#PaperMetaWFs"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:about="library.owl#PaperMetaWFs">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:about="library.owl#MetaWorkflow"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:about="library.owl#Naive_bayesClass">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:about="library.owl#Diagnosis_ClassificationClass"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:about="library.owl#EditFASTAClass">
+            <rdfs:subClassOf rdf:resource="library.owl#FASTAProcessing"/>
+      </owl:Class>
+      <owl:Class rdf:about="library.owl#DeNovo"/>
+      <owl:Class rdf:about="library.owl#ProteinDataConvertClass">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:about="library.owl#DataConversionClass"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:about="library.owl#DataClusteringClass">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:about="library.owl#DISK"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:about="library.owl#DataNormalizationClass">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:about="library.owl#DISK"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:about="library.owl#Norm_Affymetrix_CELClass">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:about="library.owl#ExpressionDataClass"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:about="library.owl#MS2_AnalysisClass">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:about="library.owl#DISK"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:about="library.owl#General_Merge_Bad_Chips"/>
+      <owl:Class rdf:about="library.owl#ResultCompositionClass"/>
+      <owl:Class rdf:about="library.owl#MetaWorkflow">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:about="library.owl#DISK"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:about="library.owl#GetReqFileFromRunClass">
+            <rdfs:subClassOf rdf:resource="library.owl#PaperMetaWFs"/>
+      </owl:Class>
+      <owl:Class rdf:about="library.owl#FilterDataClass">
+            <rdfs:subClassOf rdf:resource="library.owl#PaperMetaWFs"/>
+      </owl:Class>
+      <owl:Class rdf:about="library.owl#mergeFASTAClass">
+            <rdfs:subClassOf rdf:resource="library.owl#FASTAProcessing"/>
+      </owl:Class>
+      <owl:Class rdf:about="library.owl#Test_installation_of_toolsClass">
+            <rdfs:subClassOf rdf:resource="http://www.wings-workflows.org/ontology/component.owl#Component"/>
+      </owl:Class>
+      <owl:Class rdf:about="library.owl#VariantCallerClass">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:about="library.owl#DISK"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:about="library.owl#CallSNPIndelsClass">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:about="library.owl#DISK"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:about="library.owl#BaggingClass">
+            <rdfs:subClassOf rdf:resource="library.owl#Diagnosis_ClassificationClass"/>
+      </owl:Class>
+      <owl:Class rdf:about="library.owl#VariantAnalysisClass">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:about="library.owl#DISK"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:about="library.owl#SamTools">
+            <rdfs:subClassOf rdf:resource="http://www.wings-workflows.org/ontology/component.owl#Component"/>
+      </owl:Class>
+      <owl:Class rdf:about="library.owl#SubmissionClass"/>
+      <owl:Class rdf:about="library.owl#Tiling_whole_slide_bftoolsClass"/>
+      <owl:Class rdf:about="library.owl#IndexFASTAClass">
+            <rdfs:subClassOf rdf:resource="library.owl#FASTAProcessing"/>
+      </owl:Class>
+      <owl:Class rdf:about="library.owl#Cell_SegmentationClass"/>
+      <owl:Class rdf:about="library.owl#PeptideSpectralSearchClass">
+            <rdfs:subClassOf rdf:resource="library.owl#MS2_AnalysisClass"/>
+      </owl:Class>
+      <owl:Class rdf:about="library.owl#Classification_EvaluationClass"/>
+      <owl:Class rdf:about="library.owl#Detect_CNVs"/>
+      <owl:Class rdf:about="library.owl#FastqToBamClass">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:about="library.owl#DISK"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:about="library.owl#CustomProteinFastaDBClass">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:about="library.owl#DISK"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:about="library.owl#SpliceVarCallerClass">
+            <rdfs:subClassOf rdf:resource="library.owl#VariantCallerClass"/>
+      </owl:Class>
+      <owl:Class rdf:about="library.owl#DataConversionClass">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:about="library.owl#DISK"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:about="library.owl#ChangeDataTypeClass">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:about="library.owl#DataFormattingClass"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:about="library.owl#AnalysisClass"/>
+      <owl:Class rdf:about="library.owl#SNVCallerClass">
+            <rdfs:subClassOf rdf:resource="library.owl#VariantCallerClass"/>
+      </owl:Class>
+      <owl:Class rdf:about="library.owl#DISK">
+            <rdfs:subClassOf rdf:resource="http://www.wings-workflows.org/ontology/component.owl#Component"/>
+      </owl:Class>
+      <owl:Class rdf:about="library.owl#CreateDecoyFASTAClass">
+            <rdfs:subClassOf rdf:resource="library.owl#FASTAProcessing"/>
+      </owl:Class>
+      <owl:Class rdf:about="library.owl#MetadataFetcherTypeClass">
+            <rdfs:subClassOf rdf:resource="library.owl#DISK"/>
+      </owl:Class>
+      <owl:Class rdf:about="library.owl#General_Merge_CNVs"/>
+      <owl:Class rdf:about="library.owl#cleanFASTAClass">
+            <rdfs:subClassOf rdf:resource="library.owl#FASTAProcessing"/>
+      </owl:Class>
+      <owl:Class rdf:about="library.owl#Prognosis_PredictionClass"/>
+      <owl:Class rdf:about="library.owl#DataComparisonClass">
+            <rdfs:subClassOf rdf:resource="library.owl#PaperMetaWFs"/>
+      </owl:Class>
+      <owl:Class rdf:about="library.owl#TSVOutputFetcherClass"/>
+      <owl:Class rdf:about="library.owl#DataQuantitationClass">
+            <rdfs:subClassOf rdf:resource="library.owl#DISK"/>
+      </owl:Class>
+      <owl:Class rdf:about="library.owl#Prognosis_EvaluationClass"/>
+      <owl:Class rdf:about="library.owl#BarplotDataClass">
+            <rdfs:subClassOf rdf:resource="library.owl#PaperMetaWFs"/>
+      </owl:Class>
+      <owl:Class rdf:about="library.owl#ExpressionDataClass">
+            <rdfs:subClassOf rdf:resource="library.owl#WorkshopDemo"/>
+      </owl:Class>
+      <owl:Class rdf:about="library.owl#DataCorrectionClass">
+            <rdfs:subClassOf rdf:resource="library.owl#PaperMetaWFs"/>
+      </owl:Class>
+      <owl:Class rdf:about="library.owl#FetchDataFromRunClass">
+            <rdfs:subClassOf rdf:resource="library.owl#PaperMetaWFs"/>
+      </owl:Class>
+      <owl:Class rdf:about="library.owl#HypothesisRevisionClass"/>
+      <owl:Class rdf:about="library.owl#CallVariantsClass">
+            <rdfs:subClassOf rdf:resource="library.owl#WorkshopDemo"/>
+      </owl:Class>
+      <owl:Class rdf:about="library.owl#PlotHistClass">
+            <rdfs:subClassOf rdf:resource="library.owl#PaperMetaWFs"/>
+      </owl:Class>
+      <owl:Class rdf:about="library.owl#OmicsDataSubtypingClass">
+            <rdfs:subClassOf rdf:resource="library.owl#PaperMetaWFs"/>
+      </owl:Class>
+      <owl:Class rdf:about="library.owl#ScatterplotDataClass">
+            <rdfs:subClassOf rdf:resource="library.owl#PaperMetaWFs"/>
+      </owl:Class>
+      <owl:Class rdf:about="library.owl#NormalizeOmicsDataClass">
+            <rdfs:subClassOf rdf:resource="library.owl#WorkshopDemo"/>
+      </owl:Class>
+      <owl:Class rdf:about="library.owl#Scag_script_1Class"/>
+      <owl:Class rdf:about="library.owl#PredictionClass"/>
+      <owl:Class rdf:about="library.owl#CorrAndSigTestingClass">
+            <rdfs:subClassOf rdf:resource="library.owl#PaperMetaWFs"/>
+      </owl:Class>
+      <owl:Class rdf:about="library.owl#CallSNVsClass">
+            <rdfs:subClassOf rdf:resource="library.owl#CallVariantsClass"/>
+      </owl:Class>
+      <owl:Class rdf:about="library.owl#SVMClass">
+            <rdfs:subClassOf rdf:resource="library.owl#Diagnosis_ClassificationClass"/>
+      </owl:Class>
+      <owl:Class rdf:about="library.owl#PeptideDataConvertClass">
+            <rdfs:subClassOf rdf:resource="library.owl#DataConversionClass"/>
+      </owl:Class>
+      <owl:Class rdf:about="library.owl#PeptideSearchClass">
+            <rdfs:subClassOf rdf:resource="library.owl#MS2_AnalysisClass"/>
+      </owl:Class>
+      <owl:Class rdf:about="library.owl#CreateDecoySpectraClass">
+            <rdfs:subClassOf rdf:resource="library.owl#SpectraProcessing"/>
+      </owl:Class>
+      <owl:Class rdf:about="library.owl#IndexBamFileClass">
+            <rdfs:subClassOf rdf:resource="library.owl#DISK"/>
+      </owl:Class>
+      <owl:Class rdf:about="library.owl#DataFormattingClass">
+            <rdfs:subClassOf rdf:resource="library.owl#DISK"/>
+      </owl:Class>
+      <owl:Class rdf:about="library.owl#Random_ForestClass">
+            <rdfs:subClassOf rdf:resource="library.owl#Diagnosis_ClassificationClass"/>
+      </owl:Class>
+      <owl:Class rdf:about="library.owl#PlotUpSetClass">
+            <rdfs:subClassOf rdf:resource="library.owl#PaperMetaWFs"/>
+      </owl:Class>
+      <owl:Class rdf:about="library.owl#CallSVsClass">
+            <rdfs:subClassOf rdf:resource="library.owl#CallVariantsClass"/>
+      </owl:Class>
+      <owl:Class rdf:about="library.owl#DataQueryClass">
+            <rdfs:subClassOf rdf:resource="library.owl#DISK"/>
+      </owl:Class>
+      <owl:Class rdf:about="library.owl#Image_feature_extractionClass"/>
+      <j.2:Prognosis_EvaluationClass rdf:about="library.owl#Prognosis_Evaluation">
+            <j.3:hasInput>
+                  <j.1:tab-separated rdf:about="library.owl#Prognosis_Evaluation_Survival_index">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-i1</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>Survival_index</j.3:hasArgumentID>
+                  </j.1:tab-separated>
+            </j.3:hasInput>
+            <j.3:isConcrete rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >false</j.3:isConcrete>
+            <j.3:hasOutput>
+                  <j.1:PDFFile rdf:about="library.owl#Prognosis_Evaluation_Survival_Plots">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-o1</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>Survival_Plots</j.3:hasArgumentID>
+                  </j.1:PDFFile>
+            </j.3:hasOutput>
+      </j.2:Prognosis_EvaluationClass>
+      <j.2:Classification_EvaluationClass rdf:about="library.owl#Classification_Evaluation">
+            <j.3:hasInput>
+                  <j.1:tab-separated rdf:about="library.owl#Classification_Evaluation_Classification_Matrix">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-i1</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>Classification_Matrix</j.3:hasArgumentID>
+                  </j.1:tab-separated>
+            </j.3:hasInput>
+            <j.3:isConcrete rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >false</j.3:isConcrete>
+            <j.3:hasOutput>
+                  <j.1:tab-separated rdf:about="library.owl#Classification_Evaluation_ROCR">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-o1</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>ROCR</j.3:hasArgumentID>
+                  </j.1:tab-separated>
+            </j.3:hasOutput>
+      </j.2:Classification_EvaluationClass>
+      <j.2:PlotHistClass rdf:about="library.owl#PlotHist">
+            <j.3:isConcrete rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >false</j.3:isConcrete>
+            <j.0:hasHardwareDependency>
+                  <j.0:HardwareDependency>
+                        <j.0:requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                        >0.0</j.0:requiresMemoryGB>
+                        <j.0:needs64bit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                        >false</j.0:needs64bit>
+                        <j.0:requiresStorageGB rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                        >0.0</j.0:requiresStorageGB>
+                  </j.0:HardwareDependency>
+            </j.0:hasHardwareDependency>
+      </j.2:PlotHistClass>
+      <j.2:CallSNVsClass rdf:about="library.owl#CallSNVs">
+            <j.3:hasInput>
+                  <j.1:GenomicFastaFile rdf:about="library.owl#CallSNVs_fastaFile">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-i2</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>fastaFile</j.3:hasArgumentID>
+                  </j.1:GenomicFastaFile>
+            </j.3:hasInput>
+            <j.0:hasHardwareDependency>
+                  <j.0:HardwareDependency>
+                        <j.0:requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                        >0.0</j.0:requiresMemoryGB>
+                        <j.0:needs64bit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                        >false</j.0:needs64bit>
+                        <j.0:requiresStorageGB rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                        >0.0</j.0:requiresStorageGB>
+                  </j.0:HardwareDependency>
+            </j.0:hasHardwareDependency>
+            <j.3:isConcrete rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >false</j.3:isConcrete>
+            <j.3:hasOutput>
+                  <j.1:VCFFile rdf:about="library.owl#CallSNVs_vcfSNVFile">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-o2</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>vcfSNVFile</j.3:hasArgumentID>
+                  </j.1:VCFFile>
+            </j.3:hasOutput>
+            <j.3:hasOutput>
+                  <j.1:SNVFile rdf:about="library.owl#CallSNVs_txtSNVFile">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-o1</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>txtSNVFile</j.3:hasArgumentID>
+                  </j.1:SNVFile>
+            </j.3:hasOutput>
+            <j.3:hasInput>
+                  <j.1:BAMFile rdf:about="library.owl#CallSNVs_bamFile">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-i1</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>bamFile</j.3:hasArgumentID>
+                  </j.1:BAMFile>
+            </j.3:hasInput>
+      </j.2:CallSNVsClass>
+      <j.2:BaggingClass rdf:about="library.owl#Bagging">
+            <j.3:hasInput>
+                  <j.1:tab-separated rdf:about="library.owl#Bagging_Feature_Matrix">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-i1</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>Feature_Matrix</j.3:hasArgumentID>
+                  </j.1:tab-separated>
+            </j.3:hasInput>
+            <j.0:hasHardwareDependency>
+                  <j.0:HardwareDependency>
+                        <j.0:requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                        >0.0</j.0:requiresMemoryGB>
+                        <j.0:needs64bit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                        >false</j.0:needs64bit>
+                        <j.0:requiresStorageGB rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                        >0.0</j.0:requiresStorageGB>
+                  </j.0:HardwareDependency>
+            </j.0:hasHardwareDependency>
+            <j.3:isConcrete rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >false</j.3:isConcrete>
+            <j.3:hasOutput>
+                  <j.1:tab-separated rdf:about="library.owl#Bagging_Classification_Matrix">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-o1</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>Classification_Matrix</j.3:hasArgumentID>
+                  </j.1:tab-separated>
+            </j.3:hasOutput>
+      </j.2:BaggingClass>
+      <j.2:GetReqFileFromRunClass rdf:about="library.owl#GetReqFileFromRun">
+            <j.3:isConcrete rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >false</j.3:isConcrete>
+            <j.0:hasHardwareDependency>
+                  <j.0:HardwareDependency>
+                        <j.0:requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                        >0.0</j.0:requiresMemoryGB>
+                        <j.0:needs64bit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                        >false</j.0:needs64bit>
+                        <j.0:requiresStorageGB rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                        >0.0</j.0:requiresStorageGB>
+                  </j.0:HardwareDependency>
+            </j.0:hasHardwareDependency>
+      </j.2:GetReqFileFromRunClass>
+      <j.2:DrawVennClass rdf:about="library.owl#DrawVenn">
+            <j.3:hasInput>
+                  <j.3:ParameterArgument rdf:about="library.owl#DrawVenn_plotTitle">
+                        <j.3:hasArgumentID>plotTitle</j.3:hasArgumentID>
+                        <j.3:hasValue></j.3:hasValue>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-p2</j.3:hasArgumentName>
+                  </j.3:ParameterArgument>
+            </j.3:hasInput>
+            <j.3:isConcrete rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >false</j.3:isConcrete>
+            <j.3:hasOutput>
+                  <j.1:PlotFile rdf:about="library.owl#DrawVenn_vennDiagram">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-o1</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>vennDiagram</j.3:hasArgumentID>
+                  </j.1:PlotFile>
+            </j.3:hasOutput>
+            <j.3:hasInput>
+                  <j.3:ParameterArgument rdf:about="library.owl#DrawVenn_delimParam">
+                        <j.3:hasArgumentID>delimParam</j.3:hasArgumentID>
+                        <j.3:hasValue>\t</j.3:hasValue>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-p1</j.3:hasArgumentName>
+                  </j.3:ParameterArgument>
+            </j.3:hasInput>
+            <j.3:hasInput>
+                  <j.1:DelimTextFile rdf:about="library.owl#DrawVenn_inputFile">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-i1</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>inputFile</j.3:hasArgumentID>
+                  </j.1:DelimTextFile>
+            </j.3:hasInput>
+      </j.2:DrawVennClass>
+      <j.2:Norm_Affymetrix_CELClass rdf:about="library.owl#Norm_Affymetrix_CEL">
+            <j.3:hasInput>
+                  <j.3:ParameterArgument rdf:about="library.owl#Norm_Affymetrix_CEL_annotation">
+                        <j.3:hasArgumentID>annotation</j.3:hasArgumentID>
+                        <j.3:hasValue></j.3:hasValue>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-p1</j.3:hasArgumentName>
+                  </j.3:ParameterArgument>
+            </j.3:hasInput>
+            <j.3:isConcrete rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >false</j.3:isConcrete>
+            <j.3:hasOutput>
+                  <j.1:NormResults rdf:about="library.owl#Norm_Affymetrix_CEL_normResults">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-o2</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>normResults</j.3:hasArgumentID>
+                  </j.1:NormResults>
+            </j.3:hasOutput>
+            <j.3:hasOutput>
+                  <j.1:RawResults rdf:about="library.owl#Norm_Affymetrix_CEL_rawResults">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-o1</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>rawResults</j.3:hasArgumentID>
+                  </j.1:RawResults>
+            </j.3:hasOutput>
+            <j.3:hasInput>
+                  <j.1:CELFilesZipped rdf:about="library.owl#Norm_Affymetrix_CEL_celFiles">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-i1</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>celFiles</j.3:hasArgumentID>
+                  </j.1:CELFilesZipped>
+            </j.3:hasInput>
+      </j.2:Norm_Affymetrix_CELClass>
+      <j.0:HardwareDependency>
+            <j.0:requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+            >0.0</j.0:requiresMemoryGB>
+            <j.0:needs64bit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >false</j.0:needs64bit>
+            <j.0:requiresStorageGB rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+            >0.0</j.0:requiresStorageGB>
+      </j.0:HardwareDependency>
+      <j.2:DataCorrectionClass rdf:about="library.owl#DataCorrection">
+            <j.3:hasInput>
+                  <j.1:DelimTextFile rdf:about="library.owl#DataCorrection_batchesFile">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-i2</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>batchesFile</j.3:hasArgumentID>
+                  </j.1:DelimTextFile>
+            </j.3:hasInput>
+            <j.3:isConcrete rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >false</j.3:isConcrete>
+            <j.3:hasOutput>
+                  <j.1:DelimTextFile rdf:about="library.owl#DataCorrection_noBatchEffectFile">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-o1</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>noBatchEffectFile</j.3:hasArgumentID>
+                  </j.1:DelimTextFile>
+            </j.3:hasOutput>
+            <j.3:hasInput>
+                  <j.1:DelimTextFile rdf:about="library.owl#DataCorrection_inputFile">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-i1</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>inputFile</j.3:hasArgumentID>
+                  </j.1:DelimTextFile>
+            </j.3:hasInput>
+      </j.2:DataCorrectionClass>
+      <j.2:BarplotDataClass rdf:about="library.owl#BarplotData">
+            <j.3:isConcrete rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >false</j.3:isConcrete>
+            <j.0:hasHardwareDependency>
+                  <j.0:HardwareDependency>
+                        <j.0:requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                        >0.0</j.0:requiresMemoryGB>
+                        <j.0:needs64bit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                        >false</j.0:needs64bit>
+                        <j.0:requiresStorageGB rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                        >0.0</j.0:requiresStorageGB>
+                  </j.0:HardwareDependency>
+            </j.0:hasHardwareDependency>
+      </j.2:BarplotDataClass>
+      <j.2:Prognosis_PredictionClass rdf:about="library.owl#Prognosis_Prediction">
+            <j.3:hasInput>
+                  <j.1:tab-separated rdf:about="library.owl#Prognosis_Prediction_Feature_Matrix">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-i1</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>Feature_Matrix</j.3:hasArgumentID>
+                  </j.1:tab-separated>
+            </j.3:hasInput>
+            <j.3:isConcrete rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >false</j.3:isConcrete>
+            <j.3:hasOutput>
+                  <j.1:tab-separated rdf:about="library.owl#Prognosis_Prediction_Survival_Index">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-o2</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>Survival_Index</j.3:hasArgumentID>
+                  </j.1:tab-separated>
+            </j.3:hasOutput>
+            <j.3:hasOutput>
+                  <j.1:PDFFile rdf:about="library.owl#Prognosis_Prediction_Kaplan_M_Plot">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-o1</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>Kaplan_M_Plot</j.3:hasArgumentID>
+                  </j.1:PDFFile>
+            </j.3:hasOutput>
+      </j.2:Prognosis_PredictionClass>
+      <j.2:mergeFASTAClass rdf:about="library.owl#mergeFASTA">
+            <j.3:isConcrete rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >false</j.3:isConcrete>
+            <j.0:hasHardwareDependency>
+                  <j.0:HardwareDependency>
+                        <j.0:requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                        >0.0</j.0:requiresMemoryGB>
+                        <j.0:needs64bit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                        >false</j.0:needs64bit>
+                        <j.0:requiresStorageGB rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                        >0.0</j.0:requiresStorageGB>
+                  </j.0:HardwareDependency>
+            </j.0:hasHardwareDependency>
+      </j.2:mergeFASTAClass>
+      <j.2:ExpressionDataClass rdf:about="library.owl#ExpressionData">
+            <j.3:isConcrete rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >false</j.3:isConcrete>
+            <j.0:hasHardwareDependency>
+                  <j.0:HardwareDependency>
+                        <j.0:requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                        >0.0</j.0:requiresMemoryGB>
+                        <j.0:needs64bit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                        >false</j.0:needs64bit>
+                        <j.0:requiresStorageGB rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                        >0.0</j.0:requiresStorageGB>
+                  </j.0:HardwareDependency>
+            </j.0:hasHardwareDependency>
+      </j.2:ExpressionDataClass>
+      <j.2:ResultCompositionClass rdf:about="library.owl#ResultComposition">
+            <j.3:hasInput>
+                  <j.3:ParameterArgument rdf:about="library.owl#ResultComposition_RunID1">
+                        <j.3:hasArgumentID>RunID1</j.3:hasArgumentID>
+                        <j.3:hasValue></j.3:hasValue>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-p1</j.3:hasArgumentName>
+                  </j.3:ParameterArgument>
+            </j.3:hasInput>
+            <j.3:isConcrete rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >false</j.3:isConcrete>
+            <j.3:hasOutput>
+                  <j.1:ConfidenceResults rdf:about="library.owl#ResultComposition_ConfidenceResults">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-o1</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>ConfidenceResults</j.3:hasArgumentID>
+                  </j.1:ConfidenceResults>
+            </j.3:hasOutput>
+            <j.3:hasInput>
+                  <j.1:ScoreMatrix rdf:about="library.owl#ResultComposition_ScoreMatrix">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-i1</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>ScoreMatrix</j.3:hasArgumentID>
+                  </j.1:ScoreMatrix>
+            </j.3:hasInput>
+            <j.3:hasInput>
+                  <j.3:ParameterArgument rdf:about="library.owl#ResultComposition_RunID2">
+                        <j.3:hasArgumentID>RunID2</j.3:hasArgumentID>
+                        <j.3:hasValue></j.3:hasValue>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-p2</j.3:hasArgumentName>
+                  </j.3:ParameterArgument>
+            </j.3:hasInput>
+      </j.2:ResultCompositionClass>
+      <j.2:SVMClass rdf:about="library.owl#SVM">
+            <j.3:hasInput>
+                  <j.3:ParameterArgument rdf:about="library.owl#SVM_Type">
+                        <j.3:hasArgumentID>Type</j.3:hasArgumentID>
+                        <j.3:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >1</j.3:hasValue>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-p1</j.3:hasArgumentName>
+                  </j.3:ParameterArgument>
+            </j.3:hasInput>
+            <j.3:isConcrete rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >false</j.3:isConcrete>
+            <j.3:hasOutput>
+                  <j.1:tab-separated rdf:about="library.owl#SVM_Classification_Matrix">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-o1</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>Classification_Matrix</j.3:hasArgumentID>
+                  </j.1:tab-separated>
+            </j.3:hasOutput>
+            <j.3:hasInput>
+                  <j.1:tab-separated rdf:about="library.owl#SVM_Feature_Matrix">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-i1</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>Feature_Matrix</j.3:hasArgumentID>
+                  </j.1:tab-separated>
+            </j.3:hasInput>
+      </j.2:SVMClass>
+      <j.2:DataConversionClass rdf:about="library.owl#DataConversion">
+            <j.3:hasRule>[ PropagateSoftware: (?c rdf:type acdom:DataConversionClass) (?c ac:hasInput ?in1) (?in1 dcdom:createdBySoftware ?sw) (?c ac:hasOutput ?out) -&gt; (?out dcdom:createdBySoftware ?sw) ]</j.3:hasRule>
+            <j.3:isConcrete rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >false</j.3:isConcrete>
+      </j.2:DataConversionClass>
+      <j.2:CallSVsClass rdf:about="library.owl#CallSVs">
+            <j.3:hasInput>
+                  <j.1:GenomicFastaFile rdf:about="library.owl#CallSVs_fastaFile">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-i2</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>fastaFile</j.3:hasArgumentID>
+                  </j.1:GenomicFastaFile>
+            </j.3:hasInput>
+            <j.0:hasHardwareDependency>
+                  <j.0:HardwareDependency>
+                        <j.0:requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                        >0.0</j.0:requiresMemoryGB>
+                        <j.0:needs64bit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                        >false</j.0:needs64bit>
+                        <j.0:requiresStorageGB rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                        >0.0</j.0:requiresStorageGB>
+                  </j.0:HardwareDependency>
+            </j.0:hasHardwareDependency>
+            <j.3:isConcrete rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >false</j.3:isConcrete>
+            <j.3:hasOutput>
+                  <j.1:SNVFile rdf:about="library.owl#CallSVs_txtSNVFile">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-o1</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>txtSNVFile</j.3:hasArgumentID>
+                  </j.1:SNVFile>
+            </j.3:hasOutput>
+            <j.3:hasOutput>
+                  <j.1:VCFFile rdf:about="library.owl#CallSVs_vcfSNVFile">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-o2</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>vcfSNVFile</j.3:hasArgumentID>
+                  </j.1:VCFFile>
+            </j.3:hasOutput>
+            <j.3:hasInput>
+                  <j.1:BAMFile rdf:about="library.owl#CallSVs_bamFile">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-i1</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>bamFile</j.3:hasArgumentID>
+                  </j.1:BAMFile>
+            </j.3:hasInput>
+      </j.2:CallSVsClass>
+      <j.2:ChangeDataTypeClass rdf:about="library.owl#ChangeDataType">
+            <j.3:isConcrete rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >false</j.3:isConcrete>
+            <j.0:hasHardwareDependency>
+                  <j.0:HardwareDependency>
+                        <j.0:requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                        >0.0</j.0:requiresMemoryGB>
+                        <j.0:needs64bit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                        >false</j.0:needs64bit>
+                        <j.0:requiresStorageGB rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                        >0.0</j.0:requiresStorageGB>
+                  </j.0:HardwareDependency>
+            </j.0:hasHardwareDependency>
+      </j.2:ChangeDataTypeClass>
+      <j.2:WorkflowComparisonClass rdf:about="library.owl#WorkflowComparison">
+            <j.3:hasInput>
+                  <j.3:ParameterArgument rdf:about="library.owl#WorkflowComparison_RunID1">
+                        <j.3:hasArgumentID>RunID1</j.3:hasArgumentID>
+                        <j.3:hasValue></j.3:hasValue>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-p1</j.3:hasArgumentName>
+                  </j.3:ParameterArgument>
+            </j.3:hasInput>
+            <j.3:isConcrete rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >false</j.3:isConcrete>
+            <j.3:hasOutput>
+                  <j.1:SimilarityMetrics rdf:about="library.owl#WorkflowComparison_SimilarityMetrics">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-o2</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>SimilarityMetrics</j.3:hasArgumentID>
+                  </j.1:SimilarityMetrics>
+            </j.3:hasOutput>
+            <j.3:hasOutput>
+                  <j.1:ScoreMatrix rdf:about="library.owl#WorkflowComparison_ScoreMatrix">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-o1</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>ScoreMatrix</j.3:hasArgumentID>
+                  </j.1:ScoreMatrix>
+            </j.3:hasOutput>
+            <j.3:hasInput>
+                  <j.1:MetaOptionsFile rdf:about="library.owl#WorkflowComparison_InputOptions">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-i1</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>InputOptions</j.3:hasArgumentID>
+                  </j.1:MetaOptionsFile>
+            </j.3:hasInput>
+            <j.3:hasInput>
+                  <j.3:ParameterArgument rdf:about="library.owl#WorkflowComparison_RunID2">
+                        <j.3:hasArgumentID>RunID2</j.3:hasArgumentID>
+                        <j.3:hasValue></j.3:hasValue>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-p2</j.3:hasArgumentName>
+                  </j.3:ParameterArgument>
+            </j.3:hasInput>
+      </j.2:WorkflowComparisonClass>
+      <j.2:Diagnosis_ClassificationClass rdf:about="library.owl#Diagnosis_Classification">
+            <j.3:hasInput>
+                  <j.1:tab-separated rdf:about="library.owl#Diagnosis_Classification_Feature_Matrix">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-i1</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>Feature_Matrix</j.3:hasArgumentID>
+                  </j.1:tab-separated>
+            </j.3:hasInput>
+            <j.3:isConcrete rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >false</j.3:isConcrete>
+            <j.3:hasOutput>
+                  <j.1:tab-separated rdf:about="library.owl#Diagnosis_Classification_Classification_Matrix">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-o1</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>Classification_Matrix</j.3:hasArgumentID>
+                  </j.1:tab-separated>
+            </j.3:hasOutput>
+      </j.2:Diagnosis_ClassificationClass>
+      <j.2:SpliceVarCallerClass rdf:about="library.owl#SpliceVarCaller">
+            <j.3:isConcrete rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >false</j.3:isConcrete>
+            <j.0:hasHardwareDependency>
+                  <j.0:HardwareDependency>
+                        <j.0:requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                        >0.0</j.0:requiresMemoryGB>
+                        <j.0:needs64bit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                        >false</j.0:needs64bit>
+                        <j.0:requiresStorageGB rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                        >0.0</j.0:requiresStorageGB>
+                  </j.0:HardwareDependency>
+            </j.0:hasHardwareDependency>
+      </j.2:SpliceVarCallerClass>
+      <j.2:PeptideDataConvertClass rdf:about="library.owl#PeptideDataConvert">
+            <j.3:hasInput>
+                  <j.1:SpectraFile rdf:about="library.owl#PeptideDataConvert_pepFile">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-i1</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>pepFile</j.3:hasArgumentID>
+                  </j.1:SpectraFile>
+            </j.3:hasInput>
+            <j.3:isConcrete rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >false</j.3:isConcrete>
+            <j.3:hasOutput>
+                  <j.1:SpectraFile rdf:about="library.owl#PeptideDataConvert_pepConvertSpectra">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-o1</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>pepConvertSpectra</j.3:hasArgumentID>
+                  </j.1:SpectraFile>
+            </j.3:hasOutput>
+            <j.3:hasInput>
+                  <j.1:PepConvertParamFile rdf:about="library.owl#PeptideDataConvert_pepConvertParams">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-i3</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>pepConvertParams</j.3:hasArgumentID>
+                  </j.1:PepConvertParamFile>
+            </j.3:hasInput>
+            <j.3:hasInput>
+                  <j.1:SpectraFile rdf:about="library.owl#PeptideDataConvert_spectraFile">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-i2</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>spectraFile</j.3:hasArgumentID>
+                  </j.1:SpectraFile>
+            </j.3:hasInput>
+      </j.2:PeptideDataConvertClass>
+      <j.2:NormalizeOmicsDataClass rdf:about="library.owl#NormalizeOmicsData">
+            <j.3:isConcrete rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >false</j.3:isConcrete>
+            <j.0:hasHardwareDependency>
+                  <j.0:HardwareDependency>
+                        <j.0:requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                        >0.0</j.0:requiresMemoryGB>
+                        <j.0:needs64bit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                        >false</j.0:needs64bit>
+                        <j.0:requiresStorageGB rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                        >0.0</j.0:requiresStorageGB>
+                  </j.0:HardwareDependency>
+            </j.0:hasHardwareDependency>
+      </j.2:NormalizeOmicsDataClass>
+      <j.2:ProteinAssemblyClass rdf:about="library.owl#ProteinAssembly">
+            <j.3:hasOutput>
+                  <j.1:SpectraFile rdf:about="library.owl#ProteinAssembly_mergedProtFile">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-o2</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>mergedProtFile</j.3:hasArgumentID>
+                  </j.1:SpectraFile>
+            </j.3:hasOutput>
+            <j.3:hasInput>
+                  <j.1:ProteomicFastaFile rdf:about="library.owl#ProteinAssembly_protSeqDBFile">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >1</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-i5</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>protSeqDBFile</j.3:hasArgumentID>
+                  </j.1:ProteomicFastaFile>
+            </j.3:hasInput>
+            <j.3:hasInput>
+                  <j.1:SampleInfoFile rdf:about="library.owl#ProteinAssembly_sampleIDs">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-i6</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>sampleIDs</j.3:hasArgumentID>
+                  </j.1:SampleInfoFile>
+            </j.3:hasInput>
+            <j.3:hasInput>
+                  <j.1:ConditionParamFile rdf:about="library.owl#ProteinAssembly_condFile">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-i4</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>condFile</j.3:hasArgumentID>
+                  </j.1:ConditionParamFile>
+            </j.3:hasInput>
+            <j.3:hasInput>
+                  <j.1:SpectraFile rdf:about="library.owl#ProteinAssembly_spectraFile">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >1</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-i2</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>spectraFile</j.3:hasArgumentID>
+                  </j.1:SpectraFile>
+            </j.3:hasInput>
+            <j.3:hasOutput>
+                  <j.1:SpectraFile rdf:about="library.owl#ProteinAssembly_mergedPepFile">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-o1</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>mergedPepFile</j.3:hasArgumentID>
+                  </j.1:SpectraFile>
+            </j.3:hasOutput>
+            <j.3:hasInput>
+                  <j.1:ProtAssemblyParamFile rdf:about="library.owl#ProteinAssembly_protAssemblyParams">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-i3</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>protAssemblyParams</j.3:hasArgumentID>
+                  </j.1:ProtAssemblyParamFile>
+            </j.3:hasInput>
+            <j.3:hasInput>
+                  <j.1:SpectraFile rdf:about="library.owl#ProteinAssembly_pepFile">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >1</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-i1</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>pepFile</j.3:hasArgumentID>
+                  </j.1:SpectraFile>
+            </j.3:hasInput>
+            <j.3:hasOutput>
+                  <j.1:MS2Log rdf:about="library.owl#ProteinAssembly_protassemblyLog">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-o3</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>protassemblyLog</j.3:hasArgumentID>
+                  </j.1:MS2Log>
+            </j.3:hasOutput>
+            <j.3:isConcrete rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >false</j.3:isConcrete>
+      </j.2:ProteinAssemblyClass>
+      <j.2:MS2_AnalysisClass rdf:about="library.owl#MS2_Analysis">
+            <j.3:hasRule>[ PropagateSoftware: (?c rdf:type acdom:MS2_AnalysisClass) (?c ac:hasInput ?in1) (?in1 dcdom:createdBySoftware ?sw) (?c ac:hasOutput ?out) -&gt; (?out dcdom:createdBySoftware ?sw) ]</j.3:hasRule>
+            <j.3:isConcrete rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >false</j.3:isConcrete>
+      </j.2:MS2_AnalysisClass>
+      <j.2:DataQuantitationClass rdf:about="library.owl#DataQuantitation">
+            <j.3:isConcrete rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >false</j.3:isConcrete>
+            <j.0:hasHardwareDependency>
+                  <j.0:HardwareDependency>
+                        <j.0:requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                        >0.0</j.0:requiresMemoryGB>
+                        <j.0:needs64bit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                        >false</j.0:needs64bit>
+                        <j.0:requiresStorageGB rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                        >0.0</j.0:requiresStorageGB>
+                  </j.0:HardwareDependency>
+            </j.0:hasHardwareDependency>
+      </j.2:DataQuantitationClass>
+      <j.2:IndexFASTAClass rdf:about="library.owl#IndexFASTA">
+            <j.3:isConcrete rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >false</j.3:isConcrete>
+            <j.0:hasHardwareDependency>
+                  <j.0:HardwareDependency>
+                        <j.0:requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                        >0.0</j.0:requiresMemoryGB>
+                        <j.0:needs64bit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                        >false</j.0:needs64bit>
+                        <j.0:requiresStorageGB rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                        >0.0</j.0:requiresStorageGB>
+                  </j.0:HardwareDependency>
+            </j.0:hasHardwareDependency>
+      </j.2:IndexFASTAClass>
+      <j.2:DataComparisonClass rdf:about="library.owl#DataComparison">
+            <j.3:isConcrete rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >false</j.3:isConcrete>
+            <j.0:hasHardwareDependency>
+                  <j.0:HardwareDependency>
+                        <j.0:requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                        >0.0</j.0:requiresMemoryGB>
+                        <j.0:needs64bit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                        >false</j.0:needs64bit>
+                        <j.0:requiresStorageGB rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                        >0.0</j.0:requiresStorageGB>
+                  </j.0:HardwareDependency>
+            </j.0:hasHardwareDependency>
+      </j.2:DataComparisonClass>
+      <j.2:OmicsDataSubtypingClass rdf:about="library.owl#OmicsDataSubtyping">
+            <j.3:isConcrete rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >false</j.3:isConcrete>
+            <j.0:hasHardwareDependency>
+                  <j.0:HardwareDependency>
+                        <j.0:requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                        >0.0</j.0:requiresMemoryGB>
+                        <j.0:needs64bit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                        >false</j.0:needs64bit>
+                        <j.0:requiresStorageGB rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                        >0.0</j.0:requiresStorageGB>
+                  </j.0:HardwareDependency>
+            </j.0:hasHardwareDependency>
+      </j.2:OmicsDataSubtypingClass>
+      <j.2:EditFASTAClass rdf:about="library.owl#EditFASTA">
+            <j.3:isConcrete rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >false</j.3:isConcrete>
+            <j.0:hasHardwareDependency>
+                  <j.0:HardwareDependency>
+                        <j.0:requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                        >0.0</j.0:requiresMemoryGB>
+                        <j.0:needs64bit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                        >false</j.0:needs64bit>
+                        <j.0:requiresStorageGB rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                        >0.0</j.0:requiresStorageGB>
+                  </j.0:HardwareDependency>
+            </j.0:hasHardwareDependency>
+      </j.2:EditFASTAClass>
+      <j.2:ScatterplotDataClass rdf:about="library.owl#ScatterplotData">
+            <j.3:isConcrete rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >false</j.3:isConcrete>
+            <j.0:hasHardwareDependency>
+                  <j.0:HardwareDependency>
+                        <j.0:requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                        >0.0</j.0:requiresMemoryGB>
+                        <j.0:needs64bit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                        >false</j.0:needs64bit>
+                        <j.0:requiresStorageGB rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                        >0.0</j.0:requiresStorageGB>
+                  </j.0:HardwareDependency>
+            </j.0:hasHardwareDependency>
+      </j.2:ScatterplotDataClass>
+      <j.2:CreateDecoySpectraClass rdf:about="library.owl#CreateDecoySpectra">
+            <j.3:hasInput>
+                  <j.1:DecoySpectraParamFile rdf:about="library.owl#CreateDecoySpectra_decoyParams">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-i2</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>decoyParams</j.3:hasArgumentID>
+                  </j.1:DecoySpectraParamFile>
+            </j.3:hasInput>
+            <j.3:isConcrete rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >false</j.3:isConcrete>
+            <j.3:hasOutput>
+                  <j.1:SpectralLibFile rdf:about="library.owl#CreateDecoySpectra_decoySpectraFormat2">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-o2</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>decoySpectraFormat2</j.3:hasArgumentID>
+                  </j.1:SpectralLibFile>
+            </j.3:hasOutput>
+            <j.3:hasOutput>
+                  <j.1:SpectralLibFile rdf:about="library.owl#CreateDecoySpectra_decoySpectraFormat1">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-o1</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>decoySpectraFormat1</j.3:hasArgumentID>
+                  </j.1:SpectralLibFile>
+            </j.3:hasOutput>
+            <j.3:hasInput>
+                  <j.1:SpectralLibFile rdf:about="library.owl#CreateDecoySpectra_spectraLibFile">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-i1</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>spectraLibFile</j.3:hasArgumentID>
+                  </j.1:SpectralLibFile>
+            </j.3:hasInput>
+      </j.2:CreateDecoySpectraClass>
+      <j.2:PeptideSearchClass rdf:about="library.owl#PeptideSearch">
+            <j.3:hasInput>
+                  <j.1:PepSearchParamFile rdf:about="library.owl#PeptideSearch_pepSearchParams">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-i3</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>pepSearchParams</j.3:hasArgumentID>
+                  </j.1:PepSearchParamFile>
+            </j.3:hasInput>
+            <j.3:isConcrete rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >false</j.3:isConcrete>
+            <j.3:hasOutput>
+                  <j.1:PepSpectraFile rdf:about="library.owl#PeptideSearch_pepSearchResults">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-o1</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>pepSearchResults</j.3:hasArgumentID>
+                  </j.1:PepSpectraFile>
+            </j.3:hasOutput>
+            <j.3:hasOutput>
+                  <j.1:MS2Log rdf:about="library.owl#PeptideSearch_pepsearchLog">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-o3</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>pepsearchLog</j.3:hasArgumentID>
+                  </j.1:MS2Log>
+            </j.3:hasOutput>
+            <j.3:hasOutput>
+                  <j.1:PepSearchParamFile rdf:about="library.owl#PeptideSearch_pepSearchFinalParams">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-o2</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>pepSearchFinalParams</j.3:hasArgumentID>
+                  </j.1:PepSearchParamFile>
+            </j.3:hasOutput>
+            <j.3:hasInput>
+                  <j.1:ProteomicFastaFile rdf:about="library.owl#PeptideSearch_protSeqDBFile">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-i2</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>protSeqDBFile</j.3:hasArgumentID>
+                  </j.1:ProteomicFastaFile>
+            </j.3:hasInput>
+            <j.3:hasInput>
+                  <j.1:SpectraFile rdf:about="library.owl#PeptideSearch_spectraFile">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-i1</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>spectraFile</j.3:hasArgumentID>
+                  </j.1:SpectraFile>
+            </j.3:hasInput>
+      </j.2:PeptideSearchClass>
+      <j.2:CorrAndSigTestingClass rdf:about="library.owl#CorrAndSigTesting">
+            <j.3:isConcrete rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >false</j.3:isConcrete>
+            <j.0:hasHardwareDependency>
+                  <j.0:HardwareDependency>
+                        <j.0:requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                        >0.0</j.0:requiresMemoryGB>
+                        <j.0:needs64bit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                        >false</j.0:needs64bit>
+                        <j.0:requiresStorageGB rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                        >0.0</j.0:requiresStorageGB>
+                  </j.0:HardwareDependency>
+            </j.0:hasHardwareDependency>
+      </j.2:CorrAndSigTestingClass>
+      <j.2:FastqToBamClass rdf:about="library.owl#FastqToBam">
+            <j.3:hasInput>
+                  <j.1:RefFastaTuxZip rdf:about="library.owl#FastqToBam_refFastaBundle">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-i3</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>refFastaBundle</j.3:hasArgumentID>
+                  </j.1:RefFastaTuxZip>
+            </j.3:hasInput>
+            <j.3:isConcrete rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >false</j.3:isConcrete>
+            <j.3:hasOutput>
+                  <j.1:BEDFile rdf:about="library.owl#FastqToBam_outputBED">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-o4</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>outputBED</j.3:hasArgumentID>
+                  </j.1:BEDFile>
+            </j.3:hasOutput>
+            <j.3:hasOutput>
+                  <j.1:BAMFile rdf:about="library.owl#FastqToBam_alignedBAM">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-o1</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>alignedBAM</j.3:hasArgumentID>
+                  </j.1:BAMFile>
+            </j.3:hasOutput>
+            <j.3:hasOutput>
+                  <j.1:BAMFile rdf:about="library.owl#FastqToBam_unmappedBAM">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-o2</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>unmappedBAM</j.3:hasArgumentID>
+                  </j.1:BAMFile>
+            </j.3:hasOutput>
+            <j.3:hasOutput>
+                  <j.1:JunctionsBEDFile rdf:about="library.owl#FastqToBam_juncBED">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-o3</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>juncBED</j.3:hasArgumentID>
+                  </j.1:JunctionsBEDFile>
+            </j.3:hasOutput>
+            <j.3:hasInput>
+                  <j.1:FastqToBamParamFile rdf:about="library.owl#FastqToBam_fastqToBamParams">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-i2</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>fastqToBamParams</j.3:hasArgumentID>
+                  </j.1:FastqToBamParamFile>
+            </j.3:hasInput>
+            <j.3:hasInput>
+                  <j.1:FASTQFile rdf:about="library.owl#FastqToBam_fastqFile">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-i1</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>fastqFile</j.3:hasArgumentID>
+                  </j.1:FASTQFile>
+            </j.3:hasInput>
+      </j.2:FastqToBamClass>
+      <j.2:SNVCallerClass rdf:about="library.owl#SNVCaller">
+            <j.3:isConcrete rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >false</j.3:isConcrete>
+      </j.2:SNVCallerClass>
+      <j.2:Scag_script_1Class rdf:about="library.owl#Scag_script_1">
+            <j.3:isConcrete rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >false</j.3:isConcrete>
+            <j.0:hasHardwareDependency>
+                  <j.0:HardwareDependency>
+                        <j.0:requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                        >0.0</j.0:requiresMemoryGB>
+                        <j.0:needs64bit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                        >false</j.0:needs64bit>
+                        <j.0:requiresStorageGB rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                        >0.0</j.0:requiresStorageGB>
+                  </j.0:HardwareDependency>
+            </j.0:hasHardwareDependency>
+      </j.2:Scag_script_1Class>
+      <j.2:DataDimensionConvertClass rdf:about="library.owl#DataDimensionConvert">
+            <j.3:isConcrete rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >false</j.3:isConcrete>
+            <j.0:hasHardwareDependency>
+                  <j.0:HardwareDependency>
+                        <j.0:requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                        >0.0</j.0:requiresMemoryGB>
+                        <j.0:needs64bit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                        >false</j.0:needs64bit>
+                        <j.0:requiresStorageGB rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                        >0.0</j.0:requiresStorageGB>
+                  </j.0:HardwareDependency>
+            </j.0:hasHardwareDependency>
+      </j.2:DataDimensionConvertClass>
+      <j.2:FetchDataFromRunClass rdf:about="library.owl#FetchDataFromRun">
+            <j.3:hasInput>
+                  <j.3:ParameterArgument rdf:about="library.owl#FetchDataFromRun_RunID">
+                        <j.3:hasArgumentID>RunID</j.3:hasArgumentID>
+                        <j.3:hasValue></j.3:hasValue>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-p1</j.3:hasArgumentName>
+                  </j.3:ParameterArgument>
+            </j.3:hasInput>
+            <j.3:isConcrete rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >false</j.3:isConcrete>
+            <j.3:hasOutput>
+                  <j.1:OmicsFile rdf:about="library.owl#FetchDataFromRun_RunDetails">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-o1</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>RunDetails</j.3:hasArgumentID>
+                  </j.1:OmicsFile>
+            </j.3:hasOutput>
+      </j.2:FetchDataFromRunClass>
+      <j.2:Naive_bayesClass rdf:about="library.owl#Naive_bayes">
+            <j.3:hasInput>
+                  <j.1:tab-separated rdf:about="library.owl#Naive_bayes_Feature_Matrix">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-i1</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>Feature_Matrix</j.3:hasArgumentID>
+                  </j.1:tab-separated>
+            </j.3:hasInput>
+            <j.0:hasHardwareDependency>
+                  <j.0:HardwareDependency>
+                        <j.0:requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                        >0.0</j.0:requiresMemoryGB>
+                        <j.0:needs64bit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                        >false</j.0:needs64bit>
+                        <j.0:requiresStorageGB rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                        >0.0</j.0:requiresStorageGB>
+                  </j.0:HardwareDependency>
+            </j.0:hasHardwareDependency>
+            <j.3:isConcrete rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >false</j.3:isConcrete>
+            <j.3:hasOutput>
+                  <j.1:tab-separated rdf:about="library.owl#Naive_bayes_Classification_Matrix">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-o1</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>Classification_Matrix</j.3:hasArgumentID>
+                  </j.1:tab-separated>
+            </j.3:hasOutput>
+      </j.2:Naive_bayesClass>
+      <j.2:CustomProteinFastaDBClass rdf:about="library.owl#CustomProteinFastaDB">
+            <j.3:hasInput>
+                  <j.1:BAMFile rdf:about="library.owl#CustomProteinFastaDB_InputBAM">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-i1</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>InputBAM</j.3:hasArgumentID>
+                  </j.1:BAMFile>
+            </j.3:hasInput>
+            <j.3:isConcrete rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >false</j.3:isConcrete>
+            <j.3:hasOutput>
+                  <j.1:ProteomicFastaFile rdf:about="library.owl#CustomProteinFastaDB_ProteinRPKMFasta">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-o1</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>ProteinRPKMFasta</j.3:hasArgumentID>
+                  </j.1:ProteomicFastaFile>
+            </j.3:hasOutput>
+            <j.3:hasOutput>
+                  <j.1:SNVFile rdf:about="library.owl#CustomProteinFastaDB_ProteinSNVTable">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-o3</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>ProteinSNVTable</j.3:hasArgumentID>
+                  </j.1:SNVFile>
+            </j.3:hasOutput>
+            <j.3:hasOutput>
+                  <j.1:ProteomicFastaFile rdf:about="library.owl#CustomProteinFastaDB_ProteinSNVFasta">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-o2</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>ProteinSNVFasta</j.3:hasArgumentID>
+                  </j.1:ProteomicFastaFile>
+            </j.3:hasOutput>
+            <j.3:hasInput>
+                  <j.1:VCFFile rdf:about="library.owl#CustomProteinFastaDB_InputVCF">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-i2</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>InputVCF</j.3:hasArgumentID>
+                  </j.1:VCFFile>
+            </j.3:hasInput>
+      </j.2:CustomProteinFastaDBClass>
+      <j.2:Tiling_whole_slide_bftoolsClass rdf:about="library.owl#Tiling_whole_slide_bftools">
+            <j.3:hasOutput>
+                  <j.1:Tile rdf:about="library.owl#Tiling_whole_slide_bftools_Tile10">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-o10</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>Tile10</j.3:hasArgumentID>
+                  </j.1:Tile>
+            </j.3:hasOutput>
+            <j.3:hasOutput>
+                  <j.1:Tile rdf:about="library.owl#Tiling_whole_slide_bftools_Tile6">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-o6</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>Tile6</j.3:hasArgumentID>
+                  </j.1:Tile>
+            </j.3:hasOutput>
+            <j.3:hasInput>
+                  <j.1:Whole_Slide rdf:about="library.owl#Tiling_whole_slide_bftools_Whole_Slide">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-i1</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>Whole_Slide</j.3:hasArgumentID>
+                  </j.1:Whole_Slide>
+            </j.3:hasInput>
+            <j.3:hasOutput>
+                  <j.1:Tile rdf:about="library.owl#Tiling_whole_slide_bftools_Tile7">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-o7</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>Tile7</j.3:hasArgumentID>
+                  </j.1:Tile>
+            </j.3:hasOutput>
+            <j.3:isConcrete rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >false</j.3:isConcrete>
+            <j.3:hasOutput>
+                  <j.1:Tile rdf:about="library.owl#Tiling_whole_slide_bftools_Tile4">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-o4</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>Tile4</j.3:hasArgumentID>
+                  </j.1:Tile>
+            </j.3:hasOutput>
+            <j.3:hasOutput>
+                  <j.1:Tile rdf:about="library.owl#Tiling_whole_slide_bftools_Tile2">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-o2</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>Tile2</j.3:hasArgumentID>
+                  </j.1:Tile>
+            </j.3:hasOutput>
+            <j.3:hasOutput>
+                  <j.1:Tile rdf:about="library.owl#Tiling_whole_slide_bftools_Tile5">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-o5</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>Tile5</j.3:hasArgumentID>
+                  </j.1:Tile>
+            </j.3:hasOutput>
+            <j.3:hasOutput>
+                  <j.1:Tile rdf:about="library.owl#Tiling_whole_slide_bftools_Tile8">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-o8</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>Tile8</j.3:hasArgumentID>
+                  </j.1:Tile>
+            </j.3:hasOutput>
+            <j.3:hasOutput>
+                  <j.1:Tile rdf:about="library.owl#Tiling_whole_slide_bftools_Tile3">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-o3</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>Tile3</j.3:hasArgumentID>
+                  </j.1:Tile>
+            </j.3:hasOutput>
+            <j.3:hasOutput>
+                  <j.1:Tile rdf:about="library.owl#Tiling_whole_slide_bftools_Tile9">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-o9</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>Tile9</j.3:hasArgumentID>
+                  </j.1:Tile>
+            </j.3:hasOutput>
+            <j.3:hasOutput>
+                  <j.1:Tile rdf:about="library.owl#Tiling_whole_slide_bftools_Tile1">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-o1</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>Tile1</j.3:hasArgumentID>
+                  </j.1:Tile>
+            </j.3:hasOutput>
+            <j.3:hasInput>
+                  <j.3:ParameterArgument rdf:about="library.owl#Tiling_whole_slide_bftools_Tile_dimensions">
+                        <j.3:hasArgumentID>Tile_dimensions</j.3:hasArgumentID>
+                        <j.3:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >1000</j.3:hasValue>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-p1</j.3:hasArgumentName>
+                  </j.3:ParameterArgument>
+            </j.3:hasInput>
+      </j.2:Tiling_whole_slide_bftoolsClass>
+      <j.2:PredictionClass rdf:about="library.owl#Prediction">
+            <j.3:isConcrete rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >false</j.3:isConcrete>
+            <j.0:hasHardwareDependency>
+                  <j.0:HardwareDependency>
+                        <j.0:requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                        >0.0</j.0:requiresMemoryGB>
+                        <j.0:needs64bit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                        >false</j.0:needs64bit>
+                        <j.0:requiresStorageGB rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                        >0.0</j.0:requiresStorageGB>
+                  </j.0:HardwareDependency>
+            </j.0:hasHardwareDependency>
+      </j.2:PredictionClass>
+      <j.2:Random_ForestClass rdf:about="library.owl#Random_Forest">
+            <j.3:hasInput>
+                  <j.3:ParameterArgument rdf:about="library.owl#Random_Forest_Type">
+                        <j.3:hasArgumentID>Type</j.3:hasArgumentID>
+                        <j.3:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >1</j.3:hasValue>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-p1</j.3:hasArgumentName>
+                  </j.3:ParameterArgument>
+            </j.3:hasInput>
+            <j.3:isConcrete rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >false</j.3:isConcrete>
+            <j.3:hasOutput>
+                  <j.1:tab-separated rdf:about="library.owl#Random_Forest_Classification_Matrix">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-o1</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>Classification_Matrix</j.3:hasArgumentID>
+                  </j.1:tab-separated>
+            </j.3:hasOutput>
+            <j.3:hasInput>
+                  <j.1:tab-separated rdf:about="library.owl#Random_Forest_Feature_Matrix">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-i1</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>Feature_Matrix</j.3:hasArgumentID>
+                  </j.1:tab-separated>
+            </j.3:hasInput>
+      </j.2:Random_ForestClass>
+      <j.2:IndexBamFileClass rdf:about="library.owl#IndexBamFile">
+            <j.3:isConcrete rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >false</j.3:isConcrete>
+            <j.0:hasHardwareDependency>
+                  <j.0:HardwareDependency>
+                        <j.0:requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                        >0.0</j.0:requiresMemoryGB>
+                        <j.0:needs64bit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                        >false</j.0:needs64bit>
+                        <j.0:requiresStorageGB rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                        >0.0</j.0:requiresStorageGB>
+                  </j.0:HardwareDependency>
+            </j.0:hasHardwareDependency>
+      </j.2:IndexBamFileClass>
+      <j.2:Test_installation_of_toolsClass rdf:about="library.owl#Test_installation_of_tools">
+            <j.3:hasInput>
+                  <j.1:Whole_Slide rdf:about="library.owl#Test_installation_of_tools_input_image">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-i1</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>input_image</j.3:hasArgumentID>
+                  </j.1:Whole_Slide>
+            </j.3:hasInput>
+            <j.3:isConcrete rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >false</j.3:isConcrete>
+            <j.3:hasOutput>
+                  <j.1:CSVFile rdf:about="library.owl#Test_installation_of_tools_output_features">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-o1</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>output_features</j.3:hasArgumentID>
+                  </j.1:CSVFile>
+            </j.3:hasOutput>
+      </j.2:Test_installation_of_toolsClass>
+      <j.2:VariantCallerClass rdf:about="library.owl#VariantCaller">
+            <j.3:isConcrete rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >false</j.3:isConcrete>
+      </j.2:VariantCallerClass>
+      <j.2:PeptideSpectralSearchClass rdf:about="library.owl#PeptideSpectralSearch">
+            <j.3:hasInput>
+                  <j.1:SpectraFile rdf:about="library.owl#PeptideSpectralSearch_spectraFile">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-i1</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>spectraFile</j.3:hasArgumentID>
+                  </j.1:SpectraFile>
+            </j.3:hasInput>
+            <j.3:isConcrete rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >false</j.3:isConcrete>
+            <j.3:hasOutput>
+                  <j.1:PepSearchParamFile rdf:about="library.owl#PeptideSpectralSearch_pepSpectralSearchFinalParams">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-o2</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>pepSpectralSearchFinalParams</j.3:hasArgumentID>
+                  </j.1:PepSearchParamFile>
+            </j.3:hasOutput>
+            <j.3:hasOutput>
+                  <j.1:PepSpectraFile rdf:about="library.owl#PeptideSpectralSearch_pepSpectralLibSearchResults">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-o1</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>pepSpectralLibSearchResults</j.3:hasArgumentID>
+                  </j.1:PepSpectraFile>
+            </j.3:hasOutput>
+            <j.3:hasOutput>
+                  <j.1:MS2Log rdf:about="library.owl#PeptideSpectralSearch_pepSpectralLibSearchLog">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-o3</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>pepSpectralLibSearchLog</j.3:hasArgumentID>
+                  </j.1:MS2Log>
+            </j.3:hasOutput>
+            <j.3:hasInput>
+                  <j.1:PepSearchParamFile rdf:about="library.owl#PeptideSpectralSearch_pepSpectralSearchParams">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-i3</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>pepSpectralSearchParams</j.3:hasArgumentID>
+                  </j.1:PepSearchParamFile>
+            </j.3:hasInput>
+            <j.3:hasInput>
+                  <j.1:SpectralLibFile rdf:about="library.owl#PeptideSpectralSearch_spectralLibFile">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-i4</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>spectralLibFile</j.3:hasArgumentID>
+                  </j.1:SpectralLibFile>
+            </j.3:hasInput>
+            <j.3:hasInput>
+                  <j.1:ProteomicFastaFile rdf:about="library.owl#PeptideSpectralSearch_protSeqDBFile">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-i2</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>protSeqDBFile</j.3:hasArgumentID>
+                  </j.1:ProteomicFastaFile>
+            </j.3:hasInput>
+      </j.2:PeptideSpectralSearchClass>
+      <j.2:SubmissionClass rdf:about="library.owl#Submission">
+            <j.3:isConcrete rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >false</j.3:isConcrete>
+            <j.0:hasHardwareDependency>
+                  <j.0:HardwareDependency>
+                        <j.0:requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                        >0.0</j.0:requiresMemoryGB>
+                        <j.0:needs64bit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                        >false</j.0:needs64bit>
+                        <j.0:requiresStorageGB rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                        >0.0</j.0:requiresStorageGB>
+                  </j.0:HardwareDependency>
+            </j.0:hasHardwareDependency>
+      </j.2:SubmissionClass>
+      <j.2:PlotUpSetClass rdf:about="library.owl#PlotUpSet">
+            <j.3:isConcrete rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >false</j.3:isConcrete>
+            <j.0:hasHardwareDependency>
+                  <j.0:HardwareDependency>
+                        <j.0:requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                        >0.0</j.0:requiresMemoryGB>
+                        <j.0:needs64bit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                        >false</j.0:needs64bit>
+                        <j.0:requiresStorageGB rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                        >0.0</j.0:requiresStorageGB>
+                  </j.0:HardwareDependency>
+            </j.0:hasHardwareDependency>
+      </j.2:PlotUpSetClass>
+      <j.2:CallVariantsClass rdf:about="library.owl#CallVariants">
+            <j.3:hasInput>
+                  <j.1:GenomicFastaFile rdf:about="library.owl#CallVariants_fastaFile">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-i2</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>fastaFile</j.3:hasArgumentID>
+                  </j.1:GenomicFastaFile>
+            </j.3:hasInput>
+            <j.3:isConcrete rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >false</j.3:isConcrete>
+            <j.3:hasOutput>
+                  <j.1:SNVFile rdf:about="library.owl#CallVariants_txtSNVFile">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-o1</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>txtSNVFile</j.3:hasArgumentID>
+                  </j.1:SNVFile>
+            </j.3:hasOutput>
+            <j.3:hasOutput>
+                  <j.1:VCFFile rdf:about="library.owl#CallVariants_vcfSNVFile">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-o2</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>vcfSNVFile</j.3:hasArgumentID>
+                  </j.1:VCFFile>
+            </j.3:hasOutput>
+            <j.3:hasInput>
+                  <j.1:BAMFile rdf:about="library.owl#CallVariants_bamFile">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-i1</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>bamFile</j.3:hasArgumentID>
+                  </j.1:BAMFile>
+            </j.3:hasInput>
+      </j.2:CallVariantsClass>
+      <j.2:CallSNPIndelsClass rdf:about="library.owl#CallSNPIndels">
+            <j.3:isConcrete rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >false</j.3:isConcrete>
+            <j.0:hasHardwareDependency>
+                  <j.0:HardwareDependency>
+                        <j.0:requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                        >0.0</j.0:requiresMemoryGB>
+                        <j.0:needs64bit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                        >false</j.0:needs64bit>
+                        <j.0:requiresStorageGB rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                        >0.0</j.0:requiresStorageGB>
+                  </j.0:HardwareDependency>
+            </j.0:hasHardwareDependency>
+      </j.2:CallSNPIndelsClass>
+      <j.2:ProteinDataConvertClass rdf:about="library.owl#ProteinDataConvert">
+            <j.3:hasInput>
+                  <j.1:SpectraFile rdf:about="library.owl#ProteinDataConvert_protSpectra">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-i1</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>protSpectra</j.3:hasArgumentID>
+                  </j.1:SpectraFile>
+            </j.3:hasInput>
+            <j.3:isConcrete rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >false</j.3:isConcrete>
+            <j.3:hasOutput>
+                  <j.1:MS2Log rdf:about="library.owl#ProteinDataConvert_protConvertLog">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-o2</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>protConvertLog</j.3:hasArgumentID>
+                  </j.1:MS2Log>
+            </j.3:hasOutput>
+            <j.3:hasOutput>
+                  <j.1:SpectraFile rdf:about="library.owl#ProteinDataConvert_protConvertSpectra">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-o1</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>protConvertSpectra</j.3:hasArgumentID>
+                  </j.1:SpectraFile>
+            </j.3:hasOutput>
+            <j.3:hasInput>
+                  <j.1:ProtConvertParamFile rdf:about="library.owl#ProteinDataConvert_protConvertParams">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-i4</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>protConvertParams</j.3:hasArgumentID>
+                  </j.1:ProtConvertParamFile>
+            </j.3:hasInput>
+            <j.3:hasInput>
+                  <j.1:ProteomicFastaFile rdf:about="library.owl#ProteinDataConvert_fastaFile">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >1</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-i3</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>fastaFile</j.3:hasArgumentID>
+                  </j.1:ProteomicFastaFile>
+            </j.3:hasInput>
+            <j.3:hasInput>
+                  <j.1:SpectraFile rdf:about="library.owl#ProteinDataConvert_pepSpectra">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-i2</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>pepSpectra</j.3:hasArgumentID>
+                  </j.1:SpectraFile>
+            </j.3:hasInput>
+      </j.2:ProteinDataConvertClass>
+      <j.2:TSVOutputFetcherClass rdf:about="library.owl#TSVOutputFetcher">
+            <j.3:hasInput>
+                  <j.3:ParameterArgument rdf:about="library.owl#TSVOutputFetcher_RunId">
+                        <j.3:hasArgumentID>RunId</j.3:hasArgumentID>
+                        <j.3:hasValue></j.3:hasValue>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-p1</j.3:hasArgumentName>
+                  </j.3:ParameterArgument>
+            </j.3:hasInput>
+            <j.3:isConcrete rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >false</j.3:isConcrete>
+            <j.3:hasOutput>
+                  <j.1:tab-separated rdf:about="library.owl#TSVOutputFetcher_TSVFile">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-o1</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>TSVFile</j.3:hasArgumentID>
+                  </j.1:tab-separated>
+            </j.3:hasOutput>
+            <j.3:hasInput>
+                  <j.1:MetaOptionsFile rdf:about="library.owl#TSVOutputFetcher_InputOptions">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-i1</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>InputOptions</j.3:hasArgumentID>
+                  </j.1:MetaOptionsFile>
+            </j.3:hasInput>
+      </j.2:TSVOutputFetcherClass>
+      <j.2:DataFormattingClass rdf:about="library.owl#DataFormatting">
+            <j.3:isConcrete rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >false</j.3:isConcrete>
+            <j.0:hasHardwareDependency>
+                  <j.0:HardwareDependency>
+                        <j.0:requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                        >0.0</j.0:requiresMemoryGB>
+                        <j.0:needs64bit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                        >false</j.0:needs64bit>
+                        <j.0:requiresStorageGB rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                        >0.0</j.0:requiresStorageGB>
+                  </j.0:HardwareDependency>
+            </j.0:hasHardwareDependency>
+      </j.2:DataFormattingClass>
+      <j.2:CreateDecoyFASTAClass rdf:about="library.owl#CreateDecoyFASTA">
+            <j.3:hasInput>
+                  <j.1:DecoyFastaParamFile rdf:about="library.owl#CreateDecoyFASTA_decoyParams">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-i2</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>decoyParams</j.3:hasArgumentID>
+                  </j.1:DecoyFastaParamFile>
+            </j.3:hasInput>
+            <j.3:isConcrete rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >false</j.3:isConcrete>
+            <j.3:hasOutput>
+                  <j.1:FastaFile rdf:about="library.owl#CreateDecoyFASTA_decoyFasta">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-o1</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>decoyFasta</j.3:hasArgumentID>
+                  </j.1:FastaFile>
+            </j.3:hasOutput>
+            <j.3:hasInput>
+                  <j.1:FastaFile rdf:about="library.owl#CreateDecoyFASTA_fastaFile">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-i1</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>fastaFile</j.3:hasArgumentID>
+                  </j.1:FastaFile>
+            </j.3:hasInput>
+      </j.2:CreateDecoyFASTAClass>
+      <j.2:Image_feature_extractionClass rdf:about="library.owl#Image_feature_extraction">
+            <j.3:hasInput>
+                  <j.1:Tile rdf:about="library.owl#Image_feature_extraction_Segmented_Image4">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-i4</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>Segmented_Image4</j.3:hasArgumentID>
+                  </j.1:Tile>
+            </j.3:hasInput>
+            <j.3:hasInput>
+                  <j.1:Tile rdf:about="library.owl#Image_feature_extraction_Segmented_Image9">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-i9</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>Segmented_Image9</j.3:hasArgumentID>
+                  </j.1:Tile>
+            </j.3:hasInput>
+            <j.3:hasOutput>
+                  <j.1:tab-separated rdf:about="library.owl#Image_feature_extraction_All_cells_all_tile_feature_list">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-o1</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>All_cells_all_tile_feature_list</j.3:hasArgumentID>
+                  </j.1:tab-separated>
+            </j.3:hasOutput>
+            <j.3:hasInput>
+                  <j.1:Tile rdf:about="library.owl#Image_feature_extraction_Segmented_Image10">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-i10</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>Segmented_Image10</j.3:hasArgumentID>
+                  </j.1:Tile>
+            </j.3:hasInput>
+            <j.3:isConcrete rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >false</j.3:isConcrete>
+            <j.3:hasInput>
+                  <j.1:Tile rdf:about="library.owl#Image_feature_extraction_Segmented_Image1">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-i1</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>Segmented_Image1</j.3:hasArgumentID>
+                  </j.1:Tile>
+            </j.3:hasInput>
+            <j.3:hasInput>
+                  <j.1:Tile rdf:about="library.owl#Image_feature_extraction_Segmented_Image6">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-i6</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>Segmented_Image6</j.3:hasArgumentID>
+                  </j.1:Tile>
+            </j.3:hasInput>
+            <j.3:hasInput>
+                  <j.1:Tile rdf:about="library.owl#Image_feature_extraction_Segmented_Image5">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-i5</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>Segmented_Image5</j.3:hasArgumentID>
+                  </j.1:Tile>
+            </j.3:hasInput>
+            <j.3:hasInput>
+                  <j.1:Tile rdf:about="library.owl#Image_feature_extraction_Segmented_Image7">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-i7</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>Segmented_Image7</j.3:hasArgumentID>
+                  </j.1:Tile>
+            </j.3:hasInput>
+            <j.3:hasInput>
+                  <j.1:Tile rdf:about="library.owl#Image_feature_extraction_Segmented_Image2">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-i2</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>Segmented_Image2</j.3:hasArgumentID>
+                  </j.1:Tile>
+            </j.3:hasInput>
+            <j.3:hasInput>
+                  <j.1:Tile rdf:about="library.owl#Image_feature_extraction_Segmented_Image8">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-i8</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>Segmented_Image8</j.3:hasArgumentID>
+                  </j.1:Tile>
+            </j.3:hasInput>
+            <j.3:hasInput>
+                  <j.1:Tile rdf:about="library.owl#Image_feature_extraction_Segmented_Image3">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-i3</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>Segmented_Image3</j.3:hasArgumentID>
+                  </j.1:Tile>
+            </j.3:hasInput>
+      </j.2:Image_feature_extractionClass>
+      <j.2:DataClusteringClass rdf:about="library.owl#DataClustering">
+            <j.3:isConcrete rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >false</j.3:isConcrete>
+            <j.0:hasHardwareDependency>
+                  <j.0:HardwareDependency>
+                        <j.0:requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                        >0.0</j.0:requiresMemoryGB>
+                        <j.0:needs64bit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                        >false</j.0:needs64bit>
+                        <j.0:requiresStorageGB rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                        >0.0</j.0:requiresStorageGB>
+                  </j.0:HardwareDependency>
+            </j.0:hasHardwareDependency>
+      </j.2:DataClusteringClass>
+      <j.2:MetadataFetcherTypeClass rdf:about="library.owl#MetadataFetcherType">
+            <j.3:hasInput>
+                  <j.3:ParameterArgument rdf:about="library.owl#MetadataFetcherType_RunId1">
+                        <j.3:hasArgumentID>RunId1</j.3:hasArgumentID>
+                        <j.3:hasValue></j.3:hasValue>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-p1</j.3:hasArgumentName>
+                  </j.3:ParameterArgument>
+            </j.3:hasInput>
+            <j.3:isConcrete rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >false</j.3:isConcrete>
+            <j.3:hasOutput>
+                  <j.1:HypothesisFile rdf:about="library.owl#MetadataFetcherType_OutputHypothesis">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-o1</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>OutputHypothesis</j.3:hasArgumentID>
+                  </j.1:HypothesisFile>
+            </j.3:hasOutput>
+            <j.3:hasInput>
+                  <j.1:MetaFetcherOptions rdf:about="library.owl#MetadataFetcherType_InputOptions">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-i2</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>InputOptions</j.3:hasArgumentID>
+                  </j.1:MetaFetcherOptions>
+            </j.3:hasInput>
+            <j.3:hasInput>
+                  <j.1:HypothesisFile rdf:about="library.owl#MetadataFetcherType_InputHypothesis">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-i1</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>InputHypothesis</j.3:hasArgumentID>
+                  </j.1:HypothesisFile>
+            </j.3:hasInput>
+            <j.3:hasInput>
+                  <j.3:ParameterArgument rdf:about="library.owl#MetadataFetcherType_RunId2">
+                        <j.3:hasArgumentID>RunId2</j.3:hasArgumentID>
+                        <j.3:hasValue></j.3:hasValue>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-p2</j.3:hasArgumentName>
+                  </j.3:ParameterArgument>
+            </j.3:hasInput>
+      </j.2:MetadataFetcherTypeClass>
+      <j.2:DataNormalizationClass rdf:about="library.owl#DataNormalization">
+            <j.3:isConcrete rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >false</j.3:isConcrete>
+            <j.0:hasHardwareDependency>
+                  <j.0:HardwareDependency>
+                        <j.0:requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                        >0.0</j.0:requiresMemoryGB>
+                        <j.0:needs64bit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                        >false</j.0:needs64bit>
+                        <j.0:requiresStorageGB rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                        >0.0</j.0:requiresStorageGB>
+                  </j.0:HardwareDependency>
+            </j.0:hasHardwareDependency>
+      </j.2:DataNormalizationClass>
+      <j.2:FilterDataClass rdf:about="library.owl#FilterData">
+            <j.3:isConcrete rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >false</j.3:isConcrete>
+            <j.0:hasHardwareDependency>
+                  <j.0:HardwareDependency>
+                        <j.0:requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                        >0.0</j.0:requiresMemoryGB>
+                        <j.0:needs64bit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                        >false</j.0:needs64bit>
+                        <j.0:requiresStorageGB rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                        >0.0</j.0:requiresStorageGB>
+                  </j.0:HardwareDependency>
+            </j.0:hasHardwareDependency>
+      </j.2:FilterDataClass>
+      <j.2:Cell_SegmentationClass rdf:about="library.owl#Cell_Segmentation">
+            <j.3:isConcrete rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >false</j.3:isConcrete>
+            <j.3:hasInput>
+                  <j.1:Tile rdf:about="library.owl#Cell_Segmentation_Tile1">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-i1</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>Tile1</j.3:hasArgumentID>
+                  </j.1:Tile>
+            </j.3:hasInput>
+            <j.3:hasInput>
+                  <j.1:Tile rdf:about="library.owl#Cell_Segmentation_Tile8">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-i8</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>Tile8</j.3:hasArgumentID>
+                  </j.1:Tile>
+            </j.3:hasInput>
+            <j.3:hasOutput>
+                  <j.1:Tile rdf:about="library.owl#Cell_Segmentation_Segmented_Tile3">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-o3</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>Segmented_Tile3</j.3:hasArgumentID>
+                  </j.1:Tile>
+            </j.3:hasOutput>
+            <j.3:hasOutput>
+                  <j.1:Tile rdf:about="library.owl#Cell_Segmentation_Segmented_Tile10">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-o10</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>Segmented_Tile10</j.3:hasArgumentID>
+                  </j.1:Tile>
+            </j.3:hasOutput>
+            <j.3:hasOutput>
+                  <j.1:Tile rdf:about="library.owl#Cell_Segmentation_Segmented_Tile7">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-o7</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>Segmented_Tile7</j.3:hasArgumentID>
+                  </j.1:Tile>
+            </j.3:hasOutput>
+            <j.3:hasInput>
+                  <j.1:Tile rdf:about="library.owl#Cell_Segmentation_Tile9">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-i9</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>Tile9</j.3:hasArgumentID>
+                  </j.1:Tile>
+            </j.3:hasInput>
+            <j.3:hasOutput>
+                  <j.1:Tile rdf:about="library.owl#Cell_Segmentation_Segmented_Tile4">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-o4</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>Segmented_Tile4</j.3:hasArgumentID>
+                  </j.1:Tile>
+            </j.3:hasOutput>
+            <j.3:hasInput>
+                  <j.1:Tile rdf:about="library.owl#Cell_Segmentation_Tile2">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-i2</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>Tile2</j.3:hasArgumentID>
+                  </j.1:Tile>
+            </j.3:hasInput>
+            <j.3:hasOutput>
+                  <j.1:Tile rdf:about="library.owl#Cell_Segmentation_Segmented_Tile8">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-o8</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>Segmented_Tile8</j.3:hasArgumentID>
+                  </j.1:Tile>
+            </j.3:hasOutput>
+            <j.3:hasOutput>
+                  <j.1:Tile rdf:about="library.owl#Cell_Segmentation_Segmented_Tile1">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-o1</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>Segmented_Tile1</j.3:hasArgumentID>
+                  </j.1:Tile>
+            </j.3:hasOutput>
+            <j.3:hasInput>
+                  <j.1:Tile rdf:about="library.owl#Cell_Segmentation_Tile3">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-i3</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>Tile3</j.3:hasArgumentID>
+                  </j.1:Tile>
+            </j.3:hasInput>
+            <j.3:hasOutput>
+                  <j.1:Tile rdf:about="library.owl#Cell_Segmentation_Segmented_Tile5">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-o5</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>Segmented_Tile5</j.3:hasArgumentID>
+                  </j.1:Tile>
+            </j.3:hasOutput>
+            <j.3:hasOutput>
+                  <j.1:Tile rdf:about="library.owl#Cell_Segmentation_Segmented_Tile2">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-o2</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>Segmented_Tile2</j.3:hasArgumentID>
+                  </j.1:Tile>
+            </j.3:hasOutput>
+            <j.3:hasOutput>
+                  <j.1:Tile rdf:about="library.owl#Cell_Segmentation_Segmented_Tile6">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-o6</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>Segmented_Tile6</j.3:hasArgumentID>
+                  </j.1:Tile>
+            </j.3:hasOutput>
+            <j.3:hasInput>
+                  <j.1:Tile rdf:about="library.owl#Cell_Segmentation_Tile10">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-i10</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>Tile10</j.3:hasArgumentID>
+                  </j.1:Tile>
+            </j.3:hasInput>
+            <j.3:hasInput>
+                  <j.1:Tile rdf:about="library.owl#Cell_Segmentation_Tile6">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-i6</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>Tile6</j.3:hasArgumentID>
+                  </j.1:Tile>
+            </j.3:hasInput>
+            <j.3:hasInput>
+                  <j.1:Tile rdf:about="library.owl#Cell_Segmentation_Tile7">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-i7</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>Tile7</j.3:hasArgumentID>
+                  </j.1:Tile>
+            </j.3:hasInput>
+            <j.3:hasOutput>
+                  <j.1:Tile rdf:about="library.owl#Cell_Segmentation_Segmented_Tile9">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-o9</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>Segmented_Tile9</j.3:hasArgumentID>
+                  </j.1:Tile>
+            </j.3:hasOutput>
+            <j.3:hasInput>
+                  <j.1:Tile rdf:about="library.owl#Cell_Segmentation_Tile4">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-i4</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>Tile4</j.3:hasArgumentID>
+                  </j.1:Tile>
+            </j.3:hasInput>
+            <j.3:hasInput>
+                  <j.1:Tile rdf:about="library.owl#Cell_Segmentation_Tile5">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-i5</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>Tile5</j.3:hasArgumentID>
+                  </j.1:Tile>
+            </j.3:hasInput>
+      </j.2:Cell_SegmentationClass>
+      <j.2:HypothesisRevisionClass rdf:about="library.owl#HypothesisRevision">
+            <j.3:hasInput>
+                  <j.1:ConfidenceResults rdf:about="library.owl#HypothesisRevision_ConfidenceResults">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-i2</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>ConfidenceResults</j.3:hasArgumentID>
+                  </j.1:ConfidenceResults>
+            </j.3:hasInput>
+            <j.3:isConcrete rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >false</j.3:isConcrete>
+            <j.3:hasOutput>
+                  <j.1:HypothesisFile rdf:about="library.owl#HypothesisRevision_RevisedHypothesis">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-o1</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>RevisedHypothesis</j.3:hasArgumentID>
+                  </j.1:HypothesisFile>
+            </j.3:hasOutput>
+            <j.3:hasInput>
+                  <j.1:HypothesisFile rdf:about="library.owl#HypothesisRevision_InputHypothesis">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-i1</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>InputHypothesis</j.3:hasArgumentID>
+                  </j.1:HypothesisFile>
+            </j.3:hasInput>
+      </j.2:HypothesisRevisionClass>
+      <j.2:AnalysisClass rdf:about="library.owl#Analysis">
+            <j.3:isConcrete rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >false</j.3:isConcrete>
+            <j.0:hasHardwareDependency>
+                  <j.0:HardwareDependency>
+                        <j.0:requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                        >0.0</j.0:requiresMemoryGB>
+                        <j.0:needs64bit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                        >false</j.0:needs64bit>
+                        <j.0:requiresStorageGB rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                        >0.0</j.0:requiresStorageGB>
+                  </j.0:HardwareDependency>
+            </j.0:hasHardwareDependency>
+      </j.2:AnalysisClass>
+      <j.2:cleanFASTAClass rdf:about="library.owl#cleanFASTA">
+            <j.3:isConcrete rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >false</j.3:isConcrete>
+            <j.0:hasHardwareDependency>
+                  <j.0:HardwareDependency>
+                        <j.0:requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                        >0.0</j.0:requiresMemoryGB>
+                        <j.0:needs64bit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                        >false</j.0:needs64bit>
+                        <j.0:requiresStorageGB rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                        >0.0</j.0:requiresStorageGB>
+                  </j.0:HardwareDependency>
+            </j.0:hasHardwareDependency>
+      </j.2:cleanFASTAClass>
+      <j.2:DataQueryClass rdf:about="library.owl#DataQuery">
+            <j.3:hasInput>
+                  <j.1:SpectraFile rdf:about="library.owl#DataQuery_inputFile">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-i1</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>inputFile</j.3:hasArgumentID>
+                  </j.1:SpectraFile>
+            </j.3:hasInput>
+            <j.3:isConcrete rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >false</j.3:isConcrete>
+            <j.3:hasOutput>
+                  <j.1:SpectraFile rdf:about="library.owl#DataQuery_editedFile">
+                        <rdf:type rdf:resource="http://www.wings-workflows.org/ontology/component.owl#DataArgument"/>
+                        <j.3:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.3:hasDimensionality>
+                        <j.3:hasArgumentName>-o1</j.3:hasArgumentName>
+                        <j.3:hasArgumentID>editedFile</j.3:hasArgumentID>
+                  </j.1:SpectraFile>
+            </j.3:hasOutput>
+      </j.2:DataQueryClass>
+      <j.2:VariantAnalysisClass rdf:about="library.owl#VariantAnalysis">
+            <j.3:isConcrete rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >false</j.3:isConcrete>
+            <j.0:hasHardwareDependency>
+                  <j.0:HardwareDependency>
+                        <j.0:requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                        >0.0</j.0:requiresMemoryGB>
+                        <j.0:needs64bit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                        >false</j.0:needs64bit>
+                        <j.0:requiresStorageGB rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                        >0.0</j.0:requiresStorageGB>
+                  </j.0:HardwareDependency>
+            </j.0:hasHardwareDependency>
+      </j.2:VariantAnalysisClass>
+      <j.2:GeneratePlotsClass rdf:about="library.owl#GeneratePlots">
+            <j.3:isConcrete rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >false</j.3:isConcrete>
+            <j.0:hasHardwareDependency>
+                  <j.0:HardwareDependency>
+                        <j.0:requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                        >0.0</j.0:requiresMemoryGB>
+                        <j.0:needs64bit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                        >false</j.0:needs64bit>
+                        <j.0:requiresStorageGB rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                        >0.0</j.0:requiresStorageGB>
+                  </j.0:HardwareDependency>
+            </j.0:hasHardwareDependency>
+      </j.2:GeneratePlotsClass>
+</rdf:RDF>

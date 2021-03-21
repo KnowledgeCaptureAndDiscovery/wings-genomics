@@ -1,0 +1,1968 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.0="http://www.wings-workflows.org/ontology/workflow.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+      xml:base="http://localhost:8080/wings-portal/export/users/admin/genomics/workflows/MetaAnalysisCompare_RefCustomFiles.owl">
+      <owl:Ontology rdf:about="">
+            <owl:imports>
+                  <owl:Ontology rdf:about="http://www.wings-workflows.org/ontology/workflow.owl"/>
+            </owl:imports>
+      </owl:Ontology>
+      <owl:Ontology rdf:about="http://www.wings-workflows.org/ontology/workflow.owl">
+            <owl:versionInfo>3.0</owl:versionInfo>
+      </owl:Ontology>
+      <owl:Class rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#WorkflowTemplate">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#Workflow"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#ComponentSetRule">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#SetCreationRule"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#SetCreationExpression"/>
+      <owl:Class rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#Variable"/>
+      <owl:Class rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#Role"/>
+      <owl:Class rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#IncreaseDimensionality">
+            <rdfs:subClassOf rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#SetCreationExpression"/>
+      </owl:Class>
+      <owl:Class rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#NWise">
+            <rdfs:subClassOf rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#SetCreationExpression"/>
+      </owl:Class>
+      <owl:Class rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#WorkflowInstance">
+            <rdfs:subClassOf rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Workflow"/>
+      </owl:Class>
+      <owl:Class rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#Node"/>
+      <owl:Class rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#PortSetRule">
+            <rdfs:subClassOf rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#SetCreationRule"/>
+      </owl:Class>
+      <owl:Class rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#XProduct">
+            <rdfs:subClassOf rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#SetCreationExpression"/>
+      </owl:Class>
+      <owl:Class rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#Port"/>
+      <owl:Class rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#DataVariable">
+            <rdfs:subClassOf rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Variable"/>
+      </owl:Class>
+      <owl:Class rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#InputLink">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#Link"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#InOutLink">
+            <rdfs:subClassOf rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Link"/>
+      </owl:Class>
+      <owl:Class rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#OutputLink">
+            <rdfs:subClassOf rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Link"/>
+      </owl:Class>
+      <owl:Class rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#ComponentVariable">
+            <rdfs:subClassOf rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Variable"/>
+      </owl:Class>
+      <owl:Class rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#ReduceDimensionality">
+            <rdfs:subClassOf rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#SetCreationExpression"/>
+      </owl:Class>
+      <owl:Class rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#Metadata"/>
+      <owl:Class rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#ParameterVariable">
+            <rdfs:subClassOf rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Variable"/>
+      </owl:Class>
+      <owl:Class rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#Shift">
+            <rdfs:subClassOf rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#SetCreationExpression"/>
+      </owl:Class>
+      <owl:ObjectProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#hasLink">
+            <rdfs:range rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Link"/>
+            <rdfs:domain rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Workflow"/>
+      </owl:ObjectProperty>
+      <owl:ObjectProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#derivedFrom"/>
+      <owl:ObjectProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#hasExpressionArgument">
+            <rdfs:range>
+                  <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                              <owl:Class rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#Port"/>
+                              <owl:Class rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#SetCreationExpression"/>
+                        </owl:unionOf>
+                  </owl:Class>
+            </rdfs:range>
+            <rdfs:domain rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#SetCreationExpression"/>
+      </owl:ObjectProperty>
+      <owl:ObjectProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#hasOutputRole">
+            <rdfs:range rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Role"/>
+            <rdfs:domain rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Workflow"/>
+      </owl:ObjectProperty>
+      <owl:ObjectProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#hasComponentBinding">
+            <rdfs:domain rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#ComponentVariable"/>
+      </owl:ObjectProperty>
+      <owl:ObjectProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#canRunOn">
+            <rdfs:range rdf:resource="http://www.wings-workflows.org/ontology/resource.owl#Machine"/>
+            <rdfs:domain rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Node"/>
+      </owl:ObjectProperty>
+      <owl:ObjectProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#hasOriginNode">
+            <rdfs:range rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Node"/>
+            <rdfs:domain rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Link"/>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+      </owl:ObjectProperty>
+      <owl:ObjectProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#hasInputPort">
+            <rdfs:range rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Port"/>
+            <rdfs:domain rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Node"/>
+      </owl:ObjectProperty>
+      <owl:ObjectProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#hasNode">
+            <rdfs:range rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Node"/>
+            <rdfs:domain rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Workflow"/>
+      </owl:ObjectProperty>
+      <owl:ObjectProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#hasDestinationPort">
+            <rdfs:range rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Port"/>
+            <rdfs:domain rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Link"/>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+      </owl:ObjectProperty>
+      <owl:ObjectProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#hasWorkflow">
+            <rdfs:range rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Workflow"/>
+            <rdfs:domain rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Node"/>
+      </owl:ObjectProperty>
+      <owl:ObjectProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#hasDataBinding">
+            <rdfs:domain rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#DataVariable"/>
+      </owl:ObjectProperty>
+      <owl:ObjectProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#hasDestinationNode">
+            <rdfs:range rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Node"/>
+            <rdfs:domain rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Link"/>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+      </owl:ObjectProperty>
+      <owl:ObjectProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#mapsToVariable">
+            <rdfs:range rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Variable"/>
+            <rdfs:domain rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Role"/>
+      </owl:ObjectProperty>
+      <owl:ObjectProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#createSetsOn">
+            <rdfs:range>
+                  <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                              <owl:Class rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#ComponentVariable"/>
+                              <owl:Class rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#SetCreationExpression"/>
+                        </owl:unionOf>
+                  </owl:Class>
+            </rdfs:range>
+            <rdfs:domain rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#SetCreationRule"/>
+      </owl:ObjectProperty>
+      <owl:ObjectProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#hasVariable">
+            <rdfs:range rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Variable"/>
+            <rdfs:domain rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Link"/>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+      </owl:ObjectProperty>
+      <owl:ObjectProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#hasOutputPort">
+            <rdfs:range rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Port"/>
+            <rdfs:domain rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Node"/>
+      </owl:ObjectProperty>
+      <owl:ObjectProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#hasComponent">
+            <rdfs:range rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#ComponentVariable"/>
+            <rdfs:domain rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Node"/>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+      </owl:ObjectProperty>
+      <owl:ObjectProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#hasComponentSetCreationRule">
+            <rdfs:range rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#SetCreationRule"/>
+            <rdfs:domain rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Node"/>
+      </owl:ObjectProperty>
+      <owl:ObjectProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#hasOriginPort">
+            <rdfs:range rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Port"/>
+            <rdfs:domain rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Link"/>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+      </owl:ObjectProperty>
+      <owl:ObjectProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#hasInputRole">
+            <rdfs:range rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Role"/>
+            <rdfs:domain rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Workflow"/>
+      </owl:ObjectProperty>
+      <owl:ObjectProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#hasPortSetCreationRule">
+            <rdfs:range rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#SetCreationRule"/>
+            <rdfs:domain rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Node"/>
+      </owl:ObjectProperty>
+      <owl:ObjectProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#hasMetadata">
+            <rdfs:range rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Metadata"/>
+            <rdfs:domain rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Workflow"/>
+      </owl:ObjectProperty>
+      <owl:ObjectProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#satisfiesRole">
+            <rdfs:range rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Role"/>
+            <rdfs:domain rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Port"/>
+      </owl:ObjectProperty>
+      <owl:DatatypeProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#hasVersion">
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            <rdfs:domain rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Workflow"/>
+      </owl:DatatypeProperty>
+      <owl:DatatypeProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#hasDocumentation">
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            <rdfs:domain rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Metadata"/>
+      </owl:DatatypeProperty>
+      <owl:DatatypeProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#isInactive">
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+      </owl:DatatypeProperty>
+      <owl:DatatypeProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#hasRoleID">
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            <rdfs:domain rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Role"/>
+      </owl:DatatypeProperty>
+      <owl:DatatypeProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#createdFrom">
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            <rdfs:domain rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Metadata"/>
+      </owl:DatatypeProperty>
+      <owl:DatatypeProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#hasContributor">
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            <rdfs:domain rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Metadata"/>
+      </owl:DatatypeProperty>
+      <owl:DatatypeProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#tellmeData">
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            <rdfs:domain rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Metadata"/>
+      </owl:DatatypeProperty>
+      <owl:DatatypeProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#createWorkflowSets">
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            <rdfs:domain rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#SetCreationRule"/>
+      </owl:DatatypeProperty>
+      <owl:DatatypeProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#hasParameterValue">
+            <rdfs:domain rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#ParameterVariable"/>
+      </owl:DatatypeProperty>
+      <owl:DatatypeProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#autoFill">
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            <rdfs:domain rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#ParameterVariable"/>
+      </owl:DatatypeProperty>
+      <owl:DatatypeProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#breakPoint">
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#true"/>
+            <rdfs:domain rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Variable"/>
+      </owl:DatatypeProperty>
+      <owl:DatatypeProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#isConcrete">
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            <rdfs:domain rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#ComponentVariable"/>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+      </owl:DatatypeProperty>
+      <owl:DatatypeProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#hasRules">
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            <rdfs:domain rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Workflow"/>
+      </owl:DatatypeProperty>
+      <owl:DatatypeProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#createComponentSets">
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            <rdfs:domain rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#SetCreationRule"/>
+      </owl:DatatypeProperty>
+      <owl:DatatypeProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#hasDimensionality">
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+      </owl:DatatypeProperty>
+      <owl:DatatypeProperty rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#lastUpdateTime">
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            <rdfs:domain rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Metadata"/>
+      </owl:DatatypeProperty>
+      <j.0:WorkflowTemplate rdf:ID="MetaAnalysisCompare_RefCustomFiles">
+            <j.0:hasLink>
+                  <j.0:InputLink rdf:ID="plotDensity_node_valueColname_input">
+                        <j.0:hasVariable>
+                              <j.0:ParameterVariable rdf:ID="corrValueColname">
+                                    <j.0:autoFill rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#boolean"
+                                    >true</j.0:autoFill>
+                                    <rdfs:comment>center:x=304.25176658630375,y=323.34336376190186</rdfs:comment>
+                              </j.0:ParameterVariable>
+                        </j.0:hasVariable>
+                        <j.0:hasDestinationPort>
+                              <j.0:Port rdf:ID="plotDensity_node_valueColname">
+                                    <j.0:satisfiesRole>
+                                          <rdf:Description rdf:ID="plotDensity_node_valueColname_role">
+                                                <j.0:hasRoleID
+                                                >valueColname</j.0:hasRoleID>
+                                                <j.0:hasDimensionality
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#integer"
+                                                >0</j.0:hasDimensionality>
+                                          </rdf:Description>
+                                    </j.0:satisfiesRole>
+                              </j.0:Port>
+                        </j.0:hasDestinationPort>
+                        <j.0:hasDestinationNode>
+                              <j.0:Node rdf:ID="plotDensity_node">
+                                    <rdfs:comment>center:x=513.252630996704,y=543.3417520523071</rdfs:comment>
+                                    <j.0:hasComponentSetCreationRule>
+                                          <j.0:ComponentSetRule rdf:ID="plotDensity_node_crule">
+                                                <j.0:createWorkflowSets
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#boolean"
+                                                >true</j.0:createWorkflowSets>
+                                                <j.0:createSetsOn>
+                                                      <j.0:ComponentVariable rdf:ID="plotDensity_node_comp">
+                                                            <j.0:isConcrete
+                                                             rdf:datatype=
+                                                            "http://www.w3.org/2001/XMLSchema#boolean"
+                                                            >true</j.0:isConcrete>
+                                                            <j.0:hasComponentBinding rdf:resource="../components/library.owl#plotDensity"/>
+                                                      </j.0:ComponentVariable>
+                                                </j.0:createSetsOn>
+                                          </j.0:ComponentSetRule>
+                                    </j.0:hasComponentSetCreationRule>
+                                    <j.0:hasInputPort>
+                                          <j.0:Port rdf:ID="plotDensity_node_plotTitle">
+                                                <j.0:satisfiesRole>
+                                                      <rdf:Description rdf:ID="plotDensity_node_plotTitle_role">
+                                                            <j.0:hasRoleID
+                                                            >plotTitle</j.0:hasRoleID>
+                                                            <j.0:hasDimensionality
+                                                             rdf:datatype=
+                                                            "http://www.w3.org/2001/XMLSchema#integer"
+                                                            >0</j.0:hasDimensionality>
+                                                      </rdf:Description>
+                                                </j.0:satisfiesRole>
+                                          </j.0:Port>
+                                    </j.0:hasInputPort>
+                                    <j.0:hasPortSetCreationRule>
+                                          <j.0:PortSetRule rdf:ID="plotDensity_node_prule">
+                                                <j.0:createComponentSets
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#boolean"
+                                                >true</j.0:createComponentSets>
+                                                <j.0:createSetsOn>
+                                                      <j.0:XProduct rdf:ID="_xprod-197984bf-0da3-4988-ae05-3b8073bdd69d">
+                                                            <j.0:hasExpressionArgument>
+                                                            
+      <j.0:Port rdf:ID="plotDensity_node_inputFile">
+            <j.0:satisfiesRole>
+                  <rdf:Description rdf:ID="plotDensity_node_inputFile_role">
+                        <j.0:hasRoleID>inputFile</j.0:hasRoleID>
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                  </rdf:Description>
+            </j.0:satisfiesRole>
+      </j.0:Port>                                           </j.0:hasExpressionArgument>
+                                                            <j.0:hasExpressionArgument rdf:resource="#plotDensity_node_plotTitle"/>
+                                                            <j.0:hasExpressionArgument>
+                                                            
+      <j.0:Port rdf:ID="plotDensity_node_yTitle">
+            <j.0:satisfiesRole>
+                  <rdf:Description rdf:ID="plotDensity_node_yTitle_role">
+                        <j.0:hasRoleID>yTitle</j.0:hasRoleID>
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                  </rdf:Description>
+            </j.0:satisfiesRole>
+      </j.0:Port>                                           </j.0:hasExpressionArgument>
+                                                            <j.0:hasExpressionArgument>
+                                                            
+      <j.0:Port rdf:ID="plotDensity_node_xTitle">
+            <j.0:satisfiesRole>
+                  <rdf:Description rdf:ID="plotDensity_node_xTitle_role">
+                        <j.0:hasRoleID>xTitle</j.0:hasRoleID>
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                  </rdf:Description>
+            </j.0:satisfiesRole>
+      </j.0:Port>                                           </j.0:hasExpressionArgument>
+                                                            <j.0:hasExpressionArgument rdf:resource="#plotDensity_node_valueColname"/>
+                                                      </j.0:XProduct>
+                                                </j.0:createSetsOn>
+                                          </j.0:PortSetRule>
+                                    </j.0:hasPortSetCreationRule>
+                                    <j.0:hasOutputPort>
+                                          <j.0:Port rdf:ID="plotDensity_node_densityPlot">
+                                                <j.0:satisfiesRole>
+                                                      <rdf:Description rdf:ID="plotDensity_node_densityPlot_role">
+                                                            <j.0:hasRoleID
+                                                            >densityPlot</j.0:hasRoleID>
+                                                            <j.0:hasDimensionality
+                                                             rdf:datatype=
+                                                            "http://www.w3.org/2001/XMLSchema#integer"
+                                                            >0</j.0:hasDimensionality>
+                                                      </rdf:Description>
+                                                </j.0:satisfiesRole>
+                                          </j.0:Port>
+                                    </j.0:hasOutputPort>
+                                    <j.0:hasInputPort rdf:resource="#plotDensity_node_inputFile"/>
+                                    <j.0:hasInputPort rdf:resource="#plotDensity_node_yTitle"/>
+                                    <j.0:hasInputPort rdf:resource="#plotDensity_node_xTitle"/>
+                                    <j.0:hasComponent rdf:resource="#plotDensity_node_comp"/>
+                                    <j.0:hasInputPort rdf:resource="#plotDensity_node_valueColname"/>
+                              </j.0:Node>
+                        </j.0:hasDestinationNode>
+                  </j.0:InputLink>
+            </j.0:hasLink>
+            <j.0:hasLink>
+                  <j.0:InputLink rdf:ID="formatIDPQueryData_node1_datasetColname_input">
+                        <j.0:hasVariable>
+                              <j.0:ParameterVariable rdf:ID="datasetColname">
+                                    <j.0:autoFill rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#boolean"
+                                    >true</j.0:autoFill>
+                                    <rdfs:comment>center:x=696.9491355895997,y=29.986567497253418</rdfs:comment>
+                              </j.0:ParameterVariable>
+                        </j.0:hasVariable>
+                        <j.0:hasDestinationPort>
+                              <j.0:Port rdf:ID="formatIDPQueryData_node1_datasetColname">
+                                    <j.0:satisfiesRole>
+                                          <rdf:Description rdf:ID="formatIDPQueryData_node1_datasetColname_role">
+                                                <j.0:hasRoleID
+                                                >datasetColname</j.0:hasRoleID>
+                                                <j.0:hasDimensionality
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#integer"
+                                                >0</j.0:hasDimensionality>
+                                          </rdf:Description>
+                                    </j.0:satisfiesRole>
+                              </j.0:Port>
+                        </j.0:hasDestinationPort>
+                        <j.0:hasDestinationNode>
+                              <j.0:Node rdf:ID="formatIDPQueryData_node1">
+                                    <j.0:hasOutputPort>
+                                          <j.0:Port rdf:ID="formatIDPQueryData_node1_wideFormatFile">
+                                                <j.0:satisfiesRole>
+                                                      <rdf:Description rdf:ID="formatIDPQueryData_node1_wideFormatFile_role">
+                                                            <j.0:hasRoleID
+                                                            >wideFormatFile</j.0:hasRoleID>
+                                                            <j.0:hasDimensionality
+                                                             rdf:datatype=
+                                                            "http://www.w3.org/2001/XMLSchema#integer"
+                                                            >0</j.0:hasDimensionality>
+                                                      </rdf:Description>
+                                                </j.0:satisfiesRole>
+                                          </j.0:Port>
+                                    </j.0:hasOutputPort>
+                                    <j.0:hasComponent>
+                                          <j.0:ComponentVariable rdf:ID="formatIDPQueryData_node1_comp">
+                                                <j.0:isConcrete
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#boolean"
+                                                >true</j.0:isConcrete>
+                                                <j.0:hasComponentBinding rdf:resource="../components/library.owl#formatIDPQueryData"/>
+                                          </j.0:ComponentVariable>
+                                    </j.0:hasComponent>
+                                    <rdfs:comment>center:x=838.828012084961,y=103.33056163787842</rdfs:comment>
+                                    <j.0:hasInputPort>
+                                          <j.0:Port rdf:ID="formatIDPQueryData_node1_sampleColname">
+                                                <j.0:satisfiesRole>
+                                                      <rdf:Description rdf:ID="formatIDPQueryData_node1_sampleColname_role">
+                                                            <j.0:hasRoleID
+                                                            >sampleColname</j.0:hasRoleID>
+                                                            <j.0:hasDimensionality
+                                                             rdf:datatype=
+                                                            "http://www.w3.org/2001/XMLSchema#integer"
+                                                            >0</j.0:hasDimensionality>
+                                                      </rdf:Description>
+                                                </j.0:satisfiesRole>
+                                          </j.0:Port>
+                                    </j.0:hasInputPort>
+                                    <j.0:hasInputPort>
+                                          <j.0:Port rdf:ID="formatIDPQueryData_node1_reqColname2">
+                                                <j.0:satisfiesRole>
+                                                      <rdf:Description rdf:ID="formatIDPQueryData_node1_reqColname2_role">
+                                                            <j.0:hasRoleID
+                                                            >reqColname2</j.0:hasRoleID>
+                                                            <j.0:hasDimensionality
+                                                             rdf:datatype=
+                                                            "http://www.w3.org/2001/XMLSchema#integer"
+                                                            >0</j.0:hasDimensionality>
+                                                      </rdf:Description>
+                                                </j.0:satisfiesRole>
+                                          </j.0:Port>
+                                    </j.0:hasInputPort>
+                                    <j.0:hasInputPort>
+                                          <j.0:Port rdf:ID="formatIDPQueryData_node1_idpquery">
+                                                <j.0:satisfiesRole>
+                                                      <rdf:Description rdf:ID="formatIDPQueryData_node1_idpquery_role">
+                                                            <j.0:hasRoleID
+                                                            >idpquery</j.0:hasRoleID>
+                                                            <j.0:hasDimensionality
+                                                             rdf:datatype=
+                                                            "http://www.w3.org/2001/XMLSchema#integer"
+                                                            >0</j.0:hasDimensionality>
+                                                      </rdf:Description>
+                                                </j.0:satisfiesRole>
+                                          </j.0:Port>
+                                    </j.0:hasInputPort>
+                                    <j.0:hasComponentSetCreationRule>
+                                          <j.0:ComponentSetRule rdf:ID="formatIDPQueryData_node1_crule">
+                                                <j.0:createWorkflowSets
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#boolean"
+                                                >true</j.0:createWorkflowSets>
+                                                <j.0:createSetsOn rdf:resource="#formatIDPQueryData_node1_comp"/>
+                                          </j.0:ComponentSetRule>
+                                    </j.0:hasComponentSetCreationRule>
+                                    <j.0:hasInputPort>
+                                          <j.0:Port rdf:ID="formatIDPQueryData_node1_SampleIDs">
+                                                <j.0:satisfiesRole>
+                                                      <rdf:Description rdf:ID="formatIDPQueryData_node1_SampleIDs_role">
+                                                            <j.0:hasRoleID
+                                                            >SampleIDs</j.0:hasRoleID>
+                                                            <j.0:hasDimensionality
+                                                             rdf:datatype=
+                                                            "http://www.w3.org/2001/XMLSchema#integer"
+                                                            >0</j.0:hasDimensionality>
+                                                      </rdf:Description>
+                                                </j.0:satisfiesRole>
+                                          </j.0:Port>
+                                    </j.0:hasInputPort>
+                                    <j.0:hasInputPort rdf:resource="#formatIDPQueryData_node1_datasetColname"/>
+                                    <j.0:hasPortSetCreationRule>
+                                          <j.0:PortSetRule rdf:ID="formatIDPQueryData_node1_prule">
+                                                <j.0:createComponentSets
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#boolean"
+                                                >true</j.0:createComponentSets>
+                                                <j.0:createSetsOn>
+                                                      <j.0:XProduct rdf:ID="_xprod-3d6641a4-8dfa-4110-9806-10978a46a4cc">
+                                                            <j.0:hasExpressionArgument rdf:resource="#formatIDPQueryData_node1_sampleColname"/>
+                                                            <j.0:hasExpressionArgument>
+                                                            
+      <j.0:Port rdf:ID="formatIDPQueryData_node1_filterColname">
+            <j.0:satisfiesRole>
+                  <rdf:Description rdf:ID="formatIDPQueryData_node1_filterColname_role">
+                        <j.0:hasRoleID>filterColname</j.0:hasRoleID>
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                  </rdf:Description>
+            </j.0:satisfiesRole>
+      </j.0:Port>                                           </j.0:hasExpressionArgument>
+                                                            <j.0:hasExpressionArgument>
+                                                            
+      <j.0:Port rdf:ID="formatIDPQueryData_node1_datasetName">
+            <j.0:satisfiesRole>
+                  <rdf:Description rdf:ID="formatIDPQueryData_node1_datasetName_role">
+                        <j.0:hasRoleID>datasetName</j.0:hasRoleID>
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                  </rdf:Description>
+            </j.0:satisfiesRole>
+      </j.0:Port>                                           </j.0:hasExpressionArgument>
+                                                            <j.0:hasExpressionArgument>
+                                                            
+      <j.0:Port rdf:ID="formatIDPQueryData_node1_reqColname1">
+            <j.0:satisfiesRole>
+                  <rdf:Description rdf:ID="formatIDPQueryData_node1_reqColname1_role">
+                        <j.0:hasRoleID>reqColname1</j.0:hasRoleID>
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                  </rdf:Description>
+            </j.0:satisfiesRole>
+      </j.0:Port>                                           </j.0:hasExpressionArgument>
+                                                            <j.0:hasExpressionArgument rdf:resource="#formatIDPQueryData_node1_datasetColname"/>
+                                                            <j.0:hasExpressionArgument rdf:resource="#formatIDPQueryData_node1_SampleIDs"/>
+                                                            <j.0:hasExpressionArgument>
+                                                            
+      <j.0:Port rdf:ID="formatIDPQueryData_node1_dataColname">
+            <j.0:satisfiesRole>
+                  <rdf:Description rdf:ID="formatIDPQueryData_node1_dataColname_role">
+                        <j.0:hasRoleID>dataColname</j.0:hasRoleID>
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                  </rdf:Description>
+            </j.0:satisfiesRole>
+      </j.0:Port>                                           </j.0:hasExpressionArgument>
+                                                            <j.0:hasExpressionArgument rdf:resource="#formatIDPQueryData_node1_reqColname2"/>
+                                                            <j.0:hasExpressionArgument rdf:resource="#formatIDPQueryData_node1_idpquery"/>
+                                                      </j.0:XProduct>
+                                                </j.0:createSetsOn>
+                                          </j.0:PortSetRule>
+                                    </j.0:hasPortSetCreationRule>
+                                    <j.0:hasInputPort rdf:resource="#formatIDPQueryData_node1_dataColname"/>
+                                    <j.0:hasOutputPort>
+                                          <j.0:Port rdf:ID="formatIDPQueryData_node1_longFormatFile">
+                                                <j.0:satisfiesRole>
+                                                      <rdf:Description rdf:ID="formatIDPQueryData_node1_longFormatFile_role">
+                                                            <j.0:hasRoleID
+                                                            >longFormatFile</j.0:hasRoleID>
+                                                            <j.0:hasDimensionality
+                                                             rdf:datatype=
+                                                            "http://www.w3.org/2001/XMLSchema#integer"
+                                                            >0</j.0:hasDimensionality>
+                                                      </rdf:Description>
+                                                </j.0:satisfiesRole>
+                                          </j.0:Port>
+                                    </j.0:hasOutputPort>
+                                    <j.0:hasInputPort rdf:resource="#formatIDPQueryData_node1_filterColname"/>
+                                    <j.0:hasInputPort rdf:resource="#formatIDPQueryData_node1_reqColname1"/>
+                                    <j.0:hasInputPort rdf:resource="#formatIDPQueryData_node1_datasetName"/>
+                              </j.0:Node>
+                        </j.0:hasDestinationNode>
+                  </j.0:InputLink>
+            </j.0:hasLink>
+            <j.0:hasLink>
+                  <j.0:InOutLink rdf:ID="formatIDPQueryData_node1_wideFormatFile_to_quantileNormAndLog2Data_node1_inputFile">
+                        <j.0:hasVariable>
+                              <j.0:DataVariable rdf:ID="CustomWideProtFile">
+                                    <rdfs:comment>center:x=1206.2368072509767,y=176.6793622970581</rdfs:comment>
+                              </j.0:DataVariable>
+                        </j.0:hasVariable>
+                        <j.0:hasOriginPort rdf:resource="#formatIDPQueryData_node1_wideFormatFile"/>
+                        <j.0:hasOriginNode rdf:resource="#formatIDPQueryData_node1"/>
+                        <j.0:hasDestinationPort>
+                              <j.0:Port rdf:ID="quantileNormAndLog2Data_node1_inputFile">
+                                    <j.0:satisfiesRole>
+                                          <rdf:Description rdf:ID="quantileNormAndLog2Data_node1_inputFile_role">
+                                                <j.0:hasRoleID
+                                                >inputFile</j.0:hasRoleID>
+                                                <j.0:hasDimensionality
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#integer"
+                                                >0</j.0:hasDimensionality>
+                                          </rdf:Description>
+                                    </j.0:satisfiesRole>
+                              </j.0:Port>
+                        </j.0:hasDestinationPort>
+                        <j.0:hasDestinationNode>
+                              <j.0:Node rdf:ID="quantileNormAndLog2Data_node1">
+                                    <j.0:hasInputPort rdf:resource="#quantileNormAndLog2Data_node1_inputFile"/>
+                                    <j.0:hasOutputPort>
+                                          <j.0:Port rdf:ID="quantileNormAndLog2Data_node1_wideLog2qnorm">
+                                                <j.0:satisfiesRole>
+                                                      <rdf:Description rdf:ID="quantileNormAndLog2Data_node1_wideLog2qnorm_role">
+                                                            <j.0:hasRoleID
+                                                            >wideLog2qnorm</j.0:hasRoleID>
+                                                            <j.0:hasDimensionality
+                                                             rdf:datatype=
+                                                            "http://www.w3.org/2001/XMLSchema#integer"
+                                                            >0</j.0:hasDimensionality>
+                                                      </rdf:Description>
+                                                </j.0:satisfiesRole>
+                                          </j.0:Port>
+                                    </j.0:hasOutputPort>
+                                    <j.0:hasInputPort>
+                                          <j.0:Port rdf:ID="quantileNormAndLog2Data_node1_sampleColname">
+                                                <j.0:satisfiesRole>
+                                                      <rdf:Description rdf:ID="quantileNormAndLog2Data_node1_sampleColname_role">
+                                                            <j.0:hasRoleID
+                                                            >sampleColname</j.0:hasRoleID>
+                                                            <j.0:hasDimensionality
+                                                             rdf:datatype=
+                                                            "http://www.w3.org/2001/XMLSchema#integer"
+                                                            >0</j.0:hasDimensionality>
+                                                      </rdf:Description>
+                                                </j.0:satisfiesRole>
+                                          </j.0:Port>
+                                    </j.0:hasInputPort>
+                                    <j.0:hasInputPort>
+                                          <j.0:Port rdf:ID="quantileNormAndLog2Data_node1_SampleIDs">
+                                                <j.0:satisfiesRole>
+                                                      <rdf:Description rdf:ID="quantileNormAndLog2Data_node1_SampleIDs_role">
+                                                            <j.0:hasRoleID
+                                                            >SampleIDs</j.0:hasRoleID>
+                                                            <j.0:hasDimensionality
+                                                             rdf:datatype=
+                                                            "http://www.w3.org/2001/XMLSchema#integer"
+                                                            >0</j.0:hasDimensionality>
+                                                      </rdf:Description>
+                                                </j.0:satisfiesRole>
+                                          </j.0:Port>
+                                    </j.0:hasInputPort>
+                                    <j.0:hasComponentSetCreationRule>
+                                          <j.0:ComponentSetRule rdf:ID="quantileNormAndLog2Data_node1_crule">
+                                                <j.0:createWorkflowSets
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#boolean"
+                                                >true</j.0:createWorkflowSets>
+                                                <j.0:createSetsOn>
+                                                      <j.0:ComponentVariable rdf:ID="quantileNormAndLog2Data_node1_comp">
+                                                            <j.0:isConcrete
+                                                             rdf:datatype=
+                                                            "http://www.w3.org/2001/XMLSchema#boolean"
+                                                            >true</j.0:isConcrete>
+                                                            <j.0:hasComponentBinding rdf:resource="../components/library.owl#quantileNormAndLog2Data"/>
+                                                      </j.0:ComponentVariable>
+                                                </j.0:createSetsOn>
+                                          </j.0:ComponentSetRule>
+                                    </j.0:hasComponentSetCreationRule>
+                                    <j.0:hasInputPort>
+                                          <j.0:Port rdf:ID="quantileNormAndLog2Data_node1_outvalueColname">
+                                                <j.0:satisfiesRole>
+                                                      <rdf:Description rdf:ID="quantileNormAndLog2Data_node1_outvalueColname_role">
+                                                            <j.0:hasRoleID
+                                                            >outvalueColname</j.0:hasRoleID>
+                                                            <j.0:hasDimensionality
+                                                             rdf:datatype=
+                                                            "http://www.w3.org/2001/XMLSchema#integer"
+                                                            >0</j.0:hasDimensionality>
+                                                      </rdf:Description>
+                                                </j.0:satisfiesRole>
+                                          </j.0:Port>
+                                    </j.0:hasInputPort>
+                                    <j.0:hasInputPort>
+                                          <j.0:Port rdf:ID="quantileNormAndLog2Data_node1_idColname">
+                                                <j.0:satisfiesRole>
+                                                      <rdf:Description rdf:ID="quantileNormAndLog2Data_node1_idColname_role">
+                                                            <j.0:hasRoleID
+                                                            >idColname</j.0:hasRoleID>
+                                                            <j.0:hasDimensionality
+                                                             rdf:datatype=
+                                                            "http://www.w3.org/2001/XMLSchema#integer"
+                                                            >0</j.0:hasDimensionality>
+                                                      </rdf:Description>
+                                                </j.0:satisfiesRole>
+                                          </j.0:Port>
+                                    </j.0:hasInputPort>
+                                    <j.0:hasComponent rdf:resource="#quantileNormAndLog2Data_node1_comp"/>
+                                    <j.0:hasOutputPort>
+                                          <j.0:Port rdf:ID="quantileNormAndLog2Data_node1_longLog2qnorm">
+                                                <j.0:satisfiesRole>
+                                                      <rdf:Description rdf:ID="quantileNormAndLog2Data_node1_longLog2qnorm_role">
+                                                            <j.0:hasRoleID
+                                                            >longLog2qnorm</j.0:hasRoleID>
+                                                            <j.0:hasDimensionality
+                                                             rdf:datatype=
+                                                            "http://www.w3.org/2001/XMLSchema#integer"
+                                                            >0</j.0:hasDimensionality>
+                                                      </rdf:Description>
+                                                </j.0:satisfiesRole>
+                                          </j.0:Port>
+                                    </j.0:hasOutputPort>
+                                    <rdfs:comment>center:x=1144.6192169189455,y=250.00893688201904</rdfs:comment>
+                                    <j.0:hasPortSetCreationRule>
+                                          <j.0:PortSetRule rdf:ID="quantileNormAndLog2Data_node1_prule">
+                                                <j.0:createComponentSets
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#boolean"
+                                                >true</j.0:createComponentSets>
+                                                <j.0:createSetsOn>
+                                                      <j.0:XProduct rdf:ID="_xprod-d1d61d86-3d67-40a8-bf4c-dd3fe7130742">
+                                                            <j.0:hasExpressionArgument rdf:resource="#quantileNormAndLog2Data_node1_outvalueColname"/>
+                                                            <j.0:hasExpressionArgument rdf:resource="#quantileNormAndLog2Data_node1_SampleIDs"/>
+                                                            <j.0:hasExpressionArgument rdf:resource="#quantileNormAndLog2Data_node1_inputFile"/>
+                                                            <j.0:hasExpressionArgument rdf:resource="#quantileNormAndLog2Data_node1_idColname"/>
+                                                            <j.0:hasExpressionArgument rdf:resource="#quantileNormAndLog2Data_node1_sampleColname"/>
+                                                      </j.0:XProduct>
+                                                </j.0:createSetsOn>
+                                          </j.0:PortSetRule>
+                                    </j.0:hasPortSetCreationRule>
+                              </j.0:Node>
+                        </j.0:hasDestinationNode>
+                  </j.0:InOutLink>
+            </j.0:hasLink>
+            <j.0:hasLink>
+                  <j.0:InputLink rdf:ID="formatIDPQueryData_node_filterColname_input">
+                        <j.0:hasVariable>
+                              <j.0:ParameterVariable rdf:ID="filterColname">
+                                    <j.0:autoFill rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#boolean"
+                                    >true</j.0:autoFill>
+                                    <rdfs:comment>center:x=826.7104217529297,y=29.986567497253418</rdfs:comment>
+                              </j.0:ParameterVariable>
+                        </j.0:hasVariable>
+                        <j.0:hasDestinationPort>
+                              <j.0:Port rdf:ID="formatIDPQueryData_node_filterColname">
+                                    <j.0:satisfiesRole>
+                                          <rdf:Description rdf:ID="formatIDPQueryData_node_filterColname_role">
+                                                <j.0:hasRoleID
+                                                >filterColname</j.0:hasRoleID>
+                                                <j.0:hasDimensionality
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#integer"
+                                                >0</j.0:hasDimensionality>
+                                          </rdf:Description>
+                                    </j.0:satisfiesRole>
+                              </j.0:Port>
+                        </j.0:hasDestinationPort>
+                        <j.0:hasDestinationNode>
+                              <j.0:Node rdf:ID="formatIDPQueryData_node">
+                                    <j.0:hasOutputPort>
+                                          <j.0:Port rdf:ID="formatIDPQueryData_node_wideFormatFile">
+                                                <j.0:satisfiesRole>
+                                                      <rdf:Description rdf:ID="formatIDPQueryData_node_wideFormatFile_role">
+                                                            <j.0:hasRoleID
+                                                            >wideFormatFile</j.0:hasRoleID>
+                                                            <j.0:hasDimensionality
+                                                             rdf:datatype=
+                                                            "http://www.w3.org/2001/XMLSchema#integer"
+                                                            >0</j.0:hasDimensionality>
+                                                      </rdf:Description>
+                                                </j.0:satisfiesRole>
+                                          </j.0:Port>
+                                    </j.0:hasOutputPort>
+                                    <j.0:hasInputPort>
+                                          <j.0:Port rdf:ID="formatIDPQueryData_node_sampleColname">
+                                                <j.0:satisfiesRole>
+                                                      <rdf:Description rdf:ID="formatIDPQueryData_node_sampleColname_role">
+                                                            <j.0:hasRoleID
+                                                            >sampleColname</j.0:hasRoleID>
+                                                            <j.0:hasDimensionality
+                                                             rdf:datatype=
+                                                            "http://www.w3.org/2001/XMLSchema#integer"
+                                                            >0</j.0:hasDimensionality>
+                                                      </rdf:Description>
+                                                </j.0:satisfiesRole>
+                                          </j.0:Port>
+                                    </j.0:hasInputPort>
+                                    <j.0:hasPortSetCreationRule>
+                                          <j.0:PortSetRule rdf:ID="formatIDPQueryData_node_prule">
+                                                <j.0:createComponentSets
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#boolean"
+                                                >true</j.0:createComponentSets>
+                                                <j.0:createSetsOn>
+                                                      <j.0:XProduct rdf:ID="_xprod-9bffef32-0dd1-48fe-b9ed-75c387b24d00">
+                                                            <j.0:hasExpressionArgument rdf:resource="#formatIDPQueryData_node_sampleColname"/>
+                                                            <j.0:hasExpressionArgument>
+                                                            
+      <j.0:Port rdf:ID="formatIDPQueryData_node_dataColname">
+            <j.0:satisfiesRole>
+                  <rdf:Description rdf:ID="formatIDPQueryData_node_dataColname_role">
+                        <j.0:hasRoleID>dataColname</j.0:hasRoleID>
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                  </rdf:Description>
+            </j.0:satisfiesRole>
+      </j.0:Port>                                           </j.0:hasExpressionArgument>
+                                                            <j.0:hasExpressionArgument rdf:resource="#formatIDPQueryData_node_filterColname"/>
+                                                            <j.0:hasExpressionArgument>
+                                                            
+      <j.0:Port rdf:ID="formatIDPQueryData_node_idpquery">
+            <j.0:satisfiesRole>
+                  <rdf:Description rdf:ID="formatIDPQueryData_node_idpquery_role">
+                        <j.0:hasRoleID>idpquery</j.0:hasRoleID>
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                  </rdf:Description>
+            </j.0:satisfiesRole>
+      </j.0:Port>                                           </j.0:hasExpressionArgument>
+                                                            <j.0:hasExpressionArgument>
+                                                            
+      <j.0:Port rdf:ID="formatIDPQueryData_node_datasetColname">
+            <j.0:satisfiesRole>
+                  <rdf:Description rdf:ID="formatIDPQueryData_node_datasetColname_role">
+                        <j.0:hasRoleID>datasetColname</j.0:hasRoleID>
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                  </rdf:Description>
+            </j.0:satisfiesRole>
+      </j.0:Port>                                           </j.0:hasExpressionArgument>
+                                                            <j.0:hasExpressionArgument>
+                                                            
+      <j.0:Port rdf:ID="formatIDPQueryData_node_SampleIDs">
+            <j.0:satisfiesRole>
+                  <rdf:Description rdf:ID="formatIDPQueryData_node_SampleIDs_role">
+                        <j.0:hasRoleID>SampleIDs</j.0:hasRoleID>
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                  </rdf:Description>
+            </j.0:satisfiesRole>
+      </j.0:Port>                                           </j.0:hasExpressionArgument>
+                                                            <j.0:hasExpressionArgument>
+                                                            
+      <j.0:Port rdf:ID="formatIDPQueryData_node_datasetName">
+            <j.0:satisfiesRole>
+                  <rdf:Description rdf:ID="formatIDPQueryData_node_datasetName_role">
+                        <j.0:hasRoleID>datasetName</j.0:hasRoleID>
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                  </rdf:Description>
+            </j.0:satisfiesRole>
+      </j.0:Port>                                           </j.0:hasExpressionArgument>
+                                                            <j.0:hasExpressionArgument>
+                                                            
+      <j.0:Port rdf:ID="formatIDPQueryData_node_reqColname1">
+            <j.0:satisfiesRole>
+                  <rdf:Description rdf:ID="formatIDPQueryData_node_reqColname1_role">
+                        <j.0:hasRoleID>reqColname1</j.0:hasRoleID>
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                  </rdf:Description>
+            </j.0:satisfiesRole>
+      </j.0:Port>                                           </j.0:hasExpressionArgument>
+                                                            <j.0:hasExpressionArgument>
+                                                            
+      <j.0:Port rdf:ID="formatIDPQueryData_node_reqColname2">
+            <j.0:satisfiesRole>
+                  <rdf:Description rdf:ID="formatIDPQueryData_node_reqColname2_role">
+                        <j.0:hasRoleID>reqColname2</j.0:hasRoleID>
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                  </rdf:Description>
+            </j.0:satisfiesRole>
+      </j.0:Port>                                           </j.0:hasExpressionArgument>
+                                                      </j.0:XProduct>
+                                                </j.0:createSetsOn>
+                                          </j.0:PortSetRule>
+                                    </j.0:hasPortSetCreationRule>
+                                    <j.0:hasInputPort rdf:resource="#formatIDPQueryData_node_datasetName"/>
+                                    <j.0:hasInputPort rdf:resource="#formatIDPQueryData_node_idpquery"/>
+                                    <j.0:hasComponentSetCreationRule>
+                                          <j.0:ComponentSetRule rdf:ID="formatIDPQueryData_node_crule">
+                                                <j.0:createWorkflowSets
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#boolean"
+                                                >true</j.0:createWorkflowSets>
+                                                <j.0:createSetsOn>
+                                                      <j.0:ComponentVariable rdf:ID="formatIDPQueryData_node_comp">
+                                                            <j.0:isConcrete
+                                                             rdf:datatype=
+                                                            "http://www.w3.org/2001/XMLSchema#boolean"
+                                                            >true</j.0:isConcrete>
+                                                            <j.0:hasComponentBinding rdf:resource="../components/library.owl#formatIDPQueryData"/>
+                                                      </j.0:ComponentVariable>
+                                                </j.0:createSetsOn>
+                                          </j.0:ComponentSetRule>
+                                    </j.0:hasComponentSetCreationRule>
+                                    <j.0:hasInputPort rdf:resource="#formatIDPQueryData_node_SampleIDs"/>
+                                    <j.0:hasInputPort rdf:resource="#formatIDPQueryData_node_dataColname"/>
+                                    <j.0:hasComponent rdf:resource="#formatIDPQueryData_node_comp"/>
+                                    <rdfs:comment>center:x=577.0482334136964,y=103.33056163787842</rdfs:comment>
+                                    <j.0:hasInputPort rdf:resource="#formatIDPQueryData_node_filterColname"/>
+                                    <j.0:hasInputPort rdf:resource="#formatIDPQueryData_node_datasetColname"/>
+                                    <j.0:hasOutputPort>
+                                          <j.0:Port rdf:ID="formatIDPQueryData_node_longFormatFile">
+                                                <j.0:satisfiesRole>
+                                                      <rdf:Description rdf:ID="formatIDPQueryData_node_longFormatFile_role">
+                                                            <j.0:hasRoleID
+                                                            >longFormatFile</j.0:hasRoleID>
+                                                            <j.0:hasDimensionality
+                                                             rdf:datatype=
+                                                            "http://www.w3.org/2001/XMLSchema#integer"
+                                                            >0</j.0:hasDimensionality>
+                                                      </rdf:Description>
+                                                </j.0:satisfiesRole>
+                                          </j.0:Port>
+                                    </j.0:hasOutputPort>
+                                    <j.0:hasInputPort rdf:resource="#formatIDPQueryData_node_reqColname2"/>
+                                    <j.0:hasInputPort rdf:resource="#formatIDPQueryData_node_reqColname1"/>
+                              </j.0:Node>
+                        </j.0:hasDestinationNode>
+                  </j.0:InputLink>
+            </j.0:hasLink>
+            <j.0:hasLink>
+                  <j.0:InputLink rdf:ID="calcCorrAndAdjustPvalues_node_datasetName1_input">
+                        <j.0:hasVariable>
+                              <j.0:ParameterVariable rdf:ID="RefDatasetName">
+                                    <rdfs:comment>center:x=77.65026593208314,y=29.986567497253418</rdfs:comment>
+                              </j.0:ParameterVariable>
+                        </j.0:hasVariable>
+                        <j.0:hasDestinationPort>
+                              <j.0:Port rdf:ID="calcCorrAndAdjustPvalues_node_datasetName1">
+                                    <j.0:satisfiesRole>
+                                          <rdf:Description rdf:ID="calcCorrAndAdjustPvalues_node_datasetName1_role">
+                                                <j.0:hasRoleID
+                                                >datasetName1</j.0:hasRoleID>
+                                                <j.0:hasDimensionality
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#integer"
+                                                >0</j.0:hasDimensionality>
+                                          </rdf:Description>
+                                    </j.0:satisfiesRole>
+                              </j.0:Port>
+                        </j.0:hasDestinationPort>
+                        <j.0:hasDestinationNode>
+                              <j.0:Node rdf:ID="calcCorrAndAdjustPvalues_node">
+                                    <j.0:hasInputPort>
+                                          <j.0:Port rdf:ID="calcCorrAndAdjustPvalues_node_calcCorrByColname">
+                                                <j.0:satisfiesRole>
+                                                      <rdf:Description rdf:ID="calcCorrAndAdjustPvalues_node_calcCorrByColname_role">
+                                                            <j.0:hasRoleID
+                                                            >calcCorrByColname</j.0:hasRoleID>
+                                                            <j.0:hasDimensionality
+                                                             rdf:datatype=
+                                                            "http://www.w3.org/2001/XMLSchema#integer"
+                                                            >0</j.0:hasDimensionality>
+                                                      </rdf:Description>
+                                                </j.0:satisfiesRole>
+                                          </j.0:Port>
+                                    </j.0:hasInputPort>
+                                    <j.0:hasInputPort rdf:resource="#calcCorrAndAdjustPvalues_node_datasetName1"/>
+                                    <j.0:hasPortSetCreationRule>
+                                          <j.0:PortSetRule rdf:ID="calcCorrAndAdjustPvalues_node_prule">
+                                                <j.0:createComponentSets
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#boolean"
+                                                >true</j.0:createComponentSets>
+                                                <j.0:createSetsOn>
+                                                      <j.0:XProduct rdf:ID="_xprod-7cbd07f1-73a9-4b0f-8373-63092c3f767a">
+                                                            <j.0:hasExpressionArgument>
+                                                            
+      <j.0:Port rdf:ID="calcCorrAndAdjustPvalues_node_pvalueColname">
+            <j.0:satisfiesRole>
+                  <rdf:Description rdf:ID="calcCorrAndAdjustPvalues_node_pvalueColname_role">
+                        <j.0:hasRoleID>pvalueColname</j.0:hasRoleID>
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                  </rdf:Description>
+            </j.0:satisfiesRole>
+      </j.0:Port>                                           </j.0:hasExpressionArgument>
+                                                            <j.0:hasExpressionArgument>
+                                                            
+      <j.0:Port rdf:ID="calcCorrAndAdjustPvalues_node_corrMethodName">
+            <j.0:satisfiesRole>
+                  <rdf:Description rdf:ID="calcCorrAndAdjustPvalues_node_corrMethodName_role">
+                        <j.0:hasRoleID>corrMethodName</j.0:hasRoleID>
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                  </rdf:Description>
+            </j.0:satisfiesRole>
+      </j.0:Port>                                           </j.0:hasExpressionArgument>
+                                                            <j.0:hasExpressionArgument>
+                                                            
+      <j.0:Port rdf:ID="calcCorrAndAdjustPvalues_node_wideFile1">
+            <j.0:satisfiesRole>
+                  <rdf:Description rdf:ID="calcCorrAndAdjustPvalues_node_wideFile1_role">
+                        <j.0:hasRoleID>wideFile1</j.0:hasRoleID>
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                  </rdf:Description>
+            </j.0:satisfiesRole>
+      </j.0:Port>                                           </j.0:hasExpressionArgument>
+                                                            <j.0:hasExpressionArgument>
+                                                            
+      <j.0:Port rdf:ID="calcCorrAndAdjustPvalues_node_pAdjMethodName">
+            <j.0:satisfiesRole>
+                  <rdf:Description rdf:ID="calcCorrAndAdjustPvalues_node_pAdjMethodName_role">
+                        <j.0:hasRoleID>pAdjMethodName</j.0:hasRoleID>
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                  </rdf:Description>
+            </j.0:satisfiesRole>
+      </j.0:Port>                                           </j.0:hasExpressionArgument>
+                                                            <j.0:hasExpressionArgument>
+                                                            
+      <j.0:Port rdf:ID="calcCorrAndAdjustPvalues_node_wideFile2">
+            <j.0:satisfiesRole>
+                  <rdf:Description rdf:ID="calcCorrAndAdjustPvalues_node_wideFile2_role">
+                        <j.0:hasRoleID>wideFile2</j.0:hasRoleID>
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                  </rdf:Description>
+            </j.0:satisfiesRole>
+      </j.0:Port>                                           </j.0:hasExpressionArgument>
+                                                            <j.0:hasExpressionArgument>
+                                                            
+      <j.0:Port rdf:ID="calcCorrAndAdjustPvalues_node_padjColname">
+            <j.0:satisfiesRole>
+                  <rdf:Description rdf:ID="calcCorrAndAdjustPvalues_node_padjColname_role">
+                        <j.0:hasRoleID>padjColname</j.0:hasRoleID>
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                  </rdf:Description>
+            </j.0:satisfiesRole>
+      </j.0:Port>                                           </j.0:hasExpressionArgument>
+                                                            <j.0:hasExpressionArgument rdf:resource="#calcCorrAndAdjustPvalues_node_calcCorrByColname"/>
+                                                            <j.0:hasExpressionArgument rdf:resource="#calcCorrAndAdjustPvalues_node_datasetName1"/>
+                                                            <j.0:hasExpressionArgument>
+                                                            
+      <j.0:Port rdf:ID="calcCorrAndAdjustPvalues_node_corrValueColname">
+            <j.0:satisfiesRole>
+                  <rdf:Description rdf:ID="calcCorrAndAdjustPvalues_node_corrValueColname_role">
+                        <j.0:hasRoleID>corrValueColname</j.0:hasRoleID>
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                  </rdf:Description>
+            </j.0:satisfiesRole>
+      </j.0:Port>                                           </j.0:hasExpressionArgument>
+                                                            <j.0:hasExpressionArgument>
+                                                            
+      <j.0:Port rdf:ID="calcCorrAndAdjustPvalues_node_datasetName2">
+            <j.0:satisfiesRole>
+                  <rdf:Description rdf:ID="calcCorrAndAdjustPvalues_node_datasetName2_role">
+                        <j.0:hasRoleID>datasetName2</j.0:hasRoleID>
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                  </rdf:Description>
+            </j.0:satisfiesRole>
+      </j.0:Port>                                           </j.0:hasExpressionArgument>
+                                                            <j.0:hasExpressionArgument>
+                                                            
+      <j.0:Port rdf:ID="calcCorrAndAdjustPvalues_node_sampleColname">
+            <j.0:satisfiesRole>
+                  <rdf:Description rdf:ID="calcCorrAndAdjustPvalues_node_sampleColname_role">
+                        <j.0:hasRoleID>sampleColname</j.0:hasRoleID>
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                  </rdf:Description>
+            </j.0:satisfiesRole>
+      </j.0:Port>                                           </j.0:hasExpressionArgument>
+                                                      </j.0:XProduct>
+                                                </j.0:createSetsOn>
+                                          </j.0:PortSetRule>
+                                    </j.0:hasPortSetCreationRule>
+                                    <j.0:hasInputPort rdf:resource="#calcCorrAndAdjustPvalues_node_padjColname"/>
+                                    <j.0:hasInputPort rdf:resource="#calcCorrAndAdjustPvalues_node_sampleColname"/>
+                                    <j.0:hasComponentSetCreationRule>
+                                          <j.0:ComponentSetRule rdf:ID="calcCorrAndAdjustPvalues_node_crule">
+                                                <j.0:createWorkflowSets
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#boolean"
+                                                >true</j.0:createWorkflowSets>
+                                                <j.0:createSetsOn>
+                                                      <j.0:ComponentVariable rdf:ID="calcCorrAndAdjustPvalues_node_comp">
+                                                            <j.0:isConcrete
+                                                             rdf:datatype=
+                                                            "http://www.w3.org/2001/XMLSchema#boolean"
+                                                            >true</j.0:isConcrete>
+                                                            <j.0:hasComponentBinding rdf:resource="../components/library.owl#calcCorrAndAdjustPvalues"/>
+                                                      </j.0:ComponentVariable>
+                                                </j.0:createSetsOn>
+                                          </j.0:ComponentSetRule>
+                                    </j.0:hasComponentSetCreationRule>
+                                    <j.0:hasComponent rdf:resource="#calcCorrAndAdjustPvalues_node_comp"/>
+                                    <j.0:hasOutputPort>
+                                          <j.0:Port rdf:ID="calcCorrAndAdjustPvalues_node_corrResults">
+                                                <j.0:satisfiesRole>
+                                                      <rdf:Description rdf:ID="calcCorrAndAdjustPvalues_node_corrResults_role">
+                                                            <j.0:hasRoleID
+                                                            >corrResults</j.0:hasRoleID>
+                                                            <j.0:hasDimensionality
+                                                             rdf:datatype=
+                                                            "http://www.w3.org/2001/XMLSchema#integer"
+                                                            >0</j.0:hasDimensionality>
+                                                      </rdf:Description>
+                                                </j.0:satisfiesRole>
+                                          </j.0:Port>
+                                    </j.0:hasOutputPort>
+                                    <j.0:hasInputPort rdf:resource="#calcCorrAndAdjustPvalues_node_pvalueColname"/>
+                                    <rdfs:comment>center:x=870.7456024169923,y=396.6777448654175</rdfs:comment>
+                                    <j.0:hasInputPort rdf:resource="#calcCorrAndAdjustPvalues_node_corrValueColname"/>
+                                    <j.0:hasInputPort rdf:resource="#calcCorrAndAdjustPvalues_node_corrMethodName"/>
+                                    <j.0:hasInputPort rdf:resource="#calcCorrAndAdjustPvalues_node_wideFile2"/>
+                                    <j.0:hasInputPort rdf:resource="#calcCorrAndAdjustPvalues_node_pAdjMethodName"/>
+                                    <j.0:hasInputPort rdf:resource="#calcCorrAndAdjustPvalues_node_datasetName2"/>
+                                    <j.0:hasInputPort rdf:resource="#calcCorrAndAdjustPvalues_node_wideFile1"/>
+                              </j.0:Node>
+                        </j.0:hasDestinationNode>
+                  </j.0:InputLink>
+            </j.0:hasLink>
+            <j.0:hasLink>
+                  <j.0:InputLink rdf:ID="formatIDPQueryData_node_datasetName_input">
+                        <j.0:hasVariable rdf:resource="#RefDatasetName"/>
+                        <j.0:hasDestinationPort rdf:resource="#formatIDPQueryData_node_datasetName"/>
+                        <j.0:hasDestinationNode rdf:resource="#formatIDPQueryData_node"/>
+                  </j.0:InputLink>
+            </j.0:hasLink>
+            <j.0:hasInputRole>
+                  <j.0:Role rdf:ID="sampleColname_irole">
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                        <j.0:hasRoleID>calcCorrAndAdjustPvalues_node_sampleColname</j.0:hasRoleID>
+                        <j.0:mapsToVariable>
+                              <j.0:ParameterVariable rdf:ID="sampleColname">
+                                    <j.0:autoFill rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#boolean"
+                                    >true</j.0:autoFill>
+                                    <rdfs:comment>center:x=1358.0631927490235,y=29.986567497253418</rdfs:comment>
+                              </j.0:ParameterVariable>
+                        </j.0:mapsToVariable>
+                  </j.0:Role>
+            </j.0:hasInputRole>
+            <j.0:hasMetadata>
+                  <j.0:Metadata rdf:ID="MetaAnalysisCompare_RefCustomFiles_meta">
+                        <j.0:lastUpdateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+                        >2020-10-22T00:00:00Z</j.0:lastUpdateTime>
+                        <j.0:hasContributor>admin</j.0:hasContributor>
+                  </j.0:Metadata>
+            </j.0:hasMetadata>
+            <j.0:hasInputRole>
+                  <j.0:Role rdf:ID="corrValueColname_irole">
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                        <j.0:hasRoleID>plotDensity_node_valueColname</j.0:hasRoleID>
+                        <j.0:mapsToVariable rdf:resource="#corrValueColname"/>
+                  </j.0:Role>
+            </j.0:hasInputRole>
+            <j.0:hasLink>
+                  <j.0:InputLink rdf:ID="formatIDPQueryData_node1_idpquery_input">
+                        <j.0:hasVariable>
+                              <j.0:DataVariable rdf:ID="CustomProtFile">
+                                    <rdfs:comment>center:x=953.2719879150392,y=29.986567497253418</rdfs:comment>
+                              </j.0:DataVariable>
+                        </j.0:hasVariable>
+                        <j.0:hasDestinationPort rdf:resource="#formatIDPQueryData_node1_idpquery"/>
+                        <j.0:hasDestinationNode rdf:resource="#formatIDPQueryData_node1"/>
+                  </j.0:InputLink>
+            </j.0:hasLink>
+            <j.0:hasLink>
+                  <j.0:OutputLink rdf:ID="formatIDPQueryData_node_longFormatFile_output">
+                        <j.0:hasVariable>
+                              <j.0:DataVariable rdf:ID="RefLongProtFile">
+                                    <rdfs:comment>center:x=533.0526309967041,y=176.6793622970581</rdfs:comment>
+                              </j.0:DataVariable>
+                        </j.0:hasVariable>
+                        <j.0:hasOriginPort rdf:resource="#formatIDPQueryData_node_longFormatFile"/>
+                        <j.0:hasOriginNode rdf:resource="#formatIDPQueryData_node"/>
+                  </j.0:OutputLink>
+            </j.0:hasLink>
+            <j.0:hasLink>
+                  <j.0:InputLink rdf:ID="calcCorrAndAdjustPvalues_node_corrMethodName_input">
+                        <j.0:hasVariable>
+                              <j.0:ParameterVariable rdf:ID="corrMethodName">
+                                    <j.0:autoFill rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#boolean"
+                                    >true</j.0:autoFill>
+                                    <rdfs:comment>center:x=794.8482711791993,y=323.34336376190186</rdfs:comment>
+                              </j.0:ParameterVariable>
+                        </j.0:hasVariable>
+                        <j.0:hasDestinationPort rdf:resource="#calcCorrAndAdjustPvalues_node_corrMethodName"/>
+                        <j.0:hasDestinationNode rdf:resource="#calcCorrAndAdjustPvalues_node"/>
+                  </j.0:InputLink>
+            </j.0:hasLink>
+            <j.0:hasLink>
+                  <j.0:InputLink rdf:ID="formatIDPQueryData_node1_dataColname_input">
+                        <j.0:hasVariable>
+                              <j.0:ParameterVariable rdf:ID="scColname">
+                                    <j.0:autoFill rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#boolean"
+                                    >true</j.0:autoFill>
+                                    <rdfs:comment>center:x=300.94911670684814,y=29.986567497253418</rdfs:comment>
+                              </j.0:ParameterVariable>
+                        </j.0:hasVariable>
+                        <j.0:hasDestinationPort rdf:resource="#formatIDPQueryData_node1_dataColname"/>
+                        <j.0:hasDestinationNode rdf:resource="#formatIDPQueryData_node1"/>
+                  </j.0:InputLink>
+            </j.0:hasLink>
+            <j.0:hasLink>
+                  <j.0:InputLink rdf:ID="calcCorrAndAdjustPvalues_node_padjColname_input">
+                        <j.0:hasVariable>
+                              <j.0:ParameterVariable rdf:ID="padjColname">
+                                    <j.0:autoFill rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#boolean"
+                                    >true</j.0:autoFill>
+                                    <rdfs:comment>center:x=1296.4456024169922,y=323.34336376190186</rdfs:comment>
+                              </j.0:ParameterVariable>
+                        </j.0:hasVariable>
+                        <j.0:hasDestinationPort rdf:resource="#calcCorrAndAdjustPvalues_node_padjColname"/>
+                        <j.0:hasDestinationNode rdf:resource="#calcCorrAndAdjustPvalues_node"/>
+                  </j.0:InputLink>
+            </j.0:hasLink>
+            <j.0:hasLink>
+                  <j.0:InputLink rdf:ID="formatIDPQueryData_node_reqColname2_input">
+                        <j.0:hasVariable>
+                              <j.0:ParameterVariable rdf:ID="protIDColname">
+                                    <j.0:autoFill rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#boolean"
+                                    >true</j.0:autoFill>
+                                    <rdfs:comment>center:x=1085.2192169189454,y=29.986567497253418</rdfs:comment>
+                              </j.0:ParameterVariable>
+                        </j.0:hasVariable>
+                        <j.0:hasDestinationPort rdf:resource="#formatIDPQueryData_node_reqColname2"/>
+                        <j.0:hasDestinationNode rdf:resource="#formatIDPQueryData_node"/>
+                  </j.0:InputLink>
+            </j.0:hasLink>
+            <j.0:hasLink>
+                  <j.0:InputLink rdf:ID="quantileNormAndLog2Data_node_idColname_input">
+                        <j.0:hasVariable>
+                              <j.0:ParameterVariable rdf:ID="geneIDColname">
+                                    <j.0:autoFill rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#boolean"
+                                    >true</j.0:autoFill>
+                                    <rdfs:comment>center:x=1220.5719879150392,y=29.986567497253418</rdfs:comment>
+                              </j.0:ParameterVariable>
+                        </j.0:hasVariable>
+                        <j.0:hasDestinationPort>
+                              <j.0:Port rdf:ID="quantileNormAndLog2Data_node_idColname">
+                                    <j.0:satisfiesRole>
+                                          <rdf:Description rdf:ID="quantileNormAndLog2Data_node_idColname_role">
+                                                <j.0:hasRoleID
+                                                >idColname</j.0:hasRoleID>
+                                                <j.0:hasDimensionality
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#integer"
+                                                >0</j.0:hasDimensionality>
+                                          </rdf:Description>
+                                    </j.0:satisfiesRole>
+                              </j.0:Port>
+                        </j.0:hasDestinationPort>
+                        <j.0:hasDestinationNode>
+                              <j.0:Node rdf:ID="quantileNormAndLog2Data_node">
+                                    <j.0:hasComponent>
+                                          <j.0:ComponentVariable rdf:ID="quantileNormAndLog2Data_node_comp">
+                                                <j.0:isConcrete
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#boolean"
+                                                >true</j.0:isConcrete>
+                                                <j.0:hasComponentBinding rdf:resource="../components/library.owl#quantileNormAndLog2Data"/>
+                                          </j.0:ComponentVariable>
+                                    </j.0:hasComponent>
+                                    <rdfs:comment>center:x=858.628012084961,y=250.00893688201904</rdfs:comment>
+                                    <j.0:hasComponentSetCreationRule>
+                                          <j.0:ComponentSetRule rdf:ID="quantileNormAndLog2Data_node_crule">
+                                                <j.0:createWorkflowSets
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#boolean"
+                                                >true</j.0:createWorkflowSets>
+                                                <j.0:createSetsOn rdf:resource="#quantileNormAndLog2Data_node_comp"/>
+                                          </j.0:ComponentSetRule>
+                                    </j.0:hasComponentSetCreationRule>
+                                    <j.0:hasInputPort rdf:resource="#quantileNormAndLog2Data_node_idColname"/>
+                                    <j.0:hasPortSetCreationRule>
+                                          <j.0:PortSetRule rdf:ID="quantileNormAndLog2Data_node_prule">
+                                                <j.0:createComponentSets
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#boolean"
+                                                >true</j.0:createComponentSets>
+                                                <j.0:createSetsOn>
+                                                      <j.0:XProduct rdf:ID="_xprod-fb26dbfd-930d-46b1-9ab3-d27f5431323f">
+                                                            <j.0:hasExpressionArgument>
+                                                            
+      <j.0:Port rdf:ID="quantileNormAndLog2Data_node_inputFile">
+            <j.0:satisfiesRole>
+                  <rdf:Description rdf:ID="quantileNormAndLog2Data_node_inputFile_role">
+                        <j.0:hasRoleID>inputFile</j.0:hasRoleID>
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                  </rdf:Description>
+            </j.0:satisfiesRole>
+      </j.0:Port>                                           </j.0:hasExpressionArgument>
+                                                            <j.0:hasExpressionArgument>
+                                                            
+      <j.0:Port rdf:ID="quantileNormAndLog2Data_node_sampleColname">
+            <j.0:satisfiesRole>
+                  <rdf:Description rdf:ID="quantileNormAndLog2Data_node_sampleColname_role">
+                        <j.0:hasRoleID>sampleColname</j.0:hasRoleID>
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                  </rdf:Description>
+            </j.0:satisfiesRole>
+      </j.0:Port>                                           </j.0:hasExpressionArgument>
+                                                            <j.0:hasExpressionArgument>
+                                                            
+      <j.0:Port rdf:ID="quantileNormAndLog2Data_node_outvalueColname">
+            <j.0:satisfiesRole>
+                  <rdf:Description rdf:ID="quantileNormAndLog2Data_node_outvalueColname_role">
+                        <j.0:hasRoleID>outvalueColname</j.0:hasRoleID>
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                  </rdf:Description>
+            </j.0:satisfiesRole>
+      </j.0:Port>                                           </j.0:hasExpressionArgument>
+                                                            <j.0:hasExpressionArgument rdf:resource="#quantileNormAndLog2Data_node_idColname"/>
+                                                            <j.0:hasExpressionArgument>
+                                                            
+      <j.0:Port rdf:ID="quantileNormAndLog2Data_node_SampleIDs">
+            <j.0:satisfiesRole>
+                  <rdf:Description rdf:ID="quantileNormAndLog2Data_node_SampleIDs_role">
+                        <j.0:hasRoleID>SampleIDs</j.0:hasRoleID>
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                  </rdf:Description>
+            </j.0:satisfiesRole>
+      </j.0:Port>                                           </j.0:hasExpressionArgument>
+                                                      </j.0:XProduct>
+                                                </j.0:createSetsOn>
+                                          </j.0:PortSetRule>
+                                    </j.0:hasPortSetCreationRule>
+                                    <j.0:hasOutputPort>
+                                          <j.0:Port rdf:ID="quantileNormAndLog2Data_node_longLog2qnorm">
+                                                <j.0:satisfiesRole>
+                                                      <rdf:Description rdf:ID="quantileNormAndLog2Data_node_longLog2qnorm_role">
+                                                            <j.0:hasRoleID
+                                                            >longLog2qnorm</j.0:hasRoleID>
+                                                            <j.0:hasDimensionality
+                                                             rdf:datatype=
+                                                            "http://www.w3.org/2001/XMLSchema#integer"
+                                                            >0</j.0:hasDimensionality>
+                                                      </rdf:Description>
+                                                </j.0:satisfiesRole>
+                                          </j.0:Port>
+                                    </j.0:hasOutputPort>
+                                    <j.0:hasInputPort rdf:resource="#quantileNormAndLog2Data_node_outvalueColname"/>
+                                    <j.0:hasInputPort rdf:resource="#quantileNormAndLog2Data_node_inputFile"/>
+                                    <j.0:hasInputPort rdf:resource="#quantileNormAndLog2Data_node_SampleIDs"/>
+                                    <j.0:hasOutputPort>
+                                          <j.0:Port rdf:ID="quantileNormAndLog2Data_node_wideLog2qnorm">
+                                                <j.0:satisfiesRole>
+                                                      <rdf:Description rdf:ID="quantileNormAndLog2Data_node_wideLog2qnorm_role">
+                                                            <j.0:hasRoleID
+                                                            >wideLog2qnorm</j.0:hasRoleID>
+                                                            <j.0:hasDimensionality
+                                                             rdf:datatype=
+                                                            "http://www.w3.org/2001/XMLSchema#integer"
+                                                            >0</j.0:hasDimensionality>
+                                                      </rdf:Description>
+                                                </j.0:satisfiesRole>
+                                          </j.0:Port>
+                                    </j.0:hasOutputPort>
+                                    <j.0:hasInputPort rdf:resource="#quantileNormAndLog2Data_node_sampleColname"/>
+                              </j.0:Node>
+                        </j.0:hasDestinationNode>
+                  </j.0:InputLink>
+            </j.0:hasLink>
+            <j.0:hasLink>
+                  <j.0:InputLink rdf:ID="plotDensity_node_plotTitle_input">
+                        <j.0:hasVariable>
+                              <j.0:ParameterVariable rdf:ID="densityPlotTitle">
+                                    <j.0:autoFill rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#boolean"
+                                    >true</j.0:autoFill>
+                                    <rdfs:comment>center:x=438.4482334136963,y=470.0121488571167</rdfs:comment>
+                              </j.0:ParameterVariable>
+                        </j.0:hasVariable>
+                        <j.0:hasDestinationPort rdf:resource="#plotDensity_node_plotTitle"/>
+                        <j.0:hasDestinationNode rdf:resource="#plotDensity_node"/>
+                  </j.0:InputLink>
+            </j.0:hasLink>
+            <j.0:hasLink>
+                  <j.0:OutputLink rdf:ID="quantileNormAndLog2Data_node1_wideLog2qnorm_output">
+                        <j.0:hasVariable>
+                              <j.0:DataVariable rdf:ID="CustomWideLog2qnorm">
+                                    <rdfs:comment>center:x=1602.2368072509767,y=323.34336376190186</rdfs:comment>
+                              </j.0:DataVariable>
+                        </j.0:hasVariable>
+                        <j.0:hasOriginPort rdf:resource="#quantileNormAndLog2Data_node1_wideLog2qnorm"/>
+                        <j.0:hasOriginNode rdf:resource="#quantileNormAndLog2Data_node1"/>
+                  </j.0:OutputLink>
+            </j.0:hasLink>
+            <j.0:hasLink>
+                  <j.0:InputLink rdf:ID="calcCorrAndAdjustPvalues_node_sampleColname_input">
+                        <j.0:hasVariable rdf:resource="#sampleColname"/>
+                        <j.0:hasDestinationPort rdf:resource="#calcCorrAndAdjustPvalues_node_sampleColname"/>
+                        <j.0:hasDestinationNode rdf:resource="#calcCorrAndAdjustPvalues_node"/>
+                  </j.0:InputLink>
+            </j.0:hasLink>
+            <j.0:hasLink>
+                  <j.0:InputLink rdf:ID="formatIDPQueryData_node_datasetColname_input">
+                        <j.0:hasVariable rdf:resource="#datasetColname"/>
+                        <j.0:hasDestinationPort rdf:resource="#formatIDPQueryData_node_datasetColname"/>
+                        <j.0:hasDestinationNode rdf:resource="#formatIDPQueryData_node"/>
+                  </j.0:InputLink>
+            </j.0:hasLink>
+            <j.0:hasInputRole>
+                  <j.0:Role rdf:ID="RefDatasetName_irole">
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                        <j.0:hasRoleID>formatIDPQueryData_node_datasetName</j.0:hasRoleID>
+                        <j.0:mapsToVariable rdf:resource="#RefDatasetName"/>
+                  </j.0:Role>
+            </j.0:hasInputRole>
+            <j.0:hasLink>
+                  <j.0:InputLink rdf:ID="formatIDPQueryData_node_reqColname1_input">
+                        <j.0:hasVariable rdf:resource="#geneIDColname"/>
+                        <j.0:hasDestinationPort rdf:resource="#formatIDPQueryData_node_reqColname1"/>
+                        <j.0:hasDestinationNode rdf:resource="#formatIDPQueryData_node"/>
+                  </j.0:InputLink>
+            </j.0:hasLink>
+            <j.0:hasLink>
+                  <j.0:InputLink rdf:ID="formatIDPQueryData_node_sampleColname_input">
+                        <j.0:hasVariable rdf:resource="#sampleColname"/>
+                        <j.0:hasDestinationPort rdf:resource="#formatIDPQueryData_node_sampleColname"/>
+                        <j.0:hasDestinationNode rdf:resource="#formatIDPQueryData_node"/>
+                  </j.0:InputLink>
+            </j.0:hasLink>
+            <j.0:hasLink>
+                  <j.0:InOutLink rdf:ID="formatIDPQueryData_node_wideFormatFile_to_quantileNormAndLog2Data_node_inputFile">
+                        <j.0:hasVariable>
+                              <j.0:DataVariable rdf:ID="RefWideProtFile">
+                                    <rdfs:comment>center:x=667.2491355895996,y=176.6793622970581</rdfs:comment>
+                              </j.0:DataVariable>
+                        </j.0:hasVariable>
+                        <j.0:hasOriginPort rdf:resource="#formatIDPQueryData_node_wideFormatFile"/>
+                        <j.0:hasOriginNode rdf:resource="#formatIDPQueryData_node"/>
+                        <j.0:hasDestinationPort rdf:resource="#quantileNormAndLog2Data_node_inputFile"/>
+                        <j.0:hasDestinationNode rdf:resource="#quantileNormAndLog2Data_node"/>
+                  </j.0:InOutLink>
+            </j.0:hasLink>
+            <j.0:hasLink>
+                  <j.0:InputLink rdf:ID="formatIDPQueryData_node1_reqColname2_input">
+                        <j.0:hasVariable rdf:resource="#protIDColname"/>
+                        <j.0:hasDestinationPort rdf:resource="#formatIDPQueryData_node1_reqColname2"/>
+                        <j.0:hasDestinationNode rdf:resource="#formatIDPQueryData_node1"/>
+                  </j.0:InputLink>
+            </j.0:hasLink>
+            <j.0:hasLink>
+                  <j.0:InputLink rdf:ID="formatIDPQueryData_node1_reqColname1_input">
+                        <j.0:hasVariable rdf:resource="#geneIDColname"/>
+                        <j.0:hasDestinationPort rdf:resource="#formatIDPQueryData_node1_reqColname1"/>
+                        <j.0:hasDestinationNode rdf:resource="#formatIDPQueryData_node1"/>
+                  </j.0:InputLink>
+            </j.0:hasLink>
+            <j.0:hasLink>
+                  <j.0:OutputLink rdf:ID="quantileNormAndLog2Data_node_longLog2qnorm_output">
+                        <j.0:hasVariable>
+                              <j.0:DataVariable rdf:ID="RefLongLog2qnorm">
+                                    <rdfs:comment>center:x=641.9526309967041,y=323.34336376190186</rdfs:comment>
+                              </j.0:DataVariable>
+                        </j.0:hasVariable>
+                        <j.0:hasOriginPort rdf:resource="#quantileNormAndLog2Data_node_longLog2qnorm"/>
+                        <j.0:hasOriginNode rdf:resource="#quantileNormAndLog2Data_node"/>
+                  </j.0:OutputLink>
+            </j.0:hasLink>
+            <j.0:hasOutputRole>
+                  <j.0:Role rdf:ID="RefLongProtFile_orole">
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                        <j.0:hasRoleID>RefLongProtFile</j.0:hasRoleID>
+                        <j.0:mapsToVariable rdf:resource="#RefLongProtFile"/>
+                  </j.0:Role>
+            </j.0:hasOutputRole>
+            <j.0:hasLink>
+                  <j.0:InputLink rdf:ID="plotDensity_node_yTitle_input">
+                        <j.0:hasVariable>
+                              <j.0:ParameterVariable rdf:ID="yTitle">
+                                    <j.0:autoFill rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#boolean"
+                                    >true</j.0:autoFill>
+                                    <rdfs:comment>center:x=632.0526309967041,y=470.0121488571167</rdfs:comment>
+                              </j.0:ParameterVariable>
+                        </j.0:hasVariable>
+                        <j.0:hasDestinationPort rdf:resource="#plotDensity_node_yTitle"/>
+                        <j.0:hasDestinationNode rdf:resource="#plotDensity_node"/>
+                  </j.0:InputLink>
+            </j.0:hasLink>
+            <j.0:hasInputRole>
+                  <j.0:Role rdf:ID="RefProtFile_irole">
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                        <j.0:hasRoleID>formatIDPQueryData_node_idpquery</j.0:hasRoleID>
+                        <j.0:mapsToVariable>
+                              <j.0:DataVariable rdf:ID="RefProtFile">
+                                    <rdfs:comment>center:x=577.0482334136964,y=29.986567497253418</rdfs:comment>
+                              </j.0:DataVariable>
+                        </j.0:mapsToVariable>
+                  </j.0:Role>
+            </j.0:hasInputRole>
+            <j.0:hasLink>
+                  <j.0:InputLink rdf:ID="quantileNormAndLog2Data_node1_SampleIDs_input">
+                        <j.0:hasVariable>
+                              <j.0:DataVariable rdf:ID="SampleIDs">
+                                    <rdfs:comment>center:x=199.74736900329592,y=29.986567497253418</rdfs:comment>
+                              </j.0:DataVariable>
+                        </j.0:hasVariable>
+                        <j.0:hasDestinationPort rdf:resource="#quantileNormAndLog2Data_node1_SampleIDs"/>
+                        <j.0:hasDestinationNode rdf:resource="#quantileNormAndLog2Data_node1"/>
+                  </j.0:InputLink>
+            </j.0:hasLink>
+            <j.0:hasLink>
+                  <j.0:InputLink rdf:ID="quantileNormAndLog2Data_node1_idColname_input">
+                        <j.0:hasVariable rdf:resource="#geneIDColname"/>
+                        <j.0:hasDestinationPort rdf:resource="#quantileNormAndLog2Data_node1_idColname"/>
+                        <j.0:hasDestinationNode rdf:resource="#quantileNormAndLog2Data_node1"/>
+                  </j.0:InputLink>
+            </j.0:hasLink>
+            <j.0:hasLink>
+                  <j.0:InOutLink rdf:ID="calcCorrAndAdjustPvalues_node_corrResults_to_plotDensity_node_inputFile">
+                        <j.0:hasVariable>
+                              <j.0:DataVariable rdf:ID="RefCustomCorrPerGene">
+                                    <rdfs:comment>center:x=277.84648571014407,y=470.0121488571167</rdfs:comment>
+                              </j.0:DataVariable>
+                        </j.0:hasVariable>
+                        <j.0:hasOriginPort rdf:resource="#calcCorrAndAdjustPvalues_node_corrResults"/>
+                        <j.0:hasOriginNode rdf:resource="#calcCorrAndAdjustPvalues_node"/>
+                        <j.0:hasDestinationPort rdf:resource="#plotDensity_node_inputFile"/>
+                        <j.0:hasDestinationNode rdf:resource="#plotDensity_node"/>
+                  </j.0:InOutLink>
+            </j.0:hasLink>
+            <j.0:hasLink>
+                  <j.0:InputLink rdf:ID="calcCorrAndAdjustPvalues_node_pvalueColname_input">
+                        <j.0:hasVariable>
+                              <j.0:ParameterVariable rdf:ID="pvalueColname">
+                                    <j.0:autoFill rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#boolean"
+                                    >true</j.0:autoFill>
+                                    <rdfs:comment>center:x=1421.8192169189454,y=323.34336376190186</rdfs:comment>
+                              </j.0:ParameterVariable>
+                        </j.0:hasVariable>
+                        <j.0:hasDestinationPort rdf:resource="#calcCorrAndAdjustPvalues_node_pvalueColname"/>
+                        <j.0:hasDestinationNode rdf:resource="#calcCorrAndAdjustPvalues_node"/>
+                  </j.0:InputLink>
+            </j.0:hasLink>
+            <j.0:hasNode rdf:resource="#formatIDPQueryData_node1"/>
+            <j.0:hasLink>
+                  <j.0:InputLink rdf:ID="formatIDPQueryData_node1_sampleColname_input">
+                        <j.0:hasVariable rdf:resource="#sampleColname"/>
+                        <j.0:hasDestinationPort rdf:resource="#formatIDPQueryData_node1_sampleColname"/>
+                        <j.0:hasDestinationNode rdf:resource="#formatIDPQueryData_node1"/>
+                  </j.0:InputLink>
+            </j.0:hasLink>
+            <j.0:hasLink>
+                  <j.0:InOutLink rdf:ID="quantileNormAndLog2Data_node_wideLog2qnorm_to_calcCorrAndAdjustPvalues_node_wideFile1">
+                        <j.0:hasVariable>
+                              <j.0:DataVariable rdf:ID="RefWideLog2qnorm">
+                                    <rdfs:comment>center:x=948.8368072509767,y=323.34336376190186</rdfs:comment>
+                              </j.0:DataVariable>
+                        </j.0:hasVariable>
+                        <j.0:hasOriginPort rdf:resource="#quantileNormAndLog2Data_node_wideLog2qnorm"/>
+                        <j.0:hasOriginNode rdf:resource="#quantileNormAndLog2Data_node"/>
+                        <j.0:hasDestinationPort rdf:resource="#calcCorrAndAdjustPvalues_node_wideFile1"/>
+                        <j.0:hasDestinationNode rdf:resource="#calcCorrAndAdjustPvalues_node"/>
+                  </j.0:InOutLink>
+            </j.0:hasLink>
+            <j.0:hasInputRole>
+                  <j.0:Role rdf:ID="geneIDColname_irole">
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                        <j.0:hasRoleID>quantileNormAndLog2Data_node_idColname</j.0:hasRoleID>
+                        <j.0:mapsToVariable rdf:resource="#geneIDColname"/>
+                  </j.0:Role>
+            </j.0:hasInputRole>
+            <j.0:hasNode rdf:resource="#plotDensity_node"/>
+            <j.0:hasInputRole>
+                  <j.0:Role rdf:ID="CustomDatasetName_irole">
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                        <j.0:hasRoleID>calcCorrAndAdjustPvalues_node_datasetName2</j.0:hasRoleID>
+                        <j.0:mapsToVariable>
+                              <j.0:ParameterVariable rdf:ID="CustomDatasetName">
+                                    <rdfs:comment>center:x=439.54913558959964,y=29.986567497253418</rdfs:comment>
+                              </j.0:ParameterVariable>
+                        </j.0:mapsToVariable>
+                  </j.0:Role>
+            </j.0:hasInputRole>
+            <j.0:hasOutputRole>
+                  <j.0:Role rdf:ID="CustomLongProtFile_orole">
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                        <j.0:hasRoleID>CustomLongProtFile</j.0:hasRoleID>
+                        <j.0:mapsToVariable>
+                              <j.0:DataVariable rdf:ID="CustomLongProtFile">
+                                    <rdfs:comment>center:x=817.9192169189454,y=176.6793622970581</rdfs:comment>
+                              </j.0:DataVariable>
+                        </j.0:mapsToVariable>
+                  </j.0:Role>
+            </j.0:hasOutputRole>
+            <j.0:hasLink>
+                  <j.0:InOutLink rdf:ID="quantileNormAndLog2Data_node1_wideLog2qnorm_to_calcCorrAndAdjustPvalues_node_wideFile2">
+                        <j.0:hasVariable rdf:resource="#CustomWideLog2qnorm"/>
+                        <j.0:hasOriginPort rdf:resource="#quantileNormAndLog2Data_node1_wideLog2qnorm"/>
+                        <j.0:hasOriginNode rdf:resource="#quantileNormAndLog2Data_node1"/>
+                        <j.0:hasDestinationPort rdf:resource="#calcCorrAndAdjustPvalues_node_wideFile2"/>
+                        <j.0:hasDestinationNode rdf:resource="#calcCorrAndAdjustPvalues_node"/>
+                  </j.0:InOutLink>
+            </j.0:hasLink>
+            <j.0:hasLink>
+                  <j.0:InputLink rdf:ID="formatIDPQueryData_node_idpquery_input">
+                        <j.0:hasVariable rdf:resource="#RefProtFile"/>
+                        <j.0:hasDestinationPort rdf:resource="#formatIDPQueryData_node_idpquery"/>
+                        <j.0:hasDestinationNode rdf:resource="#formatIDPQueryData_node"/>
+                  </j.0:InputLink>
+            </j.0:hasLink>
+            <j.0:hasInputRole>
+                  <j.0:Role rdf:ID="yTitle_irole">
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                        <j.0:hasRoleID>plotDensity_node_yTitle</j.0:hasRoleID>
+                        <j.0:mapsToVariable rdf:resource="#yTitle"/>
+                  </j.0:Role>
+            </j.0:hasInputRole>
+            <j.0:hasLink>
+                  <j.0:OutputLink rdf:ID="plotDensity_node_densityPlot_output">
+                        <j.0:hasVariable>
+                              <j.0:DataVariable rdf:ID="RefCustomCorrGeneDensity">
+                                    <rdfs:comment>center:x=514.3535331726075,y=616.6771144866943</rdfs:comment>
+                              </j.0:DataVariable>
+                        </j.0:hasVariable>
+                        <j.0:hasOriginPort rdf:resource="#plotDensity_node_densityPlot"/>
+                        <j.0:hasOriginNode rdf:resource="#plotDensity_node"/>
+                  </j.0:OutputLink>
+            </j.0:hasLink>
+            <j.0:hasInputRole>
+                  <j.0:Role rdf:ID="SampleIDs_irole">
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                        <j.0:hasRoleID>formatIDPQueryData_node_SampleIDs</j.0:hasRoleID>
+                        <j.0:mapsToVariable rdf:resource="#SampleIDs"/>
+                  </j.0:Role>
+            </j.0:hasInputRole>
+            <j.0:hasOutputRole>
+                  <j.0:Role rdf:ID="RefCustomCorrGeneDensity_orole">
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                        <j.0:hasRoleID>RefCustomCorrGeneDensity</j.0:hasRoleID>
+                        <j.0:mapsToVariable rdf:resource="#RefCustomCorrGeneDensity"/>
+                  </j.0:Role>
+            </j.0:hasOutputRole>
+            <j.0:hasInputRole>
+                  <j.0:Role rdf:ID="protIDColname_irole">
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                        <j.0:hasRoleID>formatIDPQueryData_node_reqColname2</j.0:hasRoleID>
+                        <j.0:mapsToVariable rdf:resource="#protIDColname"/>
+                  </j.0:Role>
+            </j.0:hasInputRole>
+            <j.0:hasLink>
+                  <j.0:InputLink rdf:ID="quantileNormAndLog2Data_node1_outvalueColname_input">
+                        <j.0:hasVariable>
+                              <j.0:ParameterVariable rdf:ID="log2Qnorm">
+                                    <j.0:autoFill rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#boolean"
+                                    >true</j.0:autoFill>
+                                    <rdfs:comment>center:x=1070.9631927490234,y=176.6793622970581</rdfs:comment>
+                              </j.0:ParameterVariable>
+                        </j.0:hasVariable>
+                        <j.0:hasDestinationPort rdf:resource="#quantileNormAndLog2Data_node1_outvalueColname"/>
+                        <j.0:hasDestinationNode rdf:resource="#quantileNormAndLog2Data_node1"/>
+                  </j.0:InputLink>
+            </j.0:hasLink>
+            <j.0:hasNode rdf:resource="#quantileNormAndLog2Data_node"/>
+            <j.0:hasLink>
+                  <j.0:InputLink rdf:ID="formatIDPQueryData_node1_filterColname_input">
+                        <j.0:hasVariable rdf:resource="#filterColname"/>
+                        <j.0:hasDestinationPort rdf:resource="#formatIDPQueryData_node1_filterColname"/>
+                        <j.0:hasDestinationNode rdf:resource="#formatIDPQueryData_node1"/>
+                  </j.0:InputLink>
+            </j.0:hasLink>
+            <j.0:hasInputRole>
+                  <j.0:Role rdf:ID="pAdjMethodName_irole">
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                        <j.0:hasRoleID>calcCorrAndAdjustPvalues_node_pAdjMethodName</j.0:hasRoleID>
+                        <j.0:mapsToVariable>
+                              <j.0:ParameterVariable rdf:ID="pAdjMethodName">
+                                    <j.0:autoFill rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#boolean"
+                                    >true</j.0:autoFill>
+                                    <rdfs:comment>center:x=487.9482334136963,y=323.34336376190186</rdfs:comment>
+                              </j.0:ParameterVariable>
+                        </j.0:mapsToVariable>
+                  </j.0:Role>
+            </j.0:hasInputRole>
+            <j.0:hasOutputRole>
+                  <j.0:Role rdf:ID="CustomLongLog2qnorm_orole">
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                        <j.0:hasRoleID>CustomLongLog2qnorm</j.0:hasRoleID>
+                        <j.0:mapsToVariable>
+                              <j.0:DataVariable rdf:ID="CustomLongLog2qnorm">
+                                    <rdfs:comment>center:x=1125.928012084961,y=323.34336376190186</rdfs:comment>
+                              </j.0:DataVariable>
+                        </j.0:mapsToVariable>
+                  </j.0:Role>
+            </j.0:hasOutputRole>
+            <j.0:hasLink>
+                  <j.0:InputLink rdf:ID="quantileNormAndLog2Data_node_outvalueColname_input">
+                        <j.0:hasVariable rdf:resource="#log2Qnorm"/>
+                        <j.0:hasDestinationPort rdf:resource="#quantileNormAndLog2Data_node_outvalueColname"/>
+                        <j.0:hasDestinationNode rdf:resource="#quantileNormAndLog2Data_node"/>
+                  </j.0:InputLink>
+            </j.0:hasLink>
+            <j.0:hasOutputRole>
+                  <j.0:Role rdf:ID="RefWideLog2qnorm_orole">
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                        <j.0:hasRoleID>RefWideLog2qnorm</j.0:hasRoleID>
+                        <j.0:mapsToVariable rdf:resource="#RefWideLog2qnorm"/>
+                  </j.0:Role>
+            </j.0:hasOutputRole>
+            <j.0:hasInputRole>
+                  <j.0:Role rdf:ID="corrMethodName_irole">
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                        <j.0:hasRoleID>calcCorrAndAdjustPvalues_node_corrMethodName</j.0:hasRoleID>
+                        <j.0:mapsToVariable rdf:resource="#corrMethodName"/>
+                  </j.0:Role>
+            </j.0:hasInputRole>
+            <j.0:hasLink>
+                  <j.0:OutputLink rdf:ID="formatIDPQueryData_node1_longFormatFile_output">
+                        <j.0:hasVariable rdf:resource="#CustomLongProtFile"/>
+                        <j.0:hasOriginPort rdf:resource="#formatIDPQueryData_node1_longFormatFile"/>
+                        <j.0:hasOriginNode rdf:resource="#formatIDPQueryData_node1"/>
+                  </j.0:OutputLink>
+            </j.0:hasLink>
+            <j.0:hasLink>
+                  <j.0:InputLink rdf:ID="formatIDPQueryData_node1_datasetName_input">
+                        <j.0:hasVariable rdf:resource="#CustomDatasetName"/>
+                        <j.0:hasDestinationPort rdf:resource="#formatIDPQueryData_node1_datasetName"/>
+                        <j.0:hasDestinationNode rdf:resource="#formatIDPQueryData_node1"/>
+                  </j.0:InputLink>
+            </j.0:hasLink>
+            <j.0:hasLink>
+                  <j.0:InputLink rdf:ID="quantileNormAndLog2Data_node_sampleColname_input">
+                        <j.0:hasVariable rdf:resource="#sampleColname"/>
+                        <j.0:hasDestinationPort rdf:resource="#quantileNormAndLog2Data_node_sampleColname"/>
+                        <j.0:hasDestinationNode rdf:resource="#quantileNormAndLog2Data_node"/>
+                  </j.0:InputLink>
+            </j.0:hasLink>
+            <j.0:hasLink>
+                  <j.0:OutputLink rdf:ID="quantileNormAndLog2Data_node_wideLog2qnorm_output">
+                        <j.0:hasVariable rdf:resource="#RefWideLog2qnorm"/>
+                        <j.0:hasOriginPort rdf:resource="#quantileNormAndLog2Data_node_wideLog2qnorm"/>
+                        <j.0:hasOriginNode rdf:resource="#quantileNormAndLog2Data_node"/>
+                  </j.0:OutputLink>
+            </j.0:hasLink>
+            <j.0:hasInputRole>
+                  <j.0:Role rdf:ID="CustomProtFile_irole">
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                        <j.0:hasRoleID>formatIDPQueryData_node1_idpquery</j.0:hasRoleID>
+                        <j.0:mapsToVariable rdf:resource="#CustomProtFile"/>
+                  </j.0:Role>
+            </j.0:hasInputRole>
+            <j.0:hasLink>
+                  <j.0:OutputLink rdf:ID="formatIDPQueryData_node1_wideFormatFile_output">
+                        <j.0:hasVariable rdf:resource="#CustomWideProtFile"/>
+                        <j.0:hasOriginPort rdf:resource="#formatIDPQueryData_node1_wideFormatFile"/>
+                        <j.0:hasOriginNode rdf:resource="#formatIDPQueryData_node1"/>
+                  </j.0:OutputLink>
+            </j.0:hasLink>
+            <j.0:hasLink>
+                  <j.0:InputLink rdf:ID="formatIDPQueryData_node_dataColname_input">
+                        <j.0:hasVariable rdf:resource="#scColname"/>
+                        <j.0:hasDestinationPort rdf:resource="#formatIDPQueryData_node_dataColname"/>
+                        <j.0:hasDestinationNode rdf:resource="#formatIDPQueryData_node"/>
+                  </j.0:InputLink>
+            </j.0:hasLink>
+            <j.0:hasOutputRole>
+                  <j.0:Role rdf:ID="RefWideProtFile_orole">
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                        <j.0:hasRoleID>RefWideProtFile</j.0:hasRoleID>
+                        <j.0:mapsToVariable rdf:resource="#RefWideProtFile"/>
+                  </j.0:Role>
+            </j.0:hasOutputRole>
+            <j.0:hasLink>
+                  <j.0:OutputLink rdf:ID="quantileNormAndLog2Data_node1_longLog2qnorm_output">
+                        <j.0:hasVariable rdf:resource="#CustomLongLog2qnorm"/>
+                        <j.0:hasOriginPort rdf:resource="#quantileNormAndLog2Data_node1_longLog2qnorm"/>
+                        <j.0:hasOriginNode rdf:resource="#quantileNormAndLog2Data_node1"/>
+                  </j.0:OutputLink>
+            </j.0:hasLink>
+            <j.0:hasInputRole>
+                  <j.0:Role rdf:ID="densityPlotTitle_irole">
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                        <j.0:hasRoleID>plotDensity_node_plotTitle</j.0:hasRoleID>
+                        <j.0:mapsToVariable rdf:resource="#densityPlotTitle"/>
+                  </j.0:Role>
+            </j.0:hasInputRole>
+            <j.0:hasInputRole>
+                  <j.0:Role rdf:ID="datasetColname_irole">
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                        <j.0:hasRoleID>formatIDPQueryData_node_datasetColname</j.0:hasRoleID>
+                        <j.0:mapsToVariable rdf:resource="#datasetColname"/>
+                  </j.0:Role>
+            </j.0:hasInputRole>
+            <j.0:hasLink>
+                  <j.0:InputLink rdf:ID="quantileNormAndLog2Data_node_SampleIDs_input">
+                        <j.0:hasVariable rdf:resource="#SampleIDs"/>
+                        <j.0:hasDestinationPort rdf:resource="#quantileNormAndLog2Data_node_SampleIDs"/>
+                        <j.0:hasDestinationNode rdf:resource="#quantileNormAndLog2Data_node"/>
+                  </j.0:InputLink>
+            </j.0:hasLink>
+            <j.0:hasOutputRole>
+                  <j.0:Role rdf:ID="CustomWideLog2qnorm_orole">
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                        <j.0:hasRoleID>CustomWideLog2qnorm</j.0:hasRoleID>
+                        <j.0:mapsToVariable rdf:resource="#CustomWideLog2qnorm"/>
+                  </j.0:Role>
+            </j.0:hasOutputRole>
+            <j.0:hasOutputRole>
+                  <j.0:Role rdf:ID="CustomWideProtFile_orole">
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                        <j.0:hasRoleID>CustomWideProtFile</j.0:hasRoleID>
+                        <j.0:mapsToVariable rdf:resource="#CustomWideProtFile"/>
+                  </j.0:Role>
+            </j.0:hasOutputRole>
+            <j.0:hasInputRole>
+                  <j.0:Role rdf:ID="padjColname_irole">
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                        <j.0:hasRoleID>calcCorrAndAdjustPvalues_node_padjColname</j.0:hasRoleID>
+                        <j.0:mapsToVariable rdf:resource="#padjColname"/>
+                  </j.0:Role>
+            </j.0:hasInputRole>
+            <j.0:hasNode rdf:resource="#calcCorrAndAdjustPvalues_node"/>
+            <j.0:hasVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+            >3</j.0:hasVersion>
+            <j.0:hasInputRole>
+                  <j.0:Role rdf:ID="filterColname_irole">
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                        <j.0:hasRoleID>formatIDPQueryData_node_filterColname</j.0:hasRoleID>
+                        <j.0:mapsToVariable rdf:resource="#filterColname"/>
+                  </j.0:Role>
+            </j.0:hasInputRole>
+            <j.0:hasNode rdf:resource="#quantileNormAndLog2Data_node1"/>
+            <j.0:hasLink>
+                  <j.0:InputLink rdf:ID="calcCorrAndAdjustPvalues_node_pAdjMethodName_input">
+                        <j.0:hasVariable rdf:resource="#pAdjMethodName"/>
+                        <j.0:hasDestinationPort rdf:resource="#calcCorrAndAdjustPvalues_node_pAdjMethodName"/>
+                        <j.0:hasDestinationNode rdf:resource="#calcCorrAndAdjustPvalues_node"/>
+                  </j.0:InputLink>
+            </j.0:hasLink>
+            <j.0:hasLink>
+                  <j.0:InputLink rdf:ID="calcCorrAndAdjustPvalues_node_corrValueColname_input">
+                        <j.0:hasVariable rdf:resource="#corrValueColname"/>
+                        <j.0:hasDestinationPort rdf:resource="#calcCorrAndAdjustPvalues_node_corrValueColname"/>
+                        <j.0:hasDestinationNode rdf:resource="#calcCorrAndAdjustPvalues_node"/>
+                  </j.0:InputLink>
+            </j.0:hasLink>
+            <j.0:hasLink>
+                  <j.0:InputLink rdf:ID="formatIDPQueryData_node1_SampleIDs_input">
+                        <j.0:hasVariable rdf:resource="#SampleIDs"/>
+                        <j.0:hasDestinationPort rdf:resource="#formatIDPQueryData_node1_SampleIDs"/>
+                        <j.0:hasDestinationNode rdf:resource="#formatIDPQueryData_node1"/>
+                  </j.0:InputLink>
+            </j.0:hasLink>
+            <j.0:hasInputRole>
+                  <j.0:Role rdf:ID="xTitle_irole">
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                        <j.0:hasRoleID>plotDensity_node_xTitle</j.0:hasRoleID>
+                        <j.0:mapsToVariable>
+                              <j.0:ParameterVariable rdf:ID="xTitle">
+                                    <j.0:autoFill rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#boolean"
+                                    >true</j.0:autoFill>
+                                    <rdfs:comment>center:x=558.3491355895997,y=470.0121488571167</rdfs:comment>
+                              </j.0:ParameterVariable>
+                        </j.0:mapsToVariable>
+                  </j.0:Role>
+            </j.0:hasInputRole>
+            <j.0:hasOutputRole>
+                  <j.0:Role rdf:ID="RefLongLog2qnorm_orole">
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                        <j.0:hasRoleID>RefLongLog2qnorm</j.0:hasRoleID>
+                        <j.0:mapsToVariable rdf:resource="#RefLongLog2qnorm"/>
+                  </j.0:Role>
+            </j.0:hasOutputRole>
+            <j.0:hasLink>
+                  <j.0:InputLink rdf:ID="calcCorrAndAdjustPvalues_node_calcCorrByColname_input">
+                        <j.0:hasVariable rdf:resource="#geneIDColname"/>
+                        <j.0:hasDestinationPort rdf:resource="#calcCorrAndAdjustPvalues_node_calcCorrByColname"/>
+                        <j.0:hasDestinationNode rdf:resource="#calcCorrAndAdjustPvalues_node"/>
+                  </j.0:InputLink>
+            </j.0:hasLink>
+            <j.0:hasInputRole>
+                  <j.0:Role rdf:ID="scColname_irole">
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                        <j.0:hasRoleID>formatIDPQueryData_node_dataColname</j.0:hasRoleID>
+                        <j.0:mapsToVariable rdf:resource="#scColname"/>
+                  </j.0:Role>
+            </j.0:hasInputRole>
+            <j.0:hasLink>
+                  <j.0:InputLink rdf:ID="formatIDPQueryData_node_SampleIDs_input">
+                        <j.0:hasVariable rdf:resource="#SampleIDs"/>
+                        <j.0:hasDestinationPort rdf:resource="#formatIDPQueryData_node_SampleIDs"/>
+                        <j.0:hasDestinationNode rdf:resource="#formatIDPQueryData_node"/>
+                  </j.0:InputLink>
+            </j.0:hasLink>
+            <j.0:hasLink>
+                  <j.0:InputLink rdf:ID="calcCorrAndAdjustPvalues_node_datasetName2_input">
+                        <j.0:hasVariable rdf:resource="#CustomDatasetName"/>
+                        <j.0:hasDestinationPort rdf:resource="#calcCorrAndAdjustPvalues_node_datasetName2"/>
+                        <j.0:hasDestinationNode rdf:resource="#calcCorrAndAdjustPvalues_node"/>
+                  </j.0:InputLink>
+            </j.0:hasLink>
+            <j.0:hasLink>
+                  <j.0:InputLink rdf:ID="quantileNormAndLog2Data_node1_sampleColname_input">
+                        <j.0:hasVariable rdf:resource="#sampleColname"/>
+                        <j.0:hasDestinationPort rdf:resource="#quantileNormAndLog2Data_node1_sampleColname"/>
+                        <j.0:hasDestinationNode rdf:resource="#quantileNormAndLog2Data_node1"/>
+                  </j.0:InputLink>
+            </j.0:hasLink>
+            <j.0:hasInputRole>
+                  <j.0:Role rdf:ID="pvalueColname_irole">
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                        <j.0:hasRoleID>calcCorrAndAdjustPvalues_node_pvalueColname</j.0:hasRoleID>
+                        <j.0:mapsToVariable rdf:resource="#pvalueColname"/>
+                  </j.0:Role>
+            </j.0:hasInputRole>
+            <j.0:hasNode rdf:resource="#formatIDPQueryData_node"/>
+            <j.0:hasLink>
+                  <j.0:InputLink rdf:ID="plotDensity_node_xTitle_input">
+                        <j.0:hasVariable rdf:resource="#xTitle"/>
+                        <j.0:hasDestinationPort rdf:resource="#plotDensity_node_xTitle"/>
+                        <j.0:hasDestinationNode rdf:resource="#plotDensity_node"/>
+                  </j.0:InputLink>
+            </j.0:hasLink>
+            <j.0:hasInputRole>
+                  <j.0:Role rdf:ID="log2Qnorm_irole">
+                        <j.0:hasDimensionality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</j.0:hasDimensionality>
+                        <j.0:hasRoleID>quantileNormAndLog2Data_node_outvalueColname</j.0:hasRoleID>
+                        <j.0:mapsToVariable rdf:resource="#log2Qnorm"/>
+                  </j.0:Role>
+            </j.0:hasInputRole>
+            <j.0:hasLink>
+                  <j.0:OutputLink rdf:ID="formatIDPQueryData_node_wideFormatFile_output">
+                        <j.0:hasVariable rdf:resource="#RefWideProtFile"/>
+                        <j.0:hasOriginPort rdf:resource="#formatIDPQueryData_node_wideFormatFile"/>
+                        <j.0:hasOriginNode rdf:resource="#formatIDPQueryData_node"/>
+                  </j.0:OutputLink>
+            </j.0:hasLink>
+      </j.0:WorkflowTemplate>
+      <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#comment"/>
+</rdf:RDF>

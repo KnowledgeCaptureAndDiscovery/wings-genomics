@@ -1,0 +1,36 @@
+#!/bin/bash
+
+# Functions:
+checkExitCode() {
+EC=$?
+
+if [ ${EC} -ne 0 ]; then
+	echo "Error"
+    exit ${EC};
+fi
+}
+
+
+BASEDIR=`dirname $0`
+if [ $# -lt 1 ]; then echo "Error No inputs provided" && exit 1; fi
+
+NINPUTS=1
+NPARAMS=0
+NOUTPUTS=1 
+
+. $BASEDIR/io.sh ${NINPUTS} ${NPARAMS} ${NOUTPUTS} "$@"
+
+# Run SQLite query to crop required proteins from a db file
+# Re-run idpAssemble with less stringent filter
+# Components to create 1. idpQonvert 2. sqlite query 3. idpAssemble
+cp $INPUTS1 $OUTPUTS1
+
+$SQLITE3_HOME/sqlite3 $OUTPUTS1 "DELETE FROM UnfilteredProtein WHERE Id NOT IN (SELECT Id FROM Protein);
+DELETE FROM UnfilteredPeptideInstance WHERE Protein NOT IN (SELECT Id FROM UnfilteredProtein);
+DELETE FROM UnfilteredPeptide WHERE Id NOT IN (SELECT Peptide FROM UnfilteredPeptideInstance);
+DELETE FROM UnfilteredPeptideSpectrumMatch WHERE Peptide NOT IN (SELECT Id FROM UnfilteredPeptide);
+DELETE FROM UnfilteredSpectrum WHERE Id NOT IN (SELECT Spectrum FROM UnfilteredPeptideSpectrumMatch);
+DELETE FROM ProteinData WHERE Id NOT IN (SELECT Id FROM UnfilteredProtein);
+DELETE FROM ProteinMetadata WHERE Id NOT IN (SELECT Id FROM UnfilteredProtein);
+DELETE FROM PeptideSpectrumMatchScore WHERE PsmId NOT IN (SELECT Id FROM UnfilteredPeptideSpectrumMatch);"
+

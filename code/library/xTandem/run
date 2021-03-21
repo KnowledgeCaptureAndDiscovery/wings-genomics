@@ -1,0 +1,84 @@
+#!/bin/bash
+
+# Functions:
+checkExitCode() {
+EC=$?
+
+if [ ${EC} -ne 0 ]; then
+	echo "Error"
+    exit ${EC};
+fi
+}
+
+#Check if a file is zipped:
+SSV_INPUTS=""
+checkZipFile() {
+	INPUTS="$1"
+	echo $INPUTS
+	#Check if the input file is empty
+	FILE_ZIP_CHECK=`file $INPUTS | grep "Zip"`
+	echo $FILE_ZIP_CHECK
+	if [[ -z $FILE_ZIP_CHECK ]]; then
+	    SSV_INPUTS=$INPUTS
+	else 
+		# Take a zipped input file containing a collection of mzML files and get a space-sep list -> very hacky.
+		SSV_INPUTS=`$ZIP_HOME/unzip -Z1 $INPUTS | tr "\n" " "`
+		# Extracting the file-collection from zipped input file
+		$ZIP_HOME/unzip $INPUTS
+		checkExitCode
+	fi
+}
+
+BASEDIR=`dirname $0`
+if [ $# -lt 1 ]; then echo "Error No inputs provided" && exit 1; fi
+
+NINPUTS=3
+NPARAMS=1
+NOUTPUTS=3
+
+. $BASEDIR/io.sh ${NINPUTS} ${NPARAMS} ${NOUTPUTS} "$@"
+
+echo $PWD
+checkZipFile $INPUTS1
+SSV_INPUTS1="$SSV_INPUTS"
+
+## Change input details in the parameter file (escape backslashed in paths before replacing -> crude:
+DB=$(echo $INPUTS2 | sed 's_/_\\/_g')
+DB_NAME=`basename $INPUTS2`
+TX_XML=${BASEDIR}/taxonomy.xml # Should be present in the component directory
+DB_TX_XML=${DB_NAME}_`basename ${TX_XML}`
+
+sed -e "s/\${DB}/\"${DB}\"/g" ${TX_XML} > ${DB_TX_XML}
+echo "Starting X!Tandem Analysis....." > $OUTPUTS3
+# Run XTandem command: Might need to add parameters later as needed.
+for ONE_MS2_FILE in $SSV_INPUTS1
+	do
+		ONE_MS2_FILE=$(echo $ONE_MS2_FILE | sed 's_/_\\/_g')
+		ONE_MS2_FILE_BASENAME=`basename $ONE_MS2_FILE`
+		ONE_MS2_FILE_NOEXT=`echo $ONE_MS2_FILE_BASENAME | cut -d\. -f1`
+		
+		XTAN_XML=${ONE_MS2_FILE_NOEXT}.xtan.xml
+		XTAN_PARAMS_XML=${ONE_MS2_FILE_NOEXT}_input.xml
+
+		# Add input protein seq fasta, ms2 sepctrum (mzML/mzXML for now) file, taxonomy.xml, output xtan.xml, subset params (labkey protocol on labkey) file		
+		sed -e "s/\${DB_NAME}/${DB_NAME}/g" -e "s/\${TX_XML}/${DB_TX_XML}/g" -e "s/\${XTAN_XML}/${XTAN_XML}/g" -e "s/\${MS2_FILE}/${ONE_MS2_FILE}/g" ${INPUTS3} > ${XTAN_PARAMS_XML}
+		echo $TPP_HOME/bin/tandem $XTAN_PARAMS_XML
+    	$TPP_HOME/bin/tandem $XTAN_PARAMS_XML >> $OUTPUTS3
+    	
+    	#Run Tandem2XML to generate *.pep.xml/pepXML files following labkey server's pipeline
+    	# Moving this to a different component (xtanToPepXML) - so outputs will be xtan.xmls insead of pepXMLs.
+    	#RAW_PEP_XML=${ONE_MS2_FILE_NOEXT}.pepXML
+    	#echo $TPP_HOME/bin/Tandem2XML $XTAN_XML $RAW_PEP_XML
+    	#$TPP_HOME/bin/Tandem2XML $XTAN_XML $RAW_PEP_XML >> $OUTPUTS3
+	done
+checkExitCode
+
+# ZIP the output files (default is mzid) and rename the zipped output file
+#$ZIP_HOME/zip -r ${OUTPUTS1}.zip *.pepXML  >> $OUTPUTS3
+$ZIP_HOME/zip -r ${OUTPUTS1}.zip *.xtan.xml  >> $OUTPUTS3
+$ZIP_HOME/zip -r ${OUTPUTS2}.zip *_input.xml  >> $OUTPUTS3
+checkExitCode
+
+mv ${OUTPUTS1}.zip $OUTPUTS1
+mv ${OUTPUTS2}.zip $OUTPUTS2
+checkExitCode

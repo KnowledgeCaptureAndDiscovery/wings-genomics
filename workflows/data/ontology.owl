@@ -1,0 +1,598 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+      xml:base="http://localhost:8080/wings-portal/export/users/admin/genomics/data/ontology.owl">
+      <owl:Ontology rdf:about="">
+            <owl:imports rdf:resource="http://www.wings-workflows.org/ontology/data.owl"/>
+      </owl:Ontology>
+      <owl:Class rdf:ID="XLSX">
+            <rdfs:subClassOf rdf:resource="http://www.wings-workflows.org/ontology/data.owl#DataObject"/>
+      </owl:Class>
+      <owl:Class rdf:ID="VariantFile">
+            <rdfs:subClassOf rdf:resource="http://www.wings-workflows.org/ontology/data.owl#DataObject"/>
+      </owl:Class>
+      <owl:Class rdf:ID="SeqFile">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:ID="OmicsFile"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:ID="ProtConvertParamFile">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:ID="LCMSParamFile"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:ID="MS2File">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:ID="LCMSFile"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:ID="BatchAnnFile">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:ID="TSVFile"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:ID="IDPAssembleParamFile">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:ID="ProtAssemblyParamFile"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:ID="ProtXMLConfigFile">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:ID="XMLConfigFile"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:ID="FastaFile">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:ID="ReferenceFile"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:ID="PDFFile">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:ID="PlotFile"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:ID="MAFFile">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:ID="VariantAnnFile"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:ID="ProtXMLFile">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:ID="ProtSpectraFile"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:ID="CSVFile">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:ID="DelimTextFile"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:about="#TSVFile">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:about="#DelimTextFile"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:ID="ProtIDpDBFile">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:ID="IDpDBFile"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:ID="WXSFile">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:ID="DNASeqFile"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:ID="JSONFile">
+            <rdfs:subClassOf rdf:resource="http://www.wings-workflows.org/ontology/data.owl#DataObject"/>
+      </owl:Class>
+      <owl:Class rdf:ID="PepConvertParamFile">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:about="#LCMSParamFile"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:ID="PepSearchParamFile">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:about="#LCMSParamFile"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:ID="RNASeqFile">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:ID="NGSFile"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:ID="STARParamFile">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:ID="FastqToBamParamFile"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:ID="PepXMLConfigFile">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:about="#XMLConfigFile"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:ID="CustomProDBAnnotZip">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:about="#ReferenceFile"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:ID="mzMLFile">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:ID="SpectraFile"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:ID="MyrimatchParamFile">
+            <rdfs:subClassOf rdf:resource="#PepSearchParamFile"/>
+      </owl:Class>
+      <owl:Class rdf:about="#NGSFile">
+            <rdfs:subClassOf rdf:resource="#SeqFile"/>
+      </owl:Class>
+      <owl:Class rdf:ID="Gistic2CNV">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:ID="CNVFile"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:about="#VariantAnnFile">
+            <rdfs:subClassOf rdf:resource="#VariantFile"/>
+      </owl:Class>
+      <owl:Class rdf:about="#DNASeqFile">
+            <rdfs:subClassOf rdf:resource="#NGSFile"/>
+      </owl:Class>
+      <owl:Class rdf:ID="RSEMStatZip">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:ID="RSEMFile"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:ID="DecoyFastaParamFile">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:ID="ParamsFile"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:ID="PepitomeParamFile">
+            <rdfs:subClassOf rdf:resource="#PepSearchParamFile"/>
+      </owl:Class>
+      <owl:Class rdf:ID="xlsx">
+            <rdfs:subClassOf rdf:resource="#XLSX"/>
+      </owl:Class>
+      <owl:Class rdf:ID="mzXMLFile">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:about="#SpectraFile"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:about="#ProtSpectraFile">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:about="#SpectraFile"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:ID="KeggPathwaysFile">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:ID="PathwaysFile"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:ID="Tophat2ParamFile">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:about="#FastqToBamParamFile"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:about="#IDpDBFile">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:about="#SpectraFile"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:about="#CNVFile">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:about="#OmicsFile"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:ID="RunMetaFile">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:about="#OmicsFile"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:ID="RSEMIsoformExpFile">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:about="#RSEMFile"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:ID="MuTectFile">
+            <rdfs:subClassOf rdf:resource="#NGSFile"/>
+      </owl:Class>
+      <owl:Class rdf:ID="BAMIndexFile">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:ID="SamtoolsFile"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:ID="RSEMLog">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:ID="LogFile"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:ID="SAMFile">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:about="#SamtoolsFile"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:ID="RefFastaTuxZip">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:about="#ReferenceFile"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:ID="GenomicFastaFile">
+            <rdfs:subClassOf rdf:resource="#FastaFile"/>
+      </owl:Class>
+      <owl:Class rdf:ID="FPKMFile">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:ID="NGSQuantFile"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:ID="JunctionsBEDFile">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:ID="BEDFile"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:ID="SptxtFile">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:ID="SpectralLibFile"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:about="#OmicsFile">
+            <rdfs:subClassOf rdf:resource="http://www.wings-workflows.org/ontology/data.owl#DataObject"/>
+      </owl:Class>
+      <owl:Class rdf:about="#PlotFile">
+            <rdfs:subClassOf rdf:resource="http://www.wings-workflows.org/ontology/data.owl#DataObject"/>
+      </owl:Class>
+      <owl:Class rdf:ID="MicroarrayFile">
+            <rdfs:subClassOf rdf:resource="#OmicsFile"/>
+      </owl:Class>
+      <owl:Class rdf:ID="RefFastaRSEMZip">
+            <rdfs:subClassOf rdf:resource="#FastaFile"/>
+      </owl:Class>
+      <owl:Class rdf:ID="SNPFile">
+            <rdfs:subClassOf rdf:resource="http://www.wings-workflows.org/ontology/data.owl#DataObject"/>
+      </owl:Class>
+      <owl:Class rdf:ID="WGSFile">
+            <rdfs:subClassOf rdf:resource="#DNASeqFile"/>
+      </owl:Class>
+      <owl:Class rdf:ID="mzIDFile">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:about="#SpectraFile"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:about="#BEDFile">
+            <rdfs:subClassOf rdf:resource="http://www.wings-workflows.org/ontology/data.owl#DataObject"/>
+      </owl:Class>
+      <owl:Class rdf:about="#ReferenceFile">
+            <rdfs:subClassOf rdf:resource="#OmicsFile"/>
+      </owl:Class>
+      <owl:Class rdf:ID="LabkeyProtImportParamFile">
+            <rdfs:subClassOf rdf:resource="#ProtConvertParamFile"/>
+      </owl:Class>
+      <owl:Class rdf:ID="SNVFile">
+            <rdfs:subClassOf rdf:resource="http://www.wings-workflows.org/ontology/data.owl#DataObject"/>
+      </owl:Class>
+      <owl:Class rdf:ID="SampleGroupingFile">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:ID="SampleInfoFile"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:ID="tandem2XMLParamFile">
+            <rdfs:subClassOf rdf:resource="#PepConvertParamFile"/>
+      </owl:Class>
+      <owl:Class rdf:ID="SplibFile">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:about="#SpectralLibFile"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:about="#ParamsFile">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:ID="TextFile"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:ID="PepIDpDBFile">
+            <rdfs:subClassOf rdf:resource="#IDpDBFile"/>
+      </owl:Class>
+      <owl:Class rdf:ID="IDConvertParamFile">
+            <rdfs:subClassOf rdf:resource="#PepConvertParamFile"/>
+      </owl:Class>
+      <owl:Class rdf:ID="ZipFile">
+            <rdfs:subClassOf rdf:resource="http://www.wings-workflows.org/ontology/data.owl#DataObject"/>
+      </owl:Class>
+      <owl:Class rdf:ID="MS2LabelParamFile">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:ID="ConditionParamFile"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:ID="PepModsFile">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:about="#LCMSParamFile"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:ID="RawResults">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:ID="TXTResultsFile"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:about="#SampleInfoFile">
+            <rdfs:subClassOf rdf:resource="#TSVFile"/>
+      </owl:Class>
+      <owl:Class rdf:about="#TextFile">
+            <rdfs:subClassOf rdf:resource="http://www.wings-workflows.org/ontology/data.owl#DataObject"/>
+      </owl:Class>
+      <owl:Class rdf:ID="NormResults">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:about="#TXTResultsFile"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:ID="DecoySpectraSTParamFile">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:ID="DecoySpectraParamFile"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:ID="BAMFile">
+            <rdfs:subClassOf rdf:resource="#NGSFile"/>
+      </owl:Class>
+      <owl:Class rdf:ID="RAWFile">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:about="#SpectraFile"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:ID="ProteomicFastaFile">
+            <rdfs:comment>NameFormat=[__ID].fasta</rdfs:comment>
+            <rdfs:subClassOf rdf:resource="#FastaFile"/>
+      </owl:Class>
+      <owl:Class rdf:ID="VCFFile">
+            <rdfs:subClassOf rdf:resource="#VariantFile"/>
+      </owl:Class>
+      <owl:Class rdf:ID="MSPFile">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:about="#SpectralLibFile"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:ID="IDPQonvert4plexParamFile">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:ID="IDPQonvertParamFile"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:about="#SpectraFile">
+            <rdfs:subClassOf rdf:resource="#MS2File"/>
+      </owl:Class>
+      <owl:Class rdf:ID="RSEMParamFile">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:ID="RNAQuantParamFile"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:ID="FastaIndexFile">
+            <rdfs:subClassOf rdf:resource="#FastaFile"/>
+      </owl:Class>
+      <owl:Class rdf:ID="MSGFPlusParamFile">
+            <rdfs:subClassOf rdf:resource="#PepSearchParamFile"/>
+      </owl:Class>
+      <owl:Class rdf:about="#SpectralLibFile">
+            <rdfs:subClassOf rdf:resource="#ReferenceFile"/>
+      </owl:Class>
+      <owl:Class rdf:ID="MuTectSNVFile">
+            <rdfs:subClassOf rdf:resource="#SNVFile"/>
+      </owl:Class>
+      <owl:Class rdf:about="#DelimTextFile">
+            <rdfs:subClassOf rdf:resource="#OmicsFile"/>
+      </owl:Class>
+      <owl:Class rdf:ID="CRCAnnFile">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:ID="DatasetAnnFile"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:ID="PepSpectraFile">
+            <rdfs:subClassOf rdf:resource="#SpectraFile"/>
+      </owl:Class>
+      <owl:Class rdf:about="#RSEMFile">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:about="#NGSQuantFile"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:about="#LCMSFile">
+            <rdfs:subClassOf rdf:resource="#OmicsFile"/>
+      </owl:Class>
+      <owl:Class rdf:about="#PathwaysFile">
+            <rdfs:subClassOf rdf:resource="#TSVFile"/>
+      </owl:Class>
+      <owl:Class rdf:ID="CufflinksParamFile">
+            <rdfs:subClassOf rdf:resource="#ParamsFile"/>
+      </owl:Class>
+      <owl:Class rdf:ID="GTFFile">
+            <rdfs:subClassOf rdf:resource="#ReferenceFile"/>
+      </owl:Class>
+      <owl:Class rdf:about="#DatasetAnnFile">
+            <rdfs:subClassOf rdf:resource="#TSVFile"/>
+      </owl:Class>
+      <owl:Class rdf:ID="SampleIDsFile">
+            <rdfs:subClassOf rdf:resource="#SampleInfoFile"/>
+      </owl:Class>
+      <owl:Class rdf:ID="IDPQueryParamFile">
+            <rdfs:subClassOf rdf:resource="#ProtConvertParamFile"/>
+      </owl:Class>
+      <owl:Class rdf:ID="XInteractParamFile">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:about="#ProtAssemblyParamFile"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:ID="SequenceFile">
+            <rdfs:subClassOf rdf:resource="http://www.wings-workflows.org/ontology/data.owl#DataObject"/>
+      </owl:Class>
+      <owl:Class rdf:ID="FASTQFile">
+            <rdfs:subClassOf rdf:resource="#NGSFile"/>
+      </owl:Class>
+      <owl:Class rdf:ID="IDPickerParamFile">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:about="#ProtAssemblyParamFile"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:ID="RSEMGeneExpFile">
+            <rdfs:subClassOf rdf:resource="#RSEMFile"/>
+      </owl:Class>
+      <owl:Class rdf:about="#TXTResultsFile">
+            <rdfs:subClassOf rdf:resource="#OmicsFile"/>
+      </owl:Class>
+      <owl:Class rdf:about="#LCMSParamFile">
+            <rdfs:subClassOf rdf:resource="#LCMSFile"/>
+      </owl:Class>
+      <owl:Class rdf:about="#ProtAssemblyParamFile">
+            <rdfs:subClassOf rdf:resource="#LCMSParamFile"/>
+      </owl:Class>
+      <owl:Class rdf:ID="PepXMLFile">
+            <rdfs:subClassOf rdf:resource="#PepSpectraFile"/>
+      </owl:Class>
+      <owl:Class rdf:about="#FastqToBamParamFile">
+            <rdfs:subClassOf rdf:resource="#ParamsFile"/>
+      </owl:Class>
+      <owl:Class rdf:ID="MS2Log">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:about="#LogFile"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:about="#NGSQuantFile">
+            <rdfs:subClassOf rdf:resource="#NGSFile"/>
+      </owl:Class>
+      <owl:Class rdf:ID="CustomDSeqFile">
+            <rdfs:subClassOf rdf:resource="#DNASeqFile"/>
+      </owl:Class>
+      <owl:Class rdf:ID="SNVProTabFile">
+            <rdfs:subClassOf rdf:resource="#SNVFile"/>
+      </owl:Class>
+      <owl:Class rdf:about="#XMLConfigFile">
+            <rdfs:subClassOf rdf:resource="#LCMSParamFile"/>
+      </owl:Class>
+      <owl:Class rdf:ID="XTandemParamFile">
+            <rdfs:subClassOf rdf:resource="#PepSearchParamFile"/>
+      </owl:Class>
+      <owl:Class rdf:about="#RNAQuantParamFile">
+            <rdfs:subClassOf rdf:resource="#ParamsFile"/>
+      </owl:Class>
+      <owl:Class rdf:ID="SampleAnnFile">
+            <rdfs:subClassOf rdf:resource="#TSVFile"/>
+      </owl:Class>
+      <owl:Class rdf:ID="XMLFile">
+            <rdfs:subClassOf rdf:resource="http://www.wings-workflows.org/ontology/data.owl#DataObject"/>
+      </owl:Class>
+      <owl:Class rdf:about="#DecoySpectraParamFile">
+            <rdfs:subClassOf rdf:resource="#ParamsFile"/>
+      </owl:Class>
+      <owl:Class rdf:ID="SortedBAMFile">
+            <rdfs:subClassOf rdf:resource="#BAMFile"/>
+      </owl:Class>
+      <owl:Class rdf:ID="ReformatLog">
+            <rdfs:subClassOf>
+                  <owl:Class rdf:about="#LogFile"/>
+            </rdfs:subClassOf>
+      </owl:Class>
+      <owl:Class rdf:about="#LogFile">
+            <rdfs:subClassOf rdf:resource="http://www.wings-workflows.org/ontology/data.owl#DataObject"/>
+      </owl:Class>
+      <owl:Class rdf:about="#SamtoolsFile">
+            <rdfs:subClassOf rdf:resource="http://www.wings-workflows.org/ontology/data.owl#DataObject"/>
+      </owl:Class>
+      <owl:Class rdf:about="#ConditionParamFile">
+            <rdfs:subClassOf rdf:resource="#LCMSParamFile"/>
+      </owl:Class>
+      <owl:Class rdf:ID="RSEMMatrixFile">
+            <rdfs:subClassOf rdf:resource="#RSEMFile"/>
+      </owl:Class>
+      <owl:Class rdf:about="#IDPQonvertParamFile">
+            <rdfs:subClassOf rdf:resource="#PepConvertParamFile"/>
+      </owl:Class>
+      <owl:DatatypeProperty rdf:ID="hasSampleID">
+            <rdfs:domain rdf:resource="#OmicsFile"/>
+            <rdfs:subPropertyOf rdf:resource="http://www.wings-workflows.org/ontology/data.owl#hasDataMetrics"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:DatatypeProperty>
+      <owl:DatatypeProperty rdf:ID="createdBySoftware">
+            <rdfs:domain rdf:resource="#PepSpectraFile"/>
+            <rdfs:subPropertyOf rdf:resource="http://www.wings-workflows.org/ontology/data.owl#hasDataMetrics"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:DatatypeProperty>
+      <owl:DatatypeProperty rdf:ID="hasMS1LabelID">
+            <rdfs:domain rdf:resource="#LCMSFile"/>
+            <rdfs:subPropertyOf rdf:resource="http://www.wings-workflows.org/ontology/data.owl#hasDataMetrics"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:DatatypeProperty>
+      <owl:DatatypeProperty rdf:ID="hasSpeciesName">
+            <rdfs:domain rdf:parseType="Resource">
+                  <owl:unionOf rdf:parseType="Collection">
+                        <owl:Class rdf:about="#VariantFile"/>
+                        <owl:Class rdf:about="#OmicsFile"/>
+                        <owl:Class rdf:about="#XMLFile"/>
+                        <owl:Class rdf:about="#ZipFile"/>
+                        <owl:Class rdf:about="#OmicsFile"/>
+                        <owl:Class rdf:about="#OmicsFile"/>
+                        <owl:Class rdf:about="#ReferenceFile"/>
+                        <owl:Class rdf:about="#OmicsFile"/>
+                        <owl:Class rdf:about="#OmicsFile"/>
+                        <owl:Class rdf:about="#OmicsFile"/>
+                  </owl:unionOf>
+            </rdfs:domain>
+            <rdfs:subPropertyOf rdf:resource="http://www.wings-workflows.org/ontology/data.owl#hasDataMetrics"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:DatatypeProperty>
+      <owl:DatatypeProperty rdf:ID="hasDatasetID">
+            <rdfs:domain rdf:resource="#OmicsFile"/>
+            <rdfs:subPropertyOf rdf:resource="http://www.wings-workflows.org/ontology/data.owl#hasDataMetrics"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:DatatypeProperty>
+      <owl:DatatypeProperty rdf:ID="hasInstrumentName">
+            <rdfs:domain rdf:resource="#OmicsFile"/>
+            <rdfs:subPropertyOf rdf:resource="http://www.wings-workflows.org/ontology/data.owl#hasDataMetrics"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:DatatypeProperty>
+      <owl:DatatypeProperty rdf:ID="isLargeDataset">
+            <rdfs:domain rdf:resource="http://www.wings-workflows.org/ontology/data.owl#DataObject"/>
+            <rdfs:subPropertyOf rdf:resource="http://www.wings-workflows.org/ontology/data.owl#hasDataMetrics"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+      </owl:DatatypeProperty>
+      <owl:DatatypeProperty rdf:ID="hasGenomeReferenceID">
+            <rdfs:domain>
+                  <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                              <owl:Class rdf:about="#BAMFile"/>
+                              <owl:Class rdf:about="#OmicsFile"/>
+                        </owl:unionOf>
+                  </owl:Class>
+            </rdfs:domain>
+            <rdfs:subPropertyOf rdf:resource="http://www.wings-workflows.org/ontology/data.owl#hasDataMetrics"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:DatatypeProperty>
+      <owl:DatatypeProperty rdf:ID="hasSeqType">
+            <rdfs:domain rdf:resource="#NGSFile"/>
+            <rdfs:subPropertyOf rdf:resource="http://www.wings-workflows.org/ontology/data.owl#hasDataMetrics"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:DatatypeProperty>
+      <owl:DatatypeProperty rdf:ID="Chromosome">
+            <rdfs:domain rdf:resource="#BAMFile"/>
+            <rdfs:subPropertyOf rdf:resource="http://www.wings-workflows.org/ontology/data.owl#hasDataMetrics"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:DatatypeProperty>
+      <owl:DatatypeProperty rdf:ID="hasMS2LabelID">
+            <rdfs:domain rdf:resource="#LCMSFile"/>
+            <rdfs:subPropertyOf rdf:resource="http://www.wings-workflows.org/ontology/data.owl#hasDataMetrics"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:DatatypeProperty>
+      <owl:DatatypeProperty rdf:ID="hasOmicsType">
+            <rdfs:domain rdf:resource="#OmicsFile"/>
+            <rdfs:subPropertyOf rdf:resource="http://www.wings-workflows.org/ontology/data.owl#hasDataMetrics"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:DatatypeProperty>
+      <owl:DatatypeProperty rdf:ID="hasParticipantID">
+            <rdfs:domain rdf:resource="#OmicsFile"/>
+            <rdfs:subPropertyOf rdf:resource="http://www.wings-workflows.org/ontology/data.owl#hasDataMetrics"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:DatatypeProperty>
+      <owl:DatatypeProperty rdf:ID="toolName">
+            <rdfs:domain rdf:resource="#ParamsFile"/>
+            <rdfs:subPropertyOf rdf:resource="http://www.wings-workflows.org/ontology/data.owl#hasDataMetrics"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:DatatypeProperty>
+      <owl:DatatypeProperty rdf:ID="hasDatatypeID">
+            <rdfs:domain rdf:resource="#OmicsFile"/>
+            <rdfs:subPropertyOf rdf:resource="http://www.wings-workflows.org/ontology/data.owl#hasDataMetrics"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:DatatypeProperty>
+</rdf:RDF>

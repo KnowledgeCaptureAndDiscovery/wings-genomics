@@ -1,0 +1,66 @@
+#!/bin/bash
+
+# Functions:
+checkExitCode() {
+EC=$?
+
+if [ ${EC} -ne 0 ]; then
+	echo "Error"
+    exit ${EC};
+fi
+}
+
+#Check if a file is zipped:
+SSV_INPUTS=""
+checkZipFile() {
+	INPUTS="$1"
+	echo $INPUTS
+	#Check if the input file is empty
+	FILE_ZIP_CHECK=`file $INPUTS | grep "Zip"`
+	echo $FILE_ZIP_CHECK
+	if [[ -z $FILE_ZIP_CHECK ]]; then
+		INPUTS_BASE=`basename $INPUTS`
+		cp $INPUTS ${INPUTS_BASE}
+	    SSV_INPUTS=${INPUTS_BASE}
+	else 
+		# Take a zipped input file containing a collection of mzML files and get a space-sep list -> very hacky.
+		SSV_INPUTS=`$ZIP_HOME/unzip -Z1 $INPUTS | tr "\n" " "`
+		# Extracting the file-collection from zipped input file
+		$ZIP_HOME/unzip $INPUTS
+		checkExitCode
+	fi
+}
+
+BASEDIR=`dirname $0`
+if [ $# -lt 1 ]; then echo "Error No inputs provided" && exit 1; fi
+
+NINPUTS=6
+NPARAMS=1
+NOUTPUTS=3
+
+. $BASEDIR/io.sh ${NINPUTS} ${NPARAMS} ${NOUTPUTS} "$@"
+
+export PATH=${PATH}:${TPP_HOME}/bin/
+
+checkZipFile $INPUTS1
+SSV_INPUTS1="$SSV_INPUTS"
+echo $SSV_INPUTS1
+
+checkZipFile $INPUTS2
+SSV_INPUTS2="$SSV_INPUTS"
+
+XINTERACT_PARAMS=`paste -s -d " " $INPUTS3`
+
+XML_CHECK=`grep "<?xml version=\"1.0\"" $INPUTS4`
+if [[ -z $XML_CHECK ]]; then
+	echo $TPP_HOME/bin/xinteract $XINTERACT_PARAMS $SSV_INPUTS1
+	$TPP_HOME/bin/xinteract $XINTERACT_PARAMS $SSV_INPUTS1 > $OUTPUTS3
+	checkExitCode
+else
+	echo $TPP_HOME/bin/xinteract $XINTERACT_PARAMS -L${INPUTS4}-1 $SSV_INPUTS1
+	$TPP_HOME/bin/xinteract $XINTERACT_PARAMS -L${INPUTS4}-1 $SSV_INPUTS1 > $OUTPUTS3
+	checkExitCode
+fi
+
+mv interact.pep.xml $OUTPUTS1
+mv interact.prot.xml $OUTPUTS2

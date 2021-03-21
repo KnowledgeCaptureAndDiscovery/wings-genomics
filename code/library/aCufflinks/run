@@ -1,0 +1,30 @@
+#!/bin/bash
+
+checkExitCode() {
+if [ $? -ne 0 ]; then
+	echo "Error"
+	exit 1;
+fi
+}
+
+BASEDIR=`dirname $0`
+
+if [ $# -lt 1 ]; then echo "Error No inputs provided" && exit 1; fi
+
+. $BASEDIR/io.sh 3 0 4 "$@"
+
+#INPUTS3 will be a params file
+PARAMS1=1
+
+echo "Running Cufflinks using annotation file - ${INPUTS2}..."
+$CUFFLINKS_HOME/cufflinks -p $PARAMS1 -g $INPUTS2 $INPUTS1
+checkExitCode
+echo "Cufflinks done!"
+
+# Rename outputs
+mv genes.fpkm_tracking $OUTPUTS1
+mv isoforms.fpkm_tracking $OUTPUTS2
+mv transcripts.gtf $OUTPUTS3
+mv skipped.gtf $OUTPUTS4
+
+checkExitCode

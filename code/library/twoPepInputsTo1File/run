@@ -1,0 +1,68 @@
+#!/bin/bash
+
+checkExitCode() {
+if [ $? -ne 0 ]; then
+	echo "Error"
+	exit 1;
+fi
+}
+
+#Check if a file is zipped:
+SSV_INPUTS=""
+checkZipFile() {
+	INPUTS="$1"
+	echo $INPUTS
+	#Check if the input file is empty
+	FILE_ZIP_CHECK=`file $INPUTS | grep "Zip"`
+	echo $FILE_ZIP_CHECK
+	if [[ -z $FILE_ZIP_CHECK ]]; then
+	    SSV_INPUTS=$INPUTS
+	else 
+		# Extracting the file-collection from zipped input file
+		$ZIP_HOME/unzip $INPUTS
+		# Take a zipped input file containing a collection of mzML files and get a space-sep list -> very hacky.
+		SSV_INPUTS=`$ZIP_HOME/unzip -Z1 $INPUTS | tr "\n" " "`		
+		checkExitCode
+	fi
+}
+
+
+renameFiles() {
+	INPUT_FILES="$1"
+	PREFIX_ARG=`echo "$2" | cut -d'.' -f1`
+	FILEPREFIX=`basename $PREFIX_ARG`
+	count=1
+	SSV_NEW_INPUTS=""
+	for ONE_FILE in $INPUT_FILES
+		do
+			EXTENSION=`echo "$ONE_FILE" | cut -d'.' -f2-`
+			NEW_FILE=${FILEPREFIX}_${count}.${EXTENSION}
+			echo mv $ONE_FILE $NEW_FILE
+			mv $ONE_FILE $NEW_FILE
+			checkExitCode
+			SSV_NEW_INPUTS="${SSV_NEW_INPUTS} ${NEW_FILE}"
+			count=$[count+1]
+		done
+}
+
+BASEDIR=`dirname $0`
+
+if [ $# -lt 1 ]; then echo "Error No inputs provided" && exit 1; fi
+
+. $BASEDIR/io.sh 2 0 1 "$@"
+
+INPUTS1_INPUTS2_ARRAY=("${INPUTS1[@]}" "${INPUTS2[@]}")
+for ONE_FILE in ${INPUTS1_INPUTS2_ARRAY[@]}
+do
+	echo "Processing file: $ONE_FILE"
+    checkZipFile $ONE_FILE
+    renameFiles "${SSV_INPUTS}" "${ONE_FILE}"
+    echo "Zipping files:"
+    echo $ZIP_HOME/zip -r -j ${OUTPUTS1}.zip $SSV_NEW_INPUTS
+	$ZIP_HOME/zip -r -j ${OUTPUTS1}.zip $SSV_NEW_INPUTS
+	checkExitCode
+done
+
+echo "Renaming to WINGS output names"
+mv ${OUTPUTS1}.zip $OUTPUTS1
+checkExitCode

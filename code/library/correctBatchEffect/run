@@ -1,0 +1,23 @@
+#!/bin/sh
+
+checkExitCode() {
+if [ $? -ne 0 ]; then
+	echo "Error"
+	exit 1;
+fi
+}
+
+BASEDIR=`dirname $0`
+
+if [ $# -lt 1 ]; then echo "Error No inputs provided" && exit 1; fi
+
+NINPUTS=2
+NPARAMS=0
+NOUTPUTS=1
+
+. $BASEDIR/io.sh $NINPUTS $NPARAMS $NOUTPUTS "$@"
+
+echo $R_HOME/bin/Rscript --no-save --no-restore $BASEDIR/correctBatchEffect.R $INPUTS1 $INPUTS2 $OUTPUTS1
+$R_HOME/bin/Rscript --no-save --no-restore $BASEDIR/correctBatchEffect.R $INPUTS1 $INPUTS2 $OUTPUTS1
+
+checkExitCode

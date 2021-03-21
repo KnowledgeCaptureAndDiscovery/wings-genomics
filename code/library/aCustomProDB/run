@@ -1,0 +1,39 @@
+#!/bin/sh
+
+checkExitCode() {
+if [ $? -ne 0 ]; then
+	echo "Error"
+	exit 1;
+fi
+}
+
+BASEDIR=`dirname $0`
+
+if [ $# -lt 1 ]; then echo "Error No inputs provided" && exit 1; fi
+
+. $BASEDIR/io.sh 4 5 4 "$@"
+
+ANNDIR=${PWD}/annot_dir
+$ZIP_HOME/unzip -d $ANNDIR $INPUTS4
+
+echo $R_HOME/bin/Rscript --no-save --no-restore $BASEDIR/customProDBWrapper.R $INPUTS1 $INPUTS2 $INPUTS3 $ANNDIR $OUTPUTS1 $PARAMS1 $PARAMS2 $PARAMS3 $PARAMS4 $PARAMS5
+$R_HOME/bin/Rscript --no-save --no-restore $BASEDIR/customProDBWrapper.R $INPUTS1 $INPUTS2 $INPUTS3 $ANNDIR $OUTPUTS1 $PARAMS1 $PARAMS2 $PARAMS3 $PARAMS4 $PARAMS5
+
+checkExitCode
+
+echo mv ${OUTPUTS1}_rpkm.fasta $OUTPUTS1
+mv ${OUTPUTS1}_rpkm.fasta $OUTPUTS1
+echo mv ${OUTPUTS1}_snv.fasta $OUTPUTS2
+mv ${OUTPUTS1}_snv.fasta $OUTPUTS2
+echo mv ${OUTPUTS1}_snv.tab $OUTPUTS3
+mv ${OUTPUTS1}_snv.tab $OUTPUTS3
+
+if [ ${PARAMS1} == 'true' ] && [ -e ${OUTPUTS1}_indel.fasta ] ; then
+	echo mv ${OUTPUTS1}_indel.fasta $OUTPUTS4
+	mv ${OUTPUTS1}_indel.fasta $OUTPUTS4
+else
+	echo "No indel fasta produced. Output file will be blank"
+	echo "" > $OUTPUTS4
+fi
+
+checkExitCode

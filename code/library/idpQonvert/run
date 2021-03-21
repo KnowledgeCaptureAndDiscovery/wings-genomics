@@ -1,0 +1,87 @@
+#!/bin/bash
+
+# Functions:
+checkExitCode() {
+EC=$?
+
+if [ ${EC} -ne 0 ]; then
+	echo "Error"
+    exit ${EC};
+fi
+}
+
+FILE_SQLDB_CHECK=""
+SSV_INPUTS=""
+checkSQLdbFile() {
+	INPUT_FILE="$1"
+	echo $INPUT_FILE
+	#Check if the input file is empty
+	FILE_SQLDB_CHECK=`file $INPUT_FILE | grep "SQLite.*database"`
+	echo $FILE_SQLDB_CHECK
+	if [[ -z $FILE_SQLDB_CHECK ]]; then
+		echo "${INPUT_FILE} is not a SQLite Database format."
+	else
+		INPUT_FILE_BASENAME=`basename $INPUT_FILE`
+	    echo mv $INPUT_FILE_BASENAME ${INPUT_FILE_BASENAME}.idpDB
+	    mv $INPUT_FILE_BASENAME ${INPUT_FILE_BASENAME}.idpDB
+	    SSV_INPUTS=${INPUT_FILE_BASENAME}.idpDB		
+		checkExitCode
+	fi
+}
+
+#Check if a file is zipped:
+SSV_INPUTS=""
+checkZipFile() {
+	INPUTS="$1"
+	echo $INPUTS
+	#Check if the input file is empty
+	FILE_ZIP_CHECK=`file $INPUTS | grep "Zip"`
+	echo $FILE_ZIP_CHECK
+	if [[ -z $FILE_ZIP_CHECK ]]; then
+	    SSV_INPUTS=$INPUTS
+	    echo cp $INPUTS $PWD
+	    cp $INPUTS $PWD
+	    checkSQLdbFile $INPUTS
+
+	else 
+		# Take a zipped input file containing a collection of mzML files and get a space-sep list -> very hacky.
+		SSV_INPUTS=`$ZIP_HOME/unzip -Z1 $INPUTS | tr "\n" " "`
+		# Extracting the file-collection from zipped input file
+		$ZIP_HOME/unzip $INPUTS
+		checkExitCode
+	fi
+}
+
+BASEDIR=`dirname $0`
+if [ $# -lt 1 ]; then echo "Error No inputs provided" && exit 1; fi
+
+NINPUTS=4
+NPARAMS=0
+NOUTPUTS=1
+
+. $BASEDIR/io.sh ${NINPUTS} ${NPARAMS} ${NOUTPUTS} "$@"
+
+# Copy the required fasta files to the working directory
+echo cp $INPUTS4 $PWD
+cp $INPUTS4 $PWD
+
+IDPQonvert_PARAMS=$(paste -s -d " " $INPUTS3)
+
+checkZipFile $INPUTS1
+SSV_INPUTS1="$SSV_INPUTS"
+
+checkZipFile $INPUTS2
+SSV_INPUTS2="$SSV_INPUTS"
+
+echo "Running idpQonvert from bumbershoot to convert files to idpDB format"
+echo $BSHOOT_HOME/idpQonvert -ProteinDatabase $INPUTS4 $IDPQonvert_PARAMS $SSV_INPUTS1
+$BSHOOT_HOME/idpQonvert -ProteinDatabase $INPUTS4 $IDPQonvert_PARAMS $SSV_INPUTS1
+		
+# Add the converted idpDB files to output zip file
+for ONE_FILE in $SSV_INPUTS1; do echo ${ONE_FILE%.*}.idpDB ; done > LIST_IDPDB
+SSV_IDPDB=$(paste -s -d " " LIST_IDPDB)
+
+$ZIP_HOME/zip -r ${OUTPUTS1}.zip $SSV_IDPDB
+mv $OUTPUTS1.zip $OUTPUTS1
+
+checkExitCode

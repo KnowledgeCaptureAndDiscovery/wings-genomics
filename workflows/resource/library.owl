@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.0="http://www.wings-workflows.org/ontology/resource.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+      xml:base="http://localhost:8080/wings-portal/export/common/resource/library.owl">
+      <j.0:SoftwareVersion rdf:ID="bcftools1.3_a1.3">
+            <j.0:hasVersionText>1.3</j.0:hasVersionText>
+            <j.0:hasVersionNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+            >0</j.0:hasVersionNumber>
+            <j.0:hasSoftwareGroup>
+                  <j.0:SoftwareGroup rdf:ID="bcftools1.3">
+                        <j.0:hasEnvironmentVariable>BCFTOOLS13_HOME</j.0:hasEnvironmentVariable>
+                  </j.0:SoftwareGroup>
+            </j.0:hasSoftwareGroup>
+      </j.0:SoftwareVersion>
+      <j.0:SoftwareVersion rdf:ID="rsem1.3_a1.3">
+            <j.0:hasVersionText>1.3</j.0:hasVersionText>
+            <j.0:hasVersionNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+            >0</j.0:hasVersionNumber>
+            <j.0:hasSoftwareGroup>
+                  <j.0:SoftwareGroup rdf:ID="rsem1.3">
+                        <j.0:hasEnvironmentVariable>RSEM_HOME</j.0:hasEnvironmentVariable>
+                  </j.0:SoftwareGroup>
+            </j.0:hasSoftwareGroup>
+      </j.0:SoftwareVersion>
+      <j.0:SoftwareVersion rdf:ID="Samtools_a1.3.0">
+            <j.0:hasVersionText>1.3.0</j.0:hasVersionText>
+            <j.0:hasVersionNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+            >0</j.0:hasVersionNumber>
+            <j.0:hasSoftwareGroup>
+                  <j.0:SoftwareGroup rdf:ID="Samtools">
+                        <j.0:hasEnvironmentVariable>SAMTOOLS13_HOME</j.0:hasEnvironmentVariable>
+                        <j.0:hasEnvironmentVariable>SAMTOOLS_HOME</j.0:hasEnvironmentVariable>
+                  </j.0:SoftwareGroup>
+            </j.0:hasSoftwareGroup>
+      </j.0:SoftwareVersion>
+</rdf:RDF>

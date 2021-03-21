@@ -1,0 +1,19 @@
+#!/bin/sh
+
+checkExitCode() {
+if [ $? -ne 0 ]; then
+	echo "Error"
+	exit 1;
+fi
+}
+
+BASEDIR=`dirname $0`
+
+if [ $# -lt 1 ]; then echo "Error No inputs provided" && exit 1; fi
+
+. $BASEDIR/io.sh 2 15 1 "$@"
+
+echo $R_HOME/bin/Rscript $BASEDIR/combineSNVSAAVMAF.R --no-save --no-restore $INPUTS1 $INPUTS2 $PARAMS1 $PARAMS2 $PARAMS3 $PARAMS4 $PARAMS5 $PARAMS6 $PARAMS7 $PARAMS8 $PARAMS9 $PARAMS10 $PARAMS11 $PARAMS12 $PARAMS13 $PARAMS14 $PARAMS15 $OUTPUTS1
+$R_HOME/bin/Rscript $BASEDIR/combineSNVSAAVMAF.R --no-save --no-restore $INPUTS1 $INPUTS2 $PARAMS1 $PARAMS2 $PARAMS3 $PARAMS4 $PARAMS5 $PARAMS6 $PARAMS7 $PARAMS8 $PARAMS9 $PARAMS10 $PARAMS11 $PARAMS12 $PARAMS13 $PARAMS14 $PARAMS15 $OUTPUTS1
+
+checkExitCode

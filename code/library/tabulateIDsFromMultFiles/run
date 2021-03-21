@@ -1,0 +1,48 @@
+#!/bin/sh
+
+checkExitCode() {
+if [ $? -ne 0 ]; then
+	echo "Error"
+	exit 1;
+fi
+}
+
+#Check if a file is zipped:
+SSV_INPUTS=""
+checkZipFile() {
+	INPUTS="$1"
+	echo $INPUTS
+	#Check if the input file is empty
+	FILE_ZIP_CHECK=`file $INPUTS | grep "Zip"`
+	echo $FILE_ZIP_CHECK
+	if [[ -z $FILE_ZIP_CHECK ]]; then
+	    SSV_INPUTS=$INPUTS
+	else 
+		# Extracting the file-collection from zipped input file
+		$ZIP_HOME/unzip $INPUTS
+		# Take a zipped input file containing a collection of mzML files and get a space-sep list -> very hacky.
+		SSV_INPUTS=`$ZIP_HOME/unzip -Z1 $INPUTS | tr "\n" " "`		
+		checkExitCode
+	fi
+}
+
+BASEDIR=`dirname $0`
+
+if [ $# -lt 1 ]; then echo "Error No inputs provided" && exit 1; fi
+
+. $BASEDIR/io.sh 1 2 1 "$@"
+
+#CSV_INPUTS1=`paste -s -d, $INPUTS1`
+
+for ONE_INPUT_FILE in $INPUTS1
+	do
+		checkZipFile $ONE_INPUT_FILE
+		SSV_INPUTS1="$SSV_INPUTS1 $SSV_INPUTS"	
+	done 
+CSV_INPUTS1=`echo $SSV_INPUTS1 | tr " " ,`
+echo $CSV_INPUTS1
+
+echo $R_HOME/bin/Rscript --no-save --no-restore $BASEDIR/tabulateIDsFromMultFiles.R $CSV_INPUTS1 $PARAMS1 $PARAMS2 $OUTPUTS1
+$R_HOME/bin/Rscript --no-save --no-restore $BASEDIR/tabulateIDsFromMultFiles.R $CSV_INPUTS1 $PARAMS1 $PARAMS2 $OUTPUTS1
+
+checkExitCode

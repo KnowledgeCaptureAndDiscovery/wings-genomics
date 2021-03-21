@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bioml>
+	<note label="list path, taxonomy information" type="input">${TX_XML}</note>
+	<note type="input" label="protein, taxon">${DB_NAME}</note>
+	<note label="output, histogram column width" type="input">30</note>
+	<note label="output, histograms" type="input">no</note>
+	<note label="output, maximum valid expectation value" type="input">0.1</note>
+	<note label="output, one sequence copy" type="input">yes</note>
+	<note label="output, parameters" type="input">yes</note>
+	<note label="output, path" type="input">${XTAN_XML}</note>
+	<note label="output, path hashing" type="input">no</note>
+	<note label="output, performance" type="input">yes</note>
+	<note label="output, proteins" type="input">yes</note>
+	<note label="output, results" type="input">all</note>
+	<note label="output, sequences" type="input">no</note>
+	<note label="output, sort results by" type="input">spectrum</note>
+	<note label="output, spectra" type="input">yes</note>
+	<note label="output, xsl path" type="input">tandem-style.xsl</note>
+	<note label="protein, C-terminal residue modification mass" type="input">0.0</note>
+	<note label="protein, N-terminal residue modification mass" type="input">0.0</note>
+	<note label="protein, cleavage site" type="input">[KR]|{P}</note>
+	<note label="protein, homolog management" type="input">no</note>
+	<note label="protein, taxon" type="input">sequences</note>
+	<note label="refine" type="input">no</note>
+	<note label="refine, maximum valid expectation value" type="input">0.1</note>
+	<note label="refine, point mutations" type="input">no</note>
+	<note label="refine, potential C-terminus modifications" type="input"/>
+	<note label="refine, potential N-terminus modifications" type="input">+42.010565@[</note>
+	<note label="refine, potential modification mass" type="input"/>
+	<note label="refine, potential modification motif" type="input"/>
+	<note label="refine, spectrum synthesis" type="input">yes</note>
+	<note label="refine, unanticipated cleavage" type="input">yes</note>
+	<note label="refine, use potential modifications for full refinement" type="input">no</note>
+	<note label="residue, modification mass" type="input">57.021464@C</note>
+	<note label="residue, potential modification mass" type="input">15.994915@M</note>
+	<note label="residue, potential modification motif" type="input"/>
+	<note label="scoring, a ions" type="input">no</note>
+	<note label="scoring, algorithm" type="input">k-score</note>
+	<note label="scoring, b ions" type="input">yes</note>
+	<note label="scoring, c ions" type="input">no</note>
+	<note label="scoring, cyclic permutation" type="input">no</note>
+	<note label="scoring, include reverse" type="input">no</note>
+	<note label="scoring, maximum missed cleavage sites" type="input">2</note>
+	<note label="scoring, minimum ion count" type="input">1</note>
+	<note label="scoring, x ions" type="input">no</note>
+	<note label="scoring, y ions" type="input">yes</note>
+	<note label="scoring, z ions" type="input">no</note>
+	<note label="spectrum, dynamic range" type="input">100.0</note>
+	<note label="spectrum, fragment mass type" type="input">monoisotopic</note>
+	<note label="spectrum, fragment monoisotopic mass error" type="input">0.5</note>
+	<note label="spectrum, fragment monoisotopic mass error units" type="input">Daltons</note>
+	<note label="spectrum, maximum parent charge" type="input">4</note>
+	<note label="spectrum, maximum parent m+h" type="input">4094.0</note>
+	<note label="spectrum, minimum fragment mz" type="input">150.0</note>
+	<note label="spectrum, minimum parent m+h" type="input">600.0</note>
+	<note label="spectrum, minimum peaks" type="input">6</note>
+	<note label="spectrum, parent monoisotopic mass error minus" type="input">2.0</note>
+	<note label="spectrum, parent monoisotopic mass error plus" type="input">2.0</note>
+	<note label="spectrum, parent monoisotopic mass error units" type="input">Daltons</note>
+	<note label="spectrum, parent monoisotopic mass isotope error" type="input">no</note>
+	<note label="spectrum, path" type="input">${MS2_FILE}</note>
+	<note label="spectrum, threads" type="input">16</note>
+	<note label="spectrum, total peaks" type="input">50</note>
+	<note label="spectrum, use conditioning" type="input">no</note>
+	<note label="spectrum, use noise suppression" type="input">no</note>
+</bioml>

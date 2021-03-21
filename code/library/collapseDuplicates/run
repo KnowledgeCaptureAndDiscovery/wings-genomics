@@ -1,0 +1,19 @@
+#!/bin/sh
+
+checkExitCode() {
+if [ $? -ne 0 ]; then
+	echo "Error"
+	exit 1;
+fi
+}
+
+BASEDIR=`dirname $0`
+
+if [ $# -lt 1 ]; then echo "Error No inputs provided" && exit 1; fi
+
+. $BASEDIR/io.sh 3 0 1 "$@"
+
+echo $R_HOME/bin/Rscript --no-save --no-restore $BASEDIR/collapseDuplicates.R $INPUTS1 $INPUTS2 $INPUTS3 $OUTPUTS1
+$R_HOME/bin/Rscript --no-save --no-restore $BASEDIR/collapseDuplicates.R $INPUTS1 $INPUTS2 $INPUTS3 $OUTPUTS1
+
+checkExitCode

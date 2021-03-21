@@ -1,0 +1,19 @@
+#!/bin/sh
+
+checkExitCode() {
+if [ $? -ne 0 ]; then
+	echo "Error"
+	exit 1;
+fi
+}
+
+BASEDIR=`dirname $0`
+
+if [ $# -lt 1 ]; then echo "Error No inputs provided" && exit 1; fi
+
+. $BASEDIR/io.sh 1 0 1 "$@"
+
+# Hardcoding perl location for now
+/usr/bin/perl -ne 'if (/>(.*?)\s+(.*)/){push(@{$hash{$1}},$2) ;}}{open(I, "<",'\"$INPUTS1\"');while(<I>){if(/>(.*?)\s+/){ $t = 0; next if $h{$1}; $h{$1} = 1 if $hash{$1}; $t = 1; chomp; print $_ . " \n"}elsif($t==1){print $_} } close I;' $INPUTS1 > $OUTPUTS1
+
+checkExitCode

@@ -1,0 +1,24 @@
+#!/bin/bash
+
+checkExitCode() {
+if [ $? -ne 0 ]; then
+    echo "Error"
+    exit 1;
+fi
+}
+
+BASEDIR=`dirname $0`
+
+. $BASEDIR/io.sh 1 2 1 "$@"
+
+SSV_FILES=`python $BASEDIR/GetRunReqFiles1D.py $INPUTS1 $PARAMS1`
+
+FILES_ARRAY=(${SSV_FILES[@]})
+OUTPUTS1_ARRAY=(${OUTPUTS1[@]})
+for (( i=0; i<${#OUTPUTS1_ARRAY[@]}; i++ ))
+	do
+		echo cp ${FILES_ARRAY[$i]} ${OUTPUTS1_ARRAY[$i]}
+		cp ${FILES_ARRAY[$i]} ${OUTPUTS1_ARRAY[$i]}
+	done
+
+checkExitCode

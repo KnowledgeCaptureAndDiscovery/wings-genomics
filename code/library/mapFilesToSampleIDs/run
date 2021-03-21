@@ -1,0 +1,23 @@
+#!/bin/bash
+
+checkExitCode() {
+if [ $? -ne 0 ]; then
+	echo "Error"
+	exit 1;
+fi
+}
+
+BASEDIR=`dirname $0`
+
+if [ $# -lt 1 ]; then echo "Error No inputs provided" && exit 1; fi
+
+. $BASEDIR/io.sh 3 0 1 "$@"
+
+echo $INPUTS2 |  tr " " "\n" > editToFilenames.txt
+
+echo Rscript --no-save --no-restore $BASEDIR/mapFilesToSampleIDs.R $INPUTS1 editToFilenames.txt $INPUTS3
+Rscript --no-save --no-restore $BASEDIR/mapFilesToSampleIDs.R $INPUTS1 editToFilenames.txt $INPUTS3
+checkExitCode
+
+mv fileNameToSampleIDs.txt $OUTPUTS1
+checkExitCode

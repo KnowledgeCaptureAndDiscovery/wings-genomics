@@ -1,0 +1,22 @@
+#!/bin/sh
+
+checkExitCode() {
+if [ $? -ne 0 ]; then
+	echo "Error"
+	exit 1;
+fi
+}
+
+BASEDIR=`dirname $0`
+
+if [ $# -lt 1 ]; then echo "Error No inputs provided" && exit 1; fi
+
+. $BASEDIR/io.sh 1 2 1 "$@"
+
+PDF_OUTPUTS1=${OUTPUTS1}.pdf
+echo $PYTHON2_HOME/bin/python $BASEDIR/plotScaledVennFromCSV.py -i $INPUTS1 -n $PARAMS1 -t $PARAMS2 -o $PDF_OUTPUTS1
+$PYTHON2_HOME/bin/python $BASEDIR/plotScaledVennFromCSV.py -i $INPUTS1 -n $PARAMS1 -t $PARAMS2 -o $PDF_OUTPUTS1
+
+mv $PDF_OUTPUTS1 $OUTPUTS1
+
+checkExitCode

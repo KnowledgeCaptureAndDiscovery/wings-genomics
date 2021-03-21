@@ -1,0 +1,19 @@
+#!/bin/bash
+
+checkExitCode() {
+if [ $? -ne 0 ]; then
+	echo "Error"
+	exit 1;
+fi
+}
+
+BASEDIR=`dirname $0`
+
+if [ $# -lt 1 ]; then echo "Error No inputs provided" && exit 1; fi
+
+. $BASEDIR/io.sh 2 0 1 "$@"
+
+DECOYFASTA_PARAMS=$(paste -s -d " " $INPUTS2)
+
+$TPP_HOME/bin/decoyFASTA $DECOYFASTA_PARAMS $INPUTS1 $OUTPUTS1
+checkExitCode

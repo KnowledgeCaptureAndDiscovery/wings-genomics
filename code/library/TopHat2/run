@@ -1,0 +1,105 @@
+#!/bin/bash
+
+checkExitCode() {
+if [ $? -ne 0 ]; then
+	echo "Error"
+	exit 1;
+fi
+}
+
+#Check if a file is zipped:
+SSV_INPUTS=""
+checkZipFile() {
+	INPUTS="$1"
+	echo $INPUTS
+	#Check if the input file is empty
+	FILE_ZIP_CHECK=`file $INPUTS | grep "Zip"`
+	echo $FILE_ZIP_CHECK
+	if [[ -z $FILE_ZIP_CHECK ]]; then
+	    SSV_INPUTS=$INPUTS
+	else 
+		# Extracting the file-collection from zipped input file
+		unzip $INPUTS
+		# Take a zipped input file containing a collection of files and get a space-sep list -> very hacky.
+		SSV_INPUTS=`unzip -Z1 $INPUTS | tr "\n" " "`
+		checkExitCode
+	fi
+}
+
+checkTARFile() {
+	INPUTS="$1"
+	echo $INPUTS
+	#Check if the input file is empty
+	FILE_TAR_CHECK=`tar -tf $INPUTS 2>&1 | grep "Error"`
+	echo $FILE_TAR_CHECK
+	if [[ -z $FILE_TAR_CHECK ]]; then
+		# Extracting the file-collection from zipped input file
+		tar -xvf $INPUTS
+		# Take a zipped input file containing a collection of files and get a space-sep list -> very hacky.
+		TAR_SSV_INPUTS=`tar -tf $INPUTS | tr "\n" " "`		
+		checkExitCode
+	else 
+		TAR_SSV_INPUTS=$INPUTS
+	fi
+}
+
+BASEDIR=`dirname $0`
+
+if [ $# -lt 1 ]; then echo "Error No inputs provided" && exit 1; fi
+
+. $BASEDIR/io.sh 3 0 4 "$@"
+
+echo $OUTPUTS1
+# Append the location of bowtie2 software to the path - required for TOPHAT2
+#export PATH=$PATH:$BOWTIE2_HOME/
+export PATH=$BOWTIE2_HOME/:$PATH
+checkExitCode
+
+# Extracting the Input file-collection from zipped input file
+# Accomodating only paired end FASTQ reads
+checkZipFile $INPUTS1
+SSV_INPUTS1="$SSV_INPUTS"
+echo $SSV_INPUTS1
+
+# Extracting the REFERENCE GENOME FASTA file with bowtie indices and genes.gtf annotation file
+checkZipFile $INPUTS3
+SSV_INPUTS3="$SSV_INPUTS"
+echo $SSV_INPUTS3
+
+TAR_SSV_INPUTS1=""
+for f in $SSV_INPUTS1; do checkTARFile $f; TAR_SSV_INPUTS1="$TAR_SSV_INPUTS1 $TAR_SSV_INPUTS"; done
+
+# All bowtie indices should be in the same directory as <input>.fa and have the prefix - <input>.*.bt2
+# All bowtie indices should start with the same prefix as <input>.fa and have the prefix - <input>.*.bt2
+# Note: For Tuxedo package, FASTA file extension needs to be <input>.fa (not <input>.fasta)
+# Formatting path/prefix to the location of the input fasta file (for example: <path>/hg19.fa => refix: <path>/hg19)
+REF_FASTA_FILE=`/usr/bin/unzip -Z1 $INPUTS3 | grep ".*fa$"`
+BOWTIE2_REFIX=`echo ${REF_FASTA_FILE} | cut -f 1 -d '.'`
+echo $BOWTIE2_REFIX
+
+
+INPUT1_BASE=`basename $INPUTS1`
+INPUT_NOEXT=`echo $INPUT1_BASE | cut -f 1 -d '.'`
+echo $INPUT_NOEXT
+
+TOPHATOUTDIR=$PWD/$INPUT_NOEXT
+echo $TOPHATOUTDIR
+checkExitCode
+
+TOPHAT2_PARAMS=$(paste -s -d " " $INPUTS2)
+
+echo $TOPHAT2_HOME/tophat2 -o $INPUT_NOEXT $TOPHAT2_PARAMS $BOWTIE2_REFIX $TAR_SSV_INPUTS1
+$TOPHAT2_HOME/tophat2 -o $INPUT_NOEXT $TOPHAT2_PARAMS $BOWTIE2_REFIX $TAR_SSV_INPUTS1
+checkExitCode
+
+
+zip -r -j ${OUTPUTS4}.zip ${TOPHATOUTDIR}/insertions.bed ${TOPHATOUTDIR}/deletions.bed
+
+# Rename outputs
+echo mv $TOPHATOUTDIR/accepted_hits.bam $OUTPUTS1
+mv $TOPHATOUTDIR/accepted_hits.bam $OUTPUTS1
+mv $TOPHATOUTDIR/unmapped.bam $OUTPUTS2
+mv $TOPHATOUTDIR/junctions.bed $OUTPUTS3
+mv ${OUTPUTS4}.zip ${OUTPUTS4}
+
+checkExitCode
