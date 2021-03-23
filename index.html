@@ -30,7 +30,7 @@ img {
     <a href="#software" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Software and Workflows</a>
     <a href="#docker" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Docker Image</a>
     <a href="#prov" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Provenance Traces</a>
-  <!--  <a href="#bib" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Bibliography</a>-->
+    <a href="#bib" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Bibliography</a>
     <a href="#authors" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">About the authors</a>
   </div>
 </nav>
@@ -58,8 +58,9 @@ img {
   <div class="w3-container" id="summary" style="margin-top:15px">
     <!--<h1 class="w3-xxxlarge w3-text-green"><b>Services.</b></h1>-->
     <hr style="width:50px;border:5px solid green" class="w3-round">
-    <p>This page provides pointers to the materials used in a paper <strong>under review </strong></p>
-    <p><strong>SUMMARY OF THE PAPER GOES HERE</strong>.</p>
+    <p>This page provides pointers to the materials (datasets, software, workflows, provenance traces and Docker image) used in a paper currently <strong>under review</strong> (more details about the publication will be announced at a later stage)</p>
+
+    <p><strong>Summary</strong>: The primary goal of our study is to demonstrate an example computational paradigm that uses meta-workflows (i.e., workflows that assess the results of two or more workflows) alongside abstract components (i.e, components that can be implemented with multiple tools) to overcome barriers facing multi-omic discovery.  We characterize the reproducibility of multi-omics discoveries by attempting a figure-for-figure reproduction of the seminal paper by <a href="#bib">Zhang et al [1]</a>.  We then assess the robustness of its findings by re-running all the experiments with newly acquired data, discussing the differences of the obtained results.</p>
   </div>
 
 
@@ -81,13 +82,31 @@ img {
   <div class="w3-container" id="software" style="margin-top:75px">
     <h1 class="w3-xxxlarge w3-text-green"><b>Software and Workflows.</b></h1>
     <hr style="width:50px;border:5px solid green" class="w3-round">
-    Pointers to domain. Point to the concrete workflows! (from paper)
+    The pointers for using the main software and workflows can be found below:
+    <ul>
+      <li><a href="software-packages.md">List of the software packages</a> (and corresponding version) installed in the Docker image</li>
+      <li><a href="workflow_files_description.pdf">Documentation of the input and output files used by each workflow</a></li>
+      <li><a href="worflow_parameters_description.pdf">Documentation of the parameters used for each workflow</a></li>
+      <li>Missing: pointer to domain, pointer to domain zipped.</li>
+      <li>Pointing to all workflows zipped.</li>
+    </ul>
   </div>
 
   <div class="w3-container" id="docker" style="margin-top:75px">
     <h1 class="w3-xxxlarge w3-text-green"><b>Docker image.</b></h1>
     <hr style="width:50px;border:5px solid green" class="w3-round">
-    Include here Docker images and instructions here
+
+    <ul>
+      <li>
+        A Docker image with WINGS and sample data, software and workflows is available on <a href="http://doi.org/10.5281/zenodo.4612080">Zenodo</a>
+      </li>
+      <li>
+        The Docker image is currently available in DockerHub with the id: <a href="https://hub.docker.com/r/kcapd/wings-genomics-full/tags?page=1&ordering=last_updated">kcapd/wings-genomics-full:latest</a> (availability may be subject to DockerHub policies)
+      </li>
+      <li>
+        The instructions for downloading and running the Docker image loaclly can be found on <a href="docker-instructions.md">GitHub</a>.
+      </li>
+    </ul>
   </div>
 
   <div class="w3-container" id="prov" style="margin-top:75px">
@@ -96,6 +115,12 @@ img {
     Include provenance traces (URL) and their link in Zenodo.
   </div>
 
+  <div class="w3-container" id="bib" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-green"><b>Bibliography.</b></h1>
+    <hr style="width:50px;border:5px solid green" class="w3-round">
+    <p id ="zhang">[1] Zhang, B. et al. <strong>Proteogenomic characterization of human colon and rectal cancer</strong>. Nature 513, 382-387, doi:<a href="https://dx.doi.org/10.1038/nature13438">10.1038/nature13438</a> (2014)</p>
+    </ul>
+  </div>
 
   <!-- The Team -->
   <div class="w3-container" id="authors" style="margin-top:75px">
@@ -106,19 +131,19 @@ img {
       <div class="w3-light-grey">
           <img src="images/ravali.jpg" alt="Ravali Adusumilli" style="width:100px;padding-top: 10px;">
         <div class="w3-container">
-          <h3>Ravali Adusumilli</h3>
-          <p class="w3-opacity">ROLE</p>
-          <p>Small description. </p>
+          <h3><a href="http://mallicklab.stanford.edu/peeps">Ravali Adusumilli</a></h3>
+          <p class="w3-opacity">Researcher</p>
+          <p>Bioinformaticist at the Mallik Lab of Stanford Univesity. She is interested in developing tools and pipelines for multi-omic analysis. </p>
         </div>
       </div>
     </div>
     <div class="w3-col m6 w3-margin-bottom">
       <div class="w3-light-grey">
-        <img src="images/dani.png" alt="Daniel Garijo" style="width:100px;padding-top: 10px;">
+        <img src="images/dani.png" alt="Daniel Garijo" style="width:90px;padding-top: 10px;">
         <div class="w3-container">
           <h3><a href="https://dgarijo.com">Daniel Garijo</a></h3>
           <p class="w3-opacity">Researcher</p>
-          <p>Researcher at the Information Sciences Institute of the
+          <p>Researcher at the Polytechnic University of Madrid and past researcher at the Information Sciences Institute of the
 University of Southern California. Daniel's research activities focus on
 e-Science and the Semantic web, specifically on how to increase the
 understandability of software and scientific workflows using provenance, metadata,
@@ -135,18 +160,18 @@ intermediate results and Linked Data. </p>
           <img src="images/varun.jpg" alt="Varun Ratnakar" style="width:100px;padding-top: 10px;">
         <div class="w3-container">
           <h3>Varun Ratnakar</h3>
-          <p class="w3-opacity">ROLE</p>
-          <p>Small description. </p>
+          <p class="w3-opacity">Research Programmer</p>
+          <p>Research programmer at the Information Sciences Institute of the University of Southern California. Varun is the main developer of the <a href="https://wings-workflows.org/">WINGS workflow system</a>. </p>
         </div>
       </div>
     </div>
     <div class="w3-col m6 w3-margin-bottom">
       <div class="w3-light-grey">
-        <img src="" alt="Arunima Srivastava" style="width:100px;padding-top: 10px;">
+        <img src="images/unknown.png" alt="Arunima Srivastava" style="width:90px;padding-top: 10px;">
         <div class="w3-container">
           <h3>Arunima Srivastava</h3>
-          <p class="w3-opacity">Researcher</p>
-          <p>Researcher at. </p>
+          <p class="w3-opacity">Data Scientist</p>
+          <p>Research collaborator at the Mallick lab, Stanford. Arunima currently works as a Data Scientist at a major pharmaceutical company. </p>
         </div>
       </div>
     </div>
@@ -156,7 +181,7 @@ intermediate results and Linked Data. </p>
   <div class="w3-row-padding">
     <div class="w3-col m6 w3-margin-bottom">
       <div class="w3-light-grey">
-          <img src="" alt="Matt Chambers" style="width:100px;padding-top: 10px;">
+          <img src="images/unknown.png" alt="Matt Chambers" style="width:100px;padding-top: 10px;">
         <div class="w3-container">
           <h3>Matt Chambers</h3>
           <p class="w3-opacity">ROLE</p>
@@ -166,7 +191,7 @@ intermediate results and Linked Data. </p>
     </div>
     <div class="w3-col m6 w3-margin-bottom">
       <div class="w3-light-grey">
-        <img src="" alt="Jiang Wang" style="width:100px;padding-top: 10px;">
+        <img src="images/unknown.png" alt="Jiang Wang" style="width:100px;padding-top: 10px;">
         <div class="w3-container">
           <h3>Jiang Wang</h3>
           <p class="w3-opacity">Researcher</p>
@@ -180,7 +205,7 @@ intermediate results and Linked Data. </p>
   <div class="w3-row-padding">
     <div class="w3-col m6 w3-margin-bottom">
       <div class="w3-light-grey">
-          <img src="" alt="Xiaojing Wang" style="width:100px;padding-top: 10px;">
+          <img src="images/unknown.png" alt="Xiaojing Wang" style="width:100px;padding-top: 10px;">
         <div class="w3-container">
           <h3>Xiaojing Wang</h3>
           <p class="w3-opacity">ROLE</p>
@@ -190,7 +215,7 @@ intermediate results and Linked Data. </p>
     </div>
     <div class="w3-col m6 w3-margin-bottom">
       <div class="w3-light-grey">
-        <img src="" alt="David Tabb" style="width:100px;padding-top: 10px;">
+        <img src="images/unknown.png" alt="David Tabb" style="width:100px;padding-top: 10px;">
         <div class="w3-container">
           <h3>David Tabb</h3>
           <p class="w3-opacity">Researcher</p>
@@ -204,7 +229,7 @@ intermediate results and Linked Data. </p>
   <div class="w3-row-padding">
     <div class="w3-col m6 w3-margin-bottom">
       <div class="w3-light-grey">
-          <img src="" alt="Bing Zhang" style="width:100px;padding-top: 10px;">
+          <img src="images/unknown.png" alt="Bing Zhang" style="width:100px;padding-top: 10px;">
         <div class="w3-container">
           <h3>Bing Zhang</h3>
           <p class="w3-opacity">ROLE</p>
@@ -214,7 +239,7 @@ intermediate results and Linked Data. </p>
     </div>
     <div class="w3-col m6 w3-margin-bottom">
       <div class="w3-light-grey">
-        <img src="" alt="Raghu Machiraju" style="width:100px;padding-top: 10px;">
+        <img src="images/unknown.png" alt="Raghu Machiraju" style="width:100px;padding-top: 10px;">
         <div class="w3-container">
           <h3>Raju Machiraju</h3>
           <p class="w3-opacity">Researcher</p>
@@ -230,19 +255,19 @@ intermediate results and Linked Data. </p>
       <div class="w3-light-grey">
           <img src="images/gil.jpg" alt="Yolanda Gil" style="width:100px;padding-top: 10px;">
         <div class="w3-container">
-          <h3>Yolanda Gil</h3>
-          <p class="w3-opacity">ROLE</p>
-          <p>Small description. </p>
+          <h3><a href="http://www.isi.edu/~gil/">Yolanda Gil</a></h3>
+          <p class="w3-opacity">Research Professor</p>
+          <p>Director of Knowledge Technologies and at the Information Sciences Institute of the University of Southern California, and Research Professor in the Computer Science Department. Her research interests include intelligent user interfaces, social knowledge collection, provenance and assessment of trust, and knowledge management in science. Her most recent work focuses on intelligent workflow systems to support collaborative data analytics at scale.</p>
         </div>
       </div>
     </div>
     <div class="w3-col m6 w3-margin-bottom">
       <div class="w3-light-grey">
-        <img src="images/parag.jpg" alt="Parag Mallick" style="width:100px;padding-top: 10px;">
+        <img src="images/parag.jpg" alt="Parag Mallick" style="width:120px;padding-top: 10px;">
         <div class="w3-container">
-          <h3>Parag Mallick</h3>
-          <p class="w3-opacity">Researcher</p>
-          <p>Researcher at. </p>
+          <h3><a href="https://med.stanford.edu/profiles/parag-mallick">Parag Mallick</a></h3>
+          <p class="w3-opacity">Associate Professor of Radiology</p>
+          <p>Assistant professor (Research) in Radiology. Parag is also member of the Stanford Cancer Institute and a faculty fellow of Stanford ChEM-H. After completing his PhD, he trained with Ruedi Aebersold in clinical proteomics and systems biology at the Institute for Systems Biology. </p>
         </div>
       </div>
     </div>
