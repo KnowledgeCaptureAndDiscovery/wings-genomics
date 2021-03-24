@@ -87,8 +87,8 @@ img {
       <li><a href="software-packages.md">List of the software packages</a> (and corresponding version) installed in the Docker image</li>
       <li><a href="workflow_files_description.pdf">Documentation of the input and output files used by each workflow</a></li>
       <li><a href="worflow_parameters_description.pdf">Documentation of the parameters used for each workflow</a></li>
-      <li>Missing: pointer to domain, pointer to domain zipped.</li>
-      <li>Pointing to all workflows zipped.</li>
+      <li><a href="code.zip">List of the code wrappers used to create workflow components for all workflows</a>. You can also browse them <a href="https://github.com/KnowledgeCaptureAndDiscovery/wings-genomics/tree/main/code/library">on GitHub</a>. (Note: these wrappers do not contain the dependencies required for each tool, they are ready to use in the Docker image)</li>
+      <li><a href="workflows/wf-figures.pdf">Document with an overview of the workflows used in the manuscript</a>. The workflows themselves can be found within the Docker image (in WINGS), or by downloading the <a href="workflows.zip">workflow specification files</a> (which contain all the implementation details). If you want to explore the contents of the zip files, you can also browse the <a href="https://github.com/KnowledgeCaptureAndDiscovery/wings-genomics/tree/main/workflows">on GitHub</a>. (Note: data is not included in these files)</li>
     </ul>
   </div>
 
@@ -112,7 +112,18 @@ img {
   <div class="w3-container" id="prov" style="margin-top:75px">
     <h1 class="w3-xxxlarge w3-text-green"><b>Provenance traces.</b></h1>
     <hr style="width:50px;border:5px solid green" class="w3-round">
-    Include provenance traces (URL) and their link in Zenodo.
+
+    Below you can find provenance traces for the experiments run in the paper, following the <a href="http://www.opmw.org/model/OPMW/">OPMW-PROV model</a> (and extending the <a href="https://www.w3.org/TR/prov-o/">W3C PROV standard</a>). Note that the pointers to code and data are relative URLs, which won't resolve (they indicate the names of the files that have been used, but the paths are local to the Docker image). The code components and data referred to can be found in the dataset and code sections.
+    <ul>
+      <li><a href="provenance/MultiProteomic_S-d4df9090-67c0-4e01-99dc-43654df14c15">Proteomic Run (Stage 3 reanalysis)</a>. Also browsable <a href="
+  https://www.opmw.org/export/omics/page/resource/WorkflowExecutionAccount/MultiProteomic_S-d4df9090-67c0-4e01-99dc-43654df14c15">online</a></li>
+      <li><a href="provenance/SingleProteogeno-333b42f6-bd36-47ad-9b6f-9c2f8e0f0d55">Proteogenomic Run</a>. Also browsable <a href="https://www.opmw.org/export/omics/page/resource/WorkflowExecutionAccount/SingleProteogeno-333b42f6-bd36-47ad-9b6f-9c2f8e0f0d55">online</a></li>
+      <li><a href="provenance/SingleProteomic_-c00add8a-4c33-42dd-be7d-9523f05959be
+">Pepitome Run (Figure 3)</a>. Also browsable <a href="https://www.opmw.org/export/omics/resource/WorkflowExecutionAccount/SingleProteomic_-c00add8a-4c33-42dd-be7d-9523f05959be
+">online</a></li>
+      <li><a href="provenance/xTandemSearch-67-38e22c05-4260-428e-9001-c3a2ad98de02">Xtandem Run (Figure 3)</a>. Also browsable <a href="https://www.opmw.org/export/omics/page/resource/WorkflowExecutionAccount/xTandemSearch-67-38e22c05-4260-428e-9001-c3a2ad98de02">online</a>.</li>
+    </ul>
+
   </div>
 
   <div class="w3-container" id="bib" style="margin-top:75px">
@@ -161,7 +172,7 @@ intermediate results and Linked Data. </p>
         <div class="w3-container">
           <h3>Varun Ratnakar</h3>
           <p class="w3-opacity">Research Programmer</p>
-          <p>Research programmer at the Information Sciences Institute of the University of Southern California. Varun is the main developer of the <a href="https://wings-workflows.org/">WINGS workflow system</a>. </p>
+          <p>Research programmer at the Information Sciences Institute of the University of Southern California. Ratnakar is the main developer of the <a href="https://wings-workflows.org/">WINGS workflow system</a>. </p>
         </div>
       </div>
     </div>
@@ -181,21 +192,21 @@ intermediate results and Linked Data. </p>
   <div class="w3-row-padding">
     <div class="w3-col m6 w3-margin-bottom">
       <div class="w3-light-grey">
-          <img src="images/unknown.png" alt="Matt Chambers" style="width:100px;padding-top: 10px;">
+          <img src="images/matt.jpeg" alt="Matt Chambers" style="width:100px;padding-top: 10px;">
         <div class="w3-container">
           <h3>Matt Chambers</h3>
-          <p class="w3-opacity">ROLE</p>
-          <p>Small description. </p>
+          <p class="w3-opacity">Researcher</p>
+          <p>Research collaborator at the Vanderbilt University, now working as a Bioinformatics and proteome informatics consultant. </p>
         </div>
       </div>
     </div>
     <div class="w3-col m6 w3-margin-bottom">
       <div class="w3-light-grey">
-        <img src="images/unknown.png" alt="Jiang Wang" style="width:100px;padding-top: 10px;">
+        <img src="images/jing.jpg" alt="Jing Wang" style="width:80px;padding-top: 10px;">
         <div class="w3-container">
-          <h3>Jiang Wang</h3>
-          <p class="w3-opacity">Researcher</p>
-          <p>Researcher at. </p>
+          <h3>Jing Wang</h3>
+          <p class="w3-opacity">Research Assistant Professor</p>
+          <p>Research Assistant Professor of Biomedical Informatics in the School of Medicine at Vanderbilt University. His research interests focus on integrating multi-dimensional omics data to understand cancer mechanism. His current work focuses on assessing biological relevance of mRNA and protein profiling data and developing computational tools to discover and interpret novel associations among cancer omics data.</p>
         </div>
       </div>
     </div>
@@ -205,21 +216,21 @@ intermediate results and Linked Data. </p>
   <div class="w3-row-padding">
     <div class="w3-col m6 w3-margin-bottom">
       <div class="w3-light-grey">
-          <img src="images/unknown.png" alt="Xiaojing Wang" style="width:100px;padding-top: 10px;">
+          <img src="images/xiaojing.jpg" alt="Xiaojing Wang" style="width:100px;padding-top: 10px;">
         <div class="w3-container">
           <h3>Xiaojing Wang</h3>
-          <p class="w3-opacity">ROLE</p>
-          <p>Small description. </p>
+          <p class="w3-opacity">Research Instructor</p>
+          <p>Research instructor of biomedical informatics in the School of Medicine at Vanderbilt University. Dr. Wang has extensive experience with biological data, including sequencing data analysis and gene expression. Her research focuses on using such resources in parallel with shotgun proteomics data, an emerging field termed proteogenomics, to understand cancer biology. Her current projects include developing bioinformatics methods for proteogenomics studies and its application to human cancer studies. </p>
         </div>
       </div>
     </div>
     <div class="w3-col m6 w3-margin-bottom">
       <div class="w3-light-grey">
-        <img src="images/unknown.png" alt="David Tabb" style="width:100px;padding-top: 10px;">
+        <img src="images/david.jpg" alt="David L. Tabb" style="width:100px;padding-top: 10px;">
         <div class="w3-container">
-          <h3>David Tabb</h3>
-          <p class="w3-opacity">Researcher</p>
-          <p>Researcher at. </p>
+          <h3>David L. Tabb</h3>
+          <p class="w3-opacity">Professor</p>
+          <p> Professor at the South African Tuberculosis Bioinformatics Initiative. Dr Tabb and his team have created a complete software pipeline for proteome informatics, contributing to the field-standard ProteoWizard library for mass spectrometry informatics, creating three distinct peptide identification algorithms, and developing the highly scalable IDPicker protein assembly environment. Dr Tabb moved to Stellenbosch University in 2015 to speed the development of proteomics in South Africa and to add support to tuberculosis researchers throughout Cape Town.</p>
         </div>
       </div>
     </div>
@@ -233,17 +244,19 @@ intermediate results and Linked Data. </p>
         <div class="w3-container">
           <h3><a href="https://www.bcm.edu/people-search/bing-zhang-33575">Bing Zhang</a></h3>
           <p class="w3-opacity">Professor</p>
+
+          <p>Professor at the Lester and Sue Smith Breast Center of the Baylor College of Medicine (Houston, TX); and professor at the  Department of Molecular and Human Genetics of the  Baylor College of Medicine. Professor Zhang's research  interests focus on developing computational and statistical approaches that help translating multidimensional omics data into biological and clinical insights.  </p>
         </div>
-        <p>Professor at the Lester and Sue Smith Breast Center of the Baylor College of Medicine (Houston, TX); and professor at the  Department of Molecular and Human Genetics of the  Baylor College of Medicine. Professor Zhang's research  interests focus on developing computational and statistical approaches that help translating multidimensional omics data into biological and clinical insights.  </p>
       </div>
     </div>
     <div class="w3-col m6 w3-margin-bottom">
       <div class="w3-light-grey">
-        <img src="images/unknown.png" alt="Raghu Machiraju" style="width:100px;padding-top: 10px;">
+        <img src="images/machiraju.jpg" alt="Raghu Machiraju" style="width:80px;padding-top: 10px;">
         <div class="w3-container">
           <h3>Raju Machiraju</h3>
-          <p class="w3-opacity">Researcher</p>
-          <p>Researcher at. </p>
+          <p class="w3-opacity">Professor</p>
+          <p>TDAI Chief Data Scientist; Professor of Computer Science and Engineering at the College of Engineering and Biomedical Informatics, College of Medicine. Dr. Machiraju’s interests include visual analytics, modeling, and machine learning, especially as they apply to topics in biology, medicine, and engineering. Over the years he has been working increasingly on problems of computational biology and bioinformatics including the discovery of biomarkers and disease subtypes and the modeling and reconstruction of signal transduction networks.
+</p>
         </div>
       </div>
     </div>
@@ -257,7 +270,7 @@ intermediate results and Linked Data. </p>
         <div class="w3-container">
           <h3><a href="http://www.isi.edu/~gil/">Yolanda Gil</a></h3>
           <p class="w3-opacity">Research Professor</p>
-          <p>Director of Knowledge Technologies and at the Information Sciences Institute of the University of Southern California, and Research Professor in the Computer Science Department. Her research interests include intelligent user interfaces, social knowledge collection, provenance and assessment of trust, and knowledge management in science. Her most recent work focuses on intelligent workflow systems to support collaborative data analytics at scale.</p>
+          <p>Director of Knowledge Technologies and at the Information Sciences Institute of the University of Southern California, and Research Professor in the Computer Science Department. Her research interests include intelligent user interfaces, social knowledge collection, provenance and assessment of trust, and knowledge management in science. Dr Gil's most recent work focuses on intelligent workflow systems to support collaborative data analytics at scale.</p>
         </div>
       </div>
     </div>
@@ -266,8 +279,8 @@ intermediate results and Linked Data. </p>
         <img src="images/parag.jpg" alt="Parag Mallick" style="width:120px;padding-top: 10px;">
         <div class="w3-container">
           <h3><a href="https://med.stanford.edu/profiles/parag-mallick">Parag Mallick</a></h3>
-          <p class="w3-opacity">Associate Professor of Radiology</p>
-          <p>Assistant professor (Research) in Radiology. Parag is also member of the Stanford Cancer Institute and a faculty fellow of Stanford ChEM-H. After completing his PhD, he trained with Ruedi Aebersold in clinical proteomics and systems biology at the Institute for Systems Biology. </p>
+          <p class="w3-opacity">Associate Professor in Radiology</p>
+          <p>Assistant professor (Research) in Radiology. Dr. Mallick is also member of the Stanford Cancer Institute and a faculty fellow of Stanford ChEM-H. After completing his PhD, he trained with Ruedi Aebersold in clinical proteomics and systems biology at the Institute for Systems Biology. </p>
         </div>
       </div>
     </div>
